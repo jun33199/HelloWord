@@ -1,4 +1,2 @@
-HelloWord
-=========
+study 相关的工程
 
-github test
