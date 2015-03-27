@@ -1,8 +1,0 @@
-{"NAME":"项目","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第1列“项目”：填报纳税人发生资产损失的具体项目名称，应逐笔逐项填报具体资产损失明细。","REMARK2":""}
-
-{"NAME":"账载金额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第2列“账载金额”：填报纳税人会计核算计入本年损益的资产损失金额。","REMARK2":""}
-{"NAME":"处置收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第3列“处置收入”：填报纳税人处置发生损失的资产可收回的残值或处置收益。","REMARK2":""}
-{"NAME":"赔偿收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第4列“赔偿收入”：填报纳税人发生的资产损失，取得的相关责任人、保险公司赔偿的金额。","REMARK2":""}
-{"NAME":"计税基础","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第5列“计税基础”：填报按税法规定计算的发生损失时资产的计税基础，含损失资产涉及的不得抵扣增值税进项税额。","REMARK2":""}
-{"NAME":"税收金额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第6列“税收金额”：填报按税法规定确定的允许当期税前扣除的资产损失金额，为第5-3-4列的余额。","REMARK2":""}
-{"NAME":"纳税调整金额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第8列“纳税调整金额”：填报第2-6列的余额。","REMARK2":""}
