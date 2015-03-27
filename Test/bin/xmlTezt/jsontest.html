@@ -1,0 +1,24 @@
+<html>  
+    <head>  
+        <script type="text/javascript">  
+            var data = '{"return_code":0,"return_message":"success","data":{"data":[{"id":"1","question":"公主令牌在哪交？"},{"id":"2","question":"公主护使有什么用？"},{"id":"3","question":"角斗场在哪？"},{"id":"4","question":"北部断层在哪？"},{"id":"5","question":"欢乐令有什么用？"},{"id":"6","question":"令牌积分有什么用？"},{"id":"7","question":"南部断层在哪？"},{"id":"8","question":"大妖魔令牌交给谁？"},{"id":"9","question":"神工坊在哪？"},{"id":"10","question":"警戒妖珠有什么用？"}]}}';  
+
+            function ShowData(){          
+  
+               var obj = eval("("+data+")");         
+ 
+                alert("return_code:"+obj["return_code"]);  
+                alert("return_message:"+obj["return_message"]);  
+                alert("第一个问题id：" + obj["data"]["data"][0]["id"]);  
+                alert("第一个内容id：" + obj["data"]["data"][0]["question"]);  
+            }  
+ 
+        </script>  
+    </head>  
+ 
+<body onload="ShowData();">  
+    {"return_code":0,"return_message":"success","data":{"data":[{"id":"1","question":"公主令牌在哪交？"},{"id":"2","question":"公主护使有什么用？"},{"id":"3","question":"角斗场在哪？"},{"id":"4","question":"北部断层在哪？"},{"id":"5","question":"欢乐令有什么用？"},{"id":"6","question":"令牌积分有什么用？"},{"id":"7","question":"南部断层在哪？"},{"id":"8","question":"大妖魔令牌交给谁？"},{"id":"9","question":"神工坊在哪？"},{"id":"10","question":"警戒妖珠有什么用？"}]}}  
+ 
+</body>  
+ 
+</html>  

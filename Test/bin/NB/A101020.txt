@@ -1,0 +1,43 @@
+{"NAME":"营业收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第1行“营业收入”：填报纳税人提供金融商品服务取得的收入。","REMARK2":""}
+{"NAME":"银行业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第2行“银行业务收入”：填报纳税人从事银行业务取得的收入。","REMARK2":""}
+{"NAME":"利息收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第3行“利息收入”：填报银行存贷款业务等取得的各项利息收入，包括发放的各类贷款（银团贷款、贸易融资、贴现和转贴现融出资金、协议透支、信用卡透支、转贷款、垫款等）、与其他金融机构（中央银行、同业等）之间发生资金往来业务、买入返售金融资产等实现的利息收入等。","REMARK2":""}
+{"NAME":"存放同业","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第4行“存放同业”：填报纳税人存放于境内、境外银行和非银行金融机构款项取得的利息收入。","REMARK2":""}
+{"NAME":"存放中央银行","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第5行“存放中央银行”：填报纳税人存放于中国人民银行的各种款项利息收入。","REMARK2":""}
+{"NAME":"拆出资金","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第6行“拆出资金”：填报纳税人拆借给境内、境外其他金融机构款项的利息收入。","REMARK2":""}
+{"NAME":"发放贷款及垫资","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第7行“发放贷款及垫资”：填报纳税人发放贷款及垫资的利息收入。","REMARK2":""}
+{"NAME":"买入返售金融资产","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第8行“买入返售金融资产”：填报纳税人按照返售协议约定先买入再按固定价格返售的票据、证券、贷款等金融资产所融出资金的利息收入。","REMARK2":""}
+{"NAME":"其他","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第9行“其他”：填报纳税人除本表第4行至第8行以外的其他利息收入，包括债券投资利息等收入。","REMARK2":""}
+{"NAME":"手续费及佣金收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第10行“手续费及佣金收入”：填报银行在提供相关金融业务服务时向客户收取的收入，包括结算与清算手续费、代理业务手续费、信用承诺手续费及佣金、银行卡手续费、顾问和咨询费、托管及其他受托业务佣金等。","REMARK2":""}
+{"NAME":"结算与清算手续费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"代理业务手续费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"信用承诺手续费及佣金","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"银行卡手续费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"顾问和咨询费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"托管及其他受托业务佣金","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"其他","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"证券业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第18行“证券业务收入”：填报纳税人从事证券业务取得的收入。","REMARK2":""}
+{"NAME":"证券业务手续费及佣金收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第19行“证券业务手续费及佣金收入”： 填报纳税人承销、代理兑付等业务取得的各项手续费、佣金等收入。","REMARK2":""}
+{"NAME":"证券承销业务","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"证券经纪业务","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"受托客户资产管理业务 ","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"代理兑付证券 ","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"代理保管证券 ","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"其他","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"","REMARK2":""}
+{"NAME":"其他证券业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第26行“其他证券业务收入”：填报纳税人在国家许可的范围内从事的除经纪、自营和承销业务以外的与证券有关的业务收入。","REMARK2":""}
+{"NAME":"已赚保费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第27行“已赚保费”： 填报纳税人从事保险业务确认的本年实际保费收入。","REMARK2":""}
+{"NAME":"保险业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第28行“保险业务收入”：填报纳税人从事保险业务确认的保费收入。","REMARK2":""}
+{"NAME":"分保费收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第29行“分保费收入”：填报纳税人（再保险公司或分入公司）从原保险公司或分出公司分入的保费收入。","REMARK2":""}
+{"NAME":"分出保费","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第30行“分出保费”：填报纳税人（再保险分出人）向再保险接受人分出的保费。","REMARK2":""}
+{"NAME":"提取未到期责任准备金","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第31行“提取未到期责任准备金”：填报纳税人（保险企业）提取的非寿险原保险合同未到期责任准备金和再保险合同分保未到期责任准备金。","REMARK2":""}
+{"NAME":"其他金融业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第32行“其他金融业务收入”： 填报纳税人提供除银行业、保险业、证券业以外的金融商品服务取得的收入。","REMARK2":""}
+{"NAME":"汇兑收益","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第33行“汇兑收益”：填报纳税人发生的外币交易因汇率变动而产生的汇兑损益，损失以负数填报。","REMARK2":""}
+{"NAME":"其他业务收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第34行“其他业务收入”：填报纳税人发生的除主营业务活动以外的其他经营活动实现的收入。","REMARK2":""}
+{"NAME":"营业外收入","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第35行“营业外收入”： 填报纳税人发生的各项营业外收入，主要包括非流动资产处置利得、非货币性资产交换利得、债务重组利得、政府补助、盘盈利得、捐赠利得等。","REMARK2":""}
+{"NAME":"非流动资产处置所得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第36行“非流动资产处置所得”：填报纳税人处置固定资产、无形资产等取得的净收益。","REMARK2":""}
+{"NAME":"非货币资产交换利得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第37行“非货币资产交换利得”：填报纳税人发生非货币性资产交换应确认的净收益。","REMARK2":""}
+{"NAME":"债务重组利得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第38行“债务重组利得”：填报纳税人发生的债务重组业务确认的净收益。","REMARK2":""}
+{"NAME":"政府补助利得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第39行“政府补助利得”：填报纳税人从政府无偿取得货币性资产或非货币性资产应确认的净收益。","REMARK2":""}
+{"NAME":"盘盈所得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第40行“盘盈所得”：填报纳税人在清查财产过程中查明的各种财产盘盈应确认的净收益。","REMARK2":""}
+{"NAME":"捐赠利得","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第41行“捐赠利得”：填报纳税人接受的来自企业、组织或个人无偿给予的货币性资产、非货币性资产捐赠应确认的净收益。","REMARK2":""}
+{"NAME":"其他","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第42行“其他”：填报纳税人取得的上述项目未列举的其他营业外收入，包括执行《企业会计准则》纳税人按权益法核算长期股权投资对初始投资成本调整确认的收益。","REMARK2":""}
+

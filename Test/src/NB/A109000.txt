@@ -1,0 +1,17 @@
+{"NAME":"总机构实际应纳所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第1行“总机构实际应纳所得税额”：填报《企业所得税年度纳税申报表》（A100000）第31行的金额。","REMARK2":""}
+{"NAME":"境外所得应纳所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第2行“境外所得应纳所得税额”：填报表A100000第29行的金额。","REMARK2":""}
+{"NAME":"境外所得抵免所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第3行“境外所得抵免所得税额”： 填报表A100000第30行的金额。","REMARK2":""}
+{"NAME":"总机构用于分摊的本年实际应纳所得税","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第4行“总机构用于分摊的本年实际应纳所得税”：填报第1-2+3行的金额。","REMARK2":""}
+{"NAME":"本年累计已预分、已分摊所得税","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第5行“本年累计已预分、已分摊所得税”： 填报总机构按照税收规定计算的跨地区分支机构本年累计已分摊的所得税额、建筑企业总机构直接管理的跨地区项目部本年累计已预分并就地预缴的所得税额。填报第6+7+8+9行的金额。","REMARK2":""}
+{"NAME":"总机构向其直接管理的建筑项目部所在地预分的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第6行“总机构向其直接管理的建筑项目部所在地预分的所得税额”：填报建筑企业总机构按照规定在预缴纳税申报时，向其直接管理的项目部所在地按照项目收入的0.2%预分的所得税额。","REMARK2":""}
+{"NAME":"总机构已分摊所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第7行“总机构已分摊所得税额”：填报总机构在预缴申报时已按照规定比例计算缴纳的由总机构分摊的所得税额。","REMARK2":""}
+{"NAME":"财政集中已分配所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第8行“财政集中已分配所得税额”：填报总机构在预缴申报时已按照规定比例计算缴纳的由财政集中分配的所得税额。","REMARK2":""}
+{"NAME":"总机构所属分支机构已分摊所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第9行“总机构所属分支机构已分摊所得税额”：填报总机构在预缴申报时已按照规定比例计算缴纳的由所属分支机构分摊的所得税额。","REMARK2":""}
+{"NAME":"总机构主体生产经营部门已分摊所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第10行“总机构主体生产经营部门已分摊所得税额”：填报总机构在预缴申报时已按照规定比例计算缴纳的由总机构主体生产经营部门分摊的所得税额。","REMARK2":""}
+{"NAME":"总机构本年度应分摊的应补（退）的所得税","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第11行“总机构本年度应分摊的应补（退）的所得税”：填报总机构汇总计算本年度应补（退）的所得税额，不包括境外所得应纳所得税额。填报第4-5行的金额。","REMARK2":""}
+{"NAME":"总机构分摊本年应补（退）的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第12行“总机构分摊本年应补（退）的所得税额”：填报第11行×25%的金额。","REMARK2":""}
+{"NAME":"财政集中分配本年应补（退）的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第13行“财政集中分配本年应补（退）的所得税额”：填报第11行×25%的金额。","REMARK2":""}
+{"NAME":"总机构所属分支机构分摊本年应补（退）的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第14行“总机构所属分支机构分摊本年应补（退）的所得税额”：填报第11行×50%的金额。","REMARK2":""}
+{"NAME":"总机构主体生产经营部门分摊本年应补（退）的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第15行“总机构主体生产经营部门分摊本年应补（退）的所得税额”：填报第11行×总机构主体生产经营部门分摊比例的金额。","REMARK2":""}
+{"NAME":"总机构境外所得抵免后的应纳所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第16行“总机构境外所得抵免后的应纳所得税额”：填报第2-3行的金额。","REMARK2":""}
+{"NAME":"总机构本年应补（退）的所得税额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第17行“总机构本年应补（退）的所得税额”：填报第12+13+15+16行的金额","REMARK2":""}

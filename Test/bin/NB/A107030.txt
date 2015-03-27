@@ -1,0 +1,7 @@
+{"NAME":"本年新增的符合条件的股权投资额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第1行“本年新增的符合条件的股权投资额”：填报创业投资企业采取股权投资方式投资于未上市的中小高新技术企业2年以上的，本年新增的符合条件的股权投资额。","REMARK2":""}
+{"NAME":"本年新增的可抵扣的股权投资额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第3行“本年新增的可抵扣的股权投资额”：本行填报第1×2行的金额。","REMARK2":""}
+{"NAME":"以前年度结转的尚未抵扣的股权投资余额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第4行“以前年度结转的尚未抵扣的股权投资余额”：填报以前年度符合条件的尚未抵扣的股权投资余额。","REMARK2":""}
+{"NAME":"本年可抵扣的股权投资额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第5行“本年可抵扣的股权投资额”：本行填报第3+4行的金额。","REMARK2":""}
+{"NAME":"本年可用于抵扣的应纳税所得额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第6行“本年可用于抵扣的应纳税所得额”：本行填报表A100000第19行-20行-22行的金额，若金额小于0，则填报0。","REMARK2":""}
+{"NAME":"本年实际抵扣应纳税所得额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第7行“本年实际抵扣应纳税所得额”：若第5行≤第6行，则本行＝第5行；第5行＞第6行，则本行＝第6行。","REMARK2":""}
+{"NAME":"结转以后年度抵扣的股权投资余额","DEFAULTVALUE":"","TYPE":"","DESCRIPTOR":"","DEFAULTROW":"","REMARK1":"第8行“结转以后年度抵扣的股权投资余额”：第5行＞第6行，则本行＝第5-7行；第5行≤第6行，则本行=0。","REMARK2":""}
