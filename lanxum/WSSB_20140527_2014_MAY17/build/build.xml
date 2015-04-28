@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="gb2312"?>
+<project name="shenbaozhengshou" default="all" basedir=".">
+    <property environment="env"/>
+    <property file="build.properties"/>
+    <property file="lib.properties"/>
+
+    <property name="BASEDIR" value="." />
+    <property name="build" value="${BASEDIR}/build" />
+    <property name="config" value="${build}/config" />
+    <property name="EJB_FILE" value="${src_shenbao}/EJB" />
+    <property name="dist"	value="${BASEDIR}/dist" />
+    <property name="src" value="${src_shenbao}/src" />
+    <property name="webapp" value="${BASEDIR}/webapp" />
+    <property name="WEB_LIB_PATH" value="${webapp}/WEB-INF/lib" />
+    <property name="WEB_CLASSES_PATH" value="${webapp}/WEB-INF/classes" />
+    <property name="OUT_INTERFACE_PATH" value="${BASEDIR}/outInterface" />
+    <property name="jspc_dist" value="${BASEDIR}/jspc_dist" />
+
+  <path	id="class.path">
+    <pathelement location="${struts.jar}" />
+    <pathelement location="${foundation.jar}" />
+    <pathelement location="${k_or.jar}" />
+    <pathelement location="${log4j.jar}" />
+    <pathelement location="${WL_HOME}/server/lib/weblogic.jar" />
+    <pathelement location="${jakarta-poi.jar}" />
+    <pathelement location="${zkclasses.jar}" />
+    <pathelement location="${framework.jar}" />
+    <pathelement location="${DjService.jar}" />
+    <pathelement location="${SfglService.jar}" />
+    <pathelement location="${jkclasses.jar}" />
+    <pathelement location="${Skh_Service.jar}" />
+	
+    <pathelement location="${ca4others.jar}" />
+  </path>
+
+
+   <target name="all" depends="clean, init, gen_service, gen_nspg, gen_skh,ejbc, jspc, war,deploy"/>
+   
+   <target name="all_nojspc" depends="clean, init, gen_service ,ejbc, war"/>
+   
+   
+   <target name="init">
+    <mkdir dir="${build}"/>
+    <mkdir dir="${build}/META-INF"/>
+    <mkdir dir="${config}"/>
+    <mkdir dir="${webapp}" />
+    <mkdir dir="${WEB_CLASSES_PATH}" />
+    <mkdir dir="${dist}"/>
+    <mkdir dir="${jspc_dist}" />
+    <copy file="${src_shenbao}/license/ApplicationResources.properties" todir="${WEB_CLASSES_PATH}" />
+
+    <copy todir="${config}">
+      <fileset dir="${src_shenbao}/config/config" />
+    </copy>
+
+
+    <copy todir="${webapp}">
+      <fileset dir="${src_shenbao}/webapp" >
+		<exclude name="**/*/*.jar" />
+		<exclude name="WEB-INF/classes/**" />
+		<exclude name="WEB-INF/_tmp_war_myserver_myserver_shenbao/**" />
+      </fileset>
+    </copy>
+
+<!--    <unzip src="${servclasses.jar}" dest="${build}" /> -->
+  </target>
+
+
+  <target name="compile" >
+    <javac srcdir="${src}" destdir="${build}" excludes="com/**/test/**" debug="true">
+      <classpath refid="class.path" />
+    </javac>
+  </target>
+
+  <target name="gen_service" depends="clean, init, compile">
+    <jar jarfile="${dist}/shenbaoService.jar"
+      basedir="${build}"
+      update="yes">
+      <include name="**/shenbao/model/**" />
+      <include name="**/shenbao/proxy/LWUtil.class" />
+      <include name="**/shenbao/proxy/ServiceProxy.class" />
+      <include name="**/shenbao/service/**" />
+      <include name="**/shenbao/ejb/Service.class" />
+      <include name="**/shenbao/ejb/ServiceEJBHome.class" />
+    </jar>
+  </target>
+
+  <target name="gen_nspg" depends="clean, init, compile">
+    <jar jarfile="${dist}/shenbaoForNspg.jar"
+      basedir="${build}"
+      update="yes">
+      <include name="**/bjtax/shenbao/jiekou/**" />
+      <include name="**/shenbao/model/domain/Sbjkzb.class" />
+      <include name="**/shenbao/model/domain/Sbjkmx.class" />
+      <include name="**/shenbao/model/client/DeclareInfor.class" />
+      <include name="**/shenbao/model/client/Sbsj.class" />
+      <include name="**/shenbao/model/client/Ysjc.class" />
+    </jar>
+  </target>
+
+  <target name="gen_skh" depends="clean, init, compile">
+    <jar jarfile="${dist}/shenbaoForSKH.jar"
+      basedir="${build}"
+      update="yes">
+     <include name="**/*.class" />
+    </jar>
+  </target>
+  
+  <target name="jar_ejb" depends="compile">
+    <copy todir="${build}/META-INF">
+      <fileset dir="${EJB_FILE}">
+	<include name="ejb-jar.xml"/>
+	<include name="weblogic-ejb-jar.xml"/>
+      </fileset>
+    </copy>
+    <jar jarfile="${dist}/shenbaoEJB.jar" basedir="${build}" update="yes">
+      <exclude name="**/web/**" />
+      <zipfileset src="${DjService.jar}" excludes="**/*.xml,**/web/**,**/framework/**"/>
+      <zipfileset src="${SfglService.jar}" excludes="**/*.xml,**/web/**,**/framework/**"/>
+      <zipfileset src="${zkclasses.jar}" excludes="**/*.xml,**/web/**"/>
+      <zipfileset src="${framework.jar}" excludes="**/*.xml,**/web/**"/>
+      <zipfileset src="${k_or.jar}" excludes="**/*.xml,**/web/**/*"/>
+      <zipfileset src="${jkclasses.jar}" excludes="**/*.xml,**/web/**/*"/>
+      <zipfileset src="${Skh_Service.jar}" excludes="**/*.xml,**/web/**/*"/>
+      <zipfileset src="${ca4others.jar}" />
+	  
+    </jar>
+  </target>
+
+  <target name="ejbc" depends="jar_ejb">
+    <java classname="weblogic.ejbc" fork="yes" failonerror="yes">
+      <sysproperty key="weblogic.home" value="${WL_HOME}/server"/>
+      <arg line="-compiler javac -keepgenerated ${dist}/shenbaoEJB.jar"/>
+      <classpath refid="class.path" />
+    </java>
+  </target>
+
+  <target name="wswar">
+    <copy file="${foundation.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${k_or.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${struts.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${jakarta-poi.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${framework.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${zkclasses.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${SfglService.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${DjService.jar}" todir="${WEB_LIB_PATH}" />
+    <copy file="${Skh_Service.jar}" todir="${WEB_LIB_PATH}" />
+
+    <copy file="${ca4others.jar}" todir="${WEB_LIB_PATH}" />
+   
+	<copy todir="${webapp}/WEB-INF/classes">
+      <fileset dir="${build}">
+		<exclude name="config/**" />
+		<exclude name="**/processor/**" />
+		<exclude name="META-INF/**" />
+      </fileset>
+    </copy>
+
+  </target>
+
+
+
+
+
+  <target name="war" depends="jspc">  
+<!--  <target name="war" depends="wswar">-->
+	<!-- should be delete-->
+	<!--copy file="./../web_xml/WSSB/web.xml" tofile="${webapp}/WEB-INF/web.xml" overwrite="true"/-->
+
+    <jar jarfile="${dist}/shenbao.war"
+      basedir="${webapp}" excludes="**/shenbao/*,**/include/**"
+      update="yes">
+    </jar>
+  </target>
+
+
+
+
+
+
+  <target name="jspc" depends="wswar">
+    <java classname="weblogic.jspc" fork="yes" failonerror="yes">
+          <sysproperty key="weblogic.home" value="${WL_HOME}/server"/>
+			<sysproperty key="weblogic.jsp.windows.caseSensitive" value="true" />
+          	<arg line="-keepgenerated -compileAll -verboseJspc -d ${jspc_dist} -docroot ${webapp}"/>
+	       
+			
+<!--bitzhou delete it -->			
+			<!--<classpath refid="class.path" />-->
+<!--bitzhou delete it -->
+
+
+<!--bitzhou add it -->	
+			<classpath>
+			<pathelement path="${CLASSPATH}"/>
+			<pathelement location="${dist}/zwcl_classes.jar"/>
+			</classpath>
+<!--bitzhou add it -->			
+
+
+
+
+    </java>
+	<copy todir="${webapp}/WEB-INF/classes" overwrite="yes">
+		<fileset dir="${jspc_dist}" />
+	</copy>
+
+  </target>
+
+  <target name="clean">
+	<delete	dir="${build}"/>
+	<delete	dir="${dist}"/>
+	<delete	dir="${webapp}"/>
+	<delete dir="${OUT_INTERFACE_PATH}" />
+	<delete dir="${jspc_dist}" />
+  </target>
+
+  <target name="deploy" depends="ejbc,war" >
+        <copy file="${dist}/shenbaoEJB.jar" todir="${WL_APP}" />
+        <copy file="${dist}/shenbao.war" todir="${WL_APP}" />
+  </target>
+
+</project>

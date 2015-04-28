@@ -1,0 +1,1334 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <context-param>
+    <param-name>weblogic.httpd.inputCharset./*</param-name>
+    <param-value>GBK</param-value>
+  </context-param>
+  <filter>
+    <filter-name>BusinessPermission</filter-name>
+    <filter-class>com.ttsoft.common.web.filter.BusinessPermissionFilter</filter-class>
+    <init-param>
+      <param-name>nopermissionurl</param-name>
+      <param-value>/noPermission.jsp</param-value>
+    </init-param>
+    <init-param>
+      <param-name>omiturls</param-name>
+      <param-value>quit.do,logout.do</param-value>
+    </init-param>
+  </filter>
+  <filter>
+    <filter-name>Loginer</filter-name>
+    <filter-class>com.ttsoft.common.web.filter.LoginFilter</filter-class>
+    <init-param>
+      <param-name>ssourl</param-name>
+      <param-value>/</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>Loginer</filter-name>
+    <servlet-name>action</servlet-name>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>BusinessPermission</filter-name>
+    <servlet-name>action</servlet-name>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>Loginer</filter-name>
+    <servlet-name>dcAction</servlet-name>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>BusinessPermission</filter-name>
+    <servlet-name>dcAction</servlet-name>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>dcAction</servlet-name>
+    <servlet-class>com.syax.common.web.servlet.DcActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/dc-config.xml</param-value>
+    </init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>application</param-name>
+      <param-value>ApplicationResources</param-value>
+    </init-param>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>factory</param-name>
+      <param-value>com.ttsoft.framework.util.CNPropertyMessageResourcesFactory</param-value>
+    </init-param>
+    <init-param>
+      <param-name>nocache</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>bottom</servlet-name>
+    <servlet-class>jsp_servlet._include.__bottom</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>hk</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__hk</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>hksb</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__hksb</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>byysbWithoutSfxy</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__byysbWithoutSfxy</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>byysbWithSfxy</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__byysbWithSfxy</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>czzsnd005</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__czzsnd005</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>favorite</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__favorite</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>gzsx001</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__gzsx001</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>jms011</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__jms011</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>listjks</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__listJks</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>loadsingleton</servlet-name>
+    <servlet-class>com.ttsoft.common.web.servlet.LoadSingletonServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>printypds</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__printypds</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>printzrrjks</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__printzrrjks</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>qycwzb009</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__qycwzb009</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>qysdsks010</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__qysdsks010</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>qysdsnb008</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__qysdsnb008</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sbheader</servlet-name>
+    <servlet-class>jsp_servlet._include.__SbHeader</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sbjg</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__sbjg</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sbypysjks</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__sbypysjks</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>success</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__success</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>szsm000</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__szsm000</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>updateCodeTableServlet</servlet-name>
+    <servlet-class>com.ttsoft.bjtax.shenbao.codetable.web.CodeTableServlet</servlet-class>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>wqyys017</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__wqyys017</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>wqyys018</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__wqyys018</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>wqyys019</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__wqyys019</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>wsksb001</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__wsksb001</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>yhsbg015</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__yhsbg015</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zhsbfunc</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zhsbFunc</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zhsbwithoutsfxy002</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zhsbWithoutSfxy002</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zhsbwithsfxy002</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zhsbWithSfxy002</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zrrjks</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zrrjks</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sbcghz001</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__sbcghz001</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>gzsxnr</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__gzsxnr</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>gzsxfk</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__gzsxfk</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>sbsqdPrint</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__sbsqdPrint</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zrrsb</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zrrsb</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>zjyjmsb</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__zjyjmsb</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>nbbottom</servlet-name>
+    <servlet-class>jsp_servlet._include.__nbbottom</servlet-class>
+  </servlet>
+
+
+<servlet>
+<servlet-name>azcjr03</servlet-name>
+<servlet-class>jsp_servlet._jmba._azcjr03.__azcjr03</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>azcjr03view</servlet-name>
+<servlet-class>jsp_servlet._jmba._azcjr03.__azcjr03view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>basx05</servlet-name>
+<servlet-class>jsp_servlet._jmba._basx05.__basx05</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>center13a</servlet-name>
+<servlet-class>jsp_servlet._jmba._cytzqytza.__center13a</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>cytzqytza</servlet-name>
+<servlet-class>jsp_servlet._jmba._cytzqytza.__cytzqytza</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>center13b</servlet-name>
+<servlet-class>jsp_servlet._jmba._cytzqytzb.__center13b</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>cytzqytzb</servlet-name>
+<servlet-class>jsp_servlet._jmba._cytzqytzb.__cytzqytzb</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>dyyl</servlet-name>
+<servlet-class>jsp_servlet._jmba.__dyyl</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>dyylshow</servlet-name>
+<servlet-class>jsp_servlet._jmba.__dyylshow</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>fhtjjszrsd07</servlet-name>
+<servlet-class>jsp_servlet._jmba._fhtjjszrsd07.__fhtjjszrsd07</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>fhtjjszrsdlist07</servlet-name>
+<servlet-class>jsp_servlet._jmba._fhtjjszrsd07.__fhtjjszrsdlist07</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>gdccsdnx017</servlet-name>
+<servlet-class>jsp_servlet._jmba._gdccsdnx017.__gdccsdnx017</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>sub_gdccsdnx017_js</servlet-name>
+<servlet-class>jsp_servlet._jmba._gdccsdnx017.__sub_gdccsdnx017_js</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>sub_gdccsdnx017_sd</servlet-name>
+<servlet-class>jsp_servlet._jmba._gdccsdnx017.__sub_gdccsdnx017_sd</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ggjcsstz04</servlet-name>
+<servlet-class>jsp_servlet._jmba._ggjcsstz04.__ggjcsstz04</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ggjcsstz04edit</servlet-name>
+<servlet-class>jsp_servlet._jmba._ggjcsstz04.__ggjcsstz04edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ggjcsstz04view</servlet-name>
+<servlet-class>jsp_servlet._jmba._ggjcsstz04.__ggjcsstz04view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>ggjcsstz04viewdetail</servlet-name>
+<servlet-class>jsp_servlet._jmba._ggjcsstz04.__ggjcsstz04viewdetail</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>gjghbjzdrjqy10</servlet-name>
+<servlet-class>jsp_servlet._jmba._gjghbjzdrjqy10.__gjghbjzdrjqy10</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>gjyqzdfcgxjsqy08</servlet-name>
+<servlet-class>jsp_servlet._jmba._gjyqzdfcgxjsqy08.__gjyqzdfcgxjsqy08</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>hjbhjnjs06</servlet-name>
+<servlet-class>jsp_servlet._jmba._hjbhjnjs06.__hjbhjnjs06</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>hjbhjnjs06edit</servlet-name>
+<servlet-class>jsp_servlet._jmba._hjbhjnjs06.__hjbhjnjs06edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>hjbhjnjs06view</servlet-name>
+<servlet-class>jsp_servlet._jmba._hjbhjnjs06.__hjbhjnjs06view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>hjbhjnjs06viewdetail</servlet-name>
+<servlet-class>jsp_servlet._jmba._hjbhjnjs06.__hjbhjnjs06viewdetail</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jcdlscqy12</servlet-name>
+<servlet-class>jsp_servlet._jmba._jcdlscqy012.__jcdlscqy12</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jmbaspb</servlet-name>
+<servlet-class>jsp_servlet._jmba.__jmbaspb</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jmbaspbview</servlet-name>
+<servlet-class>jsp_servlet._jmba.__jmbaspbview</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jmbaz</servlet-name>
+<servlet-class>jsp_servlet._jmba.__jmbaz</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jsxjqy20</servlet-name>
+<servlet-class>jsp_servlet._jmba._jsxjqy20.__jsxjqy20</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jsxjqy20view</servlet-name>
+<servlet-class>jsp_servlet._jmba._jsxjqy20.__jsxjqy20view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jyxwhsy21</servlet-name>
+<servlet-class>jsp_servlet._jmba._jyxwhsy21.__jyxwhsy21</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>jyxwhsy21view</servlet-name>
+<servlet-class>jsp_servlet._jmba._jyxwhsy21.__jyxwhsy21view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>qjfzjzsd019</servlet-name>
+<servlet-class>jsp_servlet._jmba._qjfzjzsd019.__qjfzjzsd019</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>center14a</servlet-name>
+<servlet-class>jsp_servlet._jmba._qygza.__center14a</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>qygza</servlet-name>
+<servlet-class>jsp_servlet._jmba._qygza.__qygza</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>qygzb</servlet-name>
+<servlet-class>jsp_servlet._jmba._qygzb.__qygzb</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>rddmqy22</servlet-name>
+<servlet-class>jsp_servlet._jmba._rddmqy22.__rddmqy22</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>rddmqy22view</servlet-name>
+<servlet-class>jsp_servlet._jmba._rddmqy22.__rddmqy22view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>scxkxyjcdlcpscqy11</servlet-name>
+<servlet-class>jsp_servlet._jmba._scxkxyjcdlcpscqy11.__scxkxyjcdlcpscqy11</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>sub_wgrjsdnx018</servlet-name>
+<servlet-class>jsp_servlet._jmba._wgrjsdnx018.__sub_wgrjsdnx018</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>wgrjsdnx018</servlet-name>
+<servlet-class>jsp_servlet._jmba._wgrjsdnx018.__wgrjsdnx018</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>xrjscqyjcdlsjqy09</servlet-name>
+<servlet-class>jsp_servlet._jmba._xrjscqyjcdlsjqy09.__xrjscqyjcdlsjqy09</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>yjkffy02</servlet-name>
+<servlet-class>jsp_servlet._jmba._yjkffy02.__yjkffy02</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>yjkffy02edit</servlet-name>
+<servlet-class>jsp_servlet._jmba._yjkffy02.__yjkffy02edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>yjkffy02view</servlet-name>
+<servlet-class>jsp_servlet._jmba._yjkffy02.__yjkffy02view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>yjkffy02viewdetail</servlet-name>
+<servlet-class>jsp_servlet._jmba._yjkffy02.__yjkffy02viewdetail</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>zyzhly01</servlet-name>
+<servlet-class>jsp_servlet._jmba._zyzhly01.__zyzhly01</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>zyzhly01edit</servlet-name>
+<servlet-class>jsp_servlet._jmba._zyzhly01.__zyzhly01edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>zyzhly01view</servlet-name>
+<servlet-class>jsp_servlet._jmba._zyzhly01.__zyzhly01view</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>zyzhly01viewdetail</servlet-name>
+<servlet-class>jsp_servlet._jmba._zyzhly01.__zyzhly01viewdetail</servlet-class>
+</servlet>
+
+
+<!-- fangtu jsp -->
+
+  <servlet>
+    <servlet-name>alter_fw_chengzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_fw_chengzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>alter_fw_chuzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_fw_chuzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>alter_fw_ziyong</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_fw_ziyong</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>alter_td_chengzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_td_chengzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>alter_td_chuzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_td_chuzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>alter_td_ziyong</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__alter_td_ziyong</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>fangtu_common_footer</servlet-name>
+    <servlet-class>jsp_servlet._fangtu._common.__footer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_common_header</servlet-name>
+    <servlet-class>jsp_servlet._fangtu._common.__header</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>fangtu_control</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__control</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_control_alter</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__control_alter</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>fw_chengzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__fw_chengzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fw_chuzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__fw_chuzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fw_ziyong</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__fw_ziyong</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>fangtu_nsr</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__nsr</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_printbgb</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__printbgb</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_printdjb</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__printdjb</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_returntomenu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__returntomenu</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>td_chengzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__td_chengzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>td_chuzu</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__td_chuzu</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>td_ziyong</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__td_ziyong</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>fangtu_zhengce</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__zhengce</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_zjlx</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__zjlx</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>fangtu_zlqx</servlet-name>
+    <servlet-class>jsp_servlet._fangtu.__zlqx</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>hdzssdsjb2008</servlet-name>
+    <servlet-class>jsp_servlet._qysds2008.__hdzssdsjb2008</servlet-class>
+  </servlet>
+    <servlet>
+    <servlet-name>czzssdsjb2008</servlet-name>
+    <servlet-class>jsp_servlet._qysds2008.__czzssdsjb2008</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>kjqysdsheader</servlet-name>
+    <servlet-class>jsp_servlet._include.__KjqysdsHeader</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>badjb</servlet-name>
+    <servlet-class>jsp_servlet._kjqysds.__badjblr</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>cjrjyjmsb</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__cjrjyjmsb</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>nsrjcxxhd</servlet-name>
+    <url-pattern>/shenbao/nsrjcxxhd.jsp</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  <servlet-name>nsrjcxxhd</servlet-name>
+    <servlet-class>jsp_servlet._shenbao.__nsrjcxxhd</servlet-class>
+  </servlet>
+<!-- fangtu jsp -->
+
+  <servlet-mapping>
+    <servlet-name>dcAction</servlet-name>
+    <url-pattern>*.dc</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sbheader</servlet-name>
+    <url-pattern>/include/SbHeader.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bottom</servlet-name>
+    <url-pattern>/include/bottom.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nbbottom</servlet-name>
+    <url-pattern>/include/nbbottom.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hk</servlet-name>
+    <url-pattern>/shenbao/hk.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hksb</servlet-name>
+    <url-pattern>/shenbao/hksb.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>byysbWithoutSfxy</servlet-name>
+    <url-pattern>/shenbao/byysbWithoutSfxy.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>byysbWithSfxy</servlet-name>
+    <url-pattern>/shenbao/byysbWithSfxy.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>czzsnd005</servlet-name>
+    <url-pattern>/shenbao/czzsnd005.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>favorite</servlet-name>
+    <url-pattern>/shenbao/favorite.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>gzsx001</servlet-name>
+    <url-pattern>/shenbao/gzsx001.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>jms011</servlet-name>
+    <url-pattern>/shenbao/jms011.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>listjks</servlet-name>
+    <url-pattern>/shenbao/listJks.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>printypds</servlet-name>
+    <url-pattern>/shenbao/printypds.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>printzrrjks</servlet-name>
+    <url-pattern>/shenbao/printzrrjks.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>qycwzb009</servlet-name>
+    <url-pattern>/shenbao/qycwzb009.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>qysdsks010</servlet-name>
+    <url-pattern>/shenbao/qysdsks010.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>qysdsnb008</servlet-name>
+    <url-pattern>/shenbao/qysdsnb008.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sbjg</servlet-name>
+    <url-pattern>/shenbao/sbjg.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sbypysjks</servlet-name>
+    <url-pattern>/shenbao/sbypysjks.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>success</servlet-name>
+    <url-pattern>/shenbao/success.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>szsm000</servlet-name>
+    <url-pattern>/shenbao/szsm000.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wqyys017</servlet-name>
+    <url-pattern>/shenbao/wqyys017.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wqyys018</servlet-name>
+    <url-pattern>/shenbao/wqyys018.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wqyys019</servlet-name>
+    <url-pattern>/shenbao/wqyys019.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wsksb001</servlet-name>
+    <url-pattern>/shenbao/wsksb001.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yhsbg015</servlet-name>
+    <url-pattern>/shenbao/yhsbg015.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zhsbfunc</servlet-name>
+    <url-pattern>/shenbao/zhsbFunc.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zhsbwithsfxy002</servlet-name>
+    <url-pattern>/shenbao/zhsbWithSfxy002.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zhsbwithoutsfxy002</servlet-name>
+    <url-pattern>/shenbao/zhsbWithoutSfxy002.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zrrjks</servlet-name>
+    <url-pattern>/shenbao/zrrjks.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zjyjmsb</servlet-name>
+    <url-pattern>/shenbao/zjyjmsb.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sbcghz001</servlet-name>
+    <url-pattern>/shenbao/sbcghz001.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sbsqdPrint</servlet-name>
+    <url-pattern>/shenbao/sbsqdPrint.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>gzsxnr</servlet-name>
+    <url-pattern>/shenbao/gzsxnr.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>gzsxfk</servlet-name>
+    <url-pattern>/shenbao/gzsxfk.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zrrsb</servlet-name>
+    <url-pattern>/shenbao/zrrsb.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateCodeTableServlet</servlet-name>
+    <url-pattern>updateCodeTable</url-pattern>
+  </servlet-mapping>
+
+
+<!-- jmba jsp -->
+
+<servlet-mapping>
+<servlet-name>azcjr03</servlet-name>
+<url-pattern>/jmba/azcjr03/azcjr03.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>azcjr03view</servlet-name>
+<url-pattern>/jmba/azcjr03/azcjr03view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>basx05</servlet-name>
+<url-pattern>/jmba/basx05/basx05.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>center13a</servlet-name>
+<url-pattern>/jmba/cytzqytza/center13a.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>cytzqytza</servlet-name>
+<url-pattern>/jmba/cytzqytza/cytzqytza.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>center13b</servlet-name>
+<url-pattern>/jmba/cytzqytzb/center13b.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>cytzqytzb</servlet-name>
+<url-pattern>/jmba/cytzqytzb/cytzqytzb.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>dyyl</servlet-name>
+<url-pattern>/jmba/dyyl.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>dyylshow</servlet-name>
+<url-pattern>/jmba/dyylshow.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>fhtjjszrsd07</servlet-name>
+<url-pattern>/jmba/fhtjjszrsd07/fhtjjszrsd07.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>fhtjjszrsdlist07</servlet-name>
+<url-pattern>/jmba/fhtjjszrsd07/fhtjjszrsdlist07.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>gdccsdnx017</servlet-name>
+<url-pattern>/jmba/gdccsdnx017/gdccsdnx017.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>sub_gdccsdnx017_js</servlet-name>
+<url-pattern>/jmba/gdccsdnx017/sub_gdccsdnx017_js.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>sub_gdccsdnx017_sd</servlet-name>
+<url-pattern>/jmba/gdccsdnx017/sub_gdccsdnx017_sd.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ggjcsstz04</servlet-name>
+<url-pattern>/jmba/ggjcsstz04/ggjcsstz04.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ggjcsstz04edit</servlet-name>
+<url-pattern>/jmba/ggjcsstz04/ggjcsstz04edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ggjcsstz04view</servlet-name>
+<url-pattern>/jmba/ggjcsstz04/ggjcsstz04view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ggjcsstz04viewdetail</servlet-name>
+<url-pattern>/jmba/ggjcsstz04/ggjcsstz04viewdetail.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>gjghbjzdrjqy10</servlet-name>
+<url-pattern>/jmba/gjghbjzdrjqy10/gjghbjzdrjqy10.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>gjyqzdfcgxjsqy08</servlet-name>
+<url-pattern>/jmba/gjyqzdfcgxjsqy08/gjyqzdfcgxjsqy08.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hjbhjnjs06</servlet-name>
+<url-pattern>/jmba/hjbhjnjs06/hjbhjnjs06.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hjbhjnjs06edit</servlet-name>
+<url-pattern>/jmba/hjbhjnjs06/hjbhjnjs06edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hjbhjnjs06view</servlet-name>
+<url-pattern>/jmba/hjbhjnjs06/hjbhjnjs06view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hjbhjnjs06viewdetail</servlet-name>
+<url-pattern>/jmba/hjbhjnjs06/hjbhjnjs06viewdetail.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jcdlscqy12</servlet-name>
+<url-pattern>/jmba/jcdlscqy012/jcdlscqy12.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jmbaspb</servlet-name>
+<url-pattern>/jmba/jmbaspb.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jmbaspbview</servlet-name>
+<url-pattern>/jmba/jmbaspbview.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jmbaz</servlet-name>
+<url-pattern>/jmba/jmbaz.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jsxjqy20</servlet-name>
+<url-pattern>/jmba/jsxjqy20/jsxjqy20.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jsxjqy20view</servlet-name>
+<url-pattern>/jmba/jsxjqy20/jsxjqy20view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jyxwhsy21</servlet-name>
+<url-pattern>/jmba/jyxwhsy21/jyxwhsy21.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>jyxwhsy21view</servlet-name>
+<url-pattern>/jmba/jyxwhsy21/jyxwhsy21view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>qjfzjzsd019</servlet-name>
+<url-pattern>/jmba/qjfzjzsd019/qjfzjzsd019.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>center14a</servlet-name>
+<url-pattern>/jmba/qygza/center14a.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>qygza</servlet-name>
+<url-pattern>/jmba/qygza/qygza.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>qygzb</servlet-name>
+<url-pattern>/jmba/qygzb/qygzb.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>rddmqy22</servlet-name>
+<url-pattern>/jmba/rddmqy22/rddmqy22.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>rddmqy22view</servlet-name>
+<url-pattern>/jmba/rddmqy22/rddmqy22view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>scxkxyjcdlcpscqy11</servlet-name>
+<url-pattern>/jmba/scxkxyjcdlcpscqy11/scxkxyjcdlcpscqy11.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>sub_wgrjsdnx018</servlet-name>
+<url-pattern>/jmba/wgrjsdnx018/sub_wgrjsdnx018.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>wgrjsdnx018</servlet-name>
+<url-pattern>/jmba/wgrjsdnx018/wgrjsdnx018.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>xrjscqyjcdlsjqy09</servlet-name>
+<url-pattern>/jmba/xrjscqyjcdlsjqy09/xrjscqyjcdlsjqy09.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>yjkffy02</servlet-name>
+<url-pattern>/jmba/yjkffy02/yjkffy02.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>yjkffy02edit</servlet-name>
+<url-pattern>/jmba/yjkffy02/yjkffy02edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>yjkffy02view</servlet-name>
+<url-pattern>/jmba/yjkffy02/yjkffy02view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>yjkffy02viewdetail</servlet-name>
+<url-pattern>/jmba/yjkffy02/yjkffy02viewdetail.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>zyzhly01</servlet-name>
+<url-pattern>/jmba/zyzhly01/zyzhly01.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>zyzhly01edit</servlet-name>
+<url-pattern>/jmba/zyzhly01/zyzhly01edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>zyzhly01view</servlet-name>
+<url-pattern>/jmba/zyzhly01/zyzhly01view.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>zyzhly01viewdetail</servlet-name>
+<url-pattern>/jmba/zyzhly01/zyzhly01viewdetail.jsp</url-pattern>
+</servlet-mapping>
+
+<!-- jmba jsp -->
+
+<!-- fangtu jsp -->
+  <servlet-mapping>
+    <servlet-name>alter_fw_chengzu</servlet-name>
+    <url-pattern>/fangtu/alter_fw_chengzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alter_fw_chuzu</servlet-name>
+    <url-pattern>/fangtu/alter_fw_chuzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alter_fw_ziyong</servlet-name>
+    <url-pattern>/fangtu/alter_fw_ziyong.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alter_td_chengzu</servlet-name>
+    <url-pattern>/fangtu/alter_td_chengzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alter_td_chuzu</servlet-name>
+    <url-pattern>/fangtu/alter_td_chuzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alter_td_ziyong</servlet-name>
+    <url-pattern>/fangtu/alter_td_ziyong.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>fangtu_common_footer</servlet-name>
+    <url-pattern>/fangtu/common/footer.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_common_header</servlet-name>
+    <url-pattern>/fangtu/common/header.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>fangtu_control</servlet-name>
+    <url-pattern>/fangtu/control.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_control_alter</servlet-name>
+    <url-pattern>/fangtu/control_alter.jsp</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>fw_chengzu</servlet-name>
+    <url-pattern>/fangtu/fw_chengzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fw_chuzu</servlet-name>
+    <url-pattern>/fangtu/fw_chuzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fw_ziyong</servlet-name>
+    <url-pattern>/fangtu/fw_ziyong.jsp</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>fangtu_nsr</servlet-name>
+    <url-pattern>/fangtu/nsr.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_printbgb</servlet-name>
+    <url-pattern>/fangtu/printbgb.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_printdjb</servlet-name>
+    <url-pattern>/fangtu/printdjb.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_returntomenu</servlet-name>
+    <url-pattern>/fangtu/returntomenu.jsp</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>td_chengzu</servlet-name>
+    <url-pattern>/fangtu/td_chengzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>td_chuzu</servlet-name>
+    <url-pattern>/fangtu/td_chuzu.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>td_ziyong</servlet-name>
+    <url-pattern>/fangtu/td_ziyong.jsp</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>fangtu_zhengce</servlet-name>
+    <url-pattern>/fangtu/zhengce.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_zjlx</servlet-name>
+    <url-pattern>/fangtu/zjlx.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>fangtu_zlqx</servlet-name>
+    <url-pattern>/fangtu/zlqx.jsp</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>hdzssdsjb2008</servlet-name>
+    <url-pattern>/qysds2008/hdzssdsjb2008.jsp</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>czzssdsjb2008</servlet-name>
+    <url-pattern>/qysds2008/czzssdsjb2008.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>kjqysdsheader</servlet-name>
+    <url-pattern>/include/KjqysdsHeader.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>badjb</servlet-name>
+    <url-pattern>/kjqysds/badjblr.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>cjrjyjmsb</servlet-name>
+    <url-pattern>/shenbao/cjrjyjmsb.jsp</url-pattern>
+  </servlet-mapping>
+<!-- fangtu jsp -->
+	<!-- =============qysdsjb2012 add by gaoyh 2012-03-13 =======-->
+	<!-- =============The begin of qysdsjb2012 ================--> 
+	<servlet>
+		<servlet-name>czzssdsjb2012</servlet-name>
+		<servlet-class>jsp_servlet._qysds2012.__czzssdsjb2012</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>hdzssdsjb2012</servlet-name>
+	    <servlet-class>jsp_servlet._qysds2012.__hdzssdsjb2012</servlet-class>
+  	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>czzssdsjb2012</servlet-name>
+		<url-pattern>/qysds2012/czzssdsjb2012.jsp</url-pattern>
+	</servlet-mapping>
+  	<servlet-mapping>
+		<servlet-name>hdzssdsjb2012</servlet-name>
+		<url-pattern>/qysds2012/hdzssdsjb2012.jsp</url-pattern>
+  	</servlet-mapping>
+	<!--=============The end of qysdsjb2012===================-->
+
+	<!-- =============hdqysdsnb2012 add by gaoyh 2013-01-23 =======-->
+	<!-- =============The begin of hdzssdsnb2012 ================--> 
+	<servlet>
+		<servlet-name>hdzssdsnb2012</servlet-name>
+		<servlet-class>jsp_servlet._qysds2012.__hdzssdsnb2012</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>hdzssdsnb2012</servlet-name>
+		<url-pattern>/qysds2012/hdzssdsnb2012.jsp</url-pattern>
+  	</servlet-mapping>
+	<!--=============The end of hdqysdsnb2012===================-->
+
+	<!-- =============hdqysdsnb2012 add by wangcy 2013-12-03 =======-->
+	<servlet>
+		<servlet-name>czzsqynb2012</servlet-name>
+		<servlet-class>jsp_servlet._qysdsfznb2012.__czzssdsnb2012</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>czzsqynb2012</servlet-name>
+		<url-pattern>/qysdsfznb2012/czzssdsnb2012.jsp</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+		<servlet-name>zfjgqynb2012</servlet-name>
+		<servlet-class>jsp_servlet._qysdsfznb2012.__zfjgqysdsnb2012</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>zfjgqynb2012</servlet-name>
+		<url-pattern>/qysdsfznb2012/zfjgqysdsnb2012.jsp</url-pattern>
+  	</servlet-mapping>
+	<!--=============The end of hdqysdsnb2012===================-->
+
+<!-- wangcy 企业所得税升级改造项目     form begin-->
+	
+	<!-- ==============减免税备案  节能服务公司实施合同能源管理项目的所得备案事项==================== -->
+	<servlet>
+		<servlet-name>basx022</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx022.__basx022</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>basx022edit</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx022.__basx022edit</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>basx022view</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx022.__basx022view</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>basx022viewdetail</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx022.__basx022viewdetail</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>basx022</servlet-name>
+		<url-pattern>/jmba/basx022/basx022.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>basx022edit</servlet-name>
+		<url-pattern>/jmba/basx022/basx022.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>basx022view</servlet-name>
+		<url-pattern>/jmba/basx022/basx022view.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>basx022viewdetail</servlet-name>
+		<url-pattern>/jmba/basx022/basx022viewdetail.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>basx021edit</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx021.__basx21edit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>basx021edit</servlet-name>
+		<url-pattern>/jmba/basx021/basx21edit.jsp</url-pattern>
+  	</servlet-mapping>
+	<servlet>
+		<servlet-name>basx021viewdetail</servlet-name>
+		<servlet-class>jsp_servlet._jmba._basx021.__basx21viewdetail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>basx021viewdetail</servlet-name>
+		<url-pattern>/jmba/basx021/basx21viewdetail.jsp</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+		<servlet-name>qyqssdsba2014</servlet-name>
+		<servlet-class>jsp_servlet._qyqssds.__qyqssdsba2014</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>qyqssdsba2014</servlet-name>
+		<url-pattern>/qyqssds/qyqssdsba2014.jsp</url-pattern>
+  	</servlet-mapping>
+	<!-- wangcy 企业所得税升级改造项目     form end  -->
+
+	<!-- wangcy 国家税务总局2014年28号公文修改  start-->
+	<servlet>
+		<servlet-name>czzssdsjb2014</servlet-name>
+		<servlet-class>jsp_servlet._qysds2014.__czzssdsjb2014</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>hdzssdsjb2014</servlet-name>
+	    <servlet-class>jsp_servlet._qysds2014.__hdzssdsjb2014</servlet-class>
+  	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>czzssdsjb2014</servlet-name>
+		<url-pattern>/qysds2014/czzssdsjb2014.jsp</url-pattern>
+	</servlet-mapping>
+  	<servlet-mapping>
+		<servlet-name>hdzssdsjb2014</servlet-name>
+		<url-pattern>/qysds2014/hdzssdsjb2014.jsp</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- grsds add by lijn 20141126 -->
+  	<servlet>
+	    <servlet-name>grsdsSb2014</servlet-name>
+	    <servlet-class>jsp_servlet._shenbao._grsds.__grsdsList</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsSb2014</servlet-name>
+		<url-pattern>/shenbao/grsds/grsdsList.jsp</url-pattern>
+	</servlet-mapping>
+	
+  	<servlet>
+	    <servlet-name>grsdsJbxxb2014</servlet-name>
+	    <servlet-class>jsp_servlet._shenbao._grsds.__grsdsJbxxLr</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsJbxxb2014</servlet-name>
+		<url-pattern>/shenbao/grsds/grsdsJbxxLr.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>grsdsNdsbb2014</servlet-name>
+	    <servlet-class>jsp_servlet._shenbao._grsds.__grsdsSbLr</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsNdsbb2014</servlet-name>
+		<url-pattern>/shenbao/grsds/grsdsSbLr.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- wangcy 国家税务总局2014年28号公文修改  end-->
+	<!-- zhangj 季报 start -->
+	<servlet>
+		<servlet-name>gdzcjszjyjqkjb2014</servlet-name>
+		<servlet-class>jsp_servlet._qysds2014.__gdzcjszjyjqkjb2014</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+		<servlet-name>gdzcjszjyjqkjb2014</servlet-name>
+		<url-pattern>/qysds2014/gdzcjszjyjqkjb2014.jsp</url-pattern>
+  	</servlet-mapping>
+	<!-- zhangj 季报 end -->
+    <!-- =============企业清算所得税年报2014版 add by zhangj start 2014-09-03 =======-->
+		<servlet>
+		<servlet-name>hdzssdsnb2014</servlet-name>
+		<servlet-class>jsp_servlet._qysds2014.__hdzssdsnb2014</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>hdzssdsnb2014</servlet-name>
+		<url-pattern>/qysds2014/hdzssdsnb2014.jsp</url-pattern>
+  	</servlet-mapping>
+	<servlet>
+		<servlet-name>czzsfzjgnb2014</servlet-name>
+		<servlet-class>jsp_servlet._qysdsfznb2014.__czzsfzjgnb2014</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>czzsfzjgnb2014</servlet-name>
+		<url-pattern>/qysdsfznb2014/czzsfzjgnb2014.jsp</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+		<servlet-name>zfjgfzjgnb2014</servlet-name>
+		<servlet-class>jsp_servlet._qysdsfznb2014.__zfjgfzjgnb2014</servlet-class>
+	</servlet>
+
+  	<servlet-mapping>
+		<servlet-name>zfjgfzjgnb2014</servlet-name>
+		<url-pattern>/qysdsfznb2014/zfjgfzjgnb2014.jsp</url-pattern>
+  	</servlet-mapping>
+	<!--=============企业清算所得税年报2014版 add by zhangj end ===================-->
+
+	<!-- 无税申报提醒 add by lijn 20150228 start-->
+	<servlet>
+		<servlet-name>wsksbgzsx</servlet-name>
+		<servlet-class>jsp_servlet._shenbao.__wsksbgzsx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wsksbgzsx</servlet-name>
+		<url-pattern>/shenbao/wsksbgzsx.jsp</url-pattern>
+  	</servlet-mapping>
+	<!-- 无税申报提醒 add by lijn 20150228 end-->
+    <taglib>
+        <taglib-uri>/WEB-INF/c.tld</taglib-uri>
+        <taglib-location>/WEB-INF/c.tld</taglib-location>
+    </taglib>
+
+    <taglib>
+        <taglib-uri>/WEB-INF/fmt.tld</taglib-uri>
+        <taglib-location>/WEB-INF/fmt.tld</taglib-location>
+    </taglib>
+
+  <taglib>
+    <taglib-uri>/WEB-INF/shenbao.tld</taglib-uri>
+    <taglib-location>/WEB-INF/shenbao.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+    <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+    <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+    <taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-template.tld</taglib-uri>
+    <taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/dc-html.tld</taglib-uri>
+    <taglib-location>/WEB-INF/dc-html.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/fangtu-lx.tld</taglib-uri>
+    <taglib-location>/WEB-INF/fangtu-lx.tld</taglib-location>
+  </taglib>
+  
+  <error-page>
+    <error-code>403</error-code>
+    <location>/err403.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/err404.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/err500.htm</location>
+  </error-page>
+</web-app>

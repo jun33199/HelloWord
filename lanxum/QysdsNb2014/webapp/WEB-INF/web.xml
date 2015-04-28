@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>frame</display-name>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-template.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>/WEB-INF/struts-nested.tld</taglib-uri>
+      <taglib-location>/WEB-INF/struts-nested.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+  <filter>
+    <filter-name>ssofilter</filter-name>
+    <filter-class>yangjian.frame.sso.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ssofilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>application</param-name>
+      <param-value>ApplicationResources</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ClientActionServlet</servlet-name>
+    <servlet-class>com.lscdz.util.ClientActionServlet</servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClientActionServlet</servlet-name>
+    <url-pattern>/ClientActionServlet</url-pattern>
+  </servlet-mapping>
+  <resource-ref>
+    <res-ref-name>FrameDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref> 
+
+
+ <!-- 加载代码表 -->
+  <servlet>
+    <servlet-name>LoadCodeTableServlet</servlet-name>
+    <servlet-class>com.lscdz.util.LoadCodeTableServlet</servlet-class>
+    <!-- 初始参数：配置class。此处<param-name>不可修改，否则无法识别 -->
+    <init-param>
+      <param-name>config.class</param-name>
+      <param-value>com.lscdz.qysds.common.codetable.CodeTableKey</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoadCodeTableServlet</servlet-name>
+    <url-pattern>/LoadCodeTableServlet</url-pattern>
+  </servlet-mapping>
+  
+<!--
+Automatically created by Apache Tomcat JspC.
+Place this fragment in the web.xml before all icon, display-name,
+description, distributable, and context-param elements.
+-->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.js_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.js_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.jsyw_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.jsyw_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.yh_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.yh_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.yhjs_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.yhjs_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.yw_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.yw_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywcd_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.ywcd_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywjh_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.ywjh_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywsj_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.qxgl.ywsj_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.login.denied_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.login.denied_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.login.login_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.login.login_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.login.main_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.login.main_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.login.passwd_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.login.passwd_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.login.sys_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.login.sys_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.dmwh.cache_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.dmwh.cache_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.dmwh.dm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.dmwh.dm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.frame.dmwh.dmlx_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.frame.dmwh.dmlx_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.common.header_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.common.header_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.common.tail_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.common.tail_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.js_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/js.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.jsyw_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/jsyw.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.yh_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/yh.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.yhjs_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/yhjs.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.yw_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/yw.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywcd_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/ywcd.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywjh_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/ywjh.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.qxgl.ywsj_jsp</servlet-name>
+        <url-pattern>/frame/qxgl/ywsj.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.login.denied_jsp</servlet-name>
+        <url-pattern>/frame/login/denied.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.login.login_jsp</servlet-name>
+        <url-pattern>/frame/login/login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.login.main_jsp</servlet-name>
+        <url-pattern>/frame/login/main.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.login.passwd_jsp</servlet-name>
+        <url-pattern>/frame/login/passwd.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.login.sys_jsp</servlet-name>
+        <url-pattern>/frame/login/sys.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.dmwh.cache_jsp</servlet-name>
+        <url-pattern>/frame/dmwh/cache.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.dmwh.dm_jsp</servlet-name>
+        <url-pattern>/frame/dmwh/dm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.frame.dmwh.dmlx_jsp</servlet-name>
+        <url-pattern>/frame/dmwh/dmlx.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.common.header_jsp</servlet-name>
+        <url-pattern>/common/header.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.common.tail_jsp</servlet-name>
+        <url-pattern>/common/tail.jsp</url-pattern>
+    </servlet-mapping>
+    
+ 
+    
+ 
+
+<!--
+All session-config, mime-mapping, welcome-file-list, error-page, taglib,
+resource-ref, security-constraint, login-config, security-role,
+env-entry, and ejb-ref elements should follow this fragment.
+-->
+  
+</web-app>

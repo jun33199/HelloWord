@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="szsmForm" type="com.ttsoft.bjtax.shenbao.szsm.web.SzsmForm" >
+      <description>显示税种税目树</description>
+    </form-bean>
+    <form-bean name="qysdsnbForm" type="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QysdsnbForm" >
+      <description>企业所得税年报</description>
+    </form-bean>
+    <form-bean name="gzsxForm" type="com.ttsoft.bjtax.shenbao.gzsx.web.GzsxForm">
+      <description>告知事项</description>
+    </form-bean>
+    <form-bean name="gzsxfkForm" type="com.ttsoft.bjtax.shenbao.gzsxfk.web.GzsxfkForm">
+      <description>告知事项反馈</description>
+    </form-bean>
+    <form-bean name="zrrsbForm" type="com.ttsoft.bjtax.shenbao.zrrsb.web.ZrrsbForm">
+      <description>自然人个人所得税申报</description>
+    </form-bean>
+    <form-bean name="favoriteForm" type="com.ttsoft.bjtax.shenbao.szsm.web.FavoriteForm">
+      <description>维护个人税目</description>
+    </form-bean>
+    <form-bean name="zrrJksForm" type="com.ttsoft.bjtax.shenbao.zrrsb.web.ZrrJksForm">
+      <description>自然人缴款书</description>
+    </form-bean>
+    <form-bean name="zjyjmsbForm" type="com.ttsoft.bjtax.shenbao.zjyjmsb.ZjyjmsbForm">
+      <description>再就业减免申报</description>
+    </form-bean>
+    <form-bean name="jksqdPrintForm" type="com.ttsoft.bjtax.shenbao.print.web.JksqdPrintForm">
+      <description>电子缴款专用缴款书</description>
+    </form-bean>
+	<form-bean name="fangtuPrintForm" 
+		type="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuPrintForm" />
+    <form-bean name="fangtuZhengceForm" 
+    	type="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuZhengceForm" />
+    <!-- <form-bean name="cjrjyjmsForm"
+			type="com.ttsoft.bjtax.shenbao.jmssb.web.CjrjyjmsForm" /> -->
+	<!-- 纳税人基础信息核对 -->
+	<form-bean name="nsrjcxxhdForm" type="com.ttsoft.bjtax.shenbao.nsrjcxxhd.web.NsrjcxxhdForm"/>
+  </form-beans>
+  <!-- ========== Global Forward Definitions ============================== -->
+  <global-forwards>
+    <forward name="Success" path="/shenbao/success.jsp" />
+    <forward name="InvalidToken" path="/invalidAccess.do?actionType=invalidToken" />
+    <forward name="noPermission" path="/invalidAccess.do?actionType=noPermission" />
+    <forward name="ReturnYs" path="/szsm.do?actionType=Show" />
+    <forward name="ReturnWs" path="/wsksb.do?actionType=Show" />
+  </global-forwards>
+  <action-mappings>
+   <!-- <action name="cjrjyjmsForm" type="com.ttsoft.bjtax.shenbao.jmssb.web.CjrjyjmsbAction" input="/shenbao/cjrjyjmsb.jsp" scope="request" path="/cjrjyjmsb">
+     <forward name="Show" path="/shenbao/cjrjyjmsb.jsp"/>
+     <forward name="Save" path="/shenbao/cjrjyjmsb.jsp"/>
+     <forward name="Query" path="/shenbao/cjrjyjmsb.jsp"/>
+     <forward name="Return" path="/gzsx.do?actionType=Show" />
+  </action>-->
+    <action name="szsmForm" type="com.ttsoft.bjtax.shenbao.szsm.web.SzsmAction" scope="request" path="/szsm">
+      <description>显示税种税目树</description>
+      <forward name="Show" path="/shenbao/szsm000.jsp" />
+      <forward name="Failure" path="/shenbao/szsm000.jsp" />
+    </action>
+    <action name="qysdsnbForm" type="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QysdsnbAction" input="/shenbao/qysdsnb008.jsp" scope="session" path="/qysdsnb">
+      <description>企业所得税年报</description>
+      <forward name="Show" path="/shenbao/qysdsnb008.jsp" />
+      <forward name="Save" path="/qycwzb.do?actionType=Show" />
+      <forward name="Return" path="/gzsx.do?actionType=Show" />
+      <!--forward name="Return" path="/szsm.do?actionType=Show" /-->
+    </action>
+    <action name="gzsxForm" type="com.ttsoft.bjtax.shenbao.gzsx.web.GzsxAction" scope="request" path="/gzsx">
+      <description>告知事项</description>
+      <forward name="Show" path="/shenbao/gzsx001.jsp" />
+      <forward name="Gzsxnr" path="/shenbao/gzsxnr.jsp" />
+      <forward name="unload" path="/gzsx.do?actionType=Show" />
+      <forward name="Failure" path="/shenbao/gzsx001.jsp" />
+    </action>
+    <action name="gzsxForm" type="com.ttsoft.bjtax.shenbao.gzsxfk.web.GzsxfkAction" scope="request" path="/gzsxfk">
+      <description>告知事项反馈</description>
+      <forward name="Show" path="/shenbao/gzsxfk.jsp" />
+      <forward name="Failure" path="/shenbao/gzsx001.jsp" />
+    </action>
+    <action name="zrrsbForm" type="com.ttsoft.bjtax.shenbao.zrrsb.web.ZrrsbAction" input="/shenbao/zrrsb.jsp" scope="request" path="/zrrsb">
+      <description>自然人个人所得税申报</description>
+      <forward name="Show" path="/shenbao/zrrsb.jsp" />
+      <forward name="Failure" path="/shenbao/zrrsb.jsp" />
+      <forward name="Save" path="/zrrJks.do?actionType=Show" />
+      <forward name="Return" path="/quit.do" />
+    </action>
+    <action name="zjyjmsbForm" type="com.ttsoft.bjtax.shenbao.zjyjmsb.ZjyjmsbAction" input="/shenbao/zjyjmsb.jsp"  scope="request" path="/zjyjmsb">
+      <description>再就业减免申报</description>
+      <forward name="Show" path="/shenbao/zjyjmsb.jsp" />
+      <forward name="Save" path="/shenbao/zjyjmsb.jsp"/>
+      <forward name="Rtn" path="/gzsx.do?actionType=Show" />
+    </action>
+    <action name="favoriteForm" type="com.ttsoft.bjtax.shenbao.szsm.web.FavoriteAction" input="/shenbao/favorite.jsp" scope="request" path="/favorite">
+      <description>个人税目设置</description>
+      <forward name="Show" path="/shenbao/favorite.jsp" />
+      <forward name="Save" path="/szsm.do?actionType=Show" />
+      <forward name="Failure" path="/shenbao/favorite.jsp" />
+    </action>
+    <action type="com.ttsoft.bjtax.shenbao.action.LogoutAction" path="/logout">
+      <description>注销</description>
+    </action>
+    <action type="com.ttsoft.bjtax.shenbao.action.QuitAction" path="/quit">
+      <description>返回功能菜单</description>
+    </action>
+    <action type="com.ttsoft.bjtax.shenbao.action.InvalidAccessAction" path="/invalidAccess" />
+    <action name="zrrJksForm" type="com.ttsoft.bjtax.shenbao.zrrsb.web.ZrrJksAction" input="/shenbao/zrrjks.jsp" scope="request" path="/zrrJks">
+      <description>自然人缴款书</description>
+      <forward name="Show" path="/shenbao/zrrjks.jsp" />
+      <forward name="ViewYPYS" path="/shenbao/printzrrjks.jsp" />
+      <forward name="ViewYPDS" path="/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Failure" path="/shenbao/zrrjks.jsp" />
+      <forward name="Return" path="/zrrsb.do?actionType=Show" />
+    </action>
+    <action name="jksqdPrintForm" type="com.ttsoft.bjtax.shenbao.print.web.JksqdPrintAction" validate="true" input="/shenbao/sbsqdPrint.jsp" scope="request" path="/jksqdPrintAction">
+      <forward name="Show" path="/shenbao/sbsqdPrint.jsp" />
+    </action>
+    
+    <!--Print Fangtu-->
+    <action path="/fangtuPrintAction" 
+    		name="fangtuPrintForm" scope="request"
+    		type="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuPrintAction">
+    	<forward name="PrintDJ" path="/fangtu/printdjb.jsp"/>
+    	<forward name="PrintBG" path="/fangtu/printbgb.jsp"/>
+    </action>
+    <!-- query zhengce detail -->
+    <action path="/zhengceAction" name="fangtuZhengceForm" scope="request"
+    		type="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuZhengceAction">
+    	<forward name="Init" path="/fangtu/zhengce.jsp"/>
+    </action>
+  </action-mappings>
+</struts-config>

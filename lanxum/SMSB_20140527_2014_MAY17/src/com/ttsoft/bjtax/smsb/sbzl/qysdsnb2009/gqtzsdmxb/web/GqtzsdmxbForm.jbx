@@ -1,0 +1,18 @@
+[PropertyInfo]
+bz32,String,false,false, , ,true,<default>
+hj_columns,String[],false,false, , ,true,<default>
+hjList,java.util.List,false,false, , ,true,<default>
+item58,String,false,false, , ,true,<default>
+nd1,String,false,false, , ,false,<default>
+nd2,String,false,false, , ,false,<default>
+nd3,String,false,false, , ,false,<default>
+nd4,String,false,false, , ,false,<default>
+nd5,String,false,false, , ,false,<default>
+sb_columns,String[],false,false, , ,false,<default>
+sbbczl_columns,String[],false,false, , ,false,<default>
+sbbczlList,java.util.List,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

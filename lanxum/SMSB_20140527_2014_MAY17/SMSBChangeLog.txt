@@ -1,0 +1,164 @@
+@date  20060208
+____________________
+
+@author wuyouzhi
+ 1.修改内容
+	修改印花税、零散、个体汇总生成缴款书或撤销汇总缴款书时判断是否联网的调用方法
+   程序所涉及到的文件：
+java:
+	GtgshHzjksAction.java
+	GtgshZfjksAction.java
+	LszsHzjksAction.java
+	LszsZfjksAction.java
+	YhsgmhzAction.java
+	YhsgmhzcxAction.java
+	ZhsbAction.java
+
+jsp:
+**********************************************************************************
+**********************************************************************************@date  20060207
+____________________
+
+@author wuyouzhi
+ 1.修改内容
+	印花税、零散、个体汇总生成缴款书时不向申报主表插入银行信息,并且缴款书中不显示银行信息
+   程序所涉及到的文件：
+java:YhsgmhzProcessor.java LszsHzjksProcessor.java GtgshHzjksProcessor.java
+
+jsp:
+**********************************************************************************
+**********************************************************************************
+@date  20050329
+____________________
+
+@author 石岩峰
+ 1.修改内容列表
+	企业所得税季报修改
+	无应纳税费款申报
+	修改告知事项批量导入功能，当计算机代码为空时不导入		
+   程序所涉及到的文件：
+java:
+
+jsp:
+**********************************************************************************
+**********************************************************************************
+@date  20050314
+____________________
+
+@author Ha Zhengze
+ 1.修改内容列表
+	修改缴款书维护时会丢失税率及分成数据的BUG。
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\zhsb\processor\ZhsbjksypdsProcessor.java	
+SMSB\src\com\ttsoft\bjtax\smsb\zhsb\processor\ZhsbjksypysProcessor.java	
+SMSB\src\com\ttsoft\bjtax\smsb\util\JksUtil.java
+SMSB\src\com\ttsoft\bjtax\smsb\constant\CodeConstant.java
+jsp:
+**********************************************************************************
+**********************************************************************************
+@date  20050224
+____________________
+   
+@author 诸光林
+ 1.修改内容列表
+	提取银行扣款信息：保存申报信息明细信息时,修改保存税种税目代码的错误
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\processor\YhdkwjxzbcProcessor.java 
+ 	期定额入库查询：增加对入库情况的分类查询,修改导出excel的两个bug(1.选择税种后导出文件失败;2.导出文件没有入库方式名称)
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\processor\DqdehrkcxProcessor.java 
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\web\DqdehrkcxForm.java
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\web\DqdehrkcxAction.java
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\excel\ExcelUtil.java
+jsp:
+SMSB\webapp\smsb\dqdehrkcx001.jsp
+
+**********************************************************************************
+**********************************************************************************
+@date  20050224
+____________________
+
+@author 石岩峰
+ 1.修改内容列表
+	修改读取征期日历sql方法
+	由
+	criteria.add("ZQQSRQ<=to_date('" + year + month + "','yyyyMM')");
+        criteria.add("ZQZZRQ>=to_date('" + year + month + "','yyyyMM')");
+	变为
+	criteria.add("ZQQSRQ<=to_date('" + dateStr + "','yyyyMMdd')");
+        criteria.add("ZQZZRQ>=to_date('" + dateStr + "','yyyyMMdd')");
+
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\util\Skssrq.java
+SMSB\src\com\ttsoft\bjtax\smsb\zhsb\processor\ZhsbProcessor.java
+SMSB\src\com\ttsoft\bjtax\smsb\gtgsh\processor\GtgshWszlrProcessor.java
+SMSB\src\com\ttsoft\bjtax\smsb\lszs\processor\LszsWszlrProcessor.java
+
+jsp:
+
+**********************************************************************************
+**********************************************************************************
+@date  20050204
+____________________
+
+@author 诸光林
+ 1.修改内容列表
+	生成银行代征信息时，银行代码取登记的信息，所属税务所取登记的
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\gghsb\processor\YhdkwjscscProcessor.java 
+修改取登记的信息，所属税务所的方法
+jsp:
+
+**********************************************************************************
+**********************************************************************************
+@date  20050201
+____________________
+
+@author 石岩峰
+ 1.修改内容列表
+	印花税购买录入时，创建时间通过数据库取得。		
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\util\TinyTools.java中添加通过数据库取时间方法
+SMSB\src\com\ttsoft\bjtax\smsb\yhsgl\processor\YhsgmlrProcessor.java中修改取得时间方法
+jsp:
+
+**********************************************************************************
+**********************************************************************************
+@date  20050520
+____________________
+
+@author 张书兵
+ 1.修改内容列表
+	无应纳税款申报查询增加两个条件：一是增加登记注册类型；二是增加申报方式		
+   程序所涉及到的文件：
+java:
+SMSB\src\com\ttsoft\bjtax\smsb\wynsk\web\WynskcxAction.java
+SMSB\src\com\ttsoft\bjtax\smsb\wynsk\web\WynskcxActionForm.java 添加了几个属性
+SMSB\src\com\ttsoft\bjtax\smsb\wynsk\processor\WynskcxProcessor.java 修改了其中的查询方法和导出方法
+jsp:
+SMSB\webapp\smsb\wynskcx001.jsp
+
+ 
+**********************************************************************************
+模版，按照日期顺序填写
+**********************************************************************************
+@date  修改日期
+____________________
+
+@author 修改人
+ 1.修改内容列表
+	
+   程序所涉及到的文件：
+java:
+jsp:
+ 2.修改内容列表
+	
+   程序所涉及到的文件：
+java:
+jsp:

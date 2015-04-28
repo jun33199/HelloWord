@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>ShenboService</fullname>
+  <class>
+    <path>[../../lib/commonlib/shenbaoService.jar]</path>
+  </class>
+  <lastmodsaved>1112251445577</lastmodsaved>
+</library>

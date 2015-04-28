@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<script type="text/javascript" src="../gojs/XmlBuild.js"></script>
+<script type="text/javascript" src="../gojs/fangtu_alter.js"></script>
+<script type="text/javascript" src="../gojs/prototype.js"></script>
+<script type="text/javascript" src="../gojs/Const.js"></script>
+
+<script type="text/javascript">
+//组装table数据
+function serialize(tableObject, LabelSeparator, ColSeparator, RowSeparator) {
+    var oTable = $(tableObject);
+    var oRows = oTable.tBodies[0].rows;
+    var i = 0, j = 0;
+    var submitData = "";
+
+    for (i = 0; i < oRows.length; i++) {
+        //解析 input element
+        var oInputs = oRows[i].getElementsByTagName("input");
+        for (j = 0; j < oInputs.length; j++) {
+            var value = oInputs[j].value;
+            if (oInputs[j].type == "checkbox") {
+                if (oInputs[j].checked) value = "1";
+                else value = "0";
+            }
+            if (oInputs[j].type == "radio") {
+                if (oInputs[j].checked) value = "1";
+                else value = "0";
+            }
+            submitData += oInputs[j].name + LabelSeparator + value + ColSeparator;
+        }
+
+        //解析 select element
+        var oSelects = oRows[i].getElementsByTagName("select");
+        for (j = 0; j < oSelects.length; j++) {
+            submitData += oSelects[j].name + LabelSeparator + oSelects[j].value + ColSeparator;
+        }
+
+        //解析 textarea element
+        var oTextAreas = oRows[i].getElementsByTagName("textarea");
+        for (j = 0; j < oTextAreas.length; j++) {
+            submitData += oTextAreas[j].name + LabelSeparator + oTextAreas[j].value + ColSeparator;
+        }
+
+        submitData += RowSeparator;
+    }
+
+    //document.writeln(submitData);
+    alert(submitData);
+    return submitData;
+}
+
+	var _list = ["opFlag","deleteFlag", "updateFlag"];
+	var _regList = ["djbh","id","fwzl","cqzsh","fcyz","swjggz","qzmsyz","qzysyz","nynse","sfdj","bz","opFlag"];
+	var _alterList = ["jsjdm", "djbh", "jcbh", "id", "bglx", "ysfcyzbgyy", "jmsyzbgyy", "jmzcdm", "jmsqxq", "jmsqxz", "bgqfwzl", "bgqcqzsh", "bgqfcyz", "bgqswjggz", "bgqqzmsyz", "bgqqzysyz", "bgqnynse", "bgqsfdj", "bgqbz", "bghfwzl", "bghcqzsh", "bghfcyz", "bghswjggz", "bghqzmsyz", "bghqzysyz", "bghnynse", "bghsfdj", "bghbz", "fhbs", "fhr", "fhrq", "tbrq", "swjgzzjgdm", "qxdm", "lrr", "lrrq", "cjr", "cjrq"];
+	
+	
+function toXml(listname, list, regList, alterList) {
+
+	var totalRow = 3;
+	
+
+	for ( var i=0; i<totalRow; i++) {
+	
+		var parent = g_Doc.XMLDoc.selectSingleNode("/taxdoc");
+		var child = g_Doc.XMLDoc.createElement(listname);
+		parent.appendChild(child);
+		var tmp= g_Doc.XMLDoc.selectNodes("//" + listname);
+		
+		for(var j=0;j<list.length;j++) {
+			
+			var tagName = list[j];
+			var value = qt("list["+ i + "]." + tagName);
+			
+			var node2 = g_Doc.XMLDoc.createElement( tagName );
+			tmp[i].appendChild( node2 );
+			
+			var objCDATA = g_Doc.XMLDoc.createCDATASection(value)
+			node2.appendChild(objCDATA);
+		}
+		
+		var child_reg = g_Doc.XMLDoc.createElement("regVO");
+		tmp[i].appendChild( child_reg );
+		
+		for(var j=0;j<regList.length;j++) {
+			
+			var tagName = regList[j];
+			var value = qt("list["+ i + "].regData." + tagName);
+			var node2 = g_Doc.XMLDoc.createElement( tagName );
+			child_reg.appendChild( node2 );
+			
+			var objCDATA = g_Doc.XMLDoc.createCDATASection(value)
+			node2.appendChild(objCDATA);
+		}
+		
+		var child_alter = g_Doc.XMLDoc.createElement("alterVO");
+		tmp[i].appendChild( child_alter );
+		
+		for(var j=0;j<alterList.length;j++) {
+			
+			var tagName = alterList[j];
+			var value = qt("list["+ i + "].alterData." + tagName);
+			var node2 = g_Doc.XMLDoc.createElement( tagName );
+			child_alter.appendChild( node2 );
+			
+			var objCDATA = g_Doc.XMLDoc.createCDATASection(value)
+			node2.appendChild(objCDATA);
+		}		
+		
+	}
+				 
+	//alert(g_Doc.XMLDoc.xml);
+	$("div").innerText = g_Doc.XMLDoc.xml;
+
+}
+
+function qt( _domain ) {
+	    if ( $( _domain ) ) {
+        	return $F( _domain );
+        }
+        return "";
+}
+
+function test() {
+	//serialize("theTable", constLabelSeparator, constColSeparator, constRowSeparator) ;
+	toXml("fwZiyongList", _list, _regList, _alterList);
+}
+</script>
+</head>
+<body>
+<p><input type="button" value="go" onclick="test()" /></p>
+<table cellspacing="1" cellpadding="1" width="100%" id="theTable">
+	<tbody>
+		<tr name="old" id="aa_0">
+			<input type="hidden" id="aOpFlag_0" name="list[0].opFlag" value="old">
+			<input type="hidden" name="list[0].alterData.id" value="">
+			<input type="hidden" name="list[0].regData.id" value="">
+			<input type="hidden" name="list[0].regData.jsjdm" value="11111111111111">
+			<input type="hidden" name="list[0.]alterData.djbh" value="123123">
+			<input type="hidden" name="list[0].alterData.cjr" value="">
+			<input type="hidden" name="list[0].alterData.cjrq" value="">
+			<input type="hidden" name="list[0].alterData.jsjdm" value="">
+			<input type="hidden" name="list[0].alterData.bglx" value="">
+			<td rowspan="2" width="36">1</td>
+			<td rowspan="2" width="38"><input type="checkbox"
+				onclick="show_m1(this)" id="ab_0" name="list[0].updateFlag"></td>
+			<td rowspan="2" width="41"><input type="checkbox"
+				onclick="delete_m(this)" id="ac_0" name="list[0].deleteFlag"></td>
+			<td rowspan="2" nowrap>登记数据</td>
+			<td width="51" id="ad_0">前</td>
+			<td><input readOnly="true" disabled type="input"
+				name="list[0].regData.cqzsh" value=""></td>
+			<td><input readOnly="true" disabled type="input"
+				name="list[0].regData.fwzl" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.fcyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.swjggz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.qzmsyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.qzysyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.nynse" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.sfdj" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[0].regData.bz" value="fsadfasd"></td>
+		</tr>
+		<tr style="display: none;" id="ba_0">
+			<td align="right" width="51">后</td>
+			<td align="right"><input name="list[0].alterData.bghcqzsh"
+				value=""></td>
+			<td align="right"><input name="list[0].alterData.bghfwzl"
+				value=""></td>
+			<td align="right"><input name="list[0].alterData.bghfcyz"
+				value=""></td>
+			<td align="right"><input name="list[0].alterData.bghswjggz"
+				value=""></td>
+			<td align="right" style="text-align: left;"><input id="bb_0"
+				name="list[0].alterData.bghqzmsyz" value=""><br> 原因： 
+			<select onchange="selectZhengCe(this)" id="bb_0"
+				name="list[0].alterData.jmsyzbgyy">
+				<option value="">---</option>
+				<option value="0">法定</option>
+				<option value="1">大修</option>
+				<option value="2">其他</option>
+			</select>
+			<div style="display: none" id="bZCDiv_0">文件号： <select
+				id="bZC_0" name="list[0].alterData.jmzcdm"></select></div>
+			<br> 减免税期限起： 
+			<input id="bb_0" name="list[0].alterData.jmsqxq"><br>
+			减免税期限起： 
+			<input id="bb_0" name="list[0].alterData.jmsqxz"></td>
+			<td align="right"><input name="list[0].alterData.bghqzysyz"
+				value=""><br> 原因： 
+			<select name="list[0].alterData.ysfcyzbgyy">
+				<option value="">---</option>
+				<option value="0">新增</option>
+				<option value="1">减少</option>
+				<option value="2">原值变更</option>
+			</select></td>
+			<td align="right"><input name="list[0].alterData.bghnynse"
+				value=""></td>
+			<td align="right"><select name="list[0].alterData.bghsfdj">
+				<option value="value_1">label_1</option>
+				<option value="value_2">label_2</option>
+			</select></td>
+			<td align="right"><input name="list[0].alterData.bghbz" value="XXXXXX"></td>
+		</tr>
+		<tr name="old" id="aa_1">
+			<input type="hidden" id="aOpFlag_1" name="list[1].opFlag" value="old">
+			<input type="hidden" name="list[1].alterData.id" value="">
+			<input type="hidden" name="list[1].regData.id" value="">
+			<input type="hidden" name="list[1].regData.jsjdm" value="">
+			<input type="hidden" name="list[1.]alterData.djbh" value="">
+			<input type="hidden" name="list[1].alterData.cjr" value="">
+			<input type="hidden" name="list[1].alterData.cjrq" value="">
+			<input type="hidden" name="list[1].alterData.jsjdm" value="">
+			<input type="hidden" name="list[1].alterData.bglx" value="">
+			<td rowspan="2" width="36">2</td>
+			<td rowspan="2" width="38"><input type="checkbox"
+				onclick="show_m1(this)" id="ab_1" name="list[1].updateFlag"></td>
+			<td rowspan="2" width="41"><input type="checkbox"
+				onclick="delete_m(this)" id="ac_1" name="list[1].deleteFlag"></td>
+			<td rowspan="2" nowrap>登记数据</td>
+			<td width="51" id="ad_1">前</td>
+			<td><input readOnly="true" disabled type="input"
+				name="list[1].regData.cqzsh" value=""></td>
+			<td><input readOnly="true" disabled type="input"
+				name="list[1].regData.fwzl" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.fcyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.swjggz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.qzmsyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.qzysyz" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.nynse" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.sfdj" value=""></td>
+			<td><input size="10" readOnly="true" disabled type="input"
+				name="list[1].regData.bz" value=""></td>
+		</tr>
+		<tr style="display: none;" id="ba_1">
+			<td align="right" width="51">后</td>
+			<td align="right"><input name="list[1].alterData.bghcqzsh"
+				value=""></td>
+			<td align="right"><input name="list[1].alterData.bghfwzl"
+				value=""></td>
+			<td align="right"><input name="list[1].alterData.bghfcyz"
+				value=""></td>
+			<td align="right"><input name="list[1].alterData.bghswjggz"
+				value=""></td>
+			<td align="right" style="text-align: left;"><input id="bb_1"
+				name="list[1].alterData.bghqzmsyz" value=""><br> 原因： 
+			<select onchange="selectZhengCe(this)" id="bb_1"
+				name="list[1].alterData.jmsyzbgyy">
+				<option value="">---</option>
+				<option value="0">法定</option>
+				<option value="1">大修</option>
+				<option value="2">其他</option>
+			</select>
+			<div style="display: none" id="bZCDiv_1">文件号： <select
+				id="bZC_1" name="list[1].alterData.jmzcdm"></select></div>
+			<br> 减免税期限起： 
+			<input id="bb_1" name="list[1].alterData.jmsqxq"><br>
+			减免税期限起： 
+			<input id="bb_1" name="list[1].alterData.jmsqxz"></td>
+			<td align="right"><input name="list[1].alterData.bghqzysyz"
+				value=""><br> 原因： 
+			<select name="list[1].alterData.ysfcyzbgyy">
+				<option value="">---</option>
+				<option value="0">新增</option>
+				<option value="1">减少</option>
+				<option value="2">原值变更</option>
+			</select></td>
+			<td align="right"><input name="list[1].alterData.bghnynse"
+				value=""></td>
+			<td align="right"><select name="list[1].alterData.bghsfdj">
+				<option value="value_1">label_1</option>
+				<option value="value_2">label_2</option>
+			</select></td>
+			<td align="right"><input name="list[1].alterData.bghbz" value=""></td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<div id="div" style="border-color: red; border-width: 1; border-style: solid"></div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="GB2312"?>
+<project name="QysdsNb2014" default="all" basedir=".">
+	<!-- set global properties for this build -->
+	<!--<property environment="env"/>-->
+
+	<!-- 源代码 -->
+	<property name="source" value="../src"/>
+	<!-- 新建目录 -->
+	<property name="src" value="./src"/>
+	<property name="build" value="./build"/>
+	<property name="dist" value="./dist"/>
+    
+	<!-- targer执行顺序 -->
+	<target name="all" depends="clean, init, compile_source,jar_util,copy_jar"/>
+	
+	<!--引用jar包-->
+	<path id="classpath_presentation">  
+	    <fileset dir="../webapp/WEB-INF/lib/"> 
+			<include name="*.jar"/> 
+        </fileset> 
+    </path>  
+    
+	<!-- 初始化创建目录拷贝源文件 -->
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp prefix="my">
+			<format property="dt" pattern="yyyy-MM-dd HH:mm:ss"/>
+		</tstamp>
+
+		<!-- Create the build directory structure used by compile
+    and copy the deployment descriptors into it-->
+		<mkdir dir="${src}"/>
+		<copy todir="${src}" overwrite="yes">
+			<fileset dir="${source}"/>
+		</copy>
+		<mkdir dir="${build}"/>
+
+		<mkdir dir="${dist}"/>
+	</target>
+	
+	<!-- 编译 -->
+	<target name="compile_source">
+	<echo>
+	</echo>
+		<javac srcdir="${src}" destdir="${build}" debug="on" deprecation="on">
+			<classpath refid="classpath_presentation"/> 
+		</javac>
+	</target>
+
+	<!-- 打包-->
+	<target name="jar_classes" depends="compile_source">
+		<jar jarfile="${dist}/QysdsNb2014Core.jar" update="yes">
+
+		<fileset dir="${build}" />
+		
+		<manifest>
+			<attribute name="Create-Time" value="${my.dt}"/>
+       </manifest>
+		</jar>
+	</target>
+	<!-- 打安卓使用的vo包-->
+	<target name="jar_util" depends="compile_source">
+	    <jar jarfile="${dist}/QysdsNb2014Core.jar"  basedir="${build}" update="yes">
+	      
+	      <include name="**" />
+	      <manifest>
+	    		<attribute name="Create-Time" value="${my.dt}"/>
+	      </manifest>
+	    </jar>
+	  </target>
+	
+	<!-- 拷贝到指定目录-->
+	<target name="copy_jar">
+		<!--用来本机部署-->
+		<!--
+		<copy file="${dist}/BjtaxPresentationCore.jar" todir="D:/" overwrite="yes"/>
+		-->
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${src}"/>
+	</target>
+</project>

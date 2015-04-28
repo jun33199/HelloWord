@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="dmlxActionForm" type="yangjian.frame.form.dmwh.DmlxActionForm" />
+    <form-bean name="dmActionForm" type="yangjian.frame.form.dmwh.DmActionForm" />
+    <form-bean name="jsActionForm" type="yangjian.frame.form.qxgl.JsActionForm" />
+    <form-bean name="yhActionForm" type="yangjian.frame.form.qxgl.YhActionForm" />
+    <form-bean name="ywActionForm" type="yangjian.frame.form.qxgl.YwActionForm" />
+    <form-bean name="ywjhActionForm" type="yangjian.frame.form.qxgl.YwjhActionForm" />
+    <form-bean name="ywsjActionForm" type="yangjian.frame.form.qxgl.YwsjActionForm" />
+    <form-bean name="jsywActionForm" type="yangjian.frame.form.qxgl.JsywActionForm" />
+    <form-bean name="yhjsActionForm" type="yangjian.frame.form.qxgl.YhjsActionForm" />
+    <form-bean name="ywcdActionForm" type="yangjian.frame.form.qxgl.YwcdActionForm" />
+  </form-beans>
+  <action-mappings>
+    <action name="dmlxActionForm" path="/frame/dmwh/dmlxAction" scope="request" type="yangjian.frame.action.dmwh.DmlxAction" validate="false">
+      <forward name="maintain" path="/frame/dmwh/dmlx.jsp" />
+    </action>
+    <action name="dmActionForm" path="/frame/dmwh/dmAction" scope="request" type="yangjian.frame.action.dmwh.DmAction" validate="false">
+      <forward name="maintain" path="/frame/dmwh/dm.jsp" />
+    </action>
+    <action path="/frame/dmwh/refreshCacheAction" type="yangjian.frame.action.dmwh.RefreshCacheAction">
+      <forward name="maintain" path="/frame/dmwh/cache.jsp" />
+    </action>
+    <action name="jsActionForm" path="/frame/qxgl/jsAction" scope="request" type="yangjian.frame.action.qxgl.JsAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/js.jsp" />
+      <forward name="setup" path="/frame/qxgl/jsywAction.do" />
+    </action>
+    <action name="yhActionForm" path="/frame/qxgl/yhAction" scope="request" type="yangjian.frame.action.qxgl.YhAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/yh.jsp" />
+      <forward name="setup" path="/frame/qxgl/yhjsAction.do" />
+    </action>
+    <action name="ywActionForm" path="/frame/qxgl/ywAction" scope="request" type="yangjian.frame.action.qxgl.YwAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/yw.jsp" />
+      <forward name="oper" path="/frame/qxgl/ywjhAction.do" />
+      <forward name="data" path="/frame/qxgl/ywsjAction.do" />
+    </action>
+    <action name="ywjhActionForm" path="/frame/qxgl/ywjhAction" scope="request" type="yangjian.frame.action.qxgl.YwjhAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/ywjh.jsp" />
+      <forward name="return" path="/frame/qxgl/ywAction.do" />
+    </action>
+    <action name="ywsjActionForm" path="/frame/qxgl/ywsjAction" scope="request" type="yangjian.frame.action.qxgl.YwsjAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/ywsj.jsp" />
+      <forward name="return" path="/frame/qxgl/ywAction.do" />
+    </action>
+    <action name="jsywActionForm" path="/frame/qxgl/jsywAction" scope="request" type="yangjian.frame.action.qxgl.JsywAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/jsyw.jsp" />
+      <forward name="return" path="/frame/qxgl/jsAction.do" />
+    </action>
+    <action name="yhjsActionForm" path="/frame/qxgl/yhjsAction" scope="request" type="yangjian.frame.action.qxgl.YhjsAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/yhjs.jsp" />
+      <forward name="return" path="/frame/qxgl/yhAction.do" />
+    </action>
+    <action name="ywcdActionForm" path="/frame/qxgl/ywcdAction" scope="request" type="yangjian.frame.action.qxgl.YwcdAction" validate="false">
+      <forward name="maintain" path="/frame/qxgl/ywcd.jsp" />
+    </action>
+    <action path="/frame/loginAction" type="yangjian.frame.action.login.loginAction">
+      <forward name="login" path="/frame/login/login.jsp" />
+      <forward name="main" path="/frame/menuAction.do" />
+    </action>
+    <action path="/frame/menuAction" type="yangjian.frame.action.login.menuAction">
+      <forward name="main" path="/frame/login/main.jsp" />
+    </action>
+    <action path="/frame/login/logoutAction" type="yangjian.frame.action.login.logoutAction">
+      <forward name="login" path="/frame/login/login.jsp" />
+    </action>
+    <action path="/frame/login/passwdAction" type="yangjian.frame.action.login.passwdAction">
+      <forward name="maintain" path="/frame/login/passwd.jsp" />
+    </action>
+    <action path="/frame/login/sysAction" type="yangjian.frame.action.login.SysAction">
+      <forward name="view" path="/frame/login/sys.jsp" />
+    </action>
+  </action-mappings>
+</struts-config>

@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-services>
+	<web-service protocol="http" useSOAP12="false" targetNamespace="CarShipEJB" name="CarShip" style="rpc" uri="/CarShip">
+		<types>
+			<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stns="java:com.thunis.bjtax.carship.dto" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="java:com.thunis.bjtax.carship.dto">
+				<xsd:import namespace="java:language_builtins.util">
+ </xsd:import>
+				<xsd:complexType name="BasicDTO">
+ </xsd:complexType>
+				<xsd:complexType name="WszInfoDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="bqynse" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cllx" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hphm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hpzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sbhzdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skssqStart" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skzsqEnd" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="swjg" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="tfsj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="tpr" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzhm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzb" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yqts" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="znj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="WszTableDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="cjr" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="clbh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cllxdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="dybz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hphm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hpysdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hzrmc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hzrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jbbz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jbdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jsjdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="lrr" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="lydm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="nd" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="ndzb" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="nsrmc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="nsrzjhm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="nsrzjlx" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pzzhdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pzzldm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="qxdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sbhzdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sbrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjzse" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skssjsrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skssksrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="swjgdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="szdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzlxdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element xmlns:tp="java:language_builtins.util" type="tp:ArrayList" name="wszmxArray" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yhzq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:schema>
+			<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stns="java:language_builtins.lang" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="java:language_builtins.lang">
+				<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/">
+ </xsd:import>
+				<xsd:complexType name="ArrayOfString">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:schema>
+			<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stns="java:language_builtins.util" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="java:language_builtins.util">
+				<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/">
+ </xsd:import>
+				<xsd:complexType name="ArrayList">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:schema>
+		</types>
+		<type-mapping>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.WszInfoDTOCodec" xmlns:p2="java:com.thunis.bjtax.carship.dto" type="p2:WszInfoDTO" serializer="com.thunis.bjtax.carship.dto.WszInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszInfoDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.BasicDTOCodec" xmlns:p5="java:com.thunis.bjtax.carship.dto" type="p5:BasicDTO" serializer="com.thunis.bjtax.carship.dto.BasicDTOCodec" class-name="com.thunis.bjtax.carship.dto.BasicDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="weblogic.xml.schema.binding.internal.builtin.JavaUtilArrayListCodec" xmlns:p4="java:language_builtins.util" type="p4:ArrayList" serializer="weblogic.xml.schema.binding.internal.builtin.JavaUtilArrayListCodec" class-name="java.util.ArrayList">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.WszTableDTOCodec" xmlns:p3="java:com.thunis.bjtax.carship.dto" type="p3:WszTableDTO" serializer="com.thunis.bjtax.carship.dto.WszTableDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszTableDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="language_builtins.lang.ArrayOfStringCodec" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" serializer="language_builtins.lang.ArrayOfStringCodec" class-name="java.lang.String[]">
+      </type-mapping-entry>
+		</type-mapping>
+		<components>
+			<stateless-ejb name="ejbcomp0">
+				<ejb-link path="CarShipEJB.jar#CarShip">
+        </ejb-link>
+			</stateless-ejb>
+		</components>
+		<operations>
+			<operation name="getDHZWSZ_TJ_QUERY" method="getDHZWSZ_TJ_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="result" class-name="[Ljava.lang.String;">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getGRDZ_TZ_QUERY" method="getGRDZ_TZ_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="result" class-name="[Ljava.lang.String;">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getHZXX" method="getHZXX([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="result" class-name="[Ljava.lang.String;">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getWSPZMX_QUERY" method="getWSPZMX_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p2="java:com.thunis.bjtax.carship.dto" type="p2:WszInfoDTO" location="body" name="result" class-name="com.thunis.bjtax.carship.dto.WszInfoDTO">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getPZZT" method="getPZZT([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getQXDM_QUERY" method="getQXDM_QUERY(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getWetherCanPayInBank" method="getWetherCanPayInBank(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSPZMX_INSERT" method="setWSPZMX_INSERT(com.thunis.bjtax.carship.dto.WszTableDTO)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p3="java:com.thunis.bjtax.carship.dto" type="p3:WszTableDTO" location="body" name="wszTableDTO" class-name="com.thunis.bjtax.carship.dto.WszTableDTO">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSZ_CANCEL" method="setWSZ_CANCEL([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSZ_DISABLE" method="setWSZ_DISABLE([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getCCSYXX_QUERY" method="getCCSYXX_QUERY(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getDHZWSZ_QUERY" method="getDHZWSZ_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getGRDZ_QUERY" method="getGRDZ_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getHPHM_QUERY" method="getHPHM_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getICCARD_QUERY" method="getICCARD_QUERY(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getJKSMX_INFO_QUERY" method="getJKSMX_INFO_QUERY(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getJKS_QUERY" method="getJKS_QUERY(java.lang.String)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getPZLY" method="getPZLY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getSBHZD_QUERY" method="getSBHZD_QUERY([Ljava.lang.String;)" component="ejbcomp0">
+				<params>
+					<param style="in" xmlns:p1="java:language_builtins.lang" type="p1:ArrayOfString" location="body" name="strings" class-name="[Ljava.lang.String;">
+          </param>
+					<return-param xmlns:p4="java:language_builtins.util" type="p4:ArrayList" location="body" name="result" class-name="java.util.ArrayList">
+          </return-param>
+				</params>
+			</operation>
+		</operations>
+	</web-service>
+	<web-service protocol="http" useSOAP12="false" targetNamespace="com.thunis.bjtax.carship" name="CarShipWebService" style="rpc" uri="/CarShipWebService">
+		<types>
+			<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stns="java:com.thunis.bjtax.carship.action" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="java:com.thunis.bjtax.carship.action">
+				<xsd:import namespace="java:com.thunis.bjtax.carship.dto">
+ </xsd:import>
+				<xsd:complexType name="GetDHZWSZ_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="BYWSZZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="HZJE" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="WSZZZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfWszDTO" name="WSZ_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="YM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="ZYS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetHPHM_QUERY_response">
+					<xsd:sequence>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfCarShipInfoDTO" name="CL_INFO_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHCLZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetICCARD_QUERY_response">
+					<xsd:sequence>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:CarShipInfoDTO" name="CL_INFO" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetJKSMX_INFO_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="BYWSZZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="SBHZDH" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="WSZZZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfWszInfoDTO" name="WSZ_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="YM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="ZYS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetJKS_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="BYJKSS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="JKSZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfJksDTO" name="JKS_INFO_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="YM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="ZYS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetPZLYQK_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="HDDS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="JSJDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfPzkcDTO" name="KCHD_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="PZH" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetPZZT_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="WSPZZT" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetSBHZD_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="BYHZDS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="SBHZDZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:ArrayOfSbhzdInfoDTO" name="SBHZD_ARRAY" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="YM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="ZYS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="GetWSPZMX_QUERY_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:WszInfoDTO" name="WSPZ" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="SetJKS_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="BBHZWSZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="BBHZZJE" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="JKSZS" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element type="xsd:string" name="SBHZDH" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="SetWSZ_INFO_response">
+					<xsd:sequence>
+						<xsd:element type="xsd:string" name="FHDM" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+						<xsd:element xmlns:tp="java:com.thunis.bjtax.carship.dto" type="tp:WszInfoDTO" name="WSPZ" minOccurs="1" maxOccurs="1" nillable="true">
+   </xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:schema>
+			<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stns="java:com.thunis.bjtax.carship.dto" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="java:com.thunis.bjtax.carship.dto">
+				<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/">
+ </xsd:import>
+				<xsd:complexType name="ArrayOfCarShipInfoDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:CarShipInfoDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="ArrayOfJksDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:JksDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="ArrayOfPzkcDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:PzkcDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="ArrayOfSbhzdInfoDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:SbhzdInfoDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="ArrayOfWszDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:WszDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="ArrayOfWszInfoDTO">
+					<xsd:complexContent>
+						<xsd:restriction xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" base="soapenc:Array">
+							<xsd:attribute xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" ref="soapenc:arrayType" wsdl:arrayType="stns:WszInfoDTO[]">
+    </xsd:attribute>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="BasicDTO">
+ </xsd:complexType>
+				<xsd:complexType name="CarShipInfoDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="bqynse" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="clbh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cllx" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hphm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hpzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skssqStart" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skzsqEnd" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wsbs" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wsrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yqts" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="znj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="JksDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="bz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jehj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkdwdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkdwdm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkdwkhyh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkdwqc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkdwzh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkpzh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jsje1" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jsje2" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jsje3" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jsje4" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="kssl1" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="kssl2" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="kssl3" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="kssl4" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pmmc1" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pmmc2" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pmmc3" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="pmmc4" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjse1" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjse2" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjse3" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjse4" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skgk" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sklx" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sksssq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skxjrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="swjg" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="szmc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="tfrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yskmbm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yskmjc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yskmmc" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="PzkcDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="kchmEnd" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="kchmStart" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="ndzb" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="SbhzdInfoDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="hzrq" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="jkpzzs" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sbhzdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sjjehj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="WszDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="tpr" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wsje" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzhm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzb" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="znj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+				<xsd:complexType name="WszInfoDTO">
+					<xsd:complexContent>
+						<xsd:extension base="stns:BasicDTO">
+							<xsd:sequence>
+								<xsd:element type="xsd:string" name="bqynse" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cllx" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="cz" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hphm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="hpzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="sbhzdh" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skssqStart" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="skzsqEnd" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="swjg" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="tfsj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="tpr" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzhm" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzb" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="wspzzl" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="yqts" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+								<xsd:element type="xsd:string" name="znj" minOccurs="1" maxOccurs="1" nillable="true">
+     </xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:schema>
+		</types>
+		<type-mapping>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetPZZT_QUERY_responseCodec" xmlns:p7="java:com.thunis.bjtax.carship.action" type="p7:GetPZZT_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetPZZT_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetPZZT_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetJKSMX_INFO_QUERY_responseCodec" xmlns:p4="java:com.thunis.bjtax.carship.action" type="p4:GetJKSMX_INFO_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetJKSMX_INFO_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetJKSMX_INFO_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfPzkcDTOCodec" xmlns:p12="java:com.thunis.bjtax.carship.dto" type="p12:ArrayOfPzkcDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfPzkcDTOCodec" class-name="com.thunis.bjtax.carship.dto.PzkcDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.WszDTOCodec" xmlns:p13="java:com.thunis.bjtax.carship.dto" type="p13:WszDTO" serializer="com.thunis.bjtax.carship.dto.WszDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetWSPZMX_QUERY_responseCodec" xmlns:p9="java:com.thunis.bjtax.carship.action" type="p9:GetWSPZMX_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetWSPZMX_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetWSPZMX_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfSbhzdInfoDTOCodec" xmlns:p14="java:com.thunis.bjtax.carship.dto" type="p14:ArrayOfSbhzdInfoDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfSbhzdInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.SbhzdInfoDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfWszInfoDTOCodec" xmlns:p15="java:com.thunis.bjtax.carship.dto" type="p15:ArrayOfWszInfoDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfWszInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszInfoDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.PzkcDTOCodec" xmlns:p16="java:com.thunis.bjtax.carship.dto" type="p16:PzkcDTO" serializer="com.thunis.bjtax.carship.dto.PzkcDTOCodec" class-name="com.thunis.bjtax.carship.dto.PzkcDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfJksDTOCodec" xmlns:p17="java:com.thunis.bjtax.carship.dto" type="p17:ArrayOfJksDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfJksDTOCodec" class-name="com.thunis.bjtax.carship.dto.JksDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetHPHM_QUERY_responseCodec" xmlns:p2="java:com.thunis.bjtax.carship.action" type="p2:GetHPHM_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetHPHM_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetHPHM_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetDHZWSZ_QUERY_responseCodec" xmlns:p1="java:com.thunis.bjtax.carship.action" type="p1:GetDHZWSZ_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetDHZWSZ_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetDHZWSZ_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetSBHZD_QUERY_responseCodec" xmlns:p8="java:com.thunis.bjtax.carship.action" type="p8:GetSBHZD_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetSBHZD_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetSBHZD_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfWszDTOCodec" xmlns:p18="java:com.thunis.bjtax.carship.dto" type="p18:ArrayOfWszDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfWszDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetPZLYQK_QUERY_responseCodec" xmlns:p6="java:com.thunis.bjtax.carship.action" type="p6:GetPZLYQK_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetPZLYQK_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetPZLYQK_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.WszInfoDTOCodec" xmlns:p19="java:com.thunis.bjtax.carship.dto" type="p19:WszInfoDTO" serializer="com.thunis.bjtax.carship.dto.WszInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.WszInfoDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.SbhzdInfoDTOCodec" xmlns:p20="java:com.thunis.bjtax.carship.dto" type="p20:SbhzdInfoDTO" serializer="com.thunis.bjtax.carship.dto.SbhzdInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.SbhzdInfoDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetJKS_QUERY_responseCodec" xmlns:p5="java:com.thunis.bjtax.carship.action" type="p5:GetJKS_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetJKS_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetJKS_QUERY_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.JksDTOCodec" xmlns:p21="java:com.thunis.bjtax.carship.dto" type="p21:JksDTO" serializer="com.thunis.bjtax.carship.dto.JksDTOCodec" class-name="com.thunis.bjtax.carship.dto.JksDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.BasicDTOCodec" xmlns:p22="java:com.thunis.bjtax.carship.dto" type="p22:BasicDTO" serializer="com.thunis.bjtax.carship.dto.BasicDTOCodec" class-name="com.thunis.bjtax.carship.dto.BasicDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.SetWSZ_INFO_responseCodec" xmlns:p11="java:com.thunis.bjtax.carship.action" type="p11:SetWSZ_INFO_response" serializer="com.thunis.bjtax.carship.action.SetWSZ_INFO_responseCodec" class-name="com.thunis.bjtax.carship.action.SetWSZ_INFO_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.ArrayOfCarShipInfoDTOCodec" xmlns:p23="java:com.thunis.bjtax.carship.dto" type="p23:ArrayOfCarShipInfoDTO" serializer="com.thunis.bjtax.carship.dto.ArrayOfCarShipInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.CarShipInfoDTO[]">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.dto.CarShipInfoDTOCodec" xmlns:p24="java:com.thunis.bjtax.carship.dto" type="p24:CarShipInfoDTO" serializer="com.thunis.bjtax.carship.dto.CarShipInfoDTOCodec" class-name="com.thunis.bjtax.carship.dto.CarShipInfoDTO">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.SetJKS_responseCodec" xmlns:p10="java:com.thunis.bjtax.carship.action" type="p10:SetJKS_response" serializer="com.thunis.bjtax.carship.action.SetJKS_responseCodec" class-name="com.thunis.bjtax.carship.action.SetJKS_response">
+      </type-mapping-entry>
+			<type-mapping-entry deserializer="com.thunis.bjtax.carship.action.GetICCARD_QUERY_responseCodec" xmlns:p3="java:com.thunis.bjtax.carship.action" type="p3:GetICCARD_QUERY_response" serializer="com.thunis.bjtax.carship.action.GetICCARD_QUERY_responseCodec" class-name="com.thunis.bjtax.carship.action.GetICCARD_QUERY_response">
+      </type-mapping-entry>
+		</type-mapping>
+		<components>
+			<java-class name="jcComp0" class-name="com.thunis.bjtax.carship.CarShipWebService">
+      </java-class>
+		</components>
+		<operations>
+			<operation name="getDHZWSZ_QUERY" method="getDHZWSZ_QUERY(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string3" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string4" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p1="java:com.thunis.bjtax.carship.action" type="p1:GetDHZWSZ_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetDHZWSZ_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getHPHM_QUERY" method="getHPHM_QUERY(java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p2="java:com.thunis.bjtax.carship.action" type="p2:GetHPHM_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetHPHM_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getICCARD_QUERY" method="getICCARD_QUERY(java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p3="java:com.thunis.bjtax.carship.action" type="p3:GetICCARD_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetICCARD_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getJKSMX_INFO_QUERY" method="getJKSMX_INFO_QUERY(java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p4="java:com.thunis.bjtax.carship.action" type="p4:GetJKSMX_INFO_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetJKSMX_INFO_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getJKS_QUERY" method="getJKS_QUERY(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p5="java:com.thunis.bjtax.carship.action" type="p5:GetJKS_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetJKS_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getPZLYQK_QUERY" method="getPZLYQK_QUERY(java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p6="java:com.thunis.bjtax.carship.action" type="p6:GetPZLYQK_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetPZLYQK_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getPZZT_QUERY" method="getPZZT_QUERY(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p7="java:com.thunis.bjtax.carship.action" type="p7:GetPZZT_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetPZZT_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getSBHZD_QUERY" method="getSBHZD_QUERY(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p8="java:com.thunis.bjtax.carship.action" type="p8:GetSBHZD_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetSBHZD_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="getWSPZMX_QUERY" method="getWSPZMX_QUERY(java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p9="java:com.thunis.bjtax.carship.action" type="p9:GetWSPZMX_QUERY_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.GetWSPZMX_QUERY_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setJKS" method="setJKS(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string3" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string4" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p10="java:com.thunis.bjtax.carship.action" type="p10:SetJKS_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.SetJKS_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSZ_INFO" method="setWSZ_INFO(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string3" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string4" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string5" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string6" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string7" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string8" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string9" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:p11="java:com.thunis.bjtax.carship.action" type="p11:SetWSZ_INFO_response" location="body" name="result" class-name="com.thunis.bjtax.carship.action.SetWSZ_INFO_response">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setSBHZD_CANCEL" method="setSBHZD_CANCEL(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSPZ_INFO_CANCEL" method="setWSPZ_INFO_CANCEL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string3" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string4" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string5" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+			<operation name="setWSPZ_INFO_DISABLE" method="setWSPZ_INFO_DISABLE(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)" component="jcComp0">
+				<params>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string0" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string1" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string2" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string3" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string4" class-name="java.lang.String">
+          </param>
+					<param style="in" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="string5" class-name="java.lang.String">
+          </param>
+					<return-param xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="xsd:string" location="body" name="result" class-name="java.lang.String">
+          </return-param>
+				</params>
+			</operation>
+		</operations>
+	</web-service>	
+</web-services>

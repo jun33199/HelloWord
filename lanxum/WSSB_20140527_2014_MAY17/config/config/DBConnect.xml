@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<DBConnection>
+   <ORMgr>
+      <DBManager ClassName="com.ttsoft.bjtax.shenbao.model.mapping.ORMgr" Name="ORMgr"/>
+   </ORMgr>
+</DBConnection>
+<!--This is the end of the xml-->

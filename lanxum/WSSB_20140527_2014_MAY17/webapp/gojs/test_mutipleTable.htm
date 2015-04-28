@@ -1,0 +1,723 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>测试JavaScript动态表格页面</title>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/swapImages.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/menus.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/common.js"></script>
+<script>
+var contextpath="/kydj";
+  function executeSubmit(_gmit_actionid)
+  {
+       if(_gmit_actionid=="quxiao")
+        {
+           document.kydj_form.reset();
+        }else
+        {
+           document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+           document.kydj_form._gmit_actionid.value=_gmit_actionid;
+           document.kydj_form.submit();
+        }
+   }
+   function showInfo(_gmit_nextpage)
+   {
+            document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+            document.kydj_form._gmit_nextpage.value=_gmit_nextpage;
+            document.kydj_form.submit();
+   }
+   function postAcceptSubmit(slbz)
+   {
+            document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+            document.kydj_form.slbz.value=slbz;
+            document.kydj_form._gmit_model.value="kydj_acceptlist";
+            document.kydj_form._gmit_actionid.value="PostAccept";
+            document.kydj_form.submit();
+   }
+   function postAuditSubmit(spbz)
+   {
+            document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+            document.kydj_form.spbz.value=spbz;
+            document.kydj_form._gmit_model.value="kydj_auditlist";
+            document.kydj_form._gmit_actionid.value="PostAudit";
+            document.kydj_form.submit();
+   }
+   function selectAcceptApply(sjlydm,yyzzh)
+   {
+            document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+            document.kydj_form.sjlydm.value=sjlydm;
+            document.kydj_form.yyzzh.value=yyzzh;
+            document.kydj_form._gmit_actionid.value="SelectAccept";
+            document.kydj_form.submit();
+   }
+   function selectAuditApply(sjlydm,yyzzh)
+   {
+            document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+            document.kydj_form.sjlydm.value=sjlydm;
+            document.kydj_form.yyzzh.value=yyzzh;
+            document.kydj_form._gmit_actionid.value="SelectAudit";
+            document.kydj_form.submit();
+}
+</script>
+<link href="file:///Z:/tax_vob/gongyong/implementation/StaticFile/css/text.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin: 0" onLoad="MM_preloadImages('file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/CHAXUN2.jpg','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/quxiao2.jpg','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/tuichu2.jpg','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/baocun2.jpg')">
+
+<table width="100%" height="61%" border="0" cellpadding="0" cellspacing="0" onload="initpage()">
+  <tr>
+    <td>
+    <table width="80%" border="1" align="center" bordercolor="#9BB4CA" bgcolor="f6f6f6">
+      <tr>
+        <td bgcolor="D6E0E9">
+        <div align="center" class="black9">
+          <strong><font size="3">null</font></strong></div>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="e8e8e8" id="page_td">
+        <table width="100%" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="D6E0E9" class="black9">
+          <tr bordercolor="#FFFFFF" bgcolor="D6E0E9">
+            <td nowrap>
+            <div align="right">
+              <font color="#57937D"><font color="#57937D"><font color="#426675">
+              <span class="desc">来&nbsp;&nbsp;&nbsp; 源</span> </font></font>
+              </font>
+            </div>
+            </td>
+            <td nowrap><font color="#57937D"><font color="#57937D">
+            <font color="#426675"><select name="select11" disabled ID="Select1">
+            <option selected>工商部门</option>
+            </select> </font></font></font></td>
+            <td nowrap><font color="#57937D"><font color="#426675">
+            <span class="black9">工商注册代码或相关批准文号</span>
+            <input id="text2" name="text22" value="123-234" disabled size="20">
+            </font></font></td>
+          </tr>
+          <tr bordercolor="#FFFFFF" bgcolor="D6E0E9">
+            <td nowrap>
+            <div align="right">
+              <font color="#57937D"><font color="#426675"><span class="desc">单位名称</span></font></font></div>
+            </td>
+            <td nowrap><font color="#57937D"><font color="#426675">
+            <input name="text32" disabled id="Text1" value=" 清华同方" size="20">
+            </font></font></td>
+            <td nowrap>
+            <div align="right">
+              <font color="#57937D"><font color="#426675">
+              <input checked id="radio3" name="gm_radioButton" type="radio" onClick="changeViewStyle(_view_style_table);">
+              <span class="black9">表格式 </span>
+              <input id="radio4" name="gm_radioButton" type="radio" onClick="changeViewStyle(_view_style_card);">
+              <span class="black9">卡片式</span></font></font></div>
+            </td>
+          </tr>
+        </table>
+        <form name="kydj_form" method="post">
+          <input type="hidden" name="_gmit_actionid" value="CatchApply" />
+          <input type="hidden" name="_gmit_currentpage" value="/jsp/kydj_qyry.jsp" />
+          <input type="hidden" name="_gmit_nextpage" value />
+          <input type="hidden" name="_gmit_model" value="null" />
+          <input type="hidden" name="_gmit_title" value="null" />
+          <input type="hidden" name="chinese_test" value="中文" />
+          <input type="hidden" name="tableValues" value />
+          <input type="hidden" name="eee" value />
+          <input type="hidden" name="dataSource_gm" value/>
+        </form>
+        <font color="#57937D"><font color="#57937D">
+        <div id="DIV_LIST" onkeydown="dokeydown();" style="OVERFLOW: auto" checked="false">
+              <table width="100%" border="1" align="center" cellspacing="0"  class="table-99" id="TABLE_LIST" style="TABLE-LAYOUT: fixed" >
+                <tr> 
+                  <td width="2%" class="2-td1-left">序号</td>
+                  <td width="10%" class="2-td1-left">计算机代码</td>
+                  <td width="9%" class="2-td1-left">名称<span class="bitian">*</span></td>
+                  <td width="13%" class="2-td1-left">税务登记证号<span class="bitian">*</span></td>
+                  <td width="9%" class="2-td1-left">职位</td>
+                  <td width="9%" class="2-td1-left">工作电话</td>
+                  <td width="10%" class="2-td1-left">税款负担比例（%）</td>
+                  <td width="11%" class="2-td1-left">本人投资金额（万元）</td>
+                  <td width="9%" class="2-td1-left">所占比例（%）</td>
+                  <td width="8%" class="2-td1-left">分配比例（%）</td>
+                  <td width="10%" class="2-td1-center">备注</td>
+                </tr>
+          </table>
+        </div>
+        <div ID="DIV_CARD" onkeydown="dokeydown();" style="display:none">
+          　<table width="100%" border="2" align="center" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" class="black9" ID="TABLE_CARD" bgcolor="e8e8e8">
+            <tr bordercolor="#9BB4CA" bgcolor="#E7EEF1">
+              <td nowrap>
+              <div align="right">
+                <span class="desc">序号</span></div>
+              </td>
+              <td nowrap><input name="text32" id="text33" size="20"></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td width="25%" nowrap class="desc">
+              <div align="right">
+                <font color="#426675">职务</font></div>
+              </td>
+              <td width="75%" nowrap>
+              <select name="select_zwdm" style="HEIGHT: 20px; WIDTH: 160px">
+              </select></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">姓名</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield4" value size="10" maxlength="10" style="HEIGHT: 20px; WIDTH: 160px">
+              </td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">姓名（英文）</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield22" size="15" maxlength="15" style="HEIGHT: 20px; WIDTH: 160px" value></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">国籍</font></div>
+              </td>
+              <td nowrap>
+              <select name="select_gjdm" style="HEIGHT: 20px; WIDTH: 160px">
+              </select></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">证件类型</font></div>
+              </td>
+              <td nowrap>
+              <select name="select_zjlxdm" style="HEIGHT: 20px; WIDTH: 160px">
+              </select></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">证件号码</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield32" size="25" maxlength="25" style="HEIGHT: 20px; WIDTH: 160px" value></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">固定电话</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield4" maxlength="20" style="HEIGHT: 20px; WIDTH: 160px" value size="20"></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">移动电话</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield5" maxlength="20" style="HEIGHT: 20px; WIDTH: 160px" value size="20"></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">个人email</font></div>
+              </td>
+              <td nowrap>
+              <input name="textfield6" maxlength="20" style="HEIGHT: 20px; WIDTH: 160px" value size="20"></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td height="25" nowrap class="desc">
+              <div align="right">
+                <font color="#426675">办税人员证书号</font></div>
+              </td>
+              <td nowrap>
+              <input type="text" maxlength="20" style="HEIGHT: 20px; WIDTH: 160px" name="textfield7" value size="20"></td>
+            </tr>
+            <tr bordercolor="#9BB4CA" bgcolor="#F6F6F6">
+              <td nowrap class="desc">
+              <div align="right">
+                <font color="#426675">办税人员是否参加培训</font></div>
+              </td>
+              <td nowrap><input type="checkbox" name="checkbox3" value></td>
+            </tr>
+          </table>
+          <p>　</p>
+        </div>
+        <hr style="LEFT: 9px; TOP: 194px">
+            <font color="#426675"> <img onclick="first(1)" onMouseOver="MM_swapImage('q3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/diyitiao2.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="tbl_first()" value="第一条" id="q3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/diyitiao1.jpg" width="79" height="22"> <img onclick="previous();" type="image" onMouseOver="MM_swapImage('qq3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/shangyitiao2.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="tbl_previous()" value="上一条" id="qq3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/shangyitiao1.jpg" width="79" height="22"> <img onclick="next(1);" onMouseOver="MM_swapImage('qqq3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/xiayitiao2.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="tbl_next()" value="下一条" id="qqq3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/xiayitiao1.jpg" width="79" height="22"> <img onclick="last(1);" onMouseOver="MM_swapImage('qqqq3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/zuimotiao2.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="tbl_last()" value="最末条" id="qqqq3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/zuimotiao1.jpg" width="79" height="22"> 
+            <img onclick="add(1)" onMouseOver="MM_swapImage('a3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/xinzeng2.jpg',1)" onMouseOut="MM_swapImgRestore()"  value="新  增" id="a3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/xinzeng1.jpg" width="79" height="22"> <img onclick="deleteRows(1)" onMouseOver="MM_swapImage('aa3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/shanchu2.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="tbl_delete()" value="删  除" id="aa3" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/shanchu1.jpg" width="79" height="22"> 
+            <img onclick="doSubmit(1);" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/tijiao1.jpg" name="Image13" width="79" height="22" border="0" id="ww3" onMouseOver="MM_swapImage('ww3','','file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/tijiao2.jpg',1)" onMouseOut="MM_swapImgRestore()"> 
+            <br>
+        </font></font></font></td>
+      </tr>
+    </table>
+    
+      <!--webbot bot="SaveResults" u-file="fpweb:///_private/form_results.csv" s-format="TEXT/CSV" s-label-fields="TRUE" -->
+        
+      <table width="75%" border="0" cellspacing="0" class="table-60" id='Table_Gongzi'>
+        <tr>
+            <td width="13%" class="2-td1-left" >序号</td>
+            <td width="31%" class="2-td1-left">月工资收入</td>
+            <td width="56%" class="2-td1-center">币种</td>
+          </tr>
+        </table>
+        <p>　</p>
+        <table width="35%" border="0" >
+          <tr>
+            <td width="62%"><input name="add3" type="image" onMouseOver="MM_swapImage('add','','../images/xinzeng2.jpg',1)" 
+					  onMouseOut="MM_swapImgRestore()" value="第一条" id="add2" src="../images/xinzeng1.jpg" width="79" onClick="add(2)" height="22">
+              <input name="del" type="image" onMouseOver="MM_swapImage('del','','../images/shanchu2.jpg',1)" 
+					  onMouseOut="MM_swapImgRestore()" value="第一条" id="del" src="../images/shanchu1.jpg" width="79" height="22" onClick="deleteRows(2)"></td>
+            <td width="38%">&nbsp;</td>
+          </tr>
+        </table>
+		<form method="POST" action="--WEBBOT-SELF--">        <p><select size="1" name="select_test"></select>
+      <input type="text" name="txtValue" size="20"><input type="button" value="根据value选中" name="B1" onclick="_selectOptionByValue(select_test,txtValue.value)">
+      <input type="text" name="txtText" size="20"><input type="button" value="根据text选中" name="B2" onclick="_selectOptionByText(select_test,txtText.value)"></p>
+      <p><input type="text" name="strValue" size="20"><input type="button" value="字符串长度" name="btnCountLength" onclick="alert('字符串长度='+getStringLength(strValue.value))"></p>
+      <p>　</p>
+    </form>
+    <form method="POST" action="--WEBBOT-SELF--">
+      <!--webbot bot="SaveResults" u-file="fpweb:///_private/form_results.csv" s-format="TEXT/CSV" s-label-fields="TRUE" --><p>
+      <select size="1" name="select1" >
+      <option>asddd</option>
+      <option>sdddf</option>
+      <option>dasdfad</option>
+      <option>dafadsf</option>
+      </select><input type="button" value="editable" name="B1" onclick="select1.isTextEdit=true"><input type="reset" value="重置" name="B2"></p>
+    </form>
+    <p>　</p>
+    <p>　</td>
+  </tr>
+  <tr>
+    <td><select name="selectConst"></select><input type="button" onclick="addOptToSelect()" value="初始化"></td>
+  </tr>
+  <tr>
+    <td>
+    <form method="POST" action="--WEBBOT-SELF--">
+      <!--webbot bot="SaveResults" u-file="fpweb:///_private/form_results.csv" s-format="TEXT/CSV" s-label-fields="TRUE" --><p>
+      <input type="text" name="numText1" size="20">&nbsp;
+      <input type="button" value="判断数字类型" name="B1" onclick="checkDecimal(numText1.value)">&nbsp;
+      <input type="button" value="trimString" name="B2" onclick="alert('trimString('+numText1.value+')='+trimString(numText1.value))"></p>
+    </form>
+　</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/q-bottom-bg-01.jpg" class="black9">
+  <tr background="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/q-bottom-bg-01.jpg">
+    <td width="51%">&nbsp;&nbsp; * 建议使用 IE 5.0 以上，分辨率 800*600 浏览本网站</td>
+    <td width="49%" align="right">
+    <img src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/images/q-bottom-tu-01.jpg" width="174" height="43"></td>
+  </tr>
+  <textarea id="DATA_AREA" name="DATA_AREA" style="HEIGHT: 200px;WIDTH: 400px;"></textarea>
+</table>
+
+</body>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/Const.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DTColumn.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DTColumn_Check.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DynamicTable.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DataAwareTable.js"></script>
+<script language="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/gmit_selectcontrol.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DynamicCard.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DataAwareCard.js"></script>
+<script LANGUAGE="javascript" src="file:///Z:/tax_vob/gongyong/implementation/StaticFile/js/DataAwarePage.js"></script>
+<script LANGUAGE="javascript">
+
+	function checkDecimal(strValue) {
+		var msg = isDigitString(strValue,17,4);
+		if (msg!=true) {
+			alert("非法输入："+msg);
+		}
+	}
+	function addOptToSelect(){
+		var obj = document.all("selectConst");
+		var array_const = [[constLoadStatus,_getConstStatusText(constLoadStatus)],[constNewStatus,_getConstStatusText(constNewStatus)],[constUpdateStatus,_getConstStatusText(constUpdateStatus)],[constDeleteStatus,_getConstStatusText(constDeleteStatus)],[constObsoleteStatus,_getConstStatusText(constObsoleteStatus)]]
+		_addOptionsToSelect(obj,array_const);
+	}
+
+	function processKeyDown(valueStr) {
+		var arrayStr="valueStr = ";
+		var arrayValue = daList.getDataAt(daList.getCurrentRow());
+		if (arrayValue==null) {
+			alert("未取得数据！");
+		} else {
+			for (var i=0;i<arrayValue.length;i++) {
+				arrayStr += " value["+i+"]="+arrayValue[i];
+			}
+			alert(arrayStr);
+		}
+		var arr = ["1","2","AAAAA","AAAAA","1","1","AAAAA","AAAAA","AAAAA","AAAAA","AAAAA","AAAAA", constNewStatus];
+		daList.setDataAt(daList.getCurrentRow(),arr);
+	}
+
+	var arySelect_zwdm = [["1","法人代表"],["2","董事长"],["3","总经理"],["4","总会计师"]];
+	var arySelect_gjdm = [["1","中国"],["2","美国"],["3","法国"],["4","英国"],["5","俄罗斯"]];
+	var arySelect_zjlxdm = [["1","身份证"],["2","护照"],["3","工作证"]];
+	var arySelect_bzdm = [["1","人民币"],["2","美元"],["3","英镑"]];
+
+    /* var aryDataSource= [];*/
+    var dtList = null;//dynamic table
+    var dtCard = null;//dynamic card
+	 var dtList1 = null;//dynamic table
+    
+	
+    var daList = null;//data aware table
+    var daCard = null;//data aware card
+	
+	var tableId1="TABLE_LIST";
+	var cardId1="TABLE_CARD";
+	
+	var tableId2="Table_Gongzi";
+	
+    //var daPage = null;//data aware page
+    
+    //var aryDataSource=[];
+    //var aryDataSource=[["","","","","","","","","","","","",constNewStatus]];
+    
+    //var aryDataSource=[["1","4","aa1","aa2","5","3","aa3","aa4","aa5","aa6","aa7","aa8",constLoadStatus],
+	//				   ["2","3","bb1","bb2","3","2","bb3","bb4","bb5","bb6","bb7","bb8",constLoadStatus],
+	//				   ["3","2","cc1","cc2","1","1","cc3","cc4","cc5","cc6","cc7","cc8",constLoadStatus]];
+    var aryDataSource=new Array();  //分别存放不同表格初始值
+     aryDataSource[0]=[["10","4","aa1","aa2","14","15","aa3","aa4","aa5","aa6","aa7","aa8", constNewStatus],
+					   ["20","3","bb1","bb2","24","25","bb3","bb4","bb5","bb6","bb7","bb8", constNewStatus],
+					   ["30","2","cc1","cc2","34","35","cc3","cc4","cc5","cc6","cc7","cc8", constNewStatus]];
+    aryDataSource[1]=[["10","40.00","1"],
+   						["20","89.12","2"]];
+	
+	var aryDtlist = new Array();
+	var aryDalist = new Array();
+	
+	
+						
+	InitialPage(1,TABLE_LIST,TABLE_CARD);
+	InitialPage(2,Table_Gongzi,null);
+	
+	
+	function InitialPage(tableNo,objTableList,objTableCard)
+	{
+		//初始化Select输入域
+		_addOptionsToSelect(document.all("select_zwdm"),arySelect_zwdm);
+		_addOptionsToSelect(document.all("select_gjdm"),arySelect_gjdm);
+		_addOptionsToSelect(document.all("select_zjlxdm"),arySelect_zjlxdm);
+		_addOptionsToSelect(document.all("select_test"),arySelect_gjdm);
+		//_addOptionsToSelect(document.all("select_bzdm"),arySelect_bzdm);
+		
+//var tableNo="1";
+		
+		var aryColumn = new Array();
+    
+        //function: constrcutor of DTColumn;
+		//parameters: numColumnType: type of DTColumn;
+		//			  strColumnName:name of DTColumn;
+		//			  numColumnWidth:DTColumn width;
+		//			  strProperties表示Column一些特殊的属性
+		//			  columnCaption表示Column的名称
+		//			  isPrimaryKey表示判断Column是否为主键 true表示是，false表示否，默认为否 false
+		//			  isNull表示判断Column是否可以为空 true表示不可以为空，false表示可以为空，默认为可以为空false
+		//			  maxLength表示Column可以的最大长度
+		if(tableNo==1)
+		{
+		  
+			aryColumn[aryColumn.length] = new DTColumn(constCTSequence,"DefaultColumn",100,null,"","序号",true,true,"30");
+		
+			//aryColumn[aryColumn.length] = new DTColumn(constCTSelect,"DefaultColumn",100,arySelect_zwdm, "firstcolumn","职务");
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null, "firstcolumn","计算机代码",false,true,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","名称",true,true,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","税务登记证号",true,true,"30");
+		
+			//aryColumn[aryColumn.length] = new DTColumn(constCTSelect,"DefaultColumn",100,arySelect_gjdm);
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","职位",false,false,"30");
+		
+			//aryColumn[aryColumn.length] = new DTColumn(constCTSelect,"input5",100,arySelect_zjlxdm);
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","工作电话",false,false,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","税款负担比例（%）",false,false,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","本人投资金额（万元）",false,false,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","所占比例",true,true,"30","isDigitString(17,4)");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","分配比例",true,true,"30");
+		
+			//aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null,"","备注",true,true,"30");
+		
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100, null, "lastcolumn");//备注一列
+		}
+		if(tableNo==2)
+		{	aryColumn[aryColumn.length] = new DTColumn(constCTSequence,"DefaultColumn",100,null,"","序号",true,true,"30");
+		
+			//aryColumn[aryColumn.length] = new DTColumn(constCTSelect,"DefaultColumn",100,arySelect_zwdm, "firstcolumn","职务");
+			aryColumn[aryColumn.length] = new DTColumn(constCTInput,"DefaultColumn",100,null, "firstcolumn","月工资收入",false,true,"30");
+			aryColumn[aryColumn.length] = new DTColumn(constCTSelect,"DefaultColumn",100,arySelect_bzdm);
+			
+		}
+		
+		
+        dtList= new DynamicTable(objTableList,aryColumn);
+		
+        if (dtList == null)  return;
+		aryDtlist[tableNo-1]=dtList;
+		
+		 daList = new DataAwareTable(aryDtlist[tableNo-1]);
+		 aryDalist[tableNo-1]=daList;
+         aryDalist[tableNo-1].setDataSource(aryDataSource[tableNo-1]);
+       // aryDalist[tableNo-1].addMoveToListener("afterMoveto");
+		
+		//表格的初始化
+        if(objTableCard!=null)
+        {
+			dtCard = new DynamicCard(objTableCard,aryColumn);
+			if (dtCard == null) return;
+			 daCard = new DataAwareCard(dtCard);
+			//daCard.Disabled=true;
+			daCard.setDataSource(aryDataSource);
+			daCard.addMoveToListener("afterMoveto");
+        }
+        //daPage = new DataAwarePage(dtList,dtCard);
+        //daPage.setDataSource(aryDataSource);
+        
+       
+        
+       
+
+		changeViewStyle(_view_style_table);        
+        window.onresize=resizeTable;
+        
+
+	}
+
+	function add(tableNo)
+	{
+	//daPage.appendRow();
+
+	   /* if (DIV_CARD.style.display == "none") {
+	        daList.appendRow();
+			alert(aryColumn.length);	   
+	        daList.focusAt(daList.getCurrentRow(),1);
+			resizeRow(TABLE_LIST.rows.length-1);
+	    } else {
+	            daCard.appendRow();
+	    }
+		*/
+		if(DIV_CARD.style.display == "block")
+		{
+			daCard.appendRow();
+		}
+		else
+		{
+			
+			//if(tableNo==2)
+			//{
+				aryDalist[tableNo-1].appendRow();
+			
+	        	aryDalist[tableNo-1].focusAt(aryDalist[tableNo-1].getCurrentRow(),1);
+			//}
+		}
+	}
+
+
+    function modify()
+    {
+		//daPage.modifyRow(daPage.getCurrentRow());
+        if (DIV_CARD.style.display == "none") {
+                daList.modifyRow(daList.DynamicTable.CurrentRow);
+        }else {
+                daCard.modifyRow(daCard.CurrentRow);
+        }
+    }
+
+    function deleteRows(tableNo)
+    {
+		//daPage.deleteRow(daPage.getCurrentRow());
+        /*if (DIV_CARD.style.display == "none") {
+            daList.deleteRow(daList.DynamicTable.CurrentRow);
+	        resizeTable();        
+        } else {
+            daCard.deleteRow(daCard.CurrentRow);
+        }
+		*/
+		if(DIV_CARD.style.display == "block")
+		{
+			//daCard.deleteRow(daCard.CurrentRow);
+		}
+		else
+		{
+			
+				  aryDalist[tableNo-1].deleteRow(aryDalist[tableNo-1].DynamicTable.CurrentRow);
+			
+		}
+    }
+
+    function first(tableNo)
+    {
+		//daPage.firstRow();
+        if (DIV_CARD.style.display == "none") {
+            aryDalist[tableNo-1].firstRow();
+        } else {
+            daCard.firstRow();
+        }
+    }
+
+    function previous(tableNo)
+    {
+		//daPage.previousRow();
+        if (DIV_CARD.style.display == "none") {
+            aryDalist[tableNo-1].previousRow();
+        } else {
+            daCard.previousRow();
+        }
+    }
+
+    function next(tableNo)
+    {
+		//daPage.nextRow();
+        if (DIV_CARD.style.display == "none") {
+            aryDalist[tableNo-1].nextRow();
+        } else {
+            daCard.nextRow();
+        }
+    }
+
+    function last(tableNo)
+    {	
+		//daPage.lastRow();
+        if (DIV_CARD.style.display == "none")
+        {
+           aryDalist[tableNo-1].lastRow();
+        }else
+        {
+            daCard.lastRow();
+        }
+    }
+
+
+	function doSubmit()
+    {
+		//daPage.saveAllData()
+        if (DIV_CARD.style.display == "none")
+        {
+			//fieldsDaListCheck(daList);
+            daList.saveData(daList.DynamicTable.CurrentRow);
+        }else
+        {
+			//fieldsDaListCheck(daCard);
+            daCard.saveData(daCard.CurrentRow);
+        }
+		
+        
+        
+        DATA_AREA.innerText = daList.formatData(constRowSeparator,constColSeparator);
+        var data = DataSourceCheck(daList);
+        alert("检查结果="+data);
+        //把textArea中的字窜放到hidden域中
+        //document.kydj_form.dataSource_gm.value=DATA_AREA.innerText;
+        //document.kydj_form.eee=DATA_AREA.innerText;
+        //alert(eee);
+        //转到下一个页面
+        //document.kydj_form.action=contextpath+"/servlet/dj/kydj/StartBizControl";
+        //document.kydj_form._gmit_nextpage.value="/jsp/kydj_main.jsp";
+        //document.kydj_form.submit();
+
+	}
+
+	function dokeydown()
+	{
+
+		if (window.event.keyCode==13)  //return
+		{
+			if (DIV_CARD.style.display == "none" &&
+				window.event.srcElement.lastcolumn!=null) {
+				if (daList.getCurrentRow()==daList.getRowSize()){
+					add();
+				} else {
+					next();
+				}
+			}
+			window.event.keyCode=9;
+		}
+		if (window.event.keyCode==38)  //up arrow
+		{
+			previous();
+		}
+		if (window.event.keyCode==40) //down arrow
+		{
+			next();
+		}
+		if (window.event.keyCode==36) //home
+		{
+			first();
+		}
+		if (window.event.keyCode==35) //end
+		{
+			last();
+		}		
+	}	
+
+	function resizeRow(rowIndex)
+	{
+		for(j=1;j<TABLE_LIST.rows[rowIndex].cells.length;j++)
+		{
+			var obj=TABLE_LIST.rows(rowIndex).cells(j).children(0);
+			if ((obj==null)||(typeof(obj)=="undefined")||obj.tagName.toLowerCase() == "select")
+			{
+				//alert(obj.tagName + "do not resize");
+				continue;
+			}
+			obj.style.width=TABLE_LIST.rows(rowIndex).cells(j).clientWidth;
+		}
+	}
+
+	function resizeTable()
+	{
+		for (i=1;i< TABLE_LIST.rows.length;i++)
+		{
+			resizeRow(i);
+		}
+	}
+	
+	//变化的显示类型
+	function changeViewStyle(type){
+
+		if (type==_view_style_table)
+		{ //表格式
+				//daPage.saveData(daPage.getCurrentRow());
+		        daCard.saveData(daCard.CurrentRow);
+		        daList.loadAllData();
+		        daList.moveto(daCard.CurrentRow);
+		        DIV_LIST.style.display = "block";
+		        DIV_CARD.style.display = "none";
+				resizeRow(TABLE_LIST.rows.length-1);
+		} else if (type==_view_style_card)
+		{//卡片式
+		        //daPage.saveData(daPage.getCurrentRow());
+		        daList.saveData(daList.DynamicTable.CurrentRow);
+		        daCard.CurrentRow = daList.DynamicTable.CurrentRow;
+		        daCard.TotalRows = daList.DynamicTable.TableID.rows.length-1;
+		        daCard.loadData(daCard.CurrentRow);
+		        DIV_LIST.style.display = "none";
+		        DIV_CARD.style.display = "block";
+		}
+	}
+	
+	function afterMoveto(rowIndex)
+	{
+	//需要判断dalist或dacard
+		var cells = daList.getCellsAt(rowIndex);
+		if (cells[2].value=='aa1')
+		{
+			cells[1].disabled=true;
+		}
+	}
+function checkSpecial(dataSource)
+{
+}
+</script>
+
+</html>

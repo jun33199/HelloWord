@@ -1,0 +1,25 @@
+上门申报目录结构
+
+SMSB----|
+	|
+	|--config(ormapping配置文件)	
+	|
+	|--EJB(ejb配置文件)
+	|
+	|--lib(项目中使用类包)
+	|
+	|--license(ormapping的license文件)
+	|
+	|--src(.java文件)
+	|
+	|--test(测试使用)
+	|
+	|--webapp(显示用文件)
+	|	|
+	|	|--css(css文件)
+	|	|
+	|	|--js(javascript文件)
+	|	|
+	|	|--smsb(html、jsp文件)
+	|
+	|--WEB-INF(web配置文件、structs框架使用文件)

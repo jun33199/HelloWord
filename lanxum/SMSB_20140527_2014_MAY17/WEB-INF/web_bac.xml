@@ -1,0 +1,3192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by et8 (et8) -->
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<context-param>
+		<param-name>weblogic.httpd.inputCharset./*</param-name>
+		<param-value>GBK</param-value>
+	</context-param>
+	<filter>
+		<filter-name>BusinessPermission</filter-name>
+		<filter-class>com.ttsoft.common.web.filter.BusinessPermissionFilter</filter-class>
+		<init-param>
+			<param-name>nopermissionurl</param-name>
+			<param-value>/nopermission.do</param-value>
+		</init-param>
+		<init-param>
+			<param-name>omiturls</param-name>
+			<param-value>quit.do,logout.do</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>Loginer</filter-name>
+		<filter-class>com.ttsoft.common.web.filter.LoginFilter</filter-class>
+		<init-param>
+			<param-name>ssourl</param-name>
+			<param-value>/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Loginer</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BusinessPermission</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>com.ttsoft.bjtax.smsb.ApplicationResources</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!-- 2013 kanght线程配置 -->
+	<listener>  
+		<listener-class>com.ttsoft.bjtax.smsb.lwpk.task.PKListener</listener-class>  
+	</listener>
+	<servlet>
+		<servlet-name>czzsjd004</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__czzsjd004</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>czzsnb005</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__czzsnb005</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx005</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx005</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx006</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx006</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx007</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx007</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx008</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>djxx010</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__djxx010</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dqdehrkcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dqdehrkcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dsdzdk016</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dsdzdk016</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dsdzdkcx016</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dsdzdkcx016</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dsdzdkdy016</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dsdzdkdy016</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dsdzdkhz016</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dsdzdkhz016</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dsdzdklr016</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dsdzdklr016</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>footer</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._include.__footer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshcxjks0261</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshcxjks0261</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshcxwsz0241</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshcxwsz0241</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshhzjks025</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshhzjks025</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshjkslr026</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshjkslr026</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshjksypds02304</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshjksypds02304</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshjksypys02303</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshjksypys02303</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshsds020</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshsds020</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshwszlr024</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshwszlr024</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshyysr022</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshyysr022</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshyysrcx0221</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshyysrcx0221</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gtgshzfjks030</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gtgshzfjks030</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzsxwh036</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxwh036</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>header</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._include.__header</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jjrwh039</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jjrwh039</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jkscx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jkscx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jksprint0262</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jksprint0262</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jmssb011</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jmssb011</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kkxxcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__kkxxcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kkztcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__kkztcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>loadsingleton</servlet-name>
+		<servlet-class>com.ttsoft.common.web.servlet.LoadSingletonServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>lszscxjks0261</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszscxjks0261</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>lszscxwsz0241</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszscxwsz0241</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>lszshzjks025</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszshzjks025</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>lszsjkslr026</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszsjkslr026</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>lszswszlr024</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszswszlr024</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>lszszfjks030</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__lszszfjks030</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qyjbcwzb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qyjbcwzb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qysdsjb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qysdsjb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qysdsnb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qysdsnb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sbsqdPrint</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sbsqdPrint</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sydwshttsrsb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sydwshttsrsb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>szzqdz041</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__szzqdz041</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>updatestatic</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__updatestatic</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>warrefresh</servlet-name>
+		<servlet-class>com.ttsoft.bjtax.sfgl.common.servlet.WARCacheRefresh</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wjgr001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wjgr001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wjgrjkswh002</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wjgrjkswh002</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wqyysassb019</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wqyysassb019</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wqyyshdzs018</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wqyyshdzs018</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wqyysjfhs017</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wqyysjfhs017</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wrkcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wrkcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wszprint0242</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wszprint0242</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wynskcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wynskcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qyjbcwzbcx001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qyjbcwzbcx001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>wynsksb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wynsksb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>xzgzsx035</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__xzgzsx035</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhdkwjscsc001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhdkwjscsc001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhdkwjscsc002</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhdkwjscsc002</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhdkwjxzbc001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhdkwjxzbc001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhs015</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhs015</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsgmhz0272</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsgmhz0272</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsgmhzcx0273</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsgmhzcx0273</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsgmlr0271</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsgmlr0271</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsgmlrck0275</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsgmlrck0275</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsgmlrcx0274</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsgmlrcx0274</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsxsdr0281</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsxsdr0281</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsxshz0282</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsxshz0282</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>yhsxshzcx0283</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__yhsxshzcx0283</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsb02301</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsb02301</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbgzsx0011</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbgzsx0011</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbjks02303</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbjks02303</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbjks02304</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbjks02304</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbjkswh02302</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbjkswh02302</servlet-class>
+	</servlet>
+
+
+<!-- servlet  begin  zhsb_pgbs  zzb  090401 -->
+	<servlet>
+		<servlet-name>zhsbpgbs</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbpgbs</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbpgbsgzsx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbpgbsgzsx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbpgbsjks01</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbpgbsjks01</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbpgbsjks02</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbpgbsjks02</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zhsbpgbsjkswh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zhsbpgbsjkswh</servlet-class>
+	</servlet>
+<!-- servlet  end  zhsb_pgbs  zzb  090401 -->
+
+
+	<servlet>
+		<servlet-name>zqlxmxwh044</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqlxmxwh044</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zqlxwh038</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqlxwh038</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zqrlcx040</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqrlcx040</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zjyjmsb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zjyjmsb</servlet-class>
+	</servlet>
+	<servlet>
+    <servlet-name>zjycx</servlet-name>
+    <servlet-class>jsp_servlet._webapp._smsb.__zjycx</servlet-class>
+  </servlet>
+	<servlet>
+		<servlet-name>zqrlmxcx042</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqrlmxcx042</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zqrlmxwh043</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqrlmxwh043</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zqwh037</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zqwh037</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dzyjcx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dzyjcx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dzyjsjmx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dzyjsjmx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dzwsz</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__dzwszprint</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sbbyzcl001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sbbyzcl001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sbbyzcl002</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sbbyzcl002</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sbbyzcl003</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sbbyzcl003</servlet-class>
+	</servlet>	
+	<servlet>
+		<servlet-name>jkcx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jkcx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jkcxmx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jkcxmx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__zb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>srbybqy</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__srbybqy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>srbjrqy</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__srbjrqy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>srbsydw</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__srbsydw</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>cbmxbybqy</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__cbmxbybqy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>cbmxbjrqy</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__cbmxbjrqy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>cbmxbsydw</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__cbmxbsydw</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>tzmxb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__tzmxb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>nstzmxzjb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__nstzmxzjb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>nstzmxjsb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__nstzmxjsb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>mbksmxb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__mbksmxb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>bxzbjb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__bxzbjb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dzzbjtmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__dzzbjtmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzxjmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__gzxjmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hzssmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__hzssmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zcmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__zcmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>czqysdsjb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__czqysdsjb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hdzssdsjb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__hdzssdsjb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hdzssdsnb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__hdzssdsnb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jzzcmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__jzzcmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jskffmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__jskffmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jwsdmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__jwsdmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gkfzcmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__gkfzcmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>mssdmxb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__mssdmxb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>mainqysds</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__mainqysds</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jbxxb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__jbxxb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qsjksb001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qsjksb001</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qsjksbjkswh002</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qsjksbjkswh002</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qsjksbjks003</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__qsjksbjks003</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>znjwh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__znjwh</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>znjwhmx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__znjwhmx</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>zfjgqysdsjb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__zfjgqysdsjb2008</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>hdzssdsjb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__hdzssdsjb2008</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>czzssdsjb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds.__czzssdsjb2008</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>jbxxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__jbxxb</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>mainqysds2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__mainqysds</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>zb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__zb</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>gg2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__gg</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>jwsdmxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__jwsdmxb</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>srmxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__srmxb2008</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jrqycbfymxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__jrqycbfymxb2008</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>qysdsmbksmxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__qysdsmbksmxb2008</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>zczjtxnstzmxb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__zczjtxnstzmxb2008</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>srbsydw2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__srbsydw2008</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>nstzmxb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__nstzmxb</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ygyjzjlnstzb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__ygyjzjlnstzb</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>gqtzsdmxb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__gqtzsdmxb </servlet-class>
+	</servlet>
+  
+  <servlet>
+  	<servlet-name>jrqysrmx</servlet-name>
+  	<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__jrqysrmx</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet>
+  	<servlet-name>systmbfqyzcmx</servlet-name>
+  	<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__systmbfqyzcmx</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet>
+  	<servlet-name>ssyhmx</servlet-name>
+  	<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__ssyhmx</servlet-class>
+ 	</servlet>
+ 
+ 	<servlet>
+  	<servlet-name>zcjztzmx</servlet-name>
+  	<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__zcjztzmx</servlet-class>
+ 	</servlet>
+ 	
+ 	<servlet>
+		<servlet-name>hdzssdsnb2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__hdzssdsnb2008</servlet-class>
+	</servlet>
+		
+	<servlet>
+		<servlet-name>hdzsssyhmx2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__hdzsssyhmx2008</servlet-class>
+	</servlet>
+	 	
+ 	<servlet>
+		<servlet-name>cbmxbybqy2008</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2008.__cbmxbybqy2008</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>badjbsh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__badjbsh</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>badjblr</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__badjblr</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>badjbxg</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__badjbxg</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>badjbmx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__badjbmx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>badjbdy</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__dybadjb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kjqysdsbgb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__kjqysdsbgb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kjqysdsbgbcx</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__kjqysdsbgbcx</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kjssjks</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__kjssjks</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>kjqysdsgltz</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._kjqysds.__kjqysdsgltz</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sjjh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__sjjh</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>gzsxfkcxmain</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxfkcxmain</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzsxydqd</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxydqd</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzsxwydqd</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxwydqd</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzsxfknr</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxfknr</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gzsxnr</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__gzsxnr</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jsjdmgzsxlist</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__jsjdmgzsxlist</servlet-class>
+	</servlet>
+		<!--
+	add auth:liwl
+	add date:20091223
+	-->
+		<servlet>
+		<servlet-name>cjrjyjms</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__cjrjyjms</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>cjrjyjmscxtj</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__cjrjyjmscxtj</servlet-class>
+	</servlet>
+	
+	<!-- add by kanght 20130708 -->
+	<servlet>
+	<servlet-name>dzwszlist</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__dzwszlist</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>dzwszlist</servlet-name>
+	<url-pattern>/webapp/smsb/dzwszlist.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>dzwszprint2013</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__dzwszprint2013</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>dzwszprint2013</servlet-name>
+	<url-pattern>/webapp/smsb/dzwszprint2013.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- end kanght 201307 -->
+	<!-- plkkcx kanght 201307 -->
+	<servlet>
+	<servlet-name>dhkscx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__dhkscx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>dhkscx</servlet-name>
+	<url-pattern>/webapp/smsb/dhkscx.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<!-- end kanght 2013 -->
+	
+	
+	<!-- start wangxq 20130723 -->
+	<servlet>
+	<servlet-name>plkscx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__plkscx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>plkscx</servlet-name>
+	<url-pattern>/webapp/smsb/plkscx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>plkscxDetail</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__plkscxDetail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>plkscxDetail</servlet-name>
+	<url-pattern>/webapp/smsb/plkscxDetail.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<!-- end wangxq 20130723 -->
+	
+	<!-- add by tangchangfu 20131123) start -->
+	<servlet>
+	<servlet-name>sgsswszmlr</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__sgsswszmlr</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sgsswszmlr</servlet-name>
+		<url-pattern>/webapp/smsb/sgsswszmlr.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>sgsswszmlrWszmPrint</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__sgsswszmlrWszmPrint</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sgsswszmlrWszmPrint</servlet-name>
+		<url-pattern>/webapp/smsb/sgsswszmlrWszmPrint.jsp</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+	<servlet-name>sgsswszmlrWH</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb.__sgsswszmlrWH</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sgsswszmlrWH</servlet-name>
+		<url-pattern>/webapp/smsb/sgsswszmlrWH.jsp</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- add by tangchangfu 20131123 end -->
+	
+	<!-- add by tujb 20131206 new piaoyang begin -->
+	<servlet>
+		<servlet-name>wszm001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wszm001</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wszm001</servlet-name>
+		<url-pattern>/webapp/smsb/wszm001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>wszm002</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wszm002</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wszm002</servlet-name>
+		<url-pattern>/webapp/smsb/wszm002.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>wszm003</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__wszm003</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wszm003</servlet-name>
+		<url-pattern>/webapp/smsb/wszm003.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- add by tujb 20131206 new piaoyang end -->
+	
+	<servlet-mapping>
+		<servlet-name>cjrjyjms</servlet-name>
+		<url-pattern>/webapp/smsb/cjrjyjms.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cjrjyjmscxtj</servlet-name>
+		<url-pattern>/webapp/smsb/cjrjyjmscxtj.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>jsjdmgzsxlist</servlet-name>
+		<url-pattern>/webapp/smsb/jsjdmgzsxlist.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxnr</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxnr.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxfknr</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxfknr.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxydqd</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxydqd.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxwydqd</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxwydqd.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxfkcxmain</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxfkcxmain.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>znjwhmx</servlet-name>
+		<url-pattern>/webapp/smsb/znjwhmx.jsp</url-pattern>
+	</servlet-mapping>		
+	<servlet-mapping>
+		<servlet-name>znjwh</servlet-name>
+		<url-pattern>/webapp/smsb/znjwh.jsp</url-pattern>
+	</servlet-mapping>		
+	<servlet-mapping>
+		<servlet-name>qsjksbjks003</servlet-name>
+		<url-pattern>/webapp/smsb/qsjksbjks003.jsp</url-pattern>
+	</servlet-mapping>			
+	<servlet-mapping>
+		<servlet-name>qsjksbjkswh002</servlet-name>
+		<url-pattern>/webapp/smsb/qsjksbjkswh002.jsp</url-pattern>
+	</servlet-mapping>		
+	<servlet-mapping>
+		<servlet-name>qsjksb001</servlet-name>
+		<url-pattern>/webapp/smsb/qsjksb001.jsp</url-pattern>
+	</servlet-mapping>		
+	<servlet-mapping>
+		<servlet-name>jkcx</servlet-name>
+		<url-pattern>/webapp/smsb/jkcx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jkcxmx</servlet-name>
+		<url-pattern>/webapp/smsb/jkcxmx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sbbyzcl003</servlet-name>
+		<url-pattern>/webapp/smsb/sbbyzcl003.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>sbbyzcl002</servlet-name>
+		<url-pattern>/webapp/smsb/sbbyzcl002.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sbbyzcl001</servlet-name>
+		<url-pattern>/webapp/smsb/sbbyzcl001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dzwsz</servlet-name>
+		<url-pattern>/webapp/smsb/dzwszprint.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>warrefresh</servlet-name>
+		<url-pattern>/warrefresh</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>czzsjd004</servlet-name>
+		<url-pattern>/webapp/smsb/czzsjd004.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>czzsnb005</servlet-name>
+		<url-pattern>/webapp/smsb/czzsnb005.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx005</servlet-name>
+		<url-pattern>/webapp/smsb/djxx005.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx006</servlet-name>
+		<url-pattern>/webapp/smsb/djxx006.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx007</servlet-name>
+		<url-pattern>/webapp/smsb/djxx007.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx008</servlet-name>
+		<url-pattern>/webapp/smsb/djxx008.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx009</servlet-name>
+		<url-pattern>/webapp/smsb/djxx009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>djxx010</servlet-name>
+		<url-pattern>/webapp/smsb/djxx010.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dqdehrkcx001</servlet-name>
+		<url-pattern>/webapp/smsb/dqdehrkcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dsdzdk016</servlet-name>
+		<url-pattern>/webapp/smsb/dsdzdk016.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dsdzdkcx016</servlet-name>
+		<url-pattern>/webapp/smsb/dsdzdkcx016.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dsdzdkdy016</servlet-name>
+		<url-pattern>/webapp/smsb/dsdzdkdy016.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dsdzdkhz016</servlet-name>
+		<url-pattern>/webapp/smsb/dsdzdkhz016.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dsdzdklr016</servlet-name>
+		<url-pattern>/webapp/smsb/dsdzdklr016.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshcxjks0261</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshcxjks0261.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshcxwsz0241</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshcxwsz0241.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshhzjks025</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshhzjks025.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshjkslr026</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshjkslr026.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshjksypds02304</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshjksypds02304.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshjksypys02303</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshjksypys02303.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshsds020</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshsds020.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshwszlr024</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshwszlr024.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshyysr022</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshyysr022.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshyysrcx0221</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshyysrcx0221.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gtgshzfjks030</servlet-name>
+		<url-pattern>/webapp/smsb/gtgshzfjks030.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzsxwh036</servlet-name>
+		<url-pattern>/webapp/smsb/gzsxwh036.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>footer</servlet-name>
+		<url-pattern>/webapp/smsb/include/footer.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>header</servlet-name>
+		<url-pattern>/webapp/smsb/include/header.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jjrwh039</servlet-name>
+		<url-pattern>/webapp/smsb/jjrwh039.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jkscx001</servlet-name>
+		<url-pattern>/webapp/smsb/jkscx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jksprint0262</servlet-name>
+		<url-pattern>/webapp/smsb/jksprint0262.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jmssb011</servlet-name>
+		<url-pattern>/webapp/smsb/jmssb011.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kkxxcx001</servlet-name>
+		<url-pattern>/webapp/smsb/kkxxcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kkztcx001</servlet-name>
+		<url-pattern>/webapp/smsb/kkztcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszscxjks0261</servlet-name>
+		<url-pattern>/webapp/smsb/lszscxjks0261.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszscxwsz0241</servlet-name>
+		<url-pattern>/webapp/smsb/lszscxwsz0241.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszshzjks025</servlet-name>
+		<url-pattern>/webapp/smsb/lszshzjks025.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszsjkslr026</servlet-name>
+		<url-pattern>/webapp/smsb/lszsjkslr026.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszswszlr024</servlet-name>
+		<url-pattern>/webapp/smsb/lszswszlr024.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>lszszfjks030</servlet-name>
+		<url-pattern>/webapp/smsb/lszszfjks030.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>qyjbcwzb001</servlet-name>
+		<url-pattern>/webapp/smsb/qyjbcwzb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>qysdsjb</servlet-name>
+		<url-pattern>/webapp/smsb/qysdsjb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>qysdsnb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysdsnb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sbsqdPrint</servlet-name>
+		<url-pattern>/webapp/smsb/sbsqdPrint.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sydwshttsrsb001</servlet-name>
+		<url-pattern>/webapp/smsb/sydwshttsrsb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>szzqdz041</servlet-name>
+		<url-pattern>/webapp/smsb/szzqdz041.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updatestatic</servlet-name>
+		<url-pattern>/webapp/smsb/updatestatic.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wjgr001</servlet-name>
+		<url-pattern>/webapp/smsb/wjgr001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wjgrjkswh002</servlet-name>
+		<url-pattern>/webapp/smsb/wjgrjkswh002.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wqyysassb019</servlet-name>
+		<url-pattern>/webapp/smsb/wqyysassb019.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wqyyshdzs018</servlet-name>
+		<url-pattern>/webapp/smsb/wqyyshdzs018.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wqyysjfhs017</servlet-name>
+		<url-pattern>/webapp/smsb/wqyysjfhs017.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wrkcx001</servlet-name>
+		<url-pattern>/webapp/smsb/wrkcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wszprint0242</servlet-name>
+		<url-pattern>/webapp/smsb/wszprint0242.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wynskcx001</servlet-name>
+		<url-pattern>/webapp/smsb/wynskcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>wynsksb001</servlet-name>
+		<url-pattern>/webapp/smsb/wynsksb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>qyjbcwzbcx001</servlet-name>
+		<url-pattern>/webapp/smsb/qyjbcwzbcx001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>xzgzsx035</servlet-name>
+		<url-pattern>/webapp/smsb/xzgzsx035.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhdkwjscsc001</servlet-name>
+		<url-pattern>/webapp/smsb/yhdkwjscsc001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhdkwjscsc002</servlet-name>
+		<url-pattern>/webapp/smsb/yhdkwjscsc002.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhdkwjxzbc001</servlet-name>
+		<url-pattern>/webapp/smsb/yhdkwjxzbc001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhs015</servlet-name>
+		<url-pattern>/webapp/smsb/yhs015.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsgmhz0272</servlet-name>
+		<url-pattern>/webapp/smsb/yhsgmhz0272.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsgmhzcx0273</servlet-name>
+		<url-pattern>/webapp/smsb/yhsgmhzcx0273.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsgmlr0271</servlet-name>
+		<url-pattern>/webapp/smsb/yhsgmlr0271.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsgmlrck0275</servlet-name>
+		<url-pattern>/webapp/smsb/yhsgmlrck0275.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsgmlrcx0274</servlet-name>
+		<url-pattern>/webapp/smsb/yhsgmlrcx0274.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsxsdr0281</servlet-name>
+		<url-pattern>/webapp/smsb/yhsxsdr0281.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsxshz0282</servlet-name>
+		<url-pattern>/webapp/smsb/yhsxshz0282.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>yhsxshzcx0283</servlet-name>
+		<url-pattern>/webapp/smsb/yhsxshzcx0283.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zjyjmsb</servlet-name>
+		<url-pattern>/webapp/smsb/zjyjmsb.jsp</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zjycx</servlet-name>
+    <url-pattern>/webapp/smsb/zjycx.jsp</url-pattern>
+  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsb02301</servlet-name>
+		<url-pattern>/webapp/smsb/zhsb02301.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbgzsx0011</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbgzsx0011.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbjks02303</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbjks02303.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbjks02304</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbjks02304.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbjkswh02302</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbjkswh02302.jsp</url-pattern>
+	</servlet-mapping>
+
+<!-- servlet mapping end  zhsb_pgbs  zzb  090401 -->
+	<servlet-mapping>
+		<servlet-name>zhsbpgbs</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbpgbs.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbpgbsgzsx</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbpgbsgzsx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbpgbsjks01</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbpgbsjks01.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbpgbsjks02</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbpgbsjks02.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zhsbpgbsjkswh</servlet-name>
+		<url-pattern>/webapp/smsb/zhsbpgbsjkswh.jsp</url-pattern>
+	</servlet-mapping>
+<!-- servlet mapping end  zhsb_pgbs  zzb  090401 -->
+
+	<servlet-mapping>
+		<servlet-name>zqlxmxwh044</servlet-name>
+		<url-pattern>/webapp/smsb/zqlxmxwh044.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zqlxwh038</servlet-name>
+		<url-pattern>/webapp/smsb/zqlxwh038.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zqrlcx040</servlet-name>
+		<url-pattern>/webapp/smsb/zqrlcx040.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zqrlmxcx042</servlet-name>
+		<url-pattern>/webapp/smsb/zqrlmxcx042.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zqrlmxwh043</servlet-name>
+		<url-pattern>/webapp/smsb/zqrlmxwh043.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zqwh037</servlet-name>
+		<url-pattern>/webapp/smsb/zqwh037.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dzyjcx</servlet-name>
+		<url-pattern>/webapp/smsb/dzyjcx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dzyjsjmx</servlet-name>
+		<url-pattern>/webapp/smsb/dzyjsjmx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/zb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srbybqy</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/srbybqy.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srbjrqy</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/srbjrqy.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srbsydw</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/srbsydw.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cbmxbybqy</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/cbmxbybqy.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cbmxbjrqy</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/cbmxbjrqy.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cbmxbsydw</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/cbmxbsydw.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>tzmxb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/tzmxb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>nstzmxzjb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/nstzmxzjb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>nstzmxjsb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/nstzmxjsb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mbksmxb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/mbksmxb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>bxzbjb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/bxzbjb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dzzbjtmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/dzzbjtmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gzxjmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/gzxjmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hzssmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/hzssmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zcmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/zcmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>czqysdsjb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/czqysdsjb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hdzssdsjb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/hdzssdsjb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hdzssdsnb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/hdzssdsnb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jzzcmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jzzcmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jskffmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jskffmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jwsdmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jwsdmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gkfzcmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/gkfzcmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mssdmxb001</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/mssdmxb001.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mainqysds</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/mainqysds.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jbxxb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jbxxb.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>zfjgqysdsjb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/zfjgqysdsjb2008.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>hdzssdsjb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/hdzssdsjb2008.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>czzssdsjb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/czzssdsjb2008.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>jbxxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/jbxxb.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>mainqysds2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/mainqysds.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>zb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/zb.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>gg2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/gg.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>jwsdmxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/jwsdmxb.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>zczjtxnstzmxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/zczjtxnstzmxb2008.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>qysdsmbksmxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jrqycbfymxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>srmxb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/srmxb2008.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>srbsydw2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/srbsydw2008.jsp</url-pattern>
+	</servlet-mapping>
+    
+	<servlet-mapping>
+		<servlet-name>nstzmxb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/nstzmxb.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ygyjzjlnstzb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>gqtzsdmxb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/gqtzsdmxb.jsp</url-pattern>
+	</servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>jrqysrmx</servlet-name>
+  	<url-pattern>/webapp/smsb/qysds/2008/jrqysrmx.jsp</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet-mapping>
+  	<servlet-name>systmbfqyzcmx</servlet-name>
+  	<url-pattern>/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet-mapping>
+  	<servlet-name>ssyhmx</servlet-name>
+  	<url-pattern>/webapp/smsb/qysds/2008/ssyhmx.jsp</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet-mapping>
+  	<servlet-name>zcjztzmx</servlet-name>
+  	<url-pattern>/webapp/smsb/qysds/2008/zcjztzmx.jsp</url-pattern>
+ 	</servlet-mapping>
+ 	<servlet-mapping>
+		<servlet-name>hdzssdsnb2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hdzsssyhmx2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp</url-pattern>
+	</servlet-mapping>
+ 	<servlet-mapping>
+		<servlet-name>cbmxbybqy2008</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>badjbsh</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/badjbsh.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>badjblr</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/badjblr.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>badjbxg</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/badjbxg.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>badjbmx</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/badjbmx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>badjbdy</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/dybadjb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kjqysdsbgb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/kjqysdsbgb.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kjqysdsbgbcx</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/kjqysdsbgbcx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kjssjks</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/kjssjks.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kjqysdsgltz</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/kjqysds/kjqysdsgltz.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sjjh</servlet-name>
+		<url-pattern>/webapp/smsb/sjjh.jsp</url-pattern>
+	</servlet-mapping>
+<!-- begin of qysds2009 by liuchao-->
+	<servlet>
+		<servlet-name>cbmxbybqy2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__cbmxbybqy2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gg2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__gg2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>gqtzsdmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__gqtzsdmxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hznszjgfpb</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__hznszjgfpb</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hdzssdsnb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__hdzssdsnb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hdzsssyhmx2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__hdzsssyhmx2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jbxxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__jbxxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jrqycbfymxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__jrqycbfymxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jrqysrmx2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__jrqysrmx2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jwsdmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__jwsdmxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>mainqysds2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__mainqysds2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>nstzmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__nstzmxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>qysdsmbksmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__qysdsmbksmxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>srbsydw2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__srbsydw2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>srmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__srmxb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ssyhmx2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__ssyhmx2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>systmbfqyzcmx2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__systmbfqyzcmx2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ygyjzjlnstzb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__ygyjzjlnstzb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__zb2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zcjztzmx2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__zcjztzmx2009</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>zczjtxnstzmxb2009</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2009.__zczjtxnstzmxb2009</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cbmxbybqy2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gg2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/gg2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>gqtzsdmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hdzssdsnb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hdzsssyhmx2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jbxxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/jbxxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jrqycbfymxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jrqysrmx2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/jrqysrmx2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jwsdmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/jwsdmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mainqysds2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/mainqysds2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>nstzmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/nstzmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>qysdsmbksmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srbsydw2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/srbsydw2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>srmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/srmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ssyhmx2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/ssyhmx2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>systmbfqyzcmx2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ygyjzjlnstzb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/zb2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zcjztzmx2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/zcjztzmx2009.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>zczjtxnstzmxb2009</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/zczjtxnstzmxb2009.jsp</url-pattern>
+	</servlet-mapping>
+
+<!-- end of qysds2009 by liuchao -->
+
+
+
+	<!-- =============qysdsjb2012 add by gaoyh 2012-2-20 =======-->
+	<!-- =============The begin of qysdsjb2012 ================--> 
+	<servlet>
+	  <servlet-name>czzssdsjb2012</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds.__czzssdsjb2012</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>hdzssdsjb2012</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds.__hdzssdsjb2012</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>zfjgqysdsjb2012</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds.__zfjgqysdsjb2012</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zfjgqysdsjb2012</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/zfjgqysdsjb2012.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>hdzssdsjb2012</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/hdzssdsjb2012.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>czzssdsjb2012</servlet-name>
+	    <url-pattern>/webapp/smsb/qysds/czzssdsjb2012.jsp</url-pattern>
+	</servlet-mapping>
+
+	<!--=============The end of qysdsjb2012===================-->
+
+	<!-- =============qysdsnb2012 add by gaoyh 2013-01-23 =======-->
+	<!-- =============The begin of qysdsnb2012 ================--> 
+	<servlet>
+		<servlet-name>hdzssdsnb2012</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2012.__hdzssdsnb2012</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hdzssdsnb2012</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp</url-pattern>
+	</servlet-mapping>
+	<!--=============The end of qysdsnb2012===================-->
+
+<!-- begin of qysdsjmsbagl by liuchao 20120724-->
+<servlet>
+<servlet-name>Basx01Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx01Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx01Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx01Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx01View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx01View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx01Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx01Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx02Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx02Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx02Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx02Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx02View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx02View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx02Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx02Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx03Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx03Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx03Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx03Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx03View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx03View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx03Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx03Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx04Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx04Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx04Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx04Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx04View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx04View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx04Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx04Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx05Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx05Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx05Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx05Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx05View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx05View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx05Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx05Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx06Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx06Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx06Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx06Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx06View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx06View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx06Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx06Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx07Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx07Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx07Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx07Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx07View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx07View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx07Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx07Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx08Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx08Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx08Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx08Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx08View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx08View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx08Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx08Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx09Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx09Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx09Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx09Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx09View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx09View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx09Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx09Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx10Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx10Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx10Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx10Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx10View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx10View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx10Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx10Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx11Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx11Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx11Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx11Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx11View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx11View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx11Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx11Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx12Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx12Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx12Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx12Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx12View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx12View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx12Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx12Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13ACheck</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13ACheck</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13AEdit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13AEdit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13AView</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13AView</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13AZfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13AZfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13BAdd</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13BAdd</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13BCheck</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13BCheck</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13BEdit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13BEdit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13BView</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13BView</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx13BZfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx13BZfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14ACheck</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14ACheck</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14AEdit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14AEdit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14AView</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14AView</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14AZfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14AZfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14BAdd</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14BAdd</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14BCheck</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14BCheck</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14BEdit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14BEdit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14BView</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14BView</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx14BZfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx14BZfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx15Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx15Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx15Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx15Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx15View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx15View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx15Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx15Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx16Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx16Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx16Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx16Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx16View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx16View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx16Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx16Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx17Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx17Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx17Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx17Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx17View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx17View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx17Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx17Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx18Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx18Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx18Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx18Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx18View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx18View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx18Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx18Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx19Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx19Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx19Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx19Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx19View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx19View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx19Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx19Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx20Check</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx20Check</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx20Edit</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx20Edit</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx20View</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx20View</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>Basx20Zfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx20Zfbg</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>PrintBysltzs</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__PrintBysltzs</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>PrintSdhz</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__PrintSdhz</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>QysdsJmsbajlMain</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__QysdsJmsbajlMain</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>QysdsJmsbajlMainZfbg</servlet-name>
+<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__QysdsJmsbajlMainZfbg</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Basx01Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx01Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx01Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx01Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx01View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx01View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx01Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx01Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx02Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx02Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx02Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx02Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx02View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx02View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx02Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx02Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx03Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx03Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx03Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx03Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx03View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx03View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx03Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx03Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx04Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx04Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx04Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx04Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx04View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx04View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx04Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx04Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx05Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx05Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx05Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx05Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx05View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx05View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx05Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx05Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx06Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx06Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx06Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx06Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx06View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx06View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx06Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx06Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx07Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx07Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx07Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx07Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx07View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx07View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx07Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx07Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx08Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx08Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx08Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx08Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx08View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx08View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx08Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx08Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx09Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx09Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx09Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx09Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx09View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx09View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx09Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx09Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx10Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx10Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx10Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx10Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx10View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx10View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx10Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx10Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx11Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx11Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx11Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx11Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx11View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx11View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx11Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx11Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx12Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx12Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx12Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx12Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx12View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx12View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx12Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx12Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13ACheck</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13ACheck.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13AEdit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13AEdit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13AView</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13AView.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13AZfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13AZfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13BAdd</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13BAdd.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13BCheck</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13BCheck.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13BEdit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13BEdit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13BView</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13BView.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx13BZfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx13BZfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14ACheck</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14ACheck.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14AEdit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14AEdit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14AView</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14AView.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14AZfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14AZfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14BAdd</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14BAdd.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14BCheck</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14BCheck.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14BEdit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14BEdit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14BView</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14BView.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx14BZfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx14BZfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx15Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx15Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx15Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx15Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx15View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx15View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx15Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx15Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx16Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx16Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx16Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx16Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx16View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx16View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx16Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx16Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx17Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx17Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx17Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx17Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx17View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx17View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx17Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx17Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx18Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx18Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx18Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx18Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx18View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx18View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx18Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx18Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx19Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx19Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx19Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx19Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx19View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx19View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx19Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx19Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx20Check</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx20Check.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx20Edit</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx20Edit.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx20View</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx20View.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Basx20Zfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx20Zfbg.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>PrintBysltzs</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/PrintBysltzs.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>PrintSdhz</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/PrintSdhz.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>QysdsJmsbajlMain</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMain.jsp</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>QysdsJmsbajlMainZfbg</servlet-name>
+<url-pattern>/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMainZfbg.jsp</url-pattern>
+</servlet-mapping>
+<!-- end of qysdsjmsbagl by liuchao 20120724-->
+
+<!-- =============pktest add by gaoyh 2013-05-15 =======-->
+	<!-- =============The begin of pktest0509 ================--> 
+	<servlet>
+		<servlet-name>pktest0509</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__pktest0509</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pktest0509</servlet-name>
+		<url-pattern>/webapp/smsb/pktest0509.jsp</url-pattern>
+	</servlet-mapping>
+	<!--=============The end of pktest0509===================-->
+
+
+	<!-- =============add by wangcy 2013-12-07 =======-->
+
+	<servlet>
+		<servlet-name>czzssdsnb2012</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2012.__czzssdsnb2012</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>czzssdsnb2012</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2012/czzssdsnb2012.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>zfjgqysdsnb2012</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2012.__zfjgqysdsnb2012</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zfjgqysdsnb2012</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2012/zfjgqysdsnb2012.jsp</url-pattern>
+	</servlet-mapping>
+	<!--=============The end of ===================-->
+
+	<!-- =============plkksjjh add by kanght 2013-05-30 =======-->
+	<!-- =============The begin of plkksjjh ================--> 
+	<servlet>
+		<servlet-name>plkksjjh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__plkksjjh</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>plkksjjh</servlet-name>
+		<url-pattern>/webapp/smsb/plkksjjh.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>plkksjjhprint</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__plkksjjhprint</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>plkksjjhprint</servlet-name>
+		<url-pattern>/webapp/smsb/plkksjjhprint.jsp</url-pattern>
+	</servlet-mapping>
+	
+    <servlet-mapping>
+		<servlet-name>hznszjgfpb</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2009/hznszjgfpb.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<!-- gdzys start-->
+	
+	<servlet>
+	<servlet-name>sydjxxlr</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__sydjxxlr</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>sydjxxlr</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/sydjxxlr.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>sydjbgxx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__sydjbgxx</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>sydjbgxx</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/sydjbgxx.jsp</url-pattern>
+	</servlet-mapping>
+
+	
+
+
+
+	<servlet>
+	<servlet-name>sydjtjbz</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__sydjtjbz</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>sydjtjbz</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/sydjtjbz.jsp</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+	<servlet-name>sydjxxxx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__sydjxxxx</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>sydjxxxx</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/sydjxxxx.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>sydjnssbb</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__sydjnssbb</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>sydjnssbb</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/sydjnssbb.jsp</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+
+	<servlet>
+      <servlet-name>gdzysjmsclose</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._jmsgl.__close</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmsclose</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/jmsgl/close.jsp</url-pattern>
+    </servlet-mapping>
+	<servlet>
+      <servlet-name>gdzysjmscx</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._jmsgl.__jmscx</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmscx</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/jmsgl/jmscx.jsp</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+      <servlet-name>gdzysjmszm</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._jmsgl.__jmszmprint</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmszm</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/jmsgl/jmszmprint.jsp</url-pattern>
+    </servlet-mapping>
+
+		<servlet>
+      <servlet-name>gdzysjmscancle</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._jmsgl.__jmszmCancle</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmscancle</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/jmsgl/jmszmCancle.jsp</url-pattern>
+    </servlet-mapping>
+
+		<servlet>
+      <servlet-name>gdzysjmszmview</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._jmsgl.__jmszmView</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmszmview</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/jmsgl/jmszmView.jsp</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+      <servlet-name>gdzyscjjks</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._sbzs.__gdzyscjjks</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzyscjjks</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/sbzs/gdzyscjjks.jsp</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+      <servlet-name>gdzyscjznjjks</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._sbzs.__gdzyscjznjjks</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzyscjznjjks</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/sbzs/gdzyscjznjjks.jsp</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+      <servlet-name>gdzyscxjks</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._sbzs.__gdzyscxjks</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzyscxjks</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/sbzs/gdzyscxjks.jsp</url-pattern>
+    </servlet-mapping>
+    
+    	<servlet>
+	<servlet-name>gdzybg</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__gdzybg</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>gdzybg</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/gdzybg.jsp</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+	<servlet-name>gdzyshqr</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/gdzyshqr.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>gdzyshqr</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__gdzyshqr</servlet-class>
+	</servlet>
+
+	<servlet>
+	<servlet-name>gdzydjcxxq</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__gdzydjcxxq</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>gdzydjcxxq</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/gdzydjcxxq.jsp</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+	<servlet-name>gdzydjcx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._sydj.__gdzydjcx</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+	<servlet-name>gdzydjcx</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/sydj/gdzydjcx.jsp</url-pattern>
+	</servlet-mapping>
+    
+    <servlet>
+      <servlet-name>gdzysjkscx</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._cx.__gdzysjkscx</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjkscx</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/cx/gdzysjkscx.jsp</url-pattern>
+    </servlet-mapping>
+
+	 <servlet>
+      <servlet-name>gdzysjmszmcx</servlet-name>
+      <servlet-class>jsp_servlet._webapp._smsb._gdzys._cx.__jmszmcx</servlet-class>
+    </servlet>
+	<servlet-mapping>
+      <servlet-name>gdzysjmszmcx</servlet-name>
+       <url-pattern>/webapp/smsb/gdzys/cx/jmszmcx.jsp</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+	<servlet-name>gdzysycxdetail</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._cx.__sycxDetail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>gdzysycxdetail</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/cx/sycxDetail.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>gdzysycx</servlet-name>
+	<servlet-class>jsp_servlet._webapp._smsb._gdzys._cx.__sycx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>gdzysycx</servlet-name>
+	<url-pattern>/webapp/smsb/gdzys/cx/sycx.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- gdzys end-->
+	
+	<!-- wangcy start 纳税人信息表2013-->
+	<servlet>
+		<servlet-name>jbxxb2013</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2013.__jbxxb2013</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jbxxb2013</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2013/jbxxb2013.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- wangcy end-->
+	
+	<!-- wangcy 企业所得税升级改造项目     form begin-->
+	<!-- ==============减免税备案    节能服务公司实施合同能源管理项目的所得备案事项  start==================== -->
+	<servlet>
+		<servlet-name>Basx22Check</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx22Check</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx22Edit</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx22Edit</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx22View</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx22View</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx22Zfbg</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx22Zfbg</servlet-class>
+	</servlet>
+
+		<!-- add by lijn 20140219 begin-->
+	<servlet>
+		<servlet-name>Basx21Edit</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx21Edit</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx21Check</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx21Check</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx21View</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx21View</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Basx21Zfbg</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._jmsbagl.__Basx21Zfbg</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Basx21Edit</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx21Edit.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx21Check</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx21Check.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx21View</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx21View.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx21Zfbg</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx21Zfbg.jsp</url-pattern>
+	</servlet-mapping>
+		<!-- add by lijn 20140219 end-->
+	
+	<servlet-mapping>
+		<servlet-name>Basx22Check</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx22Check.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx22Edit</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx22Edit.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx22View</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx22View.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Basx22Zfbg</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/jmsbagl/Basx22Zfbg.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- ==============减免税备案    节能服务公司实施合同能源管理项目的所得备案事项  end==================== -->
+		<!-- ====================企业所得税清算===================== -->
+	<servlet>
+		<servlet-name>qyqssdsbagl2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsbagl2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsbagl2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsbagl2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdsba2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsba2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsba2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>qyqssdssbgl2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdssbgl2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdssbgl2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdssbgl2014.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>qyqssdsMain2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsmain2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsMain2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsmain2014.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>qyqssdsZb2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdszb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsZb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdszb2014.jsp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>qyqssdsFb12014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsfb12014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsFb12014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsfb12014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdsFb22014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsfb22014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsFb22014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsfb22014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdsFb32014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsfb32014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsFb32014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsfb32014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdsHisgl2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdshisgl2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsHisgl2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdshisgl2014.jsp</url-pattern>
+	</servlet-mapping>
+	<!--ADDED BY ZHANGJ start -->
+	<servlet>
+		<servlet-name>qyqssdswxbagl2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdswxbagl2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdswxbagl2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdswxbagl2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdswxba2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdswxba2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdswxba2014</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>qyqssdsbadyhz</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qyqssds._2014.__qyqssdsbadyhz</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qyqssdsbadyhz</servlet-name>
+		<url-pattern>/webapp/smsb/qyqssds/2014/qyqssdsbadyhz.jsp</url-pattern>
+	</servlet-mapping>
+	<!--ADDED BY ZHANGJ end -->
+	<!-- wangcy 企业所得税升级改造项目     form end  -->
+	<!-- =============qysdsjb2014 add by wangcy 2014-6-9 =======-->
+	<!-- =============The begin of qysdsjb2014 ================--> 
+	<servlet>
+	  <servlet-name>czzssdsjb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__czzssdsjb2014</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>hdzssdsjb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__hdzssdsjb2014</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>zfjgqysdsjb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__zfjgqysdsjb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zfjgqysdsjb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/zfjgqysdsjb2014.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>hdzssdsjb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>czzssdsjb2014</servlet-name>
+	    <url-pattern>/webapp/smsb/qysds/2014/czzssdsjb2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet><!-- added by zhangj,2014.12.08 -->
+	  <servlet-name>gdzcjszjyjqkjb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__gdzcjszjyjqkjb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gdzcjszjyjqkjb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/gdzcjszjyjqkjb2014.jsp</url-pattern>
+	</servlet-mapping>	
+	<!--=============The end of qysdsjb2014===================-->
+
+	<!-- =============qysdsjb2014 add by wangcy 2014-6-9 =======-->
+	
+		<!-- =============qysdsnb2014 add by wangcy 2014-09-03 =======-->
+	<servlet>
+		<servlet-name>hdzssdsnb2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__hdzssdsnb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hdzssdsnb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>czzsfzjgnb2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__czzsfzjgnb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>czzsfzjgnb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet>
+		<servlet-name>zfjgfzjgnb2014</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._2014.__zfjgfzjgnb2014</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zfjgfzjgnb2014</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/2014/zfjgfzjgnb2014.jsp</url-pattern>
+	</servlet-mapping>		
+	
+	<!-- =============gsnb2014 add by lijn 2014-12-15 =======-->
+	<servlet>
+	  <servlet-name>grsdsJbxx2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014.__grsdsJbxx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsJbxx2014</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/grsdsJbxx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>grsdstzflb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014.__grsdstzflb</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdstzflb2014</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/grsdstzflb.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet>
+	  <servlet-name>grsdsndsbb2014</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014.__grsdsndsbb</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsndsbb2014</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/grsdsndsbb.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet>
+	  <servlet-name>grsdsJbxx2014cx</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014._cx.__grsdsJbxx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsJbxx2014cx</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/cx/grsdsJbxx.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>grsdstzflb2014cx</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014._cx.__grsdstzflb</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdstzflb2014cx</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/cx/grsdstzflb.jsp</url-pattern>
+	</servlet-mapping>	
+	<servlet>
+	  <servlet-name>grsdsndsbb2014cx</servlet-name>
+	  <servlet-class>jsp_servlet._webapp._smsb._grsds._2014._cx.__grsdsndsbb</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>grsdsndsbb2014cx</servlet-name>
+		<url-pattern>/webapp/smsb/grsds/2014/cx/grsdsndsbb.jsp</url-pattern>
+	</servlet-mapping>	
+	<!-- =============end gsnb2014 add by lijn 2014-12-15 =======-->
+	
+	<!--=============The end of plkksjjh===================-->
+	<!-- tangcf 2014-04-25 start -->
+ 	<servlet>
+		<servlet-name>zjjmsdmwh</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zjjmsdmwh</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zjjmsdmwh</servlet-name>
+		<url-pattern>/webapp/smsb/zjjmsdmwh.jsp</url-pattern>
+	</servlet-mapping>
+	
+	 <servlet>
+		<servlet-name>zjjmsdmwh001</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb.__zjjmsdmwh_001</servlet-class>
+	</servlet> 
+	<servlet-mapping>
+		<servlet-name>zjjmsdmwh001</servlet-name>
+		<url-pattern>/webapp/smsb/zjjmsdmwh_001.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- yugw start 核定申报信息-->
+	
+	<servlet>
+		<servlet-name>qysdsbbjc</servlet-name>
+		<servlet-class>jsp_servlet._webapp._smsb._qysds._qysdsbbjc.__qysdsbbjc</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qysdsbbjc</servlet-name>
+		<url-pattern>/webapp/smsb/qysds/qysdsbbjc/qysdsbbjc.jsp</url-pattern>
+	</servlet-mapping>
+	<!-- 核定申报信息     end-->
+	<!-- tangcf 2014-04-25 end -->
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-template.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/ttsoft-html.tld</taglib-uri>
+		<taglib-location>/WEB-INF/ttsoft-html.tld</taglib-location>
+	</taglib>
+	
+	<error-page>
+    <error-code>403</error-code>
+    <location>/err403.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/err404.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/err500.htm</location>
+  </error-page>
+</web-app>

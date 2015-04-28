@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The action named "GLOBAL_FORWARD" is global forward configuration.
+Just like the global-forward block in struts-config.xml.
+The requestPath "com.syax.common.web.servlet.ACTION_CONFIG"
+CAN NOT be used in anyother actions.
+-->
+<actionMaps>
+	<action name="GLOBAL_FORWARD" requestPath="com.syax.common.web.servlet.ACTION_CONFIG" input="" class="">
+		<forward name="Show" path="/shenbao/qysdsks010.jsp"/>
+		<forward name="Save" path="/qycwzb.do?actionType=Show"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+		<forward name="Failure" path="/shenbao/success.jsp"/>
+		<forward name="Success" path="/shenbao/success.jsp"/>
+		<forward name="SuccessSB" path="/shenbao/sbjg.jsp"/>
+		<forward name="InvalidToken" path="/invalidAccess.do?actionType=invalidToken"/>
+		<forward name="noPermission" path="/invalidAccess.do?actionType=noPermission"/>
+		<forward name="Menu" path="/quit.do"/>
+		<forward name="EditZb" path="/jmbaz.dc?actionType=EditZb"/>
+		<forward name="ViewZb" path="/jmbaz.dc?actionType=ViewZb"/>
+	</action>
+	<action name="quit" requestPath="/quit.dc" input="/login.jsp" class="com.syax.bjtax.shenbao.web.action.QuitAction">
+    </action>
+	<action name="qysdsjbForm" requestPath="/qysdsks.dc" input="/shenbao/qysdsks010.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.web.QysdsksAction">
+		<forward name="Show" path="/shenbao/qysdsks010.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="hdzssdsnbForm" requestPath="/hdzsqynb.dc" input="/shenbao/qysdsnew/hdzssdsnb.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnew.web.HdzssdsnbAction">
+		<forward name="Show" path="/shenbao/qysdsnew/hdzssdsnb.jsp"/>
+		<forward name="Fb" path="/hdzsqynbfb.dc?actionType=Show"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="hdzssdsnbFbForm" requestPath="/hdzsqynbfb.dc" input="/shenbao/qysdsnew/hdzssdsnbfb.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnew.web.HdzssdsnbFbAction">
+		<forward name="Show" path="/shenbao/qysdsnew/hdzssdsnbfb.jsp"/>
+		<forward name="Save" path="/hdzsqynb.dc?actionType=Show"/>
+		<forward name="Delete" path="/hdzsqynb.dc?actionType=Show"/>
+		<forward name="Return" path="/hdzsqynb.dc?actionType=Show"/>
+	</action>
+	<action name="hdzssdsjbForm" requestPath="/hdzsqyjb.dc" input="/shenbao/qysdsnew/hdzssdsjb.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnew.web.HdzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysdsnew/hdzssdsjb.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="czzssdsjbForm" requestPath="/czzsqyjb.dc" input="/shenbao/qysdsnew/czzssdsjb.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnew.web.CzzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysdsnew/czzssdsjb.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="czzsqyjbxxbbForm" requestPath="/czzsqyjbxxb.dc" input="/shenbao/qysdsnew/nsrjbxxdjb.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnew.web.NsrJbxxdjbAction">
+		<forward name="Show" path="/shenbao/qysdsnew/nsrjbxxdjb.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="czzsndForm" requestPath="/czzsnd.dc" input="/shenbao/czzsnd005.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.czzsnd.web.Czzsnd04Action">
+		<forward name="Show" path="/shenbao/czzsnd005.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<action name="listJksForm" requestPath="/listJks.dc" input="/shenbao/sbypysjks.jsp" class="com.ttsoft.bjtax.shenbao.zhsb.web.ListJks02Action">
+		<forward name="Show" path="/shenbao/listJks.jsp"/>
+		<forward name="ViewYPYS" path="/shenbao/sbypysjks.jsp"/>
+		<forward name="PrintYpds" path="/shenbao/printypds.jsp"/>
+		<forward name="Return" path="/szsm.do?actionType=Show"/>
+		<forward name="Delete" path="/shenbao/listJks.jsp"/>
+	</action>
+	<action name="wqyysForm" requestPath="/wqyys.dc" input="/shenbao/wqyys017.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.wqyys.web.Wqyys12Action">
+		<forward name="Failure01" path="/shenbao/wqyys018.jsp"/>
+		<forward name="Failure02" path="/shenbao/wqyys017.jsp"/>
+		<forward name="Failure03" path="/shenbao/wqyys019.jsp"/>
+		<forward name="Wqyys01" path="/shenbao/wqyys019.jsp"/>
+		<forward name="Wqyys02" path="/shenbao/wqyys017.jsp"/>
+		<forward name="Wqyys03" path="/shenbao/wqyys018.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="qycwzbForm" requestPath="/qycwzb.dc" input="/shenbao/qycwzb009.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QycwzbAction">
+		<forward name="Show" path="/shenbao/qycwzb009.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<action name="yhsForm" requestPath="/yhs.dc" input="/shenbao/yhsbg015.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.yhs.web.YhsAction">
+		<forward name="Show" path="/shenbao/yhsbg015.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<action name="jmsForm" requestPath="/jms.dc" input="/shenbao/jms011.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.jms.web.JmsAction">
+		<forward name="Show" path="/shenbao/jms011.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<action name="zhsbWithoutSfxyForm" requestPath="/zhsbWithoutSfxy.dc" input="/shenbao/zhsbWithoutSfxy002.jsp" class="com.ttsoft.bjtax.shenbao.zhsb.web.ZhsbWithoutSfxy02Action">
+		<forward name="Show" path="/shenbao/zhsbWithoutSfxy002.jsp"/>
+		<forward name="Query" path="/shenbao/byysbWithoutSfxy.jsp"/>
+		<forward name="Save" path="/shenbao/listJks.jsp"/>
+		<forward name="Return" path="/szsm.do?actionType=Show"/>
+		<forward name="Failure" path="/shenbao/zhsbWithoutSfxy002.jsp"/>
+	</action>
+	<action name="zhsbWithSfxyForm" requestPath="/zhsbWithSfxy.dc" input="/shenbao/zhsbWithSfxy002.jsp" class="com.ttsoft.bjtax.shenbao.zhsb.web.ZhsbWithSfxy02Action">
+		<forward name="Show" path="/shenbao/zhsbWithSfxy002.jsp"/>
+		<forward name="Query" path="/shenbao/byysbWithSfxy.jsp"/>
+		<forward name="HK" path="/shenbao/hk.jsp"/>
+		<forward name="Save" path="/shenbao/listJks.jsp"/>
+		<forward name="Return" path="/szsm.do?actionType=Show"/>
+		<forward name="Failure" path="/shenbao/hksb.jsp"/>
+	</action>
+	<action name="wsksbForm" requestPath="/wsksb.dc" input="/shenbao/wsksb001.jsp" class="com.ttsoft.bjtax.shenbao.wsksb.web.Wsksb02Action">
+		
+		<forward name="GoShow" path="/wsksb.dc?actionType=Show"/>
+		<forward name="BeforeShow" path="/shenbao/wsksbgzsx.jsp"/>
+		<forward name="Show" path="/shenbao/wsksb001.jsp"/>
+		<forward name="Save" path="/shenbao/wsksb001.jsp"/>
+		<forward name="Delete" path="/szsm.do?actionType=Show"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<action name="szsmTreeForm" requestPath="/szsmTree.dc" class="com.ttsoft.bjtax.shenbao.szsm.web.SzsmTreeAction"/>
+	<action name="wsksbForm" requestPath="/fangtu.dc" input="/fangtu/fw_ziyong.jsp" class="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuAction">
+		<forward name="fangtu_1" path="/fangtu/fw_ziyong.jsp"/>
+		<forward name="fangtu_2" path="/fangtu/fw_chuzu.jsp"/>
+		<forward name="fangtu_3" path="/fangtu/fw_chengzu.jsp"/>
+		<forward name="fangtu_4" path="/fangtu/td_ziyong.jsp"/>
+		<forward name="fangtu_5" path="/fangtu/td_chuzu.jsp"/>
+		<forward name="fangtu_6" path="/fangtu/td_chengzu.jsp"/>
+		<forward name="Return" path="/fangtu/returntomenu.jsp"/>
+		<forward name="Failure" path="/fangtu/fw_ziyong.jsp"/>
+	</action>
+	<action name="wsksbForm" requestPath="/fangtuAlter.dc" input="/fangtu/alter_fw_ziyong.jsp" class="com.ttsoft.bjtax.shenbao.fangtu.web.FangtuAlterAction">
+		<forward name="fangtu_1" path="/fangtu/alter_fw_ziyong.jsp"/>
+		<forward name="fangtu_2" path="/fangtu/alter_fw_chuzu.jsp"/>
+		<forward name="fangtu_3" path="/fangtu/alter_fw_chengzu.jsp"/>
+		<forward name="fangtu_4" path="/fangtu/alter_td_ziyong.jsp"/>
+		<forward name="fangtu_5" path="/fangtu/alter_td_chuzu.jsp"/>
+		<forward name="fangtu_6" path="/fangtu/alter_td_chengzu.jsp"/>
+		<forward name="Return" path="/fangtu/returntomenu.jsp"/>
+		<forward name="Failure" path="/fangtu/alter_fw_ziyong.jsp"/>
+	</action>
+	<action name="zfjgForm" requestPath="/zfjgqyjb2008.dc" input="/shenbao/qysds2008/zfjgqysdsjb2008.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2008.web.ZfjgqysdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2008/zfjgqysdsjb2008.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/czzsqyjb2008.dc?actionType=Show"/>
+	</action>
+	<action name="hdzsjbForm" requestPath="/hdzsqyjb2008.dc" input="/shenbao/qysds2008/hdzssdsjb2008.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2008.web.HdzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2008/hdzssdsjb2008.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<action name="czzsjbForm" requestPath="/czzsqyjb2008.dc" input="/shenbao/qysds2008/czzssdsjb2008.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2008.web.CzzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2008/czzssdsjb2008.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/zfjgqyjb2008.dc?actionType=Show"/>
+	</action>
+	<action name="badjbForm" requestPath="/badjb.dc" input="/shenbao/kjqysds/badjblr.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.kjqysds.badjb.web.BadjbAction">
+		<forward name="Show" path="/shenbao/kjqysds/badjblr.jsp"/>
+		<forward name="ShowModify" path="/shenbao/kjqysds/badjbxg.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+	</action>
+	<!--录入备案申请 开始 -->
+	<action name="jmbazForm" requestPath="/jmbaz.dc" input="/jmba/jmbaz.jsp" class="com.syax.bjtax.shenbao.jmba.jmbaz.web.JmbazAction">
+		<forward name="Show" path="/jmba/jmbaz.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+		<forward name="AddShow" path="/jmba/jmbaspb.jsp"/>
+		<forward name="EditShow" path="/jmba/jmbaspb.jsp"/>
+		
+		<forward name="ViewShow" path="/jmba/jmbaspbview.jsp"/>
+		<forward name="SavePrint" path="/jmba/dyyl.jsp"/>
+		<forward name="SaveLr0010" path="/zyzhly01.dc?actionType=Show"/>
+		<forward name="SaveLr0020" path="/yjkffy02.dc?actionType=Show"/>
+		<forward name="SaveLr0030" path="/azcjr03.dc?actionType=Show"/>
+		<forward name="SaveLr0040" path="/ggjcsstz04.dc?actionType=Show"/>
+		<forward name="SaveLr0060" path="/hjbhjnjs06.dc?actionType=Show"/>
+		<forward name="SaveLr0050" path="/basx05.dc?actionType=Show"/>
+		<forward name="SaveLr0070" path="/fhtjjszrsd.dc?actionType=Show"/>
+		<forward name="SaveLr0080" path="/gjyqzdfcgxjsqy.dc?actionType=Show"/>
+		<forward name="SaveLr0090" path="/xrjscqyjcdlsjqy.dc?actionType=Show"/>
+		<forward name="SaveLr0100" path="/gjghbjzdrjqy.dc?actionType=Show"/>
+		<forward name="SaveLr0110" path="/scxkxyjcdlcpscqy.dc?actionType=Show"/>
+		<forward name="SaveLr0120" path="/jcdlscqy12.dc?actionType=Show"/>
+		<forward name="SaveLr013A" path="/cytzqytza13.dc?actionType=Show"/>
+		<forward name="SaveLr013B" path="/basx013b.dc?actionType=Show"/>
+		<forward name="SaveLr014A" path="/basx014a.dc?actionType=Show"/>
+		<forward name="SaveLr014B" path="/basx014b.dc?actionType=Show"/>
+		<forward name="SaveLr0150" path="/basx015.dc?actionType=Show"/>
+		<forward name="SaveLr0160" path="/basx016.dc?actionType=Show"/>
+		<forward name="SaveLr0170" path="/basx017.dc?actionType=Show"/>
+		<forward name="SaveLr0180" path="/basx018.dc?actionType=Show"/>
+		<forward name="SaveLr0190" path="/lrjyxwhfwsy.dc?actionType=Show"/>
+		<forward name="SaveLr0200" path="/basx020.dc?actionType=Show"/>
+		<forward name="ShowPrint" path="/jmba/dyylshow.jsp"/>
+		<forward name="ShowLr0010" path="/zyzhly01.dc?actionType=View"/>
+		<forward name="ShowLr0020" path="/yjkffy02.dc?actionType=View"/>
+		<forward name="ShowLr0030" path="/azcjr03.dc?actionType=View"/>
+		<forward name="ShowLr0040" path="/ggjcsstz04.dc?actionType=View"/>
+		<forward name="ShowLr0060" path="/hjbhjnjs06.dc?actionType=View"/>
+		<forward name="ShowLr0050" path="/basx05.dc?actionType=View"/>
+		<forward name="ShowLr0070" path="/fhtjjszrsd.dc?actionType=View"/>
+		<forward name="ShowLr0080" path="/gjyqzdfcgxjsqy.dc?actionType=View"/>
+		<forward name="ShowLr0090" path="/xrjscqyjcdlsjqy.dc?actionType=View"/>
+		<forward name="ShowLr0100" path="/gjghbjzdrjqy.dc?actionType=View"/>
+		<forward name="ShowLr0110" path="/scxkxyjcdlcpscqy.dc?actionType=View"/>
+		<forward name="ShowLr0120" path="/jcdlscqy12.dc?actionType=View"/>
+		<forward name="ShowLr013A" path="/cytzqytza13.dc?actionType=View"/>
+		<forward name="ShowLr013B" path="/basx013b.dc?actionType=View"/>
+		<forward name="ShowLr014A" path="/basx014a.dc?actionType=View"/>
+		<forward name="ShowLr014B" path="/basx014b.dc?actionType=View"/>
+		<forward name="ShowLr0150" path="/basx015.dc?actionType=View"/>
+		<forward name="ShowLr0160" path="/basx016.dc?actionType=View"/>
+		<forward name="ShowLr0170" path="/basx017.dc?actionType=View"/>
+		<forward name="ShowLr0180" path="/basx018.dc?actionType=View"/>
+		<forward name="ShowLr0190" path="/lrjyxwhfwsy.dc?actionType=Query"/>
+		<forward name="ShowLr0200" path="/basx020.dc?actionType=View"/>
+		<forward name="SaveLr0210" path="/basx021.dc?actionType=Show"/>
+		<forward name="ShowLr0210" path="/basx021.dc?actionType=View"/>
+		<forward name="SaveLr0220" path="/basx022.dc?actionType=Show"/>
+		<forward name="ShowLr0220" path="/basx022.dc?actionType=View"/>
+	</action>
+	<action name="jcdlscqyForm" requestPath="/jcdlscqy12.dc" input="/jmba/jcdlscqy012/jcdlscqy12.jsp" class="com.syax.bjtax.shenbao.jmba.jcdlscqy12.web.JcdlscqyAction">
+		<forward name="Show" path="/jmba/jcdlscqy012/jcdlscqy12.jsp"/>
+		<forward name="ViewShow" path="/jmba/jcdlscqy012/jcdlscqy12view.jsp"/>
+		<forward name="Save" path="/jcdlscqy12.dc?actionType=Show"/>
+		<forward name="Menu" path="/qycwzb.do?actionType=Show"/>
+	</action>
+	<action name="cytzqytza13" requestPath="/cytzqytza13.dc" input="/jmba/cytzqytza/cytzqytza.jsp" class="com.syax.bjtax.shenbao.jmba.cytzqytza.web.CytzqytzaAction">
+		<forward name="Show" path="/jmba/cytzqytza/cytzqytza.jsp"/>
+		<forward name="AddShow" path="/jmba/cytzqytza/center13a.jsp"/>
+		<forward name="Save" path="/cytzqytza13.dc?actionType=Show"/>
+		<forward name="Menu" path="/quit.do"/>
+	</action>
+	<action name="cytzqytzb14" requestPath="/cytzqytzb14.dc" input="/jmba/cytzqytzb/cytzqytzb.jsp" class="com.syax.bjtax.shenbao.jmba.cytzqytzb.web.CytzqytzbAction">
+		<forward name="Show" path="/jmba/cytzqytzb/cytzqytzb.jsp"/>
+		<forward name="AddShow" path="/jmba/cytzqytzb/center13b.jsp"/>
+		<forward name="Save" path="/cytzqytzb14.dc?actionType=Show"/>
+		<forward name="Menu" path="/quit.do"/>
+	</action>
+	<action name="qygza15" requestPath="/qygza15.dc" input="/jmba/qygza/qygza.jsp" class="com.syax.bjtax.shenbao.jmba.qygza.web.QygzaAction">
+		<forward name="Show" path="/jmba/qygza/qygza.jsp"/>
+		<forward name="AddShow" path="/jmba/qygza/center14a.jsp"/>
+		<forward name="Save" path="/qygza15.dc?actionType=Show"/>
+		<forward name="Menu" path="/quit.do"/>
+	</action>
+	<action name="qygzb16" requestPath="/qygzb16.dc" input="/shenbao/jmba/qygzb/qygzb.jsp" class="com.syax.bjtax.shenbao.jmba.qygzb.web.QygzbAction">
+		<forward name="Show" path="/shenbao/jmba/qygzb/qygzb.jsp"/>
+		<forward name="Save" path="/qygzb16.dc?actionType=Show"/>
+		<forward name="Menu" path="/quit.do"/>
+	</action>
+	<!--减免备案第一项资源综合利用 -->
+	<action name="zyzhlyForm" requestPath="/zyzhly01.dc" input="/jmba/zyzhly01/zyzhly01.jsp" class="com.syax.bjtax.shenbao.jmba.zyzhly01.web.ZyzhlyAction">
+		<forward name="Show" path="/jmba/zyzhly01/zyzhly01.jsp"/>
+		<forward name="EditShow" path="/jmba/zyzhly01/zyzhly01edit.jsp"/>
+		<forward name="ViewShow" path="/jmba/zyzhly01/zyzhly01view.jsp"/>
+		<forward name="ViewDetail" path="/jmba/zyzhly01/zyzhly01viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第二项研究开发费用 -->
+	<action name="zyzhlyForm" requestPath="/yjkffy02.dc" input="/jmba/yjkffy02/yjkffy02.jsp" class="com.syax.bjtax.shenbao.jmba.yjkffy02.web.YjkffyAction">
+		<forward name="Show" path="/jmba/yjkffy02/yjkffy02.jsp"/>
+		<forward name="EditShow" path="/jmba/yjkffy02/yjkffy02edit.jsp"/>
+		<forward name="ViewShow" path="/jmba/yjkffy02/yjkffy02view.jsp"/>
+		<forward name="ViewDetail" path="/jmba/yjkffy02/yjkffy02viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第三项安置残疾人 -->
+	<action name="azcjr03Form" requestPath="/azcjr03.dc" input="/jmba/azcjr03/azcjr03.jsp" class="com.syax.bjtax.shenbao.jmba.azcjr03.web.AzcjrAction">
+		<forward name="Show" path="/jmba/azcjr03/azcjr03.jsp"/>
+		<forward name="ViewShow" path="/jmba/azcjr03/azcjr03view.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+		<forward name="Save" path="/jmba/azcjr03/azcjr03.jsp"/>
+	</action>
+	<!--减免备案第四项公共基础设施投资 -->
+	<action name="zyzhlyForm" requestPath="/ggjcsstz04.dc" input="/jmba/ggjcsstz04/ggjcsstz04.jsp" class="com.syax.bjtax.shenbao.jmba.ggjcsstz04.web.GgjcsstzAction">
+		<forward name="Show" path="/jmba/ggjcsstz04/ggjcsstz04.jsp"/>
+		<forward name="EditShow" path="/jmba/ggjcsstz04/ggjcsstz04edit.jsp"/>
+		<forward name="ViewShow" path="/jmba/ggjcsstz04/ggjcsstz04view.jsp"/>
+		<forward name="ViewDetail" path="/jmba/ggjcsstz04/ggjcsstz04viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第六项环境保护节能节水 -->
+	<action name="zyzhlyForm" requestPath="/hjbhjnjs06.dc" input="/jmba/hjbhjnjs06/hjbhjnjs06.jsp" class="com.syax.bjtax.shenbao.jmba.hjbhjnjs06.web.HjbhjnjsAction">
+		<forward name="Show" path="/jmba/hjbhjnjs06/hjbhjnjs06.jsp"/>
+		<forward name="EditShow" path="/jmba/hjbhjnjs06/hjbhjnjs06edit.jsp"/>
+		<forward name="ViewShow" path="/jmba/hjbhjnjs06/hjbhjnjs06view.jsp"/>
+		<forward name="ViewDetail" path="/jmba/hjbhjnjs06/hjbhjnjs06viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案013B -->
+	<action name="fhtjjszysdForm" requestPath="/basx013b.dc" input="/jmba/basx013b/basx013b.jsp" class="com.syax.bjtax.shenbao.jmba.basx013b.web.Basx13bAction">
+		<forward name="Show" path="/jmba/basx013b/basx013b.jsp"/>
+		<forward name="AddShow" path="/jmba/fhtjjszrsd07/fhtjjszrsd07.jsp"/>
+		<forward name="Save" path="/fhtjjszrsd.dc?actionType=Show"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第七项符合条件技术转让所得 -->
+	<action name="fhtjjszysdForm" requestPath="/fhtjjszrsd.dc" input="/jmba/fhtjjszrsd07/fhtjjszrsd07.jsp" class="com.syax.bjtax.shenbao.jmba.fhtjjszysd07.web.FhtjjszysdAction">
+		<forward name="Show" path="/jmba/fhtjjszrsd07/fhtjjszrsd07.jsp"/>
+		<forward name="AddShow" path="/jmba/fhtjjszrsd07/fhtjjszrsd07.jsp"/>
+		<forward name="Save" path="/fhtjjszrsd.dc?actionType=Show"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第八项:国家要求重点扶持的高新技术企业 -->
+	<action name="gjyqzdfcgxjsqyForm" requestPath="/gjyqzdfcgxjsqy.dc" input="/jmba/gjyqzdfcgxjsqy08/gjyqzdfcgxjsqy08.jsp" class="com.syax.bjtax.shenbao.jmba.gjyqzdfcgxjsqy08.web.GjyqzdfcgxjsqyAction">
+		<forward name="Show" path="/jmba/gjyqzdfcgxjsqy08/gjyqzdfcgxjsqy08.jsp"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第九项:新办软件生产企业、集成电路设计企业 -->
+	<action name="xrjscqyjcdlsjqyForm" requestPath="/xrjscqyjcdlsjqy.dc" input="/jmba/xrjscqyjcdlsjqy09/xrjscqyjcdlsjqy09.jsp" class="com.syax.bjtax.shenbao.jmba.xrjscqyjcdlsjqy09.web.XrjscqyjcdlsjqyAction">
+		<forward name="Show" path="/jmba/xrjscqyjcdlsjqy09/xrjscqyjcdlsjqy09.jsp"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第十项:国家规划布局内的重点软件生产企业 -->
+	<action name="gjghbjzdrjqyForm" requestPath="/gjghbjzdrjqy.dc" input="/jmba/gjghbjzdrjqy10/gjghbjzdrjqy10.jsp" class="com.syax.bjtax.shenbao.jmba.gjghbjzdrjqy10.web.GjghbjzdrjqyAction">
+		<forward name="Show" path="/jmba/gjghbjzdrjqy10/gjghbjzdrjqy10.jsp"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第十一项:生产线宽小于0.8微米（含）集成电路产品的生产企业 -->
+	<action name="scxkxyjcdlcpscqyForm" requestPath="/scxkxyjcdlcpscqy.dc" input="/jmba/scxkxyjcdlcpscqy11/scxkxyjcdlcpscqy11.jsp" class="com.syax.bjtax.shenbao.jmba.scxkxyjcdlcpscqy11.web.ScxkxyjcdlcpscqyAction">
+		<forward name="Show" path="/jmba/scxkxyjcdlcpscqy11/scxkxyjcdlcpscqy11.jsp"/>
+		<forward name="Commit" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第（十六）外购软件缩短折旧或摊销年限 -->
+	<action name="WgrjsdnxForm" requestPath="/basx016.dc" input="/jmba/basx016/basx016.jsp" class="com.syax.bjtax.shenbao.jmba.basx016.web.Basx016Action">
+		<forward name="Show" path="/jmba/basx016/basx016.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx016/basx016view.jsp"/>
+		<forward name="Save" path="/wgrjsdnx18.dc?actionType=Show"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--减免备案第(十五)固定资产缩短折旧年限或加速折旧 -->
+	<action name="GdccsdnxForm" requestPath="/basx015.dc" input="/jmba/basx015/basx015.jsp" class="com.syax.bjtax.shenbao.jmba.basx015.web.Basx015Action">
+		<forward name="Show" path="/jmba/basx015/basx015.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx015/basx015view.jsp"/>
+		<forward name="Save" path="/gdccsdnx17.dc?actionType=Show"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	
+	<!--减免备案第（十七）项清洁发展机制项目所得 -->
+	<action name="QjfzjzsdForm" requestPath="/basx017.dc" input="/jmba/basx017/basx017.jsp" class="com.syax.bjtax.shenbao.jmba.basx017.web.Basx017Action">
+		<forward name="Show" path="/jmba/basx017/basx017.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx017/basx017view.jsp"/>
+		<forward name="Save" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<!--录入备案申请 结束 -->
+	<!--认定的技术先进型服务企业备案事项 开始 -->
+	<action name="LrjsxjfuqyForm" requestPath="/basx018.dc" input="/jmba/basx018/basx018.jsp" class="com.syax.bjtax.shenbao.jmba.basx018.web.Basx018Action">
+		<forward name="Show" path="/jmba/basx018/basx018.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx018/basx018view.jsp"/>
+		
+		<forward name="Query" path="/jmba/jsxjqy20/jsxjqy20view.jsp"/>
+		<forward name="Save" path="/jmba/jsxjqy20/jsxjqy20.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<!--认定的技术先进型服务企业备案事项 结束 -->
+	<!--经营性文化事业单位转制为企业备案事项具体描述 开始 -->
+	<action name="LrjyxwhsyForm" requestPath="/lrjyxwhfwsy.dc" input="/jmba/jyxwhsy21/jyxwhsy21.jsp" class="com.syax.bjtax.shenbao.jmba.jyxwhsy19.web.LrjyxwhsyAction">
+		<forward name="Show" path="/jmba/jyxwhsy21/jyxwhsy21.jsp"/>
+		<forward name="Query" path="/jmba/jyxwhsy21/jyxwhsy21view.jsp"/>
+		<forward name="Save" path="/jmba/jyxwhsy21/jyxwhsy21.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<!--经营性文化事业单位转制为企业备案事项具体描述 结束 -->
+	<!--经认定的动漫企业 开始 -->
+	<action name="LrrddmqyForm" requestPath="/basx020.dc" input="/jmba/basx020/basx020.jsp" class="com.syax.bjtax.shenbao.jmba.basx020.web.Basx020Action">
+		<forward name="Show" path="/jmba/basx020/basx020.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx020/basx020view.jsp"/>
+		<forward name="Query" path="/jmba/rddmqy22/rddmqy22view.jsp"/>
+		<forward name="Save" path="/jmba/rddmqy22/rddmqy22.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<!--经认定的动漫企业  结束-->
+	<!--企业购置用于环境保护、节能节水、安全生产等专用设备投资额抵免应纳税额资格备案事项 开始 -->
+	<action name="LrrddmqyForm" requestPath="/basx014a.dc" input="/jmba/basx014a/basx014a.jsp" class="com.syax.bjtax.shenbao.jmba.basx014a.web.Basx014aAction">
+		<forward name="Show" path="/jmba/basx014a/basx014a.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx014a/basx014aview.jsp"/>
+		<forward name="Query" path="/jmba/rddmqy22/rddmqy22view.jsp"/>
+		<forward name="Save" path="/jmba/rddmqy22/rddmqy22.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<!--企业购置用于环境保护、节能节水、安全生产等专用设备投资额抵免应纳税额资格备案事项 结束 -->
+	<!--企业购置用于环境保护、节能节水、安全生产等专用设备投资额抵免应纳税额备案事项 开始 -->
+	<action name="LrrddmqyForm" requestPath="/basx014b.dc" input="/jmba/basx014b/basx014b.jsp" class="com.syax.bjtax.shenbao.jmba.basx014b.web.Basx014bAction">
+		<forward name="Show" path="/jmba/basx014b/basx014b.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx014b/basx014bview.jsp"/>
+		<forward name="Query" path="/jmba/rddmqy22/rddmqy22view.jsp"/>
+		<forward name="Save" path="/jmba/rddmqy22/rddmqy22.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+	</action>
+	<!--企业购置用于环境保护、节能节水、安全生产等专用设备投资额抵免应纳税额备案事项 结束 -->
+	<!--减免备案第五项从事农、林、牧、渔业项目的所得 -->
+	<action name="Basx05Form" requestPath="/basx05.dc" input="/jmba/basx05/basx05.jsp" class="com.syax.bjtax.shenbao.jmba.basx05.web.Basx05Action">
+		<forward name="Show" path="/jmba/basx05/basx05.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx05/basx05view.jsp"/>
+		<forward name="Return" path="/gzsx.do?actionType=Show"/>
+		<forward name="Save" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+
+    <action name="cjrjyjmsForm"	 requestPath="/cjrjyjmsb.dc"  input="/shenbao/cjrjyjms.jsp"      class="com.ttsoft.bjtax.shenbao.jmssb.web.CjrjyjmsbAction">
+		<forward name="Show" path="/shenbao/cjrjyjmsb.jsp" />
+		<forward name="Query" path="/shenbao/cjrjyjmsb.jsp" />
+		<forward name="Save" path="/shenbao/cjrjyjmsb.jsp" />
+		<forward name="Return" path="/gzsx.do?actionType=Show" />
+	</action>
+	<!-- 新增2012版企业所得税季报 begin gaoyh 2012-03-13 -->
+	<action name="czzsjb2012Form" requestPath="/czzsqyjb2012.dc" input="/shenbao/qysds2012/czzssdsjb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2012.web.CzzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2012/czzssdsjb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/zfjgqyjb2012.dc?actionType=Show"/>
+	</action>
+	
+	<action name="zfjg2012Form" requestPath="/zfjgqyjb2012.dc" input="/shenbao/qysds2012/zfjgqysdsjb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2012.web.ZfjgqysdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2012/zfjgqysdsjb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/czzsqyjb2012.dc?actionType=Show"/>
+	</action>
+	
+	<action name="hdzsjb2012Form" requestPath="/hdzsqyjb2012.dc" input="/shenbao/qysds2012/hdzssdsjb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2012.web.HdzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2012/hdzssdsjb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<!-- 新增2012版企业所得税季报 end gaoyh 2012-03-13 -->
+
+	<!-- 新增2012版企业所得税年报 begin gaoyh 2013-01-15 -->
+	<action name="hdzssdsnb2012Form" requestPath="/hdzsqynb2012.dc" input="/shenbao/qysds2012/hdzssdsnb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb2012.web.HdzssdsnbAction">
+		<forward name="Show" path="/shenbao/qysds2012/hdzssdsnb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<!-- 新增2012版企业所得税年报 end gaoyh 2013-01-15 -->
+	
+	<!-- 新增2012版企业所得税年报  begin wangcy 2013-12-03 -->
+	<action name="czzsqynb2012Form" requestPath="/czzsqynb2012.dc" input="/shenbao/qysdsfznb2012/czzssdsnb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsfznb2012.web.CzzssdsNbAction">
+		<forward name="Show" path="/shenbao/qysdsfznb2012/czzssdsnb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/zfjgqynb2012.dc?actionType=Query"/>
+		<forward name="JumpNew" path="/zfjgqynb2012.dc?actionType=Show"/>
+	</action>
+	
+	<action name="zfjgnb2012Form" requestPath="/zfjgqynb2012.dc" input="/shenbao/qysdsfznb2012/zfjgqysdsnb2012.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsfznb2012.web.ZfjgqysdsNbAction">
+		<forward name="Query" path="/shenbao/qysdsfznb2012/zfjgqysdsnb2012.jsp"/>
+		<forward name="Show" path="/shenbao/qysdsfznb2012/zfjgqysdsnb2012.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/czzsqynb2012.dc?actionType=Show"/>
+	</action>
+	<!-- wangcy 企业所得税升级改造项目     form begin-->
+	
+	<!-- ==============生产和装配伤残人员专门用品企业备案事项============================== -->
+	<action name="basx021Form" requestPath="/basx021.dc" input="/jmba/basx021/basx021.jsp" class="com.syax.bjtax.shenbao.jmba.basx021.web.Basx021Action">
+		
+		<forward name="EditShow" path="/jmba/basx021/basx21edit.jsp"/>
+		<forward name="ViewDetail" path="/jmba/basx021/basx21viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	
+	<!-- ==============减免税备案  节能服务公司实施合同能源管理项目的所得备案事项==================== -->
+	<action name="basx022Form" requestPath="/basx022.dc" input="/jmba/basx022/basx022.jsp" class="com.syax.bjtax.shenbao.jmba.basx022.web.Basx022Action">
+		<forward name="Show" path="/jmba/basx022/basx022.jsp"/>
+		<forward name="EditShow" path="/jmba/basx022/basx022edit.jsp"/>
+		<forward name="ViewShow" path="/jmba/basx022/basx022view.jsp"/>
+		<forward name="ViewDetail" path="/jmba/basx022/basx022viewdetail.jsp"/>
+		<forward name="Return" path="/jmbaz.dc?actionType=Show"/>
+	</action>
+	<action name="qyqssdsbaForm" requestPath="/qyqssdsba2014.dc" input="/shenbao/qyqssds/qyqssdsba2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qyqssds2014.web.QyqssdsBaAction">
+		<forward name="Show" path="/shenbao/qyqssds/qyqssdsba2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<!-- wangcy 企业所得税升级改造项目     form end  -->
+	
+	<!-- wangcy 国家税务总局2014年28号公文修改  start-->
+	<!-- 2014版企业所得税季报 begin wangcy 2014-06-03 -->
+	<action name="czzsjb2014Form" requestPath="/czzsqyjb2014.dc" input="/shenbao/qysds2014/czzssdsjb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2014.web.CzzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2014/czzssdsjb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/zfjgqyjb2014.dc?actionType=Show"/>
+		<forward name="JumpGdzc" path="/gdzcjszjyjqkjb2014.dc?actionType=Show"/>
+	</action>
+	<action name="zfjg2014Form" requestPath="/zfjgqyjb2014.dc" input="/shenbao/qysds2014/zfjgqysdsjb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2014.web.ZfjgqysdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2014/zfjgqysdsjb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/czzsqyjb2014.dc?actionType=Show"/>
+		<forward name="JumpGdzc" path="/gdzcjszjyjqkjb2014.dc?actionType=Show"/>
+	</action>
+	<action name="hdzsjb2014Form" requestPath="/hdzsqyjb2014.dc" input="/shenbao/qysds2014/hdzssdsjb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2014.web.HdzssdsjbAction">
+		<forward name="Show" path="/shenbao/qysds2014/hdzssdsjb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>	
+	<!-- 个人所得税 -->
+	<action requestPath="/grsdsJbxxb2014.dc"  name="grsdsJbxxbForm" input="/shenbao/grsds/grsdsList.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.grsds2014.web.GrsdsJbxxAction">
+		<forward name="SHOW" path="/shenbao/grsds/grsdsJbxxLr.jsp" />
+	</action>
+	<action requestPath="/grsdsNdsbb2014.dc" name="grsdsNdsbbForm" input="/shenbao/grsds/grsdsList.jsp"  class="com.ttsoft.bjtax.shenbao.sbzl.grsds2014.web.GrsdsNdsbAction">
+		<forward name="SHOW" path="/shenbao/grsds/grsdsSbLr.jsp" />
+		<forward name="BACK" path="/grsdsSb2014.dc?reason=未完成基本信息表" />
+	</action>
+	<action requestPath="/grsdsSb2014.dc" name="grsdsSbForm" input="/shenbao/grsds/grsdsList.jsp"  class="com.ttsoft.bjtax.shenbao.sbzl.grsds2014.web.GrlistAction">
+		<forward name="SHOW" path="/shenbao/grsds/grsdsList.jsp" />
+	</action>
+	
+	<!-- wangcy 国家税务总局2014年28号公文修改  end-->
+	
+	
+	<!-- zhangj 新增2014版企业所得税年报 start 2014-09-15 -->
+	<action name="czzsfzjgnb2014Form" requestPath="/czzsfzjgnb2014.dc" input="/shenbao/qysdsfznb2014/czzsfzjgnb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsfznb2014.web.CzzsfzjgNbAction">
+		<forward name="Show" path="/shenbao/qysdsfznb2014/czzsfzjgnb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/zfjgfzjgnb2014.dc?actionType=Query"/>
+		<forward name="JumpNew" path="/zfjgfzjgnb2014.dc?actionType=Show"/>
+	</action>
+	
+	<action name="zfjgfzjgnb2014Form" requestPath="/zfjgfzjgnb2014.dc" input="/shenbao/qysdsfznb2014/zfjgfzjgnb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsfznb2014.web.ZfjgfzjgNbAction">
+		<forward name="Query" path="/shenbao/qysdsfznb2014/zfjgfzjgnb2014.jsp"/>
+		<forward name="Show" path="/shenbao/qysdsfznb2014/zfjgfzjgnb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="Jump" path="/czzsfzjgnb2014.dc?actionType=Show"/>
+	</action>
+	<!-- zhangj 新增2014版企业所得税年报 end-->
+	
+	<!-- 新增2014版企业所得税年报 begin wangcy 2014-09-05 -->
+	<action name="hdzssdsnb2014Form" requestPath="/hdzsqynb2014.dc" input="/shenbao/qysds2014/hdzssdsnb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb2014.web.HdzssdsnbAction">
+		<forward name="Show" path="/shenbao/qysds2014/hdzssdsnb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+	</action>
+	<!-- 新增2014版企业所得税年报 end wangcy 2013-09-05 -->
+	
+	<!-- zhangj 季报 start -->
+	<action name="gdzcjszjyjqkjb2014Form" requestPath="/gdzcjszjyjqkjb2014.dc" input="/shenbao/qysds2014/gdzcjszjyjqkjb2014.jsp" class="com.ttsoft.bjtax.shenbao.sbzl.qysdsjb2014.web.GdzcjszjyjqkjbAction">
+		<forward name="Show" path="/shenbao/qysds2014/gdzcjszjyjqkjb2014.jsp"/>
+		<forward name="Save" path="/shenbao/success.jsp"/>
+		<forward name="Delete" path="/shenbao/success.jsp"/>
+		<forward name="JumpZfjg" path="/zfjgqyjb2014.dc?actionType=Show"/>
+		<forward name="JumpCzzs" path="/czzsqyjb2014.dc?actionType=Show"/>
+	</action>
+	<!-- zhangj 季报 end -->
+	
+	<!-- 纳税人基础信息核对 -->
+	<action name="nsrjcxxhdForm" requestPath="/nsrjcxxhd.dc" class="com.ttsoft.bjtax.shenbao.nsrjcxxhd.web.NsrjcxxhdAction">
+		<forward name="init" path="/shenbao/nsrjcxxhd.jsp"></forward>
+	</action>
+</actionMaps>

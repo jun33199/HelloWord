@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+  <display-name>QSEJB</display-name>
+  <enterprise-beans>
+    <session>
+      <ejb-name>InitialStartupBean</ejb-name>
+      <home>com.creationstar.bjtax.qsgl.BizLogic.ejb.InitialStartupHome</home>
+      <remote>com.creationstar.bjtax.qsgl.BizLogic.ejb.InitialStartup</remote>
+      <ejb-class>com.creationstar.bjtax.qsgl.BizLogic.ejb.InitialStartupBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+    <session>
+      <ejb-name>QsglSessionBean</ejb-name>
+      <home>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglSessionHome</home>
+      <remote>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglSession</remote>
+      <ejb-class>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglSessionBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+	<session>
+      <ejb-name>QsglServiceSessionBean</ejb-name>
+      <home>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglServiceSessionHome</home>
+      <remote>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglServiceSession</remote>
+      <ejb-class>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglServiceSessionBean</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+  </enterprise-beans>
+  <assembly-descriptor>
+    <container-transaction>
+      <method>
+        <ejb-name>QsglSessionBean</ejb-name>
+        <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+    </container-transaction>
+    <container-transaction>
+      <method>
+        <ejb-name>QsglServiceSessionBean</ejb-name>
+        <method-name>*</method-name>
+      </method>
+      <trans-attribute>Required</trans-attribute>
+    </container-transaction>
+  </assembly-descriptor>
+</ejb-jar>

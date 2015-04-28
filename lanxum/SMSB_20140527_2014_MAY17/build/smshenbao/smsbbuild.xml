@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="GB2312"?>
+<project name="smshenbao" default="all" basedir=".">
+	<!-- set global properties for this build -->
+	<property environment="env"/>
+	<property file="build.properties"/>
+	<property file="../lib.properties"/>
+
+	<property name="smsb_source" value="${SMSB_SOURCE}"/>
+	<property name="smshenbao_source" value="${smsb_source}/src"/>
+	<property name="smshenbao_webapp" value="${smsb_source}/webapp"/>
+	<property name="smshenbao_web-inf" value="${smsb_source}/WEB-INF"/>
+
+
+	<property name="ORMapping_Config" value="${smsb_source}/config/config"/>
+	<!-- EJB-->
+	<property name="META-INF" value="${smsb_source}/EJB"/>
+	<property name="src" value="./src"/>
+	<property name="dist" value="./dist"/>
+	<property name="build" value="./build"/>
+	<property name="smsb" value="./smsb"/>
+	<property name="smsb_webapp" value="./smsb/webapp"/>
+	<property name="smsb_webapp_lib" value="${smsb}/WEB-INF/lib"/>
+	<property name="jspc" value="./jspc"/>
+	<property name="jspc_smsb_dist" value="./jspc/smsb"/>
+
+	<!-- targer -->
+	<target name="all" depends="clean, init, compile_source, gen_service, jar_classes, jspc, jar_ejb, ejbc,war"/>
+	<target name="all_nojspc" depends="clean, init, compile_source, gen_service, jar_classes, jar_ejb,ejbc,war"/>
+	    <!-- init action -->
+	<target name="init" depends="clean">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create the build directory structure used by compile and copy the deployment descriptors into it-->
+		<mkdir dir="${src}"/>
+		<copy todir="${src}" overwrite="yes">
+			<fileset dir="${smshenbao_source}"/>
+		</copy>
+
+
+		<copy todir="${src}" overwrite="yes">
+			<fileset dir="${SHENBAO_SOURCE}/com/ttsoft/bjtax/shenbao/model/domain" />
+			<fileset dir="${SHENBAO_SOURCE}/com/ttsoft/bjtax/shenbao/model/mapping" />
+		</copy>
+
+
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${build}"/>
+		<copy todir="${build}/com/ttsoft/bjtax/smsb" overwrite="yes">		
+			<fileset dir="${smsb_source}/src/com/ttsoft/bjtax/smsb">
+				<include name="ApplicationResources.properties"/>
+			</fileset>
+		</copy>
+		<copy todir="${build}/com/ttsoft/bjtax/smsb/gghsb/ftp" overwrite="yes">		
+			<fileset dir="${smsb_source}/src/com/ttsoft/bjtax/smsb/gghsb/ftp">
+				<include name="resource.properties"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${build}/META-INF"/>
+		<copy todir="${build}/META-INF" overwrite="yes">
+			<fileset dir="${META-INF}">
+				<include name="ejb-jar.xml"/>
+				<include name="weblogic-ejb-jar.xml"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${smsb_webapp}"/>
+		<mkdir dir="${smsb}/WEB-INF"/>
+		<mkdir dir="${smsb}/webapp/classes"/>
+		<mkdir dir="${smsb_webapp_lib}"/>
+
+        <copy file="${framework.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${regex.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${struts.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${xml4j.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${zkclasses.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${DjService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${shenbaoService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${jkclasses.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${commons-net-1.3.0.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />        
+	 			<copy file="${jakarta-poi.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+				<copy file="${PzglService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+				<copy file="${SfglService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+				<copy file="${sfbase.jar}" todir="${smsb_webapp_lib}" overwrite="yes"/>
+				<copy file="${k_or.jar}" todir="${smsb_webapp_lib}" overwrite="yes"/>
+		<mkdir dir="${jspc_smsb_dist}"/>
+	</target>
+	<!-- Compile all classes into the build directory (jar preparation) -->
+	<target name="compile_source" depends="init">
+		<javac srcdir="${src}" destdir="${build}">
+			<classpath>
+				<pathelement path="${CLASSPATH}"/>
+				<pathelement location="${zkclasses.jar}"/>
+				<pathelement location="${PzglService.jar}"/>
+				<pathelement location="${DjService.jar}"/>
+				<pathelement location="${SfglService.jar}"/>
+				<pathelement location="${jkclasses.jar}"/>
+				<pathelement location="${shenbaoService.jar}"/>
+				<pathelement location="${jakarta-poi.jar}"/>
+				<pathelement location="${regex.jar}"/>
+				<pathelement location="${xml4j.jar}"/>
+				<pathelement location="${sfbase.jar}"/>
+			</classpath>
+		</javac>
+	</target>
+
+    <target name="jar_classes" depends="compile_source">
+		<jar jarfile="${dist}/smsb_classes.jar" basedir="${build}" update="yes"/>
+	</target>
+
+    <target name="gen_service" depends="clean, init, compile_source">
+		<jar jarfile="${dist}/SmsbService.jar"
+			basedir="${build}" update="yes">
+			<exclude name="**/web/**/*" />
+			<exclude name="**/META-INF/**" />
+			<exclude name="*.*" />
+			<exclude name="**/config/**" />
+		</jar>
+	</target>
+
+    <target name="war_prepare" depends="jar_classes">
+        <copy todir="${smsb_webapp}" overwrite="yes">
+			<fileset dir="${smshenbao_webapp}">
+			   <exclude name="WEB-INF/**"/>
+			</fileset>
+		</copy>
+		<copy todir="${smsb}/WEB-INF" overwrite="yes">
+			<fileset dir="${smshenbao_web-inf}">
+			   <exclude name="lib/**"/>
+			   <exclude name="classes/**"/>
+			   <exclude name="_tmp*/**"/>
+			</fileset>
+		</copy>
+        <copy file="${framework.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${regex.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${struts.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${xml4j.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${zkclasses.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${DjService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${shenbaoService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+	<copy file="${jakarta-poi.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+	<copy file="${PzglService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+		<copy file="${SfglService.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+		<copy file="${k_or.jar}" todir="${smsb_webapp_lib}" overwrite="yes" />
+        <copy file="${dist}/smsb_classes.jar" todir="${smsb_webapp_lib}" overwrite="yes" />
+		<copy file="${sfbase.jar}" todir="${smsb_webapp_lib}" overwrite="yes"/>
+    </target>
+
+	<!-- jspc to compile the jsp files -->
+	<target name="jspc" depends="war_prepare">
+		<java classname="weblogic.jspc" fork="yes" failonerror="yes">
+			<sysproperty key="weblogic.home" value="${WL_HOME}/server"/>
+			<sysproperty key="weblogic.jsp.windows.caseSensitive" value="true" />
+			<arg line="-keepgenerated -compileAll -verboseJspc -d ${jspc_smsb_dist} -docroot ${smsb}"/>
+			<classpath>
+				<pathelement path="${CLASSPATH}"/>
+                <pathelement location="${dist}/smsb_classes.jar"/>
+			</classpath>
+		</java>
+		<copy todir="${smsb}/WEB-INF/classes">
+			<fileset dir="${jspc_smsb_dist}"/>
+		</copy>
+	</target>
+
+	<target name="jar_ejb" depends="compile_source">
+
+		<copy todir="${build}/config">
+			<fileset dir="${ORMapping_Config}"/>
+		</copy>
+
+		<jar jarfile="${dist}/SmsbEjb.jar" basedir="${build}" update="yes">
+			<zipfileset src="${framework.jar}"/>
+			<zipfileset src="${zkclasses.jar}"/>
+			<zipfileset src="${struts.jar}"/>
+			<zipfileset src="${jkclasses.jar}"/>
+			<zipfileset src="${PzglService.jar}"/>
+			<zipfileset src="${shenbaoService.jar}"/>
+			<zipfileset src="${DjService.jar}"/>
+			<zipfileset src="${SfglService.jar}"/>
+			<zipfileset src="${sfbase.jar}"/>	
+			<zipfileset src="${k_or.jar}"/>
+		</jar>
+	</target>
+
+	<target name="ejbc" depends="jar_ejb">
+		<java classname="weblogic.ejbc" fork="yes" failonerror="yes">
+			<sysproperty key="weblogic.home" value="${WL_HOME}/server"/>
+			<arg line="-verbose -compiler javac ${dist}/SmsbEjb.jar"/>
+			<classpath>
+				<pathelement path="${CLASSPATH}"/>
+                <pathelement location="${framework.jar}"/>
+                <pathelement location="${struts.jar}"/>
+                <pathelement location="${zkclasses.jar}"/>
+                <pathelement location="${dist}/smsb_classes.jar"/>
+				<pathelement location="${sfbase.jar}"/>				
+			</classpath>
+		</java>
+	</target>
+	<!-- war files -->
+	<target name="war" depends="war_prepare" >
+		<!-- should be delete-->
+		<!--copy file="./../web_xml/SMSB/web.xml" tofile="${smsb}/WEB-INF/web.xml" overwrite="true"/-->
+
+		<jar jarfile="${dist}/smsb.war" basedir="${smsb}" excludes="**/*.jsp"/>
+	</target>
+
+	<!-- clean action-->
+	<target name="clean">
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${smsb}"/>
+		<delete dir="${src}"/>
+		<delete dir="${jspc}"/>
+	</target>
+</project>

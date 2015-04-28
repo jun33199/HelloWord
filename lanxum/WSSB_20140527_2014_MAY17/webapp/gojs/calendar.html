@@ -1,0 +1,205 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title> New Document </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<LINK href="/ci/skins/m_green/lib/Calendar.css" rel=stylesheet type=text/css>
+</head>
+<body>
+<script language="JavaScript">
+<!--
+document.writeln('<div id=epodDateLayer style="position: absolute; top:0; left:0; width: 142; height: 166; z-index: 9998; ">');
+document.writeln('<span id=tmpSelectYearLayer  style="z-index: 9999;position: absolute;top: 2; left: 18;display: none"></span>');
+document.writeln('<span id=tmpSelectMonthLayer style="z-index: 9999;position: absolute;top: 2; left: 75;display: none"></span>');
+document.writeln('<table border=0 cellspacing=1 cellpadding=0 width=142 height=160 bgcolor=#808080 onselectstart="return false" class="TableMain">');
+document.writeln('  <tr><td width=142 height=23 bgcolor=#FFFFFF><table border=0 cellspacing=1 cellpadding=0 width=140 height=23 class="TableMain">');
+document.writeln('      <tr align=center class="TRNav"><td width=20 align=center bgcolor=#808080 class="TDMonthNav" ');
+document.writeln('        onclick="epodPrevM()" title="向前翻 月" ><b >&lt;&lt;</b>');
+document.writeln('        </td><td width=100 align=center class="TDYearMon" >');
+document.writeln('        <span  id=epodYearHead onclick="tmpSelectYearInnerHTML(this.innerText)"></span>&nbsp;年&nbsp;<span');
+document.writeln('         id=epodMonthHead  onclick="tmpSelectMonthInnerHTML(this.innerText)"></span>&nbsp;月</td>');
+document.writeln('        <td width=20 bgcolor=#808080 class="TDMonthNav" align=center ');
+document.writeln('         onclick="epodNextM()" title="往后翻 月" ><b >&gt;&gt;</b></td></tr>');
+document.writeln('    </table></td></tr>');
+document.writeln('  <tr><td width=142 height=18 bgcolor=#808080>');
+document.writeln('<table border=0 cellspacing=0 cellpadding=0 width=140 height=1 class="TableMain">');
+document.writeln('<tr align=center><td  class="TDWeek">日</td>');
+document.writeln('<td class="TDWeek" >一</td><td class="TDWeek" >二</td>');
+document.writeln('<td class="TDWeek" >三</td><td class="TDWeek" >四</td>');
+document.writeln('<td class="TDWeek">五</td><td class="TDWeek" >六</td></tr>');
+document.writeln('</table></td></tr>');
+document.writeln('  <tr><td width=142 height=120>');
+document.writeln('    <table border=0 cellspacing=1 cellpadding=0 width=140 height=120 bgcolor=#FFFFFF class="TableMain">');
+var n=0; for (j=0;j<5;j++){ document.writeln (' <tr align=center class="TRDay">'); for (i=0;i<7;i++){
+document.writeln('<td width=20 height=20 id=epodDay'+n+' class="TDDay"  onclick=epodDayClick(this.innerText)></td>');n++;}
+document.writeln('</tr>');}
+document.writeln('      <tr align=center class="TRDay"><td width=20 height=20 class="TDDay" id=epodDay35  ');
+document.writeln('         onclick=epodDayClick(this.innerText)></td>');
+document.writeln('        <td width=20 height=20 class="TDDay" id=epodDay36  onclick=epodDayClick(this.innerText)></td>');
+document.writeln('        <td colspan=5 align=right ><span onclick=parent.closeLayer() class="CloseCalender"');
+document.writeln('          <u>关闭本控件</u></span>&nbsp;</td></tr>');
+document.writeln('    </table></td></tr><tr><td>');
+document.writeln('        <table border=0 cellspacing=1 cellpadding=0 width=100% bgcolor=#FFFFFF  class="TDMonthNav">');
+document.writeln('          <tr class="TRNav"><td  align=left><input  type=button value="< " title="向前翻　年" onclick="epodPrevY()" ');
+document.writeln('             onfocus="this.blur()" class="ButtonNav"><input  title="向前翻　月" type=button ');
+document.writeln('             value="<<" onclick="epodPrevM()" onfocus="this.blur()" class="ButtonNav"></td><td ');
+document.writeln('              align=center><input  type=button value=Today onclick="epodToday()" ');
+document.writeln('             onfocus="this.blur()" title="现在的年月" class="ButtonNav"></td><td ');
+document.writeln('              align=right><input  type=button value=">>" onclick="epodNextM()" ');
+document.writeln('             onfocus="this.blur()" title="往后翻　月" class="ButtonNav"><input ');
+document.writeln('              type=button value=" >" title="往后翻　年" onclick="epodNextY()"');
+document.writeln('             onfocus="this.blur()" class="ButtonNav"></td>');
+document.writeln('</tr></td></tr></table></table></div>');
+var outObject;
+var epodChkDay = new Date();
+
+function setObject(obj){
+	outObject = obj;
+	if(obj.value != ""){
+		var chkDay = obj.value.split("-");
+		epodChkDay = new Date(chkDay[0],chkDay[1]-1,chkDay[2]);
+		epodTheYear = epodChkDay.getFullYear();
+    epodTheMonth = epodChkDay.getMonth()+1;
+    epodSetDay(epodTheYear,epodTheMonth);
+	}else{
+		epodChkDay = new Date();
+		epodToday();
+	}
+}
+
+var MonHead = new Array(12);         
+    MonHead[0] = 31; MonHead[1] = 28; MonHead[2] = 31; MonHead[3] = 30; MonHead[4]  = 31; MonHead[5]  = 30;
+    MonHead[6] = 31; MonHead[7] = 31; MonHead[8] = 30; MonHead[9] = 31; MonHead[10] = 30; MonHead[11] = 31;
+var epodTheYear=epodChkDay.getFullYear(); 
+var epodTheMonth=epodChkDay.getMonth()+1; 
+var epodWDay=new Array(37);               
+function epodWriteHead(yy,mm)  
+  { document.all.epodYearHead.innerText  = yy;
+    document.all.epodMonthHead.innerText = mm;
+  }
+function tmpSelectYearInnerHTML(strYear)
+{
+  if (strYear.match(/\D/)!=null){alert("年份输入参数不是数字！");return;}
+  var m = (strYear) ? strYear : epodChkDay.getFullYear();
+  if (m < 1000 || m > 9999) {alert("年份值不在 1000 到 9999 之间！");return;}
+  var n = m - 10;
+  if (n < 1000) n = 1000;
+  if (n + 26 > 9999) n = 9974;
+  var s = "<select  name=tmpSelectYear style='font-size: 12px' "
+     s += "onblur='document.all.tmpSelectYearLayer.style.display=\"none\"' "
+     s += "onchange='document.all.tmpSelectYearLayer.style.display=\"none\";"
+     s += "epodTheYear = this.value; epodSetDay(epodTheYear,epodTheMonth)'>\r\n";
+  var selectInnerHTML = s;
+  for (var i = n; i < n + 26; i++)
+  {
+    if (i == m)
+       {selectInnerHTML += "<option value='" + i + "' selected>" + i + "年" + "</option>\r\n";}
+    else {selectInnerHTML += "<option value='" + i + "'>" + i + "年" + "</option>\r\n";}
+  }
+  selectInnerHTML += "</select>";
+  document.all.tmpSelectYearLayer.style.display="";
+  document.all.tmpSelectYearLayer.innerHTML = selectInnerHTML;
+  document.all.tmpSelectYear.focus();
+}
+function tmpSelectMonthInnerHTML(strMonth)
+{
+  if (strMonth.match(/\D/)!=null){alert("月份输入参数不是数字！");return;}
+  var m = (strMonth) ? strMonth : epodChkDay.getMonth() + 1;
+  var s = "<select  name=tmpSelectMonth style='font-size: 12px' "
+     s += "onblur='document.all.tmpSelectMonthLayer.style.display=\"none\"' "
+     s += "onchange='document.all.tmpSelectMonthLayer.style.display=\"none\";"
+     s += "epodTheMonth = this.value; epodSetDay(epodTheYear,epodTheMonth)'>\r\n";
+  var selectInnerHTML = s;
+  for (var i = 1; i < 13; i++)
+  {
+    if (i == m)
+       {selectInnerHTML += "<option value='"+i+"' selected>"+i+"月"+"</option>\r\n";}
+    else {selectInnerHTML += "<option value='"+i+"'>"+i+"月"+"</option>\r\n";}
+  }
+  selectInnerHTML += "</select>";
+  document.all.tmpSelectMonthLayer.style.display="";
+  document.all.tmpSelectMonthLayer.innerHTML = selectInnerHTML;
+  document.all.tmpSelectMonth.focus();
+}
+function IsPinYear(year)         
+  {
+    if (0==year%4&&((year%100!=0)||(year%400==0))) return true;else return false;
+  }
+function GetMonthCount(year,month)
+  {
+    var c=MonHead[month-1];if((month==2)&&IsPinYear(year)) c++;return c;
+  }
+function GetDOW(day,month,year)    
+  {
+    var dt=new Date(year,month-1,day).getDay()/7; return dt;
+  }
+function epodPrevY() 
+  {
+    if(epodTheYear > 999 && epodTheYear <10000){epodTheYear--;}
+    else{alert("年份超出范围（1000-9999）！");}
+    epodSetDay(epodTheYear,epodTheMonth);
+  }
+function epodNextY() 
+  {
+    if(epodTheYear > 999 && epodTheYear <10000){epodTheYear++;}
+    else{alert("年份超出范围（1000-9999）！");}
+    epodSetDay(epodTheYear,epodTheMonth);
+  }
+function epodToday() 
+  {
+		epodChkDay = new Date();
+    epodTheYear = epodChkDay.getFullYear();
+    epodTheMonth = epodChkDay.getMonth()+1;
+    epodSetDay(epodTheYear,epodTheMonth);
+  }
+function epodPrevM() 
+  {
+    if(epodTheMonth>1){epodTheMonth--}else{epodTheYear--;epodTheMonth=12;}
+    epodSetDay(epodTheYear,epodTheMonth);
+  }
+function epodNextM() 
+  {
+    if(epodTheMonth==12){epodTheYear++;epodTheMonth=1}else{epodTheMonth++}
+    epodSetDay(epodTheYear,epodTheMonth);
+  }
+function epodSetDay(yy,mm)
+{
+  epodWriteHead(yy,mm);
+  for (var i = 0; i < 37; i++){epodWDay[i]=""};
+  var day1 = 1,firstday = new Date(yy,mm-1,1).getDay();
+  for (var i = firstday; day1 < GetMonthCount(yy,mm)+1; i++){epodWDay[i]=day1;day1++;}
+  for (var i = 0; i < 37; i++)
+  { var da = eval("document.all.epodDay"+i)   
+    if (epodWDay[i]!="")
+      { da.innerHTML = "<b>" + epodWDay[i] + "</b>";
+        da.style.backgroundColor = (yy == epodChkDay.getFullYear() &&
+        mm == epodChkDay.getMonth()+1 && epodWDay[i] == epodChkDay.getDate()) ? "#FFD700" : "#ADD8E6";
+        da.style.cursor="hand"
+      }
+    else{da.innerHTML="";da.style.backgroundColor="";da.style.cursor="default"}
+  }
+}
+
+function epodDayClick(n) 
+{
+	//parent.document.all.epodDateLayer.style.display="none";
+  var yy = epodTheYear;
+  var mm = epodTheMonth;
+  if (mm < 10){mm = "0" + mm;}
+  if (outObject)
+  {
+    if (!n) {outObject.value=""; return;}
+    if ( n < 10){n = "0" + n;}
+    outObject.value= yy + "-" + mm + "-" + n ;
+    parent.closeLayer(); 
+  }
+  else {parent.closeLayer(); alert("您所要输出的控件对象并不存在！");}
+}
+epodSetDay(epodTheYear,epodTheMonth);
+//-->
+</script>
+</body>
+</html>

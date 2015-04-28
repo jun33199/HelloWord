@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<HTML>
+<HEAD>
+<meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+<TITLE>打印提示</TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY bgcolor="#F3F5F8" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center" height="100px">
+<p align="center">
+<br>
+<font color="#2C556D"><b>请选择打印方式？</b></font>
+</p>
+<input type="button" accesskey="s" tabIndex="-1" type="button" name="printHand" value="手工票(S)" onclick="printHand()" title="printHand">
+&nbsp;
+<input type="button" accesskey="f" tabIndex="-1" name="printMachine" value="机打票(F)" onclick="printMachine()" title="printMachine">
+&nbsp;
+<input type="button" accesskey="c" tabIndex="-1" name="printFailure" value="取消(C)" onclick="printFailure()" title="printFailure">
+<br>
+
+<script>
+
+function printHand(){
+	//alert(document.all.success.title)
+	if(document.all.printHand.title=="printHand")	{
+		window.returnValue = 'hand';
+	}
+	else {
+		window.returnValue = 'yes';	
+	}
+	window.close()
+}
+
+function printMachine(){
+	//alert(document.all.success.title)
+	if(document.all.printMachine.title=="printMachine")	window.returnValue = 'machine';
+	else window.returnValue = 'yes';	
+	window.close()
+}
+
+function printFailure(){
+	//alert(document.all.success.title)
+	if(document.all.printFailure.title=="printFailure")	window.returnValue = 'failure';
+	else window.returnValue = 'yes';	
+	window.close()
+}
+
+</script>
+
+</div>
+</BODY>
+</HTML>

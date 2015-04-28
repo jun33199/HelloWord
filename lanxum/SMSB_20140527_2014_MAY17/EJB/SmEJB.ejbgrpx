@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+  <ejb-jar.xml extralocation="" timestamp="1067495702743"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+    <enterprise-beans>
+        <session>
+            <display-name>SbzlEJB</display-name>
+            <ejb-name>SbzlEJB</ejb-name>
+            <home>com.ttsoft.bjtax.smsb.ejb.SbzlEJBHome</home>
+            <remote>com.ttsoft.bjtax.smsb.ejb.SbzlEJB</remote>
+            <ejb-class>com.ttsoft.bjtax.smsb.ejb.SbzlEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <session>
+            <display-name>ZhsbEJB</display-name>
+            <ejb-name>ZhsbEJB</ejb-name>
+            <home>com.ttsoft.bjtax.smsb.ejb.ZhsbEJBHome</home>
+            <remote>com.ttsoft.bjtax.smsb.ejb.ZhsbEJB</remote>
+            <ejb-class>com.ttsoft.bjtax.smsb.ejb.ZhsbEJBBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <session>
+            <display-name>SmOrmapInitStartUp</display-name>
+            <ejb-name>SmOrmapInitStartUp</ejb-name>
+            <home>com.ttsoft.bjtax.smsb.ejb.SmOrmapInitStartUpHome</home>
+            <remote>com.ttsoft.bjtax.smsb.ejb.SmOrmapInitStartUp</remote>
+            <ejb-class>com.ttsoft.bjtax.smsb.ejb.SmOrmapInitStartUpBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor>
+        <container-transaction>
+            <method>
+                <ejb-name>SbzlEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>ZhsbEJB</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <ejb-name>SmOrmapInitStartUp</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+    </assembly-descriptor>
+</ejb-jar>]]></ejb-jar.xml>
+  <ejb-borland.xml extralocation="" timestamp="1067495702743"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Borland Software Corporation//DTD Enterprise JavaBeans 2.0//EN" "http://www.borland.com/devsupport/appserver/dtds/ejb-jar_2_0-borland.dtd">
+<ejb-jar>
+    <enterprise-beans>
+        <session>
+            <ejb-name>SbzlEJB</ejb-name>
+            <bean-home-name>SbzlEJB</bean-home-name>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>SbzlEJB</prop-value>
+            </property>
+        </session>
+        <session>
+            <ejb-name>ZhsbEJB</ejb-name>
+            <bean-home-name>ZhsbEJB</bean-home-name>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>ZhsbEJB</prop-value>
+            </property>
+        </session>
+        <session>
+            <ejb-name>SmOrmapInitStartUp</ejb-name>
+            <bean-home-name>SmOrmapInitStartUp</bean-home-name>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>SmOrmapInitStartUp</prop-value>
+            </property>
+            <property>
+                <prop-name>max-beans-in-free-pool</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>1</prop-value>
+            </property>
+            <property>
+                <prop-name>initial-beans-in-free-pool</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>1</prop-value>
+            </property>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor />
+</ejb-jar>]]></ejb-borland.xml>
+  <ejb-modeler-layout.xml extralocation="" timestamp="1067495702733"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+  <view>
+    <name>Default</name>
+    <ejb>
+      <name>ZhsbEJB</name>
+      <x>207</x>
+      <y>76</y>
+      <width>131</width>
+      <height>109</height>
+    </ejb>
+    <ejb>
+      <name>SmOrmapInitStartUp</name>
+      <x>388</x>
+      <y>76</y>
+      <width>153</width>
+      <height>91</height>
+    </ejb>
+    <ejb>
+      <name>SbzlEJB</name>
+      <x>25</x>
+      <y>75</y>
+      <width>131</width>
+      <height>109</height>
+    </ejb>
+  </view>
+</layout>]]></ejb-modeler-layout.xml>
+  <weblogic-cmp-extras.xml extralocation="" timestamp="1067495702733"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-rdbms-jar />]]></weblogic-cmp-extras.xml>
+  <weblogic-ejb-jar.xml extralocation="" timestamp="1067495707109"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-ejb-jar PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 7.0.0 EJB//EN' 'http://www.bea.com/servers/wls700/dtd/weblogic-ejb-jar.dtd'>
+<weblogic-ejb-jar>
+    <weblogic-enterprise-bean>
+        <ejb-name>SbzlEJB</ejb-name>
+        <jndi-name>SbzlEJB</jndi-name>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>ZhsbEJB</ejb-name>
+        <jndi-name>ZhsbEJB</jndi-name>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>SmOrmapInitStartUp</ejb-name>
+        <stateless-session-descriptor>
+            <pool>
+                <max-beans-in-free-pool>1</max-beans-in-free-pool>
+                <initial-beans-in-free-pool>1</initial-beans-in-free-pool>
+            </pool>
+        </stateless-session-descriptor>
+        <jndi-name>SmOrmapInitStartUp</jndi-name>
+    </weblogic-enterprise-bean>
+</weblogic-ejb-jar>
+]]></weblogic-ejb-jar.xml>
+</descriptors>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="QSGL_20140730_2014_JUL22_CLF">
+        <wb-resource deploy-path="/" source-path="/qsgl" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="/QSGL_20140730_2014_JUL22_CLF"/>
+        <property name="java-output-path" value="/QSGL_20140730_2014_JUL22_CLF/bin"/>
+    </wb-module>
+</project-modules>

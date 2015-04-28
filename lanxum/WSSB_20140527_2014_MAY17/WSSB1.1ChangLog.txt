@@ -1,0 +1,1304 @@
+@date   2005-07-15
+____________________
+
+@author GuZhiXian
+ 1.修改各页面的帮助URL。
+	
+   程序所涉及到的文件：  	
+     *.jsp
+     
+ 2.增加生成缴款书接口，转换银行系统过来的一批申报数据为申报缴款主表和申报缴款明细数据。
+	
+   程序所涉及到的文件：  	
+ 
+  接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    其他子系统删除缴款数据
+    public static List generateBankSBJKS(Map sbsjMap) throws BaseException
+     
+ 3.修改无税申报重复保存的问题。
+	
+   程序所涉及到的文件：  
+   com.ttsoft.bjtax.shenbao.wsksb.processor.WsksbProcessor	
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-07-05
+____________________
+
+@author GuZhiXian
+ 1.无税申报增加税款所属时期显示。
+	
+   程序所涉及到的文件：  	
+     wsksb001.jsp
+     com.ttsoft.bjtax.shenbao.wsksb.web.WsksbAction
+ 2.修改删除缴款书接口，将帐务标识的判断由‘或’改为‘与’。
+	
+   程序所涉及到的文件：  	
+  接口类：com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    纳税评估删除缴款数据
+        public void deleteJKS(ArrayList jkpzhList, Connection conn) throws Exception
+
+  接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    其他子系统删除缴款数据
+    public static void delJKS(List jkpzhList, Connection conn) throws BaseException
+     
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-06-05
+____________________
+
+@author GuZhiXian
+ 1.修改无税申报保存成功的提示。
+	
+   程序所涉及到的文件：  	
+     ApplicationResources.properties
+     
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-04-15
+____________________
+
+@author GuZhiXian
+ 1.修改生成缴款凭证号序号的BUG。
+	
+   程序所涉及到的文件：  	
+     com.ttsoft.bjtax.shenbao.util.TinyTools
+     
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-04-05
+____________________
+
+@author GuZhiXian
+ 1.修改无税款申报权限控制，只有纳税人状态为10或90的可以做无税申报。
+	
+   程序所涉及到的文件：  	
+     com.ttsoft.bjtax.shenbao.util.SbzlAccess
+     com.ttsoft.bjtax.shenbao.wsksb.web.WsksbAction
+     
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-03-22
+____________________
+
+@author GuZhiXian
+ 1.修改无应纳税款申报查询条件。
+	
+   程序所涉及到的文件：  	
+     com.ttsoft.bjtax.shenbao.wsksb.processor.WsksbProcessor
+     com.ttsoft.bjtax.shenbao.wsksb.web.WsksbAction
+     
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-03-14
+____________________
+
+@author GuZhiXian
+ 1.修改无应纳税款申报。
+	
+   程序所涉及到的文件：
+  	
+     com.ttsoft.bjtax.shenbao.szsm.web.SzsmAction
+     com.ttsoft.bjtax.shenbao.wsksb.web.WsksbAction
+     wsksb001.jsp
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-02-21
+____________________
+
+@author GuZhiXian
+ 1.企业所得税季报，新增弥补以前年度亏损和补亏后利润总额两个行次，修改减免税额计算公式。：
+	
+   程序所涉及到的文件：
+  	
+     com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.web.QysdsksAction
+     com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.web.QysdsksForm
+     com.ttsoft.bjtax.shenbao.model.domain.Qysdsjd     
+     qysdsks010.jsp
+     eProjectORMap.xml
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-01-27
+____________________
+
+@author GuZhiXian
+ 1.无应纳税款申报;取消企业所得税年度申报表第63项“弥补以前年度亏损额”及第77项“研究新产品、新技术、新工艺费用抵扣额”与税费管理模块中相关审批结果的制约关系。：
+	
+   程序所涉及到的文件：
+  	
+     com.ttsoft.bjtax.shenbao.wsksb.*
+     com.ttsoft.bjtax.shenbao.model.domain.Wynsksb
+     com.ttsoft.bjtax.shenbao.model.domain.Wynskszsm
+     com.ttsoft.bjtax.shenbao.model.mapping.WynsksbTbl
+     com.ttsoft.bjtax.shenbao.model.mapping.WynskszsmTbl
+     com.ttsoft.bjtax.shenbao.model.mapping.ORMgr
+     com.ttsoft.bjtax.shenbao.szsm.web.SzsmAction
+     com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QysdsHelper
+     szsm000.jsp,gzsx001.jsp,wsksb001.jsp
+     web.xml,struts-config.xml,eProjectORMap.xml
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-01-12
+____________________
+
+@author GuZhiXian
+ 1.企业所得税年报和印花税删除时与上门申报冲突问题：
+	
+   程序所涉及到的文件：
+java:
+  	com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.processor.QysdsnbProcessor
+	com.ttsoft.bjtax.shenbao.sbzl.yhs.processor.YhsProcessor
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2005-01-07
+____________________
+
+@author GuZhiXian
+ 1.车船税申报计算问题：
+	
+   程序所涉及到的文件：
+js:
+  	zhsb.js
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-12-26
+____________________
+
+@author Zhu guanglin
+ 1.国地共管个体工商户申报需要增加两个表：
+	SFDB.SF_JL_GTGSH_YHKKXX 	个体工商户银行扣款信息
+	SFDB.SF_JL_GTGSH_YHKKHZXX 	个体工商户银行扣款回执信息
+   程序所涉及到的文件：
+java:
+  	com.ttsoft.bjtax.shenbao.model.domain.Yhkkxx
+	com.ttsoft.bjtax.shenbao.model.mapping.YhkkxxTbl
+	com.ttsoft.bjtax.shenbao.model.domain.Yhkkhzxx
+	com.ttsoft.bjtax.shenbao.model.mapping.YhkkhzxxTbl
+	com.ttsoft.bjtax.shenbao.model.mapping.ORMgr.java
+xml:
+	eProjectORMap.xml	
+ 
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-11-18
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报对外接口：修改生成一批申报数据生成缴款书的接口,增加参数改变取银行代码方式
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    public static List getJkInforListBySbsj(Map sbsjMap, String yhdm, String yhmc, String zh) throws BaseException
+  
+**********************************************************************************
+**********************************************************************************
+@date   2004-10-11
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报自然人申报：将外汇牌价代码表改为实时获取
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.zrrsb.ZrrsbActionConstant
+    增加常量
+  com.ttsoft.bjtax.shenbao.zrrsb.web.ZrrsbAction
+    private  List getBzList(HttpServletRequest request, String tableKey) throws
+        BaseException
+  com.ttsoft.bjtax.shenbao.zrrsb.processor.ZrrsbProcessor
+    private  Map getBzList() throws BaseException
+  
+**********************************************************************************
+**********************************************************************************
+@date   2004-08-13
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报对外接口：增加一个按输入条件查询申报缴款数据的接口
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    public static List searchJkData(String jsjdm, String[] jkpzh, String sjly,
+                                    String fsdm, int zwbs) throws BaseException
+  com.ttsoft.bjtax.shenbao.proxy.ServiceProxy
+    public static List searchJkData(String jsjdm, String[] jkpzh, String sjly,
+                                    String fsdm, int zwbs) throws BaseException
+  com.ttsoft.bjtax.shenbao.ejb.Service
+    public List searchJkData(String jsjdm, String[] jkpzh, String sjly,
+                                    String fsdm, int zwbs) throws BaseException, RemoteException;
+  com.ttsoft.bjtax.shenbao.ejb.ServiceEJB
+     public List searchJkData(String jsjdm, String[] jkpzh, String sjly,
+                                    String fsdm, int zwbs) throws BaseException
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-08-11
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报对外接口：修改生成一批申报数据生成缴款书的接口,取国库组织机构代码处错误
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    public static List getJkInforListBySbsj(Map sbsjMap) throws BaseException
+  
+**********************************************************************************
+**********************************************************************************
+@date   2004-08-06
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报的例外处理部分，将所有例外输出
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.action.ShenbaoAction
+    protected ActionForward processForwardByException(
+        ActionMapping mapping,Exception e,HttpServletRequest request,
+        HttpServletResponse response)
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-08-05
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报对外接口：修改生成一批申报数据生成缴款书的接口
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    public static List getJkInforListBySbsj(Map sbsjMap) throws BaseException
+  com.ttsoft.bjtax.shenbao.proxy.ServiceProxy
+    public static List getJkInforListBySbsj(Map sbsjMap) throws BaseException
+  com.ttsoft.bjtax.shenbao.ejb.Service
+    public List getJkInforListBySbsj(Map sbsjMap) throws BaseException, RemoteException;
+  com.ttsoft.bjtax.shenbao.ejb.ServiceEJB
+    public List getJkInforListBySbsj(Map sbsjMap) throws BaseException
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-08-04
+____________________
+
+@author GuZhiXian
+ 1.修改网上申报对外接口：增加一个根据传入的一批申报数据生成缴款书的接口
+   程序所涉及到的文件：
+  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    public static List getJkInforListBySbsj(List sbsjList) throws BaseException
+  com.ttsoft.bjtax.shenbao.proxy.ServiceProxy
+    public static List getJkInforListBySbsj(List sbsjList) throws BaseException
+  com.ttsoft.bjtax.shenbao.ejb.Service
+    public List getJkInforListBySbsj(List sbsjList) throws BaseException, RemoteException;
+  com.ttsoft.bjtax.shenbao.ejb.ServiceEJB
+    public List getJkInforListBySbsj(List sbsjList) throws BaseException
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-30
+____________________
+
+@author GuZhiXian
+ 1.修改企业所得税季报、企业所得税年报和企业基本财务指标的action文件：增加保存或删除数据时的日志记录
+   程序所涉及到的文件：
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.web.QysdsksAction
+     doDelete();
+     doSave();
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QysdsnbAction
+     doRemove();
+     doSave();
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web.QycwzbAction
+     doRemove();
+     doSave();
+ 
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-29
+____________________
+
+@author GuZhiXian
+ 1.修改企业所得税季报和企业所得税年报的Processor文件：修正保存或删除数据时对减免税的处理问题   
+   程序所涉及到的文件：
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.processor.QysdsksProcessor
+     private void doDelete(Map data) throws BaseException
+     private void doSave(Map data) throws BaseException
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.processor.QysdsnbProcessor
+     private Object doDelete(Map pData, int type) throws BaseException
+     private void doDeleteJm(String jsjdm, String nd, SWDJJBSJ jbsj, Timestamp curDate, Connection conn)
+     private void doSaveJm(Jm jm, Connection conn, ORManager orManager)
+
+ 
+ 2.修改减免税的Action文件，在取税种税目时过滤掉企业所得税：   
+    程序所涉及到的文件：
+    com.ttsoft.bjtax.shenbao.sbzl.jms.web.JmsAction
+       private void makeSzsmList(JmsForm jmsForm,List szsmList)
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-23
+____________________
+
+@author GuZhiXian
+ 1.修改企业所得税季报的JSP页面文件：修正减免税的计算值为负的问题   
+   程序所涉及到的文件：
+   \tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\qysdsks010.jsp修改JAVASCRIPT代码加入202-205行
+ 
+ 2.修改对外接口删除缴款书的判断条件为：帐务标识的第一位为0或第20位为0可以删除：   
+  接口类：com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    纳税评估删除缴款数据
+        public void deleteJKS(ArrayList jkpzhList, Connection conn) throws Exception
+
+  接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    其他子系统删除缴款数据
+    public static void delJKS(List jkpzhList, Connection conn) throws BaseException
+
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-07-14
+____________________
+
+@author GuZhiXian
+ 利用数据库配置信息控制接口和申报资料链接显示：   
+ 程序所涉及到的文件：
+com.ttsoft.bjtax.shenbao.util.TinyTools
+    public static String getProperty(String propertyName)：其他类从数据库中取属性值都要通过这个方法
+    public static String[] divideString(String source, String divideFlag) ：分割字符串，去掉空格
+
+com.ttsoft.bjtax.shenbao.util.FriendHelper
+    public static final String[] propertyNames ={…}配置属性名数组
+    public static String NSRZT_PROPERTY = "_NSRZT";判断纳税人属性后缀
+    public static String SWJG_PROPERTY = "_SWJG";判断税务机关属性后缀
+    public static boolean checkNsrztForJks(int type, SWDJJBSJ swdjjbsj)接口中判断纳税人状态
+    public static boolean checkSwjgForJks(int type, SWDJJBSJ swdjjbsj)税务机关组织机构代码后两位为00的不能开缴款书的判断
+com.ttsoft.bjtax.shenbao.constant.CodeConstant:定义了一些常量
+com.ttsoft.bjtax.shenbao.constant.ActionConstant：定义ZhsbProcessor取属性的Action类型值
+com.ttsoft.bjtax.shenbao.zhsb.processor.ZhsbProcessor：
+    public String getProperty(VOPackage voPackage) throws BaseException：取属性值的方法
+com.ttsoft.bjtax.shenbao.util.SbzlAccess
+    定义了一些常量值
+    static private boolean canDisplay(int type)根据配置的显示属性判断是否可以进行申报录入
+    static private boolean isMonths(int type, int month)根据配置的月份属性判断是否可以进行申报录入
+    static private boolean isNsr(int type)根据配置的纳税人属性判断是否要判断纳税人类型
+    修改了getAuthority(int type, HttpServletRequest request)
+com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    根据纳税评估提供的申报数据和数据库连接，生成缴款数据
+    public DeclareInfor shenbaoJiaokuan(Sbsj sbsj, Connection conn)
+        throws Exception
+
+ com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据,可输入银行信息
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj, String yhdm, String yhmc, String zh)
+        throws BaseException
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj) throws BaseException
+
+com.ttsoft.bjtax.shenbao.model.domain.Properties属性数据对象类
+com.ttsoft.bjtax.shenbao.model.mapping.PropertiesTbl属性数据对象对应数据表类
+com.ttsoft.bjtax.shenbao.model.mapping.ORMgr注册属性数据对象
+
+\tax_vob\source\V1.1\group01\WSSB\config\config\eProjectORMap.xml加入表SBDB.SB_JL_PROPERTIES的ORMapping配置信息
+
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-07-09
+____________________
+
+@author GuZhiXian
+ 修改对外接口将纳税人状态的判断改为对税务机关组织机构代码后两位为00不能开缴款书的判断：   
+ 接口类：com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    根据纳税评估提供的申报数据和数据库连接，生成缴款数据
+    public DeclareInfor shenbaoJiaokuan(Sbsj sbsj, Connection conn)
+        throws Exception
+
+ 接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据,可输入银行信息
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj, String yhdm, String yhmc, String zh)
+        throws BaseException
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj) throws BaseException
+
+常量类：com.ttsoft.bjtax.shenbao.constant.CodeConstant    
+工具类：com.ttsoft.bjtax.shenbao.util.FriendHelper加入checkSwjgForJks方法    
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-05
+____________________
+
+@author GuZhiXian
+ 修改对外接口将纳税人状态为正常（10或90）的判断改为判断非正常的情况（停业20,注销40,在途50）：   
+ 接口类：com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    根据纳税评估提供的申报数据和数据库连接，生成缴款数据
+    public DeclareInfor shenbaoJiaokuan(Sbsj sbsj, Connection conn)
+        throws Exception
+
+ 接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据,可输入银行信息
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj, String yhdm, String yhmc, String zh)
+        throws BaseException
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj) throws BaseException
+
+常量类：com.ttsoft.bjtax.shenbao.constant.CodeConstant    
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-02
+____________________
+
+@author GuZhiXian
+ 修改申报资料权限中财务指标部分，去掉限制：   
+ 类：com.ttsoft.bjtax.shenbao.util.SbzlAccess
+        public static boolean getAuthority(int type, HttpServletRequest request)
+    方法中对财务指标申报资料链接是否显示的限制去掉    
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-07-01
+____________________
+
+@author GuZhiXian
+ 修改对外接口加入纳税人状态为正常（10或90）的判断：   
+ 接口类：com.ttsoft.bjtax.shenbao.jiekou.InterFaceCoding
+    根据纳税评估提供的申报数据和数据库连接，生成缴款数据
+    public DeclareInfor shenbaoJiaokuan(Sbsj sbsj, Connection conn)
+        throws Exception
+
+ 接口类：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据,可输入银行信息
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj, String yhdm, String yhmc, String zh)
+        throws BaseException
+
+    转换其他子系统过来的申报数据为申报缴款主表和申报缴款明细数据
+    public static DeclareInfor getJkInforBySbsj(Sbsj sbsj) throws BaseException
+    
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-05-27
+____________________
+
+@author GuZhiXian
+1、增加缴款凭证号序号生成测试用例和单元测试类：   
+com.ttsoft.bjtax.shenbao.test.service.processor.TestInterfaceProcessor
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-05-26
+____________________
+
+@author 万华
+
+1.修改“企业所得税年度纳税申报表”中，在第83、84、85、86行的计算表中，增加多行又删除到只剩一行时出现的“应补所得税额”合计值错误
+  代码中体现为qysdsnb008.jsp第647行lygfybsdse_sum的值被错误赋为lygfynsdse[0].value，故修改为lygfybsdse[0].value
+修改文件：
+Z:\tax_vob\source\V2.0\group01\WSSB\webapp\shenbao\qysdsnb008.jsp
+Z:\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\qysdsnb008.jsp
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-05-21
+____________________
+
+@author 李俊超
+1、当录入的告知事项适用于全市范围时，不能显示：   
+com.ttsoft.bjtax.shenbao.gzsx.processor.GzsxProcessor
+
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-05-18
+____________________
+
+@author 李俊超
+1、对外接口中生成缴款凭证号出错：   
+com.ttsoft.bjtax.shenbao.jiekou.processor.ShenbaoProcessor
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-05-17
+______
+
+@author 李俊超
+1、缴款凭证号扩容  
+com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+com.ttsoft.bjtax.shenbao.jiekou.processor.ShenbaoProcessor
+com.ttsoft.bjtax.shenbao.util.TinyTools
+com.ttsoft.bjtax.shenbao.zhsb.processor.ZhsbProcessor
+
+**********************************************************************************
+**********************************************************************************
+@date   2004-05-13
+______
+
+@author 李俊超
+1、删除2004-05-12中为"消除Deprecated"而作的修改，使V1.1恢复原状，但V2.0上保持修改，涉及类及删除版本：
+            CLASSNAME                                       User        Version
+com.ttsoft.bjtax.shenbao.util.TinyTools                      lijc        \main\2
+com.ttsoft.bjtax.shenbao.util.Skssrq                         guzx        \main\9
+com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web                    guzx        \main\3、\main\4、\main\5
+com.ttsoft.bjtax.shenbao.jiekou.processor.ShenbaoProcessor   guzx        \main\4、\main\5
+
+2、将申报资料的企业基本财务指标表开放出来，即没有征期时间的控制了；就根据登记注册类型控制：
+com.ttsoft.bjtax.shenbao.util.SbzlAccess
+    
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-05-12
+______
+
+@author Gu ZhiXian
+修改对日期时间类的调用，消除Deprecated
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\jiekou\processor\ShenbaoProcessor.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsnb\web\QysdsHelper.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\Skssrq.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\TinyTools.java
+______
+
+@author 李俊超
+1、修改缴款凭证号生成控制规则，将原范围"000-999"扩充到"000-ZZZ"，涉及：com.ttsoft.bjtax.shenbao.util.TinyTools、com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-05-13
+______
+
+@author 李俊超
+1、删除2004-05-12中为"消除Deprecated"而作的修改，使V1.1恢复原状，但V2.0上保持修改，涉及类及删除版本：
+                CLASSNAME                                       User        Version
+   com.ttsoft.bjtax.shenbao.util.TinyTools                      lijc        \main\2
+   com.ttsoft.bjtax.shenbao.util.Skssrq                         guzx        \main\9
+   com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web                    guzx        \main\3、\main\4、\main\5
+   com.ttsoft.bjtax.shenbao.jiekou.processor.ShenbaoProcessor   guzx        \main\4、\main\5
+
+
+**********************************************************************************
+**********************************************************************************
+
+@date   2004-05-17
+______
+
+@author 李俊超
+1、缴款凭证号扩容  com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor
+                   com.ttsoft.bjtax.shenbao.jiekou.processor.ShenbaoProcessor
+                   com.ttsoft.bjtax.shenbao.util.TinyTools
+                   com.ttsoft.bjtax.shenbao.zhsb.processor.ZhsbProcessor
+
+**********************************************************************************
+**********************************************************************************
+
+
+
+
+
+2004-04-29
+给稽查增加接口public static DeclareInfor getJkInforBySbsj(Sbsj sbsj, String yhdm, String yhmc, String zh)
+修改文件
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\proxy\ServiceProxy.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\ServiceEJB.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\Service.java
+
+修改企业所得税季报向减免表插的记录的税款所属时期为20040101的bug
+修改文件
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\web\QysdsksAction.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-04-15
+三方协议申报由一票多税改成一票一税
+Ln38 at
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zhsb\web\ZhsbWithSfxyAction.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-04-12
+修改综合申报自动计算精度误差
+\tax_vob\source\V1.1\group01\WSSB\webapp\js\zhsb.js
+
+**********************************************************************************
+**********************************************************************************
+
+2004-04-09
+add function : getWszData()
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+
+不再显示查账征收季报的链接
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\SbzlAccess.java
+**********************************************************************************
+**********************************************************************************
+
+2004-04-08
+车房土按半年申报的实缴税额减半
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\model\client\SbjkmxData.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zhsb\web\ZhsbAction.java
+Z:\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\zhsbFunc.jsp
+Z:\tax_vob\source\V1.1\group01\WSSB\webapp\js\zhsb.js
+**********************************************************************************
+**********************************************************************************
+
+2004-04-02
+Hongwei Wang
+修改deleteJKS（）方法
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\jiekou\InterFaceCoding.java
+
+Wu Youzhi
+修改打印缴款书显示收款国库代码
+\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\printzrrjks.jsp
+\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\printdddyjks.jsp
+\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\sbypysjks.jsp
+**********************************************************************************
+**********************************************************************************
+
+2004-03-30
+Ding Chenggang
+1.税种税目树上在税目征期截止日期当天也要显示此税目
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\szsm\processor\SzsmProcessor.java
+
+2.外企不填写企业所得税年报、季报
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\SbzlAccess.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-03-29
+Wu Youzhi
+修改综合申报页面自动计算，53开头的附加税计税金额为主税计税金额
+\tax_vob\source\V1.1\group01\WSSB\webapp\js\zhsb.js
+
+Ding Chenggang
+修改qysdsks010.jsp
+原因：企业所得税季报税率计算公式变更,确定税率规则是4月hc2×4，7月hc2×2，10月hc2×4÷3
+
+**********************************************************************************
+**********************************************************************************
+2004-03-26
+Hongwei Wang
+优化doDel(), getZqzzrq()方法
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zhsb\processor\ZhsbProcessor.java
+
+优化getZqzzrq()查询方法
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+
+Wu Youzhi
+减免税自动代出附加税
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\web\JmsAction.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\web\JmsForm.java
+\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\jms011.jsp
+**********************************************************************************
+**********************************************************************************
+
+
+2004-03-24
+Hongwei Wang
+修改对外提供接口方法updatejbdhForPZ()，内部实现
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+
+Ding Chenggang
+
+修改车房土的税款所属时期计算方法。
+车房土不查征期日历表，只计算
+**********************************************************************************
+**********************************************************************************
+
+2004-03-23
+
+Ding Chenggang
+
+1 注释第237 238 239 256行，注释掉对税目的判断，现在不论是何种税目，都要调用税费接口获取预算级次
+  \tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\FriendHelper.java
+
+2 修改车房土的税款所属时期计算方法。
+   根据计算机代码和税种代码调用税费的缴纳次数核定的接口，
+如果接口取得返回数据，当前日期为上半年，则税款所属时期为当前年的上半年，为下半年，则税款所属时期为下半年；
+如果接口没有返回数据或返回为空，则税款所属时期为全年的。
+修改 doZcsp() at \tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\Skssrq.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-03-22
+Hongwei Wang
+修改对外提供接口方法getJkInforBySbsj()，修改银行帐户获取条件
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\jiekou\InterFaceCoding.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-03-21
+Wu Youzhi
+1.减免税页面提交判断减免税额
+	tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\jms011.jsp
+2.营业税不判断减免资格
+	tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\web\JmsAction.java
+**********************************************************************************
+**********************************************************************************
+2004-03-19
+
+hongwei wang
+修改提供给票证的接口方法：
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\Service.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\ServiceEJB.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\proxy\ServiceProxy.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+上述四个文件中的updateJzbs()方法全部增加一个参数。
+
+
+
+
+修改企业所得税季报:纯益率企业在税费的“录入企业所得税征收方式鉴定结果”功能中，查到认定为纯益率的数据后，
+则取（税费认定的纯益率）×（行次1）来计算行次2的值;适用税率根据（行次2×常量4）的值变化，同1的一般企业中的变化；
+
+**********************************************************************************
+**********************************************************************************
+2004-03-18
+Wu Youzhi
+修改综合申报自动计算：按数量计标识为2时，课税数量不足0.5按0.5算，超过0.5则进一
+	tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\js\zhsb.js
+
+Ding Chenggang
+修改企业所得税季报，当企业为非乡镇且有减免资格时，行次6从税费带出一般减免额，并保
+存到减免表中。
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\web\QysdsksAction.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\web\QysdsksForm.java
+Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\processor\QysdsksProcessor.java
+**********************************************************************************
+**********************************************************************************
+
+2004-03-17
+Wu Youzhi
+企业所得税季报的修改
+	tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\qysdsks010.jsp
+	(1)1行次不可以为负数。
+	(3)利润总额（应纳税所得额）即行次4计算为负数后改为0。
+
+Ding Chenggang
+企业所得税年报的修改： 行次69从税费接口取数
+
+**********************************************************************************
+**********************************************************************************
+
+2004-03-16
+Ding Chenggang
+1 修改三代上传的javascript的bug
+2 打印缴款书页面 printdddyjks.jsp sbypysjks.jsp printzrrjks.jsp，国库代码和国库名称的位置互换
+3 申报后加成功提示
+
+Wu Youzhi
+1.企业所得税季报的修改
+	tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\web\QysdsksAction.java
+	高新技术和纯益率企业：
+	(1)在税费的“录入企业所得税征收方式鉴定结果”功能中，查到认定为纯益率的数据后，则取（税费认定的纯益率）×（行次1的值）来计算行次2的值；
+	(2)在税费查到认定为新技术企业的数据后，则申报的适用税率为15％；
+
+
+**********************************************************************************
+**********************************************************************************
+
+2004-03-15  
+
+Ding Chenggang
+1 重新生成gzsx gzsxls两个值对象
+2 修改 printdddyjks.jsp sbypysjks.jsp printzrrjks.jsp
+  隶属关系和注册类型处不打印任何文字了；
+  征收机关：打印税务所名称
+  最后一行的第2列地方税务机关中：打印为分局名称
+3 修改web.xml，实现不预编译达到预编译的效果
+
+wang hongwei
+修改税款所属日期的获得方法
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zhsb\processor\ZhsbProcessor.java
+1，修改getZqzzrq()方法
+2，修改fillSbjkmx()方法
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\Skssrq.java
+1，修改getSksssq() 增加一个参数（增加为第三个参数）
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\Proxy\TrancProxy.java
+1，增加getZqzzrq()方法
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\ServiceEJB.java
+1，增加getZqzzrq()方法
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\ejb\Service.java
+1，增加getZqzzrq()方法
+tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\service\processor\InterFaceProcessor.java
+1，增加getZqzzrq()方法
+
+Wu Youzhi
+1.修改调用税款所属日期方法的参数
+	tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\web\JmsAction.java
+	row:535
+	tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\web\JmsForm.java
+	row:204
+	tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\qysdsjdks\web\QysdsksAction.java
+	row:268
+2.企业所得税年报89行可为负数。
+	tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\qysdsnb008.jsp
+	row:431
+3.企业所得税季报的修改
+	tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\qysdsks010.jsp
+	(1)2、5、10行次可以为负数。
+	(2)定额企业：在税费的“录入企业所得税征收方式鉴定结果”功能中，查到认定为定额的数据后，则将税费认定的“定额数”带到申报的行次4，并可编辑修改，同时行次1、2、3为空不可编辑。
+	(3)利润总额（应纳税所得额）即行次4计算为负数后改为0。
+
+**********************************************************************************
+**********************************************************************************
+2004-3-11 Ding Chenggang
+1 修改 qysdsks010.jsp Ln92-Ln118 ，修改原因：根据行次2的值找适用税率，应该改为用（行次2×4）的值去找适用税率
+2 修改 zrrsbaction.java Ln672-Ln676 修改原因：登记zrrfwdw值对象变了，做相应修改
+3 修改 szsmprocessor.java Ln164-Ln176 修改原因：优化sql
+
+**********************************************************************************
+**********************************************************************************
+
+2004-3-10 Wu Youzhi
+自然人申报添加银行信息
+修改文件：
+\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\zrrsb.jsp
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zrrsb\web\ZrrsbAction.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\zrrsb\web\ZrrsbForm.java
+\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\FriendHelper.java
+
+**********************************************************************************
+**********************************************************************************
+
+2004-3-9 Ding Chenggagn
+
+增加值对象Gzsxpl
+
+**********************************************************************************
+**********************************************************************************
+
+2004-3-9 Wu YouZhi
+修改文件：\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\sbzl\jms\JmsAction.java
+1.一般减免申报：如果税种为营业税，不论选择法定性减免还是审批减免都没有资格权限的查询和控制了；
+527行：	修改前： if(jmlx[i].equals(CodeConstant.JMLX_SP))
+	修改后： if(jmlx[i].equals(CodeConstant.JMLX_SP) && !szsmdm[i].startsWith(SzsmdmConstant.YYS))
+
+**********************************************************************************
+**********************************************************************************
+
+2004-3-8 Ding Chenggang
+
+1.修改szsm000.jsp 在申报资料链接上加“申报明细资料录入”作为标题式样，加粗字体加大。
+2.Z:\tax_vob\source\V1.1\group01\WSSB\src\com\ttsoft\bjtax\shenbao\util\SbzlAccess.java
+Ln132-Ln143,修改为登记注册类型为250和350的时候才显示外企营业税申报表的链接
+
+**********************************************************************************
+**********************************************************************************
+
+2004-3-5 Ding Chenggang
+
+1 修改gzsx001.jsp, Ln74,将提示信息“请到有关税务机关接受相关处理”改为“请与主管税务所联系”。
+
+**********************************************************************************
+**********************************************************************************
+
+
+2004-3-5 Wuyz
+修改文件：\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\zrrsb.jsp
+467行	修改前：var ynssde = Math.round((rmbhj - jfye_tmp - sskcs * fdbl/100)*100/(1-sl*fdbl/100))/100;
+	修改后：var ynssde = Math.round((rmbhj - jfye_tmp - sskcs * fdbl/100)*100*(1-sl*fdbl/100))/100;
+1234行	修改前：var ybtsk = (ynse - tzqynse)*sjgzr;
+	修改后: var ybtsk = Math.round(((ynse - tzqynse)*sjgzr)*100)/100;
+
+***************************************************************
+***************************************************************
+2004-3-5 Wanghw
+1.修改文件：com.ttsoft.bjtax.shenbao.service.processor.InterFaceProcessor.java
+  第1348――－1450行
+
+  修改方法：getYhssj（）
+
+  修改说明：方法内部修改，参数及调用等都没有变动，只返回结果集增加内容，此接口为票证使用，
+            对其它模块及票证现有调用都无影响，若票证需要使用新的结果集，则应把票证和网上申报
+            同步编译，取新的结果集；
+  建议：先于票证编译部署网上申报EJB，这样即不影响现有模块调用，又不必考虑票证何时更新。
+
+***************************************************************
+***************************************************************
+2004-3-4 Wuyz
+修改文件：\tax_vob\source\V1.1\group01\WSSB\webapp\shenbao\zrrsb.jsp
+1183行：	 修改前：		var sre = tzqrmbhj - rmbhj/sjgzr - jfye_tmp;
+	 修改后：		var sre = parseFloat(tzqrmbhj) + parseFloat(rmbhj/sjgzr) - jfye_tmp;
+
+***************************************************************
+***************************************************************
+
+3.2日版本与前一版本变化有：
+1. 打印缴款书,征收机关显示改为分局，不是税务所
+
+***************************************************************
+***************************************************************
+
+
+old:
+
+1. 自然人申报检查null
+2. 自然人打印，不打印
+3. skssrq，车房土是当期（skssrq是当年一年）
+4. 限缴日期，当月10号->当月15号
+5. 告知事项按照cjrq倒序
+
+12.16日版本与前一版本变化有：
+
+1. 按新税费接口修改程序
+2. 优化查询本月申报数据的sql
+3. 三代上传excel文件增加对金额大小的检查,<10000000000000
+
+**********************************************************************************
+**********************************************************************************
+
+12.11日版本与前一版本变化有：
+
+1. 按新需求修改申报资料过滤条件（修改了时间条件和登记企业类型条件）
+2. 修改自然人申报外币填写界面，不再把所有币种全部显示在界面上了，只显示用户选择的
+
+**********************************************************************************
+**********************************************************************************
+
+12.10日版本与前一版本变化有：
+
+1. 自然人申报填写外币金额增加分页功能
+2. 修改查账年报查询投资方信息的bug
+3. 修改三代可以查看上门数据的bug
+4. 修改综合申报可以查看上门数据的bug
+5. 修改税种税目树，增加检查数据库数据的正确性，防止出现死循环。
+
+**********************************************************************************
+**********************************************************************************
+
+12.4日版本与前一版本变化有：
+
+1. 修改综合申报时的外企附加税规则
+
+**********************************************************************************
+**********************************************************************************
+
+12.3日版本与前一版本变化有：
+
+1. 申报,如果选择的是120010税目，则用（计税金额×70％）计算后，再乘以税率计算出实际缴税额；
+2. 对申报资料的填写时间增加了限制，
+       网上季报的出现时间是1/4/7/10月;
+       网上企业所得税年报出现的日期为1-2月份;
+       网上印花税年报1月15日以前;
+3. 增加了三代的打印
+
+**********************************************************************************
+**********************************************************************************
+
+12.2日版本与前一版本变化有：
+
+1. 无三方协议的申报在用户没有银行信息时不显示银行listbox
+2. 在减免表中保存企业所得税81行次
+
+**********************************************************************************
+**********************************************************************************
+
+11.27日版本与前一版本变化有：
+
+1. 企业所得税行次81可以从税费接口得到了
+2. 按照需求的表格修改一票多税打印界面，将申报日期放到表格下面。
+3. 修改了一票多税打印界面上将税款类型显示成代码的bug
+4. 查看缴款书界面上，隐藏一票一税的缴款书的打印按钮
+5. 所有申报日期改成精确到天
+6. 实现了自然人申报
+
+**********************************************************************************
+**********************************************************************************
+
+11.20日版本与前一版本变化有：
+
+1. 修改在申报资料功能权限过滤中对外企营业税增加对登记注册类型的检查（不是外企的通不过）的bug
+2. 网上申报不在使用SBDB.V_SB_SZSMDM, 改回使用DMDB.SB_DM_SZSM，但需要增加检查zxbs（注销标识）是否为"0"
+
+**********************************************************************************
+**********************************************************************************
+
+11.19日版本与前一版本变化有：
+
+1. 修改企业所得税 事业单位的jsp，使光标无法进入只读input框。
+2. 修改无三方协议的申报缴款，使用户无银行信息时也可以进行申报。
+3. 网上申报不在使用DMDB.SB_DM_SZSM, 改成使用SBDB.V_SB_SZSMDM
+4. 修改企业所得税，行次14改成可以录入负数
+
+**********************************************************************************
+**********************************************************************************
+
+11.18日版本与前一版本变化有：
+
+1. 修改“企业所得税年报”，行次82改成总是可编辑的。
+2. 金额小于一元的转换为大写时，开头加上“零元”。
+
+**********************************************************************************
+**********************************************************************************
+
+11.17日版本与前一版本变化有：
+
+1. 综合申报增加定率功能
+2. 有三方协议的综合申报增加查看缴款书功能
+3. 在申报资料功能权限过滤中对外企营业税增加对登记注册类型的检查（不是外企的通不过）
+4. 修改作废缴款书的提示，根据作废单张缴款书和作废一次申报所有缴款书不同给出不同提示信息。
+5. 修改“三代”，撤销汇总数据成功后不再转向“成功”页面，改成停留本页，显示剩余未撤销数据。
+6. 修改企业所得税，无论企业征收税率类型为何值，都带出税费数据。
+7. 为纳税评估编写新的接口包com.ttsoft.bjtax.shenbao.jiekou
+8. 修改提供给票证的接口方法 ArrayList getYhssj(String zhdm, String jsjdm),现增加参数计算机代码
+9. 修改提供给票证的接口方法 void updateJzbs(ArrayList xspzhList, String jsjdm) ,现增加参数计算机代码
+
+**********************************************************************************
+**********************************************************************************
+
+11.14日版本与前一版本变化有：
+
+1. 修改修改szsmtree，增强容错功能。
+
+**********************************************************************************
+**********************************************************************************
+
+11.13日版本与前一版本变化有：
+
+1. 删除shenbao中的debug，统一使用zkclass中的Debug输出调试信息
+2. 修改计算企业所得税和个体工商户经营所得税款所属时期方法为：当前日期为非1季度的时候，税款所属日期为当年的1月1日至当前日期上个月的月末；当前日期为1季度的时候，税款所属日期为上年的1月1日至上年的12月31日；
+3. 修改接口方法(增加参数List xspzhList) ：from void jiebao(List wszhList,String jbdh) to void jiebao(List wszhList,List xspzhList, String jbdh)
+4. 修改企业财务指标，增加行次4, 23, 39, 40
+5. 修改三代，税率格式从支持2位小数改成支持5位小数
+
+**********************************************************************************
+**********************************************************************************
+
+11.12日版本与前一版本变化有：
+
+1. 修改页脚
+2. 增加接口方法 DeclareInfor getJksBySbsjForCF(Sbsj sbsj)
+3. 增加接口方法 ArrayList getYhssj(String zhdm)
+4. 增加接口方法 void updateJzbs(ArrayList xspzhList)
+5. 选择税种税目页面增加提示重复缴款功能
+6. 修改上传三代excel文件功能，当excel文件格式有误时，明确给出提示
+
+**********************************************************************************
+**********************************************************************************
+
+11.11日版本与前一版本变化有：
+
+1. 修改bug  sb11
+2. 修改bug  sb87
+3. 修改税种税目树，不再按照征期类型分组
+4. 修改减免税界面，将“减免类型”改为“减免分类”，并放到第一列，将“减免项目”改为“减免细目”
+5. 实现配置税款类型代码功能
+6. 实现重新加载在代码表功能
+7. 申报缴款时，同时在sbjkmx中保存“税率”
+
+**********************************************************************************
+**********************************************************************************
+
+11.10日版本与前一版本变化有：
+
+1. 修改bug  sb78
+2. 修改bug  sb79
+3. 修改印花税，外企营业税，减免税，三代的jsp页面，使适应800×600分辨率
+4. 按插入告知事项规则的变化修改查询显示告知事项
+5. 修改综合申报缴款附加税规则，修改为：外资单位不自动带出附加税
+
+**********************************************************************************
+**********************************************************************************
+
+11.7日版本与前一版本变化有：
+
+1. 修改bug  sb70
+2. 修改bug  sb71
+3. 修改bug  sb72
+4. 修改bug  sb73
+5. 修改bug  sb74
+
+**********************************************************************************
+**********************************************************************************
+
+11.6日版本与前一版本变化有：
+
+1. 修改接口DeclareInfor getJkInforBySbsj(Sbsj sbsj) ，Sbsj对象增加bz字段
+2. 修改税种税目树，点击税目文字也可以进行操作
+3. 综合申报增加自动计算实缴税额功能
+4. 讲所有页面上的“金额单位：元”统一改成“金额单位：人民币元”
+5. 更换页面的“头”
+6. 修正部分页面在800*600分辨率下显示的不美观问题。（szsm.jsp,gzsx.jsp）
+
+**********************************************************************************
+**********************************************************************************
+
+11.5日版本与前一版本变化有：
+
+1. 增加接口DeclareInfor getJkInforBySbsj(List sbsj)
+2. 修改用户测试bug，对“企业基本财务指标情况表”中的“财务费用”域的控制改为可以录入负数
+3. 修改用户测试bug，对“企业基本财务指标情况表”中的“批准文号”域的控制可以录入任意字符
+4. 修改用户测试bug，对“企业所得税年度纳税申报表”中的“营业收入”域的控制改为可以录入0
+5. 修改类Skssrq，使之可以在web层使用
+
+**********************************************************************************
+**********************************************************************************
+
+11.4日版本与前一版本变化有：
+
+1. 整理优化税种税目树，使“树”独立，无需在jsp添加其他js和css，一个szsmtree标签就ok
+2. 修改了印花税报告明细表没有填swjgzzjgdm的bug
+3. 修改一票多税打印页面，同时显示税种税目代码和税种税目名称
+4. 修改skssrq.java，取车房土税款所属日期方法，当计税金额为0时认为是年申报
+
+**********************************************************************************
+**********************************************************************************
+
+11.3日版本与前一版本变化有：
+
+1. sbjkzb和sbjkmx增加"nd"字段,修改接口getJkInforBySbsj的实现
+2. 调整一票多税打印字体,对齐等效果
+3. 根据数据库变化，增加nd字段，修改“三代”
+4. 根据数据库变化，增加nd字段，修改“自然人申报”
+5. 修改了告知事项中只有非正常信息时无法正确显示的bug
+6. 修改申报资料链接中各链接的顺序，使企业所得税的都放到一起
+7. 重新实现税种税目树，
+   新特点：
+    1) 与税种无关 
+    2) 无需后台排序 
+    3) 超常容错（不怕数据不全）
+    4) 不使用递归
+    5) 生成的html代码小，最大只有50k
+    6) 第一级默认展开，
+    7) 同时显示税种税目代码与税种税目名称
+8. 实现“企业所得税亏损”
+9. 在DBResource增加对数据库链接的计数，检查有无不释放数据库链接的情况
+10. 统一整理界面，修改了一些明显不美观的jsp页面
+11. 修改“核定征收应税所得率”中带出上次申报记录不正确的bug
+
+**********************************************************************************
+**********************************************************************************
+
+11.1日版本与前一版本变化有：
+
+1. 实现了一票一税的打印
+2. 修改了车房土的税款所属时期的计算方法，当无法取得税费信息是默认年申报所属日期
+3. 针对外企营业税表结构的变化（增加“年度”，删除“纳税人名称、税种名称、税种税目名称、征税方法名称”）修改程序
+4. 针对减免税表结构的变化（删除纳税人名称）修改程序
+5. 修改减免税查询本期已申报数据条件，增加条件“记帐标记第一位是0”
+6. 基本实现企业所得税亏损
+7. sbjkzb和sbjkmx都增加了nd字段，修改综合申报相关程序。
+8. 根据昨日grsdsz和grsdsmx表结构的变化修改个税明细相关程序
+9. 根据昨日qyjbcwzb表结构的变化修改企业基本财务指标相关程序
+10. 根据昨日yhsbgz,yhsbgmx表结构的变化修改印花税年度报告相关程序
+11. 根据昨日jm表结构的变化修改减免税相关程序
+
+**********************************************************************************
+**********************************************************************************
+
+10.30日版本与前一版本变化有：
+
+1. 修改了核定征收权限检查的bug
+2. 增加了车房土的税款所属时期的计算方法
+3. 修改“查账年报”“查账季报”“核定”，去掉了以前对分配率和不是100％不能提交的限制。
+
+**********************************************************************************
+**********************************************************************************
+
+10.29日版本与前一版本变化有：
+1. 综合申报增加自动带出本期个税定期定额数据功能。
+2. 将“选择税种税目”界面上的两个链接“设置常用税种税目”和“维护缴款书”用图片代替
+3. 实现了一票多税的打印预览
+4. 根据新需求改变了综合申报页面上对车船税的课税数量的控制，现在可以录入0了。
+5. 修改“减免税”的一些常量值变化
+6. 修正“查账征收年报”在有减免情况下的数据表现的bug
+7. 实现了按缴款凭证号作废
+8. “企业所得税亏损”重新开发中，暂不能使用
+
+**********************************************************************************
+**********************************************************************************
+
+10.28日版本与前一版本变化有：
+1. 修改“减免税”界面的表头文字表达错误
+2. 修改综合申报附加税计算方法，“文化事业建设建设税”的计税金额是其主税的计税金额的和，而不在是其主税的实缴税额的和。
+
+**********************************************************************************
+**********************************************************************************
+
+10.25日版本与前一版本变化有：
+1. 实现了一票多税打印界面的后台
+2. 修改了“查账年度”“查账季度”“核定年季度”权限控制,增加了检查当前时间是否是第一季度的判断
+
+**********************************************************************************
+**********************************************************************************
+
+10.25日版本与前一版本变化有：
+
+1. 增加"查账征收季度""查账征收年度度""核定征收季度""外企营业税"在初始化出异常后的界面控制
+2. 修改了税种税目树，使树针对登录用户经济类型内外资的不同而显示不同的税种税目
+3. 修改“企业所得税年报”jsp页面的录入控制，使部分输入域允许录入负数
+4. 修改了“查账年度”“查账季度”“核定年季度”权限控制,增加了针对用户登记注册类型是否是个体经营的检查
+
+**********************************************************************************
+**********************************************************************************
+
+10.24日版本与前一版本变化有：
+
+1. 解决success.jsp底部logo不能全部显示的问题。
+2. 解决录入申报缴款数据第一行有附加税时不自动计算的bug
+3. 解决从“选择szsm”页面到下一页，在按后退键返回选择“选择szsm”时税种税目数的check与左边列表不一致的bug
+4. 解决从“favorite”页面到下一页，在按后退键返回选择“favorite”时税种税目数的check与左边列表不一致的bug
+5. 将“选择szsm”界面美化了一下
+6. 针对数据库表grsdsz删除字段nsrmc，表grsdsmx删除字段szsmmc，zymc，zjlxmc，gjmc对程序做了相应修改
+7. 修改接口getSbjkyqwrkData与getJkDataByJkpzh的内部实现，带出代码对应的名称。
+
+**********************************************************************************
+**********************************************************************************
+
+10.23日版本与前一版本变化有：
+
+1. 实现了自然人申报缴款的预览缴款书功能
+2. 针对自然人申报修改了申报内部权限控制，增加控制自然人申报功能，修改了自然人与企业申报都使用的功能控制
+3. 修改了申报资料过滤不能出现“财务指标”链接的bug
+4. 修改了昨晚发现查账年报后台processor仍然使用已经删除字段（zjhm）的bug
+
+**********************************************************************************
+**********************************************************************************
+
+10.22日版本与前一版本变化有：
+
+1. 修改外企营业税的form，去掉szdm，szmc，szsmmc，zsffmc字段的填写。
+2. 查账年度报表的值对象的修改，包括Czzsnbtzzmxsj.java和CzzsnbtzzmxsjTbl.java，以及eProjectORMap.xml。
+3. 查账年度报表的页面的修改，查账年度报表的processor的修改。
+4. 修改getjkpzh的接口，去掉参数“当前时间”
+5. 完善自然人申报，增加生成缴款书功能。
+
+**********************************************************************************
+**********************************************************************************
+10.21日版本与前一版本变化有：
+
+1. 修改综合申报js(zhsb.js)，实现金额数字显示两位小数
+2. 完成对查账征收季度按照新款数据库表结构进行修改
+3. 完成对核定征收按照新款数据库表结构进行修改
+4. 完成对查账征收年度新款数据库表结构进行修改
+5. 完成对印花税新款数据库表结构进行修改
+6. 增加接口“取申报编号”
+
+**********************************************************************************
+**********************************************************************************
+
+10.20日版本与前一版本变化有：
+
+1. 在有关申报缴款表的代码中舍弃了各个名称字段，就是表中暂时保留字段，代码中不管这些字段
+2. 申报缴款后台增加了对“数据来源”的操作
+3. servletcontext增加了多个代码表，swjgzzjgdm，yskm，ysjc，gjbzhy，djzclx，lxgx 
+
+**********************************************************************************
+**********************************************************************************
+

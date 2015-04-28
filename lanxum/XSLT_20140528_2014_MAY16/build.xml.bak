@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gb2312"?>
+<project name="xsltweb" default="all" basedir=".">
+    <property name="BASEDIR" value="." />
+    <property name="dist"	value="${BASEDIR}/dist" />
+    <property name="webapp" value="${BASEDIR}/XSLTWEB" />
+
+    <target name="all" depends="init, war, deploy"/>
+   
+    <target name="init" depends="clean">
+		<mkdir dir="${dist}"/>
+    </target>
+
+    <target name="war" depends="init">  
+		<jar jarfile="${dist}/XSLTWEB.war" basedir="${webapp}" update="yes">
+		</jar>
+    </target>
+
+    <target name="clean">
+		<delete	dir="${dist}"/>
+    </target>
+
+    <target name="deploy" depends="war" >
+        <copy file="${dist}/XSLTWEB.war" todir="${WL_APP}" />
+    </target>
+</project>

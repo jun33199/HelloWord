@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+.hr1 {
+	border: dashed #41727E;
+	height: 1px;
+}
+.black9 {
+	font-size: 9pt;
+	color: #415967;
+	white-space: pre;
+}

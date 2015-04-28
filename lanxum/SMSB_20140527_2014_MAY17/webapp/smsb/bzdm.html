@@ -1,0 +1,197 @@
+
+
+
+
+
+
+
+<html lang="zh">
+<head>
+<meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>
+自然人个税申报
+</title>
+<link href="../css/text.css" rel="stylesheet" type="text/css">
+<link href="../css/top-box.css" rel="stylesheet" type="text/css">
+<link href="css/beijing.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../js/treatImage.js"></script>
+<script language="JavaScript" src="../js/smsb_common.js"></script>
+<script language="JavaScript" src="../js/function.js"></script>
+<script language="JavaScript" src="../js/DTable.js"></script>
+<script language="JavaScript" src="../js/InputSelect.js"></script>
+<script language=JavaScript src="../js/Bolan.js"></script>
+<script language=JavaScript src="../js/MathString.js"></script>
+<script language=JavaScript src="../js/reader.js"></script>
+<script language=JavaScript src="../js/Stack.js"></script> 
+ 
+</head>
+<body bgcolor="#ffffff" >
+
+
+
+
+
+
+<script language="JavaScript">
+	returnStr = "null";
+
+	function popUp(){
+    var server = 'w122';
+    var port   = '7001';
+    props=window.open('http://' + server + ':' + port + '/StaticFile/about/about.htm','poppage','toolbars=0,scrollbars=0,location=0,statusbara=0,menubars=0,resizable=0,width=500,height=267');
+}
+
+</SCRIPT>
+
+<style>
+.inputalignright{
+    font-size: 9pt;
+    text-align: right;
+}
+.inbright {
+    font-size: 9pt;
+    background :#F3F5F8;
+	text-align: right;
+    background-color: #F3F5F8;
+    border: 0px;
+}
+</style>
+
+
+<BODY>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"  id="BZDMMX" onkeydown=dokeydown(this.id,'szsmdm')  onmouseup='return dokeyUp(this.id)' class="table-99">
+ <tr>
+    <td class="2-td1-left">货币代码<!-- <br> Name of currency --></td>
+		<td class="2-td1-left">货币名称<!-- <br>Amount --></td>
+    <td class="2-td1-left">金额<!-- <br>Amount --></td>
+    <td class="2-td1-left">外汇牌价<!-- <br>Exchange rate --></td>
+    <td class="2-td1-left">折合人民币 <!-- <br> RMB converted into --></td>
+  </tr>
+<tr id="tr_BZDMMX"><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzdm" value="" onKeyUp=setday("bzdm","BZDMMX",this) onKeyDown=doEnterDown("bzdm","BZDMMX",this) onblur={resetRow("bzdm","BZDMMX",this);caculate(this)} size="8"  id="bzdm_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzmc" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="bzmc_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="je" value=""  size="8" onkeyup=if(checkNum(this)){caculate(this)} onchange=if(checkNum(this)){caculate(this)} id="je_WJGRSDSMX" ><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="whpj" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="whpj_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="hidden" name="bzdm_old" value="" size="8" tabIndex="-1" id="bzdm_old_WJGRSDSMX" ><input type="textfield" name="zhrmb" value="" onchange=toRMB(this) class="inputnoborder" readonly tabIndex="-1" size="8"  id="zhrmb_WJGRSDSMX" ></div></td></tr>
+<tr id="tr_BZDMMX"><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzdm" value="" onKeyUp=setday("bzdm","BZDMMX",this) onKeyDown=doEnterDown("bzdm","BZDMMX",this) onblur={resetRow("bzdm","BZDMMX",this);caculate(this)} size="8"  id="bzdm_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzmc" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="bzmc_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="je" value=""  size="8" onkeyup=if(checkNum(this)){caculate(this)} onchange=if(checkNum(this)){caculate(this)} id="je_WJGRSDSMX" ><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="whpj" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="whpj_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="hidden" name="bzdm_old" value="" size="8" tabIndex="-1" id="bzdm_old_WJGRSDSMX" ><input type="textfield" name="zhrmb" value="" onchange=toRMB(this) class="inputnoborder" readonly tabIndex="-1" size="8"  id="zhrmb_WJGRSDSMX" ></div></td></tr>
+<tr id="tr_BZDMMX"><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzdm" value="" onKeyUp=setday("bzdm","BZDMMX",this) onKeyDown=doEnterDown("bzdm","BZDMMX",this) onblur={resetRow("bzdm","BZDMMX",this);caculate(this)} size="8"  id="bzdm_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzmc" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="bzmc_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="je" value=""  size="8" onkeyup=if(checkNum(this)){caculate(this)} onchange=if(checkNum(this)){caculate(this)} id="je_WJGRSDSMX" ><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="whpj" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="whpj_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="hidden" name="bzdm_old" value="" size="8" tabIndex="-1" id="bzdm_old_WJGRSDSMX" ><input type="textfield" name="zhrmb" value="" onchange=toRMB(this) class="inputnoborder" readonly tabIndex="-1" size="8"  id="zhrmb_WJGRSDSMX" ></div></td></tr>
+<tr id="tr_BZDMMX"><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzdm" value="" onKeyUp=setday("bzdm","BZDMMX",this) onKeyDown=doEnterDown("bzdm","BZDMMX",this) onblur={resetRow("bzdm","BZDMMX",this);caculate(this)} size="8"  id="bzdm_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzmc" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="bzmc_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="je" value=""  size="8" onkeyup=if(checkNum(this)){caculate(this)} onchange=if(checkNum(this)){caculate(this)} id="je_WJGRSDSMX" ><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="whpj" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="whpj_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="hidden" name="bzdm_old" value="" size="8" tabIndex="-1" id="bzdm_old_WJGRSDSMX" ><input type="textfield" name="zhrmb" value="" onchange=toRMB(this) class="inputnoborder" readonly tabIndex="-1" size="8"  id="zhrmb_WJGRSDSMX" ></div></td></tr>
+ <DIV id=divSfTemp></DIV>
+
+</table>
+
+<table class="table-99">
+<tr>
+	<td align="center"><img src="/StaticFile/images/tianjia1.jpg" onmouseover="this.src='/StaticFile/images/tianjia2.jpg'" onmouseout="this.src='/StaticFile/images/tianjia1.jpg'" alt="增加" onclick="addRow('BZDMMX')" style="cursor:hand">&nbsp;&nbsp;<img src="/StaticFile/images/shanchu1.jpg" onmouseover="this.src='/StaticFile/images/shanchu2.jpg'" onmouseout="this.src='/StaticFile/images/shanchu1.jpg'" alt="删除" onclick="javascript:deleteRow('BZDMMX'); return false;" style="cursor:hand" style="cursor:hand">
+		&nbsp;&nbsp;<img src="/StaticFile/images/baocun1.jpg" onmouseover="this.src='/StaticFile/images/baocun2.jpg'" onmouseout="this.src='/StaticFile/images/baocun1.jpg'" alt="保存" onclick="Save()" style="cursor:hand" style="cursor:hand"></td>
+	</tr>
+</table>
+<INPUT TYPE="hidden" NAME="bzdm_focus">
+<INPUT TYPE="hidden" NAME="zhrmbhj">
+<div id=bzdm_epodDateLayer style="position: absolute; width: 142; height: 166; z-index: 9998; display: none" ><select id=sel onclick=selectClick("bzdm","BZDMMX") onkeyup=selectMove("bzdm","BZDMMX")  onfocusout=selectClick("bzdm","BZDMMX") onkeydown=if(window.event.keyCode==13)selectClick("bzdm","BZDMMX")></select></div>
+<INPUT TYPE="hidden" NAME="bzdm_focus"></BODY>
+</HTML>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var dialogClass=window.dialogArguments;
+var row=dialogClass["row"];
+var bzlist_fields=dialogClass["bzlist_fields"];
+var bzlist=dialogClass["bzlist"];
+var bzdm_value=dialogClass["bzdm_value"];
+var bzdm_name=dialogClass["bzdm_name"];
+var bzdm_value_all=dialogClass["bzdm_value_all"];
+var bzdm_name_all=dialogClass["bzdm_name_all"];
+var bzdm_name_del=dialogClass["bzdm_name_del"];
+var bzdm_value_del=dialogClass["bzdm_value_del"];
+//var jsArr_BZDMMX=dialogClass["jsArr_BZDMMX"];
+hjArray.push(new Array('zhrmb','zhrmbhj'));
+var fieldArray=new Array('bzdm','je','whpj','zhrmb')
+var jsArr_BZDMMX='<tr id="tr_BZDMMX"><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzdm" value="" onKeyUp=setday("bzdm","BZDMMX",this) onKeyDown=doEnterDown("bzdm","BZDMMX",this) onblur={resetRow("bzdm","BZDMMX",this);caculate(this)} size="8"  id="bzdm_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="bzmc" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="bzmc_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="je" value=""  size="8" onkeyup=if(checkNum(this)){caculate(this)} onchange=if(checkNum(this)){caculate(this)} id="je_WJGRSDSMX" ><td nowrap class="2-td2-left"><div align="center"><input type="textfield" name="whpj" value=""  size="8" class="inputnoborder" readonly tabIndex="-1" id="whpj_WJGRSDSMX" ></div></td><td nowrap class="2-td2-left"><div align="center"><input type="hidden" name="bzdm_old" value="" size="8" tabIndex="-1" id="bzdm_old_WJGRSDSMX" ><input type="textfield" name="zhrmb" value="" onchange=toRMB(this) class="inputnoborder" readonly tabIndex="-1" size="8"  id="zhrmb_WJGRSDSMX" ></div></td></tr>';
+var BZDMMX_list=new DTable(BZDMMX,jsArr_BZDMMX);	
+var bzdm_old=row.all("bzdm_old");
+var bzmx=row.all("bzmx");
+if(bzdm_old.value!="") {
+	BZDMMX.outerHTML=bzdm_old.value.replace("<DIV id=divBzTemp></DIV>","<DIV id=divSfTemp></DIV>");
+	first('BZDMMX')
+}else{
+//addRow('BZDMMX');
+//addRow('BZDMMX');
+//addRow('BZDMMX');
+//addRow('BZDMMX');
+first('BZDMMX');
+}
+//var BZDMMX_list=dialogClass["BZDMMX_list"];
+
+function Save(){
+bzdm_old.value=BZDMMX.outerHTML.replace("<DIV id=divSfTemp></DIV>","<DIV id=divBzTemp></DIV>");
+bzmx.value=makeNameValueStr();
+window.returnValue=document.all("zhrmbhj").value;
+window.close();
+}
+function makeNameValueStr(){
+	var nameStr =new Array();
+	var bzdms=document.all("bzdm");
+	var returnStr="";
+	if(!bzdms){return returnStr}
+	if(bzdms.length){
+	    for(var i=0;i<bzdms.length;i++){
+					var thisRow=getObjRow(bzdms[i]);
+					if(thisRow.all("zhrmb").value=="" || thisRow.all("zhrmb").value=="0.00"){
+					  continue;
+					}
+					for(var j=0;j<fieldArray.length;j++){
+						returnStr+=fieldArray[j]+":"+thisRow.all(fieldArray[j]).value+"|"
+					}
+					returnStr+="#";
+			}
+	}else{
+			for(var i=0;i<bzdms.length;i++){
+					if(thisRow.all("zhrmb").value=="" || thisRow.all("zhrmb").value=="0.00"){
+					  continue;
+					}
+					var thisRow=getObjRow(bzdms);
+					for(var j=0;j<fieldArray.length;j++){
+						returnStr+=fieldArray[j]+":"+thisRow.all(fieldArray[j]).value+"|"
+					}
+					returnStr+="#";
+			}	
+	}
+/*	for(var i=0;i<fieldArray.length;i++){
+			var fields =document.all(fieldArray[i]);
+			if(!fields) break;
+			if(fields.length){
+					for(var j=0;j<fields.length;j++){
+					  if(nameStr[j]==null) nameStr[j]="";//初始化
+						nameStr[j]+=fieldArray[i]+":"+fields[j].value+"|"
+					}
+			}else{
+			  nameStr[0]+=fieldArray[i]+":"+fields.value
+			}
+	}
+	*/
+	return returnStr;
+}
+function caculate(obj){
+
+  var thisRow=getObjRow(obj);
+	var jeObj=thisRow.all("je");
+	var whpjObj=thisRow.all("whpj");
+	var jeValue=jeObj.value;
+	var zhrmbObj=thisRow.all("zhrmb");
+	var whpjValue=whpjObj.value
+	
+	if(whpjValue==""){whpjValue=0;}
+	if(isNaN(jeValue)){	zhrmbObj.value=""; return;}
+	else{
+			zhrmbObj.value=formatNumber(whpjValue*jeValue)
+	}
+	hj();
+}
+function checkNum(obj){
+	if(window.event.keyCode==13 || window.event.keyCode==0){
+   if(!isNum(obj,0,null,null,null,2)){
+			window.event.keyCode=120;	
+			return false;
+	 }
+	}
+	return true;
+}
+window.onunload=Save
+</SCRIPT>

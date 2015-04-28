@@ -1,0 +1,58 @@
+<p>
+  <input type="text" name="T1" size="20"></p>
+  <p><input type="text" name="T2" size="20"></p>
+  <p><input type="text" name="T3" size="20"></p>
+  <p><input type="text" name="T4" size="20"></p>
+  <p><select size="1" name="D1">
+  <option></option>
+  <option value="aaaaaaaa">aaaaaaaa</option>
+  <option value="bbbbbbbb">bbbbbbbb</option>
+  <option value="cccccccc">cccccccc</option>
+  <option value="dddddddd">dddddddd</option>
+  <option value="eeeeeeee">eeeeeeee</option>
+  </select></p>
+  <p><input type="radio" value="V1" checked name="group1" ID=Radio1>
+     <input type="radio" name="group1" value="V2" ID=Radio2>
+     <input type="radio" name="group1" value="V3" ID=Radio3></p>
+  <p><input type="radio" value="V2" checked name="group2" ID=Radio4></p>     
+  <p><input type="checkbox" name="C1" value="ON" ID=Checkbox1></p>
+  <p>　</p>
+  <p><input type="submit" value="提交" name="B1" onclick="checkInput()" ID=Submit1><input type="reset" value="重置" name="B2" ID=Reset1></p>
+
+<form name="main_form" method="POST" action="testServlet" ID=Form1>
+
+</form>
+
+<script src="file:///Z:/tax_testvob/dengji/implementation/StaticFile/js/common.js"></script>
+<script src="file:///Z:/tax_testvob/dengji/implementation/StaticFile/js/gmit_inputcontrol.js"></script>
+<script language =javascript >
+
+var aryObject = new Array();
+
+aryObject[0] = new GMIT_InputObject(T1,"中文",false,20);
+aryObject[0].totalLength = 10;
+aryObject[0].deciamalLength = 2;
+aryObject[0].specialChecker=checkFloat;
+
+aryObject[1] = new GMIT_InputObject(T2,"中文2",false,20);
+aryObject[1].deciamalLength=5;
+aryObject[1].totalLength=17;
+aryObject[1].specialChecker=checkFloat;
+
+aryObject[2] = new GMIT_InputObject(T3,"中文3",false,20);
+//aryObject[1].specialChecker=checkDate;
+
+aryObject[3] = new GMIT_InputObject(T4,"中文4",false,10);
+
+var aryObject1 = new Array();
+
+aryObject1[aryObject1.length] = new GMIT_InputObject(D1,"中文",false);
+aryObject1[aryObject1.length] = new GMIT_InputObject(group2,"单选2",false);
+aryObject1[aryObject1.length] = new GMIT_InputObject(group1,"单选1",false);
+aryObject1[aryObject1.length] = new GMIT_InputObject(C1,"复选",false);
+
+var inputGroup = new GMIT_InputGroup(aryObject);
+inputGroup.addObject(aryObject1,inputGroup.arrayObjects.length);
+
+
+</script>

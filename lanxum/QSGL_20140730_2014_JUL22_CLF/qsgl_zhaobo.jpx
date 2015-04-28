@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="debug.1" name="RemoteDebug" value="1"/>
+  <property category="debug.1" name="RemoteDebugLaunch" value="0"/>
+  <property category="debug.1" name="RemoteTransportAddress" value="8787"/>
+  <property category="ejbModule" name="last.wizard.module.name" value="QSEJB"/>
+  <property category="generalFormatting" name="baseCodeStyle" value="java/Java Standard.codestyle"/>
+  <property category="generalFormatting" name="blockIndent" value="4"/>
+  <property category="generalFormatting" name="tabSize" value="4"/>
+  <property category="generalFormatting2" name="blockIndent" value="4"/>
+  <property category="generalFormatting2" name="continuationIndent" value="8"/>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="idl" name="ProcessIDL" value="false"/>
+  <property category="java.sapient" name="ACE" value="false"/>
+  <property category="java.sapient" name="AFLV" value="true"/>
+  <property category="java.sapient" name="AFP" value="false"/>
+  <property category="java.sapient" name="ASMDCN" value="true"/>
+  <property category="java.sapient" name="ASMO" value="true"/>
+  <property category="java.sapient" name="BSMC" value="true"/>
+  <property category="java.sapient" name="BTJC" value="false"/>
+  <property category="java.sapient" name="CA" value="false"/>
+  <property category="java.sapient" name="CEV" value="false"/>
+  <property category="java.sapient" name="CFPV" value="false"/>
+  <property category="java.sapient" name="CIUCFL" value="true"/>
+  <property category="java.sapient" name="CQS" value="false"/>
+  <property category="java.sapient" name="CSR" value="true"/>
+  <property category="java.sapient" name="CVSBF" value="true"/>
+  <property category="java.sapient" name="EIAV" value="false"/>
+  <property category="java.sapient" name="EJB_CL" value="false"/>
+  <property category="java.sapient" name="EJB_CONSOLE" value="false"/>
+  <property category="java.sapient" name="EJB_ENTITY" value="false"/>
+  <property category="java.sapient" name="EJB_FDESCR" value="false"/>
+  <property category="java.sapient" name="EJB_FILES" value="false"/>
+  <property category="java.sapient" name="EJB_HOME" value="false"/>
+  <property category="java.sapient" name="EJB_IO" value="false"/>
+  <property category="java.sapient" name="EJB_JDBC" value="false"/>
+  <property category="java.sapient" name="EJB_MESSAGE" value="false"/>
+  <property category="java.sapient" name="EJB_NAMES" value="false"/>
+  <property category="java.sapient" name="EJB_NATIVE" value="false"/>
+  <property category="java.sapient" name="EJB_OBJECT" value="false"/>
+  <property category="java.sapient" name="EJB_REFL" value="false"/>
+  <property category="java.sapient" name="EJB_SEC" value="false"/>
+  <property category="java.sapient" name="EJB_SECOBJ" value="false"/>
+  <property category="java.sapient" name="EJB_SESSION" value="false"/>
+  <property category="java.sapient" name="EJB_SFACT" value="false"/>
+  <property category="java.sapient" name="EJB_SOCKET" value="false"/>
+  <property category="java.sapient" name="EJB_SUBST" value="false"/>
+  <property category="java.sapient" name="EJB_THREADS" value="false"/>
+  <property category="java.sapient" name="EOBA" value="true"/>
+  <property category="java.sapient" name="EVC" value="true"/>
+  <property category="java.sapient" name="HIF" value="true"/>
+  <property category="java.sapient" name="HISM" value="true"/>
+  <property category="java.sapient" name="HN" value="true"/>
+  <property category="java.sapient" name="ICSBF" value="false"/>
+  <property category="java.sapient" name="IFM" value="true"/>
+  <property category="java.sapient" name="ILC" value="false"/>
+  <property category="java.sapient" name="IMCM" value="true"/>
+  <property category="java.sapient" name="IMMD" value="true"/>
+  <property category="java.sapient" name="LF" value="false"/>
+  <property category="java.sapient" name="LMC" value="false"/>
+  <property category="java.sapient" name="LNU" value="true"/>
+  <property category="java.sapient" name="MCP" value="true"/>
+  <property category="java.sapient" name="MCS" value="true"/>
+  <property category="java.sapient" name="MLOWP" value="false"/>
+  <property category="java.sapient" name="MNU" value="true"/>
+  <property category="java.sapient" name="MSOL" value="true"/>
+  <property category="java.sapient" name="MVDSN" value="false"/>
+  <property category="java.sapient" name="NC" value="true"/>
+  <property category="java.sapient" name="NCLS" value="true"/>
+  <property category="java.sapient" name="NFSF" value="false"/>
+  <property category="java.sapient" name="NLC" value="false"/>
+  <property category="java.sapient" name="NOIS" value="false"/>
+  <property category="java.sapient" name="ODCM" value="false"/>
+  <property category="java.sapient" name="OHCE" value="true"/>
+  <property category="java.sapient" name="OIM" value="true"/>
+  <property category="java.sapient" name="ONAMAM" value="true"/>
+  <property category="java.sapient" name="ONE" value="true"/>
+  <property category="java.sapient" name="OPM" value="true"/>
+  <property category="java.sapient" name="OSNBU" value="false"/>
+  <property category="java.sapient" name="OWS" value="false"/>
+  <property category="java.sapient" name="PCO" value="true"/>
+  <property category="java.sapient" name="PDBB" value="false"/>
+  <property category="java.sapient" name="PFC" value="false"/>
+  <property category="java.sapient" name="PIFS" value="false"/>
+  <property category="java.sapient" name="PJDC" value="false"/>
+  <property category="java.sapient" name="PMSNT" value="false"/>
+  <property category="java.sapient" name="PN" value="false"/>
+  <property category="java.sapient" name="PPA" value="false"/>
+  <property category="java.sapient" name="PPCF" value="true"/>
+  <property category="java.sapient" name="PSIB" value="true"/>
+  <property category="java.sapient" name="RIP" value="false"/>
+  <property category="java.sapient" name="SBC" value="true"/>
+  <property category="java.sapient" name="SEB" value="false"/>
+  <property category="java.sapient" name="SL" value="false"/>
+  <property category="java.sapient" name="SSSIDC" value="false"/>
+  <property category="java.sapient" name="SU" value="true"/>
+  <property category="java.sapient" name="TMSSC" value="false"/>
+  <property category="java.sapient" name="UAAO" value="true"/>
+  <property category="java.sapient" name="UC" value="true"/>
+  <property category="java.sapient" name="UCVN" value="false"/>
+  <property category="java.sapient" name="UE" value="true"/>
+  <property category="java.sapient" name="UL" value="true"/>
+  <property category="java.sapient" name="ULVFP" value="true"/>
+  <property category="java.sapient" name="UMM" value="true"/>
+  <property category="java.sapient" name="URSP" value="true"/>
+  <property category="javaFormatting" name="alignMultilineAssign" value="1"/>
+  <property category="javaFormatting" name="blankLinesAfterClass" value="2"/>
+  <property category="javaFormatting" name="classBraceNextLine" value="1"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="methodBraceNextLine" value="1"/>
+  <property category="javaFormatting" name="otherBraceNextLine" value="1"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;BLANK_LINE;javax;BLANK_LINE;(*)"/>
+  <property category="javaFormatting" name="preservedBlankLinesInDecl" value="2"/>
+  <property category="javaFormatting" name="spaceBeforeLparen" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="jspc" name="checkEnabled" value="0"/>
+  <property category="module" name="ProjectConvertedToEnsureModulesHaveSupportedFeatures" value="1"/>
+  <property category="module" name="ProjectConvertedToUseFilesAndDependenciesAsDefaultContent" value="1"/>
+  <property category="module" name="ProjectConvertedToUseProperModuleDefaults" value="1"/>
+  <property category="module" name="projectConvertedFromModuleExtensionsToModuleFileTypes" value="1"/>
+  <property category="optimize.1" name="OptimizableType" value="intuitive.ide.borland.jb10.ProfilerBootstrap"/>
+  <property category="optimize.1" name="oicc.FilterFile" value="C:\zhongzy_view2\Tax_vob\source\V1.1\group05\QSGL\qsgl_zhaobo.oif"/>
+  <property category="optimize.1" name="oipr.FilterFile" value="C:\zhongzy_view2\Tax_vob\source\V1.1\group05\QSGL\qsgl_zhaobo.oif"/>
+  <property category="optimize.1" name="oira.FilterFile" value="C:\zhongzy_view2\Tax_vob\source\V1.1\group05\QSGL\qsgl_zhaobo.oif"/>
+  <property category="personality" name="personality" value=""/>
+  <property category="runtime" name="ConfigurationCount" value="1"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="&lt;None&gt;"/>
+  <property category="runtime.0" name="ConfigurationName" value="server"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ServerRunner"/>
+  <property category="runtime.0" name="appserver.parameters" value=""/>
+  <property category="runtime.0" name="appserver.servername" value="myserver"/>
+  <property category="runtime.0" name="appserver.vmparameters" value="-ms64m -mx64m -Djava.library.path=&quot;D:/bea/weblogic81/server/bin&quot; -Dbea.home=&quot;D:/bea&quot; -Dweblogic.Name=myserver -Djava.security.policy==&quot;D:/bea/weblogic81/server/lib/weblogic.policy&quot; -Dweblogic.management.discover=false -Dweblogic.ProductionModeEnabled=false -Dweblogic.management.password=11111111 -Dweblogic.management.username=weblogic"/>
+  <property category="runtime.0" name="server.arguments" value=""/>
+  <property category="runtime.0" name="server.disableServerClassTracing" value="0"/>
+  <property category="runtime.0" name="server.instance.name" value="myserver"/>
+  <property category="runtime.0" name="server.name" value="WebLogic Platform Server 8.x"/>
+  <property category="runtime.0" name="server.vmparameters" value="-ms64m -mx64m -Djava.library.path=&quot;D:/bea/weblogic81/server/bin&quot; -Dbea.home=&quot;D:/bea&quot; -Dweblogic.Name=myserver -Djava.security.policy==&quot;D:/bea/weblogic81/server/lib/weblogic.policy&quot; -Dweblogic.management.discover=false -Dweblogic.ProductionModeEnabled=false -Dweblogic.management.password=11111111 -Dweblogic.management.username=weblogic"/>
+  <property category="runtime.1" name="BuildTargetOnRun" value="&lt;None&gt;"/>
+  <property category="runtime.1" name="ConfigurationName" value="Untitled Runtime Configuration1"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ServerRunner"/>
+  <property category="runtime.1" name="appserver.parameters" value=""/>
+  <property category="runtime.1" name="appserver.servername" value="myserver"/>
+  <property category="runtime.1" name="appserver.vmparameters" value="-ms64m -mx64m -Djava.library.path=&quot;D:/bea/weblogic81/server/bin&quot; -Dbea.home=&quot;D:/bea&quot; -Dweblogic.Name=myserver -Djava.security.policy==&quot;D:/bea/weblogic81/server/lib/weblogic.policy&quot; -Dweblogic.management.discover=false -Dweblogic.ProductionModeEnabled=false -Dweblogic.management.password=11111111 -Dweblogic.management.username=weblogic"/>
+  <property category="runtime.1" name="custom.init_required" value="0"/>
+  <property category="runtime.1" name="custom.required.1" value="WebLogic 8.x Client"/>
+  <property category="runtime.1" name="custom.required.10" value="struts"/>
+  <property category="runtime.1" name="custom.required.11" value="k_or"/>
+  <property category="runtime.1" name="custom.required.2" value="FrameWork"/>
+  <property category="runtime.1" name="custom.required.3" value="ZKClass"/>
+  <property category="runtime.1" name="custom.required.4" value="Servlet"/>
+  <property category="runtime.1" name="custom.required.5" value="SfglServices"/>
+  <property category="runtime.1" name="custom.required.6" value="DjServices"/>
+  <property category="runtime.1" name="custom.required.7" value="PzglService"/>
+  <property category="runtime.1" name="custom.required.8" value="Jkclasses"/>
+  <property category="runtime.1" name="custom.required.9" value="ShenboService"/>
+  <property category="runtime.1" name="enable.tcpmonitor" value="0"/>
+  <property category="runtime.1" name="enable.wsimonitor" value="0"/>
+  <property category="runtime.1" name="server.arguments" value=""/>
+  <property category="runtime.1" name="server.disableServerClassTracing" value="0"/>
+  <property category="runtime.1" name="server.instance.name" value="myserver"/>
+  <property category="runtime.1" name="server.name" value="WebLogic Platform Server 8.x"/>
+  <property category="runtime.1" name="server.vmparameters" value="-ms64m -mx64m -Djava.library.path=&quot;D:/bea/weblogic81/server/bin&quot; -Dbea.home=&quot;D:/bea&quot; -Dweblogic.Name=myserver -Djava.security.policy==&quot;D:/bea/weblogic81/server/lib/weblogic.policy&quot; -Dweblogic.management.discover=false -Dweblogic.ProductionModeEnabled=false -Dweblogic.management.password=11111111 -Dweblogic.management.username=weblogic"/>
+  <property category="runtime.1" name="tcpmonitor.listenport" value=""/>
+  <property category="runtime.1" name="tcpmonitor.targethost" value=""/>
+  <property category="runtime.1" name="tcpmonitor.targetport" value=""/>
+  <property category="runtime.1" name="wsimonitor.listenport" value=""/>
+  <property category="runtime.1" name="wsimonitor.logfile" value=""/>
+  <property category="runtime.1" name="wsimonitor.targethost" value=""/>
+  <property category="runtime.1" name="wsimonitor.targetport" value=""/>
+  <property category="serverservices" name="disabled.services" value="jdatastore;sqlj"/>
+  <property category="serverservices" name="single.server.name" value="WebLogic Platform Server 8.x"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2004"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.1_05-b01"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="WebLogic 8.x Client;crimson;FrameWork;ZKClass;Servlet;SfglServices;DjServices;PzglService;Jkclasses;ShenboService;struts;k_or"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="team" name="ignorePath.0" value="../../bea/user_projects/domains/mydomain"/>
+  <property category="team" name="ignorePath.1" value="D:/bea/user_projects/domains/mydomain"/>
+  <property category="webModule" name="last.wizard.module.name" value="qsgl"/>
+  <node name="Additional Settings" type="Folder">
+    <property category="sys" name="SettingsFolder" value="1"/>
+    <file path="src/com/creationstar/bjtax/qsgl/BizLogic/ejb/InitialStartupBean.java"/>
+    <file path="QSEJB.jar">
+      <property category="weblogic" name="deploy.node.as.exploded.directory.8x" value="0"/>
+    </file>
+    <file path="src/com/creationstar/bjtax/qsgl/BizLogic/ejb/QsglServiceSessionBean.java"/>
+    <file path="src/com/creationstar/bjtax/qsgl/BizLogic/ejb/QsglSessionBean.java"/>
+  </node>
+  <node name="qsgl" type="WebModuleNode">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.enterprise.module.web.WebModuleArchiver"/>
+    <property category="archiving" name="contentRules.1" value="I:com/creationstar/bjtax/qsgl/model/*.*"/>
+    <property category="archiving" name="contentRules.10" value="i:html"/>
+    <property category="archiving" name="contentRules.11" value="i:class"/>
+    <property category="archiving" name="contentRules.12" value="i:jnlp"/>
+    <property category="archiving" name="contentRules.13" value="i:js"/>
+    <property category="archiving" name="contentRules.14" value="i:jpg"/>
+    <property category="archiving" name="contentRules.15" value="i:jsp"/>
+    <property category="archiving" name="contentRules.16" value="i:tld"/>
+    <property category="archiving" name="contentRules.17" value="i:opentools"/>
+    <property category="archiving" name="contentRules.18" value="i:png"/>
+    <property category="archiving" name="contentRules.19" value="i:properties"/>
+    <property category="archiving" name="contentRules.2" value="I:com/creationstar/bjtax/qsgl/proxy/*.*"/>
+    <property category="archiving" name="contentRules.20" value="i:au"/>
+    <property category="archiving" name="contentRules.21" value="i:txt"/>
+    <property category="archiving" name="contentRules.22" value="i:ram"/>
+    <property category="archiving" name="contentRules.23" value="i:css"/>
+    <property category="archiving" name="contentRules.24" value="i:wml"/>
+    <property category="archiving" name="contentRules.25" value="i:xml"/>
+    <property category="archiving" name="contentRules.26" value="i:xul"/>
+    <property category="archiving" name="contentRules.27" value="i:xpi"/>
+    <property category="archiving" name="contentRules.28" value="i:xsl"/>
+    <property category="archiving" name="contentRules.3" value="I:com/creationstar/bjtax/qsgl/servlet/*.*"/>
+    <property category="archiving" name="contentRules.4" value="I:com/creationstar/bjtax/qsgl/util/*.*"/>
+    <property category="archiving" name="contentRules.5" value="I:com/creationstar/bjtax/qsgl/VisionLogic/*.*"/>
+    <property category="archiving" name="contentRules.6" value="i:jar"/>
+    <property category="archiving" name="contentRules.7" value="i:cab"/>
+    <property category="archiving" name="contentRules.8" value="i:rpt"/>
+    <property category="archiving" name="contentRules.9" value="i:gif"/>
+    <property category="archiving" name="defaultLibraryState" value="3"/>
+    <property category="archiving" name="includeDeps" value="1"/>
+    <property category="archiving" name="libraryStates.1" value="0:WebLogic 8.x Client"/>
+    <property category="archiving" name="libraryStates.2" value="0:Servlet"/>
+    <property category="archiving" name="outPathState" value="4"/>
+    <property category="archiving" name="targetPath" value="qsgl.war"/>
+    <property category="archiving" name="usingRules" value="1"/>
+    <property category="kit.struts" name="struts-config.1" value="WEB-INF/struts-config.xml"/>
+    <property category="module" name="buildModuleArchiveWithModuleNode" value="0"/>
+    <property category="module" name="buildModuleArchiveWithProject" value="0"/>
+    <property category="module" name="buildModuleExplodedArchiveWithModuleNode" value="1"/>
+    <property category="module" name="buildModuleExplodedArchiveWithProject" value="1"/>
+    <property category="module" name="cleanRules.1" value="I:WEB-INF/classes/**"/>
+    <property category="module" name="cleanRules.2" value="I:WEB-INF/lib/**"/>
+    <property category="module" name="cleanRules.3" value="X:WEB-INF/**/*.ds"/>
+    <property category="module" name="cleanRules.4" value="X:WEB-INF/**/*.wsdd"/>
+    <property category="module" name="cleanRules.5" value="X:WEB-INF/**/cocoon.xconf"/>
+    <property category="module" name="cleanRules.6" value="X:WEB-INF/**/logkit.xconf"/>
+    <property category="module" name="cleanRules.7" value="X:WEB-INF/*.xml"/>
+    <property category="module" name="cleanRules.8" value="X:WEB-INF/*.xmi"/>
+    <property category="module" name="directory" value="qsgl"/>
+    <property category="module" name="extraDefaultDirectoriesToKeepOnClean.1" value=".cvsignore"/>
+    <property category="module" name="lastServer" value="WebLogic Platform Server 8.x"/>
+    <property category="module" name="nodeJBuilderVersion" value="JBuilder 200"/>
+    <property category="module" name="supported.features.1" value="JSP 1.2"/>
+    <property category="module" name="supported.features.2" value="Servlet 2.3"/>
+    <property category="sys" name="WebLogicServerVersion" value="6.1.5"/>
+    <property category="web" name="context-root" value="qsgl"/>
+    <property category="webModule" name="kit.1" value="struts"/>
+    <property category="webModule" name="kitlib.1" value="Struts 1.0.2"/>
+    <property category="webModule" name="launch.uri" value="/"/>
+    <property category="weblogic" name="deploy.node.as.exploded.directory.8x" value="0"/>
+    <property category="weblogic" name="deploy.node.options.8x" value=""/>
+    <property category="weblogic" name="deploy.node.password.8x" value="123456"/>
+    <property category="weblogic" name="deploy.node.remote.exploded.appname.8x" value=""/>
+    <property category="weblogic" name="deploy.node.server.8x" value="myserver"/>
+    <property category="weblogic" name="deploy.node.unit.name.8x" value="qsgl"/>
+    <property category="weblogic" name="deploy.node.user.name.8x" value="admin"/>
+    <property category="weblogic" name="deploy.node.vm.parameters.8x" value=""/>
+    <property category="weblogic" name="deployer.node.admin.url.8x" value="http://notebook:7001"/>
+    <property category="weblogic.appc" name="run" value="0"/>
+  </node>
+  <node name="QSEJB" type="EjbModuleNode">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.enterprise.module.ejb.EjbModuleArchiver"/>
+    <property category="archiving" name="contentRules.1" value="i:jar"/>
+    <property category="archiving" name="contentRules.10" value="i:opentools"/>
+    <property category="archiving" name="contentRules.11" value="i:png"/>
+    <property category="archiving" name="contentRules.12" value="i:au"/>
+    <property category="archiving" name="contentRules.13" value="i:txt"/>
+    <property category="archiving" name="contentRules.14" value="i:ram"/>
+    <property category="archiving" name="contentRules.15" value="i:css"/>
+    <property category="archiving" name="contentRules.16" value="i:wml"/>
+    <property category="archiving" name="contentRules.17" value="i:xml"/>
+    <property category="archiving" name="contentRules.2" value="i:gif"/>
+    <property category="archiving" name="contentRules.3" value="i:html"/>
+    <property category="archiving" name="contentRules.4" value="i:class"/>
+    <property category="archiving" name="contentRules.5" value="i:jnlp"/>
+    <property category="archiving" name="contentRules.6" value="i:js"/>
+    <property category="archiving" name="contentRules.7" value="i:jpg"/>
+    <property category="archiving" name="contentRules.8" value="i:jsp"/>
+    <property category="archiving" name="contentRules.9" value="i:tld"/>
+    <property category="archiving" name="includeAll" value="1"/>
+    <property category="archiving" name="libraryStates.1" value="2:FrameWork"/>
+    <property category="archiving" name="libraryStates.2" value="2:ZKClass"/>
+    <property category="archiving" name="libraryStates.3" value="2:SfglServices"/>
+    <property category="archiving" name="libraryStates.4" value="3:DjServices"/>
+    <property category="archiving" name="libraryStates.5" value="2:PzglService"/>
+    <property category="archiving" name="libraryStates.6" value="2:Jkclasses"/>
+    <property category="archiving" name="libraryStates.7" value="2:ShenboService"/>
+    <property category="archiving" name="libraryStates.8" value="2:k_or"/>
+    <property category="archiving" name="obfuscator" value="RetroGuard for J2ME"/>
+    <property category="archiving" name="outPathState" value="4"/>
+    <property category="archiving" name="targetPath" value="QSEJB.jar"/>
+    <property category="archiving" name="usingRules" value="1"/>
+    <property category="bes" name="add.layout.descriptor.jar.50" value="1"/>
+    <property category="bes" name="add.layout.descriptor.jar.50x" value="1"/>
+    <property category="bes" name="add.schema.descriptor.jar.50" value="1"/>
+    <property category="bes" name="add.schema.descriptor.jar.50x" value="1"/>
+    <property category="ejbmodeler" name="add.layout.descriptor.jar" value="1"/>
+    <property category="ejbmodeler" name="add.schema.descriptor.jar" value="1"/>
+    <property category="module" name="buildModuleArchiveWithModuleNode" value="0"/>
+    <property category="module" name="buildModuleArchiveWithProject" value="0"/>
+    <property category="module" name="buildModuleExplodedArchiveWithModuleNode" value="1"/>
+    <property category="module" name="buildModuleExplodedArchiveWithProject" value="1"/>
+    <property category="module" name="cleanRules.1" value="X:META-INF/*.xml"/>
+    <property category="module" name="cleanRules.10" value="x:jar"/>
+    <property category="module" name="cleanRules.11" value="x:gif"/>
+    <property category="module" name="cleanRules.12" value="x:html"/>
+    <property category="module" name="cleanRules.13" value="x:jnlp"/>
+    <property category="module" name="cleanRules.14" value="x:js"/>
+    <property category="module" name="cleanRules.15" value="x:jpg"/>
+    <property category="module" name="cleanRules.16" value="x:jsp"/>
+    <property category="module" name="cleanRules.17" value="x:tld"/>
+    <property category="module" name="cleanRules.18" value="x:opentools"/>
+    <property category="module" name="cleanRules.19" value="x:png"/>
+    <property category="module" name="cleanRules.2" value="X:META-INF/*.xmi"/>
+    <property category="module" name="cleanRules.20" value="x:au"/>
+    <property category="module" name="cleanRules.21" value="x:txt"/>
+    <property category="module" name="cleanRules.22" value="x:ram"/>
+    <property category="module" name="cleanRules.23" value="x:css"/>
+    <property category="module" name="cleanRules.24" value="x:wml"/>
+    <property category="module" name="cleanRules.25" value="I:**/*.*"/>
+    <property category="module" name="cleanRules.3" value="X:**/.sbas/*"/>
+    <property category="module" name="cleanRules.4" value="X:**/CVS/*"/>
+    <property category="module" name="cleanRules.5" value="X:**/.svn/*"/>
+    <property category="module" name="cleanRules.6" value="X:**/.cvsignore/*"/>
+    <property category="module" name="cleanRules.7" value="X:**/*.java"/>
+    <property category="module" name="cleanRules.8" value="X:**/vssver.scc"/>
+    <property category="module" name="cleanRules.9" value="X:**/.cvsignore"/>
+    <property category="module" name="directoriesRules.1" value="I:**/*"/>
+    <property category="module" name="directoriesRules.2" value="I:bjtax_qsgl.properties"/>
+    <property category="module" name="directoriesRules.3" value="I:ApplicationResources.properties"/>
+    <property category="module" name="directoriesRules.4" value="I:qsgl_dao-processor.properties"/>
+    <property category="module" name="directoriesRules.5" value="I:qsgl_processor-map.properties"/>
+    <property category="module" name="directoriesRules.6" value="X:**/.sbas/*"/>
+    <property category="module" name="directoriesRules.7" value="X:**/CVS/*"/>
+    <property category="module" name="directoriesRules.8" value="X:**/.svn/*"/>
+    <property category="module" name="directoriesRules.9" value="X:**/.cvsignore/*"/>
+    <property category="module" name="directory" value="QSEJB"/>
+    <property category="module" name="extraDefaultDirectoriesToKeepOnClean.1" value=".cvsignore"/>
+    <property category="module" name="lastServer" value="WebLogic Platform Server 8.x"/>
+    <property category="module" name="nodeJBuilderVersion" value="JBuilder 200"/>
+    <property category="module" name="supported.features.1" value="EJB 2.0"/>
+    <property category="module" name="validate.descriptors.during.build" value="0"/>
+    <property category="sys" name="WebLogicServerVersion" value="7.0.4"/>
+    <property category="weblogic" name="deploy.node.as.exploded.directory.8x" value="0"/>
+    <property category="weblogic" name="deploy.node.options.8x" value=""/>
+    <property category="weblogic" name="deploy.node.password.8x" value="11111111"/>
+    <property category="weblogic" name="deploy.node.remote.exploded.appname.8x" value=""/>
+    <property category="weblogic" name="deploy.node.server.8x" value="myserver"/>
+    <property category="weblogic" name="deploy.node.unit.name.8x" value="QSEJB"/>
+    <property category="weblogic" name="deploy.node.user.name.8x" value="admin"/>
+    <property category="weblogic" name="deploy.node.vm.parameters.8x" value=""/>
+    <property category="weblogic" name="deployer.node.admin.url.8x" value="http://localhost:7001"/>
+    <property category="weblogic.appc" name="run" value="1"/>
+  </node>
+  <file path="QSGL.html"/>
+</project>
