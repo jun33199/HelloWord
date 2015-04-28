@@ -1,0 +1,49 @@
+
+package weizhu.qa;
+
+option java_package = "com.weizhu.proto";
+option java_outer_classname = "QAProtos";
+
+//分类
+message Category{
+  required int32      category_id           = 1; // 分类id
+  required string     category_name         = 2; // 分类名
+  optional string      user_id               = 3; // 用户id  
+  optional int32      question_num          = 4; // 问题个数
+  required int32      create_time           = 5; // 添加日期
+  optional int64      admin_id              = 6; // 管理员id 
+
+}
+// 问题
+message Question{
+  required int64      question_id           = 1; // 问题id
+  required string     question_content      = 2; // 问题内容
+  optional string      user_id               = 3; // 用户id  
+  optional int32      answer_num            = 4; // 回复个数
+  required int32      category_id           = 5; // 分类id
+  required int32      create_time           = 6; // 添加日期
+  optional int64      admin_id              = 7; // 管理员id
+
+}
+
+// 回答
+message Answer{
+  required int64      answer_id             = 1; // 回答id
+  required int64      question_id           = 2; // 问题id
+  optional string      user_id              = 3; // 用户id
+  required string     answer_content        = 4; // 回答内容
+  optional int32      like_num              = 5; // 点赞个数
+  required int32      create_time           = 6; // 添加日期  
+  optional int64      admin_id              = 7; // 管理员id
+
+}
+// 回答点赞
+message AnswerLike{
+  optional int64      like_id               = 1; // 点赞记录的id
+  required int64      answer_id             = 2; // 回答id
+  optional string      user_id              = 3; // 用户id
+
+
+}
+
+

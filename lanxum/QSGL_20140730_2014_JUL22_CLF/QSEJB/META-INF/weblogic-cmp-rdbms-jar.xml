@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-rdbms-jar PUBLIC "-//BEA Systems, Inc.//DTD WebLogic 7.0.0 EJB RDBMS Persistence//EN" "http://www.bea.com/servers/wls700/dtd/weblogic-rdbms20-persistence-700.dtd">
+<weblogic-rdbms-jar />

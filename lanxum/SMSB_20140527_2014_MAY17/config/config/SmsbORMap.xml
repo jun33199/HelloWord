@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OR>
+  <!--   #  ORManager:  for ORMgr     -->
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Properties" table="sbdb.SB_JL_PROPERTIES">
+    <ORColumn ColumName="PROPERTYNAME" Key="true" Update="false" Getter="getPropertyname" Setter="setPropertyname" ClassType="String.class" />
+    <ORColumn ColumName="PROPERTYVALUE" Key="false" Update="true" Getter="getPropertyvalue" Setter="setPropertyvalue" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Qyjbcwzb" table="SBDB.SB_JL_QYJBCWZB">
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="NCS" Key="false" Update="true" Getter="getNcs" Setter="setNcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NMS" Key="false" Update="true" Getter="getNms" Setter="setNms" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Hdzstzzsb" table="SBDB.SB_JL_HDZSTZZSB">
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SSKCS" Key="false" Update="true" Getter="getSskcs" Setter="setSskcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="YNSE" Key="false" Update="true" Getter="getYnse" Setter="setYnse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZJHM" Key="true" Update="false" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="SYSL" Key="false" Update="true" Getter="getSysl" Setter="setSysl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRFPBL" Key="false" Update="true" Getter="getLrfpbl" Setter="setLrfpbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="TZZXM" Key="false" Update="true" Getter="getTzzxm" Setter="setTzzxm" ClassType="String.class" />
+    <ORColumn ColumName="JMSE" Key="false" Update="true" Getter="getJmse" Setter="setJmse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CJSJ" Key="false" Update="true" Getter="getCjsj" Setter="setCjsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QCWJSK" Key="false" Update="true" Getter="getQcwjsk" Setter="setQcwjsk" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SJYJSE" Key="false" Update="true" Getter="getSjyjse" Setter="setSjyjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JD" Key="true" Update="false" Getter="getJd" Setter="setJd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YJNSE" Key="false" Update="true" Getter="getYjnse" Setter="setYjnse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSSDE" Key="false" Update="true" Getter="getYnssde" Setter="setYnssde" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Lswszsbhz" table="SBDB.SB_JL_LSWSZSBHZ">
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="HZKSRQ" Key="false" Update="true" Getter="getHzksrq" Setter="setHzksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="HZRQ" Key="true" Update="false" Getter="getHzrq" Setter="setHzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="HZJSRQ" Key="false" Update="true" Getter="getHzjsrq" Setter="setHzjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBHZDH" Key="true" Update="false" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="HZFS" Key="true" Update="false" Getter="getHzfs" Setter="setHzfs" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Jjlxglszsm" table="SBDB.SB_JL_JJLXGLSZSM">
+    <ORColumn ColumName="ZQLXMC" Key="false" Update="true" Getter="getZqlxmc" Setter="setZqlxmc" ClassType="String.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZQLXDM" Key="true" Update="false" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbjkmx" table="SBDB.SB_JL_SBJKMX">
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="RKJE" Key="false" Update="true" Getter="getRkje" Setter="setRkje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBBH" Key="false" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="SJFC" Key="false" Update="false" Getter="getSjfc" Setter="setSjfc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QJFC" Key="false" Update="false" Getter="getQjfc" Setter="setQjfc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshsdsz" table="SBDB.SB_JL_GTGSHSDSZ">
+    <ORColumn ColumName="XM" Key="false" Update="true" Getter="getXm" Setter="setXm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="false" Update="true" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZH" Key="false" Update="true" Getter="getZh" Setter="setZh" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="true" Update="false" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SCJYRQ" Key="false" Update="true" Getter="getScjyrq" Setter="setScjyrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gzsx" table="SBDB.SB_JL_GZSX">
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="GZSXKSRQ" Key="false" Update="true" Getter="getGzsxksrq" Setter="setGzsxksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="FZCBS" Key="false" Update="true" Getter="getFzcbs" Setter="setFzcbs" ClassType="String.class" />
+    <ORColumn ColumName="GZSXJSRQ" Key="false" Update="true" Getter="getGzsxjsrq" Setter="setGzsxjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="GZSXNR" Key="false" Update="true" Getter="getGzsxnr" Setter="setGzsxnr" ClassType="String.class" />
+    <ORColumn ColumName="GZSXFCDW" Key="false" Update="true" Getter="getGzsxfcdw" Setter="setGzsxfcdw" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRRDM" Key="false" Update="true" Getter="getLrrdm" Setter="setLrrdm" ClassType="String.class" />
+    <ORColumn ColumName="GZSXSDBZ" Key="false" Update="true" Getter="getGzsxsdbz" Setter="setGzsxsdbz" ClassType="String.class" />
+    <ORColumn ColumName="GZSXFCRQ" Key="true" Update="false" Getter="getGzsxfcrq" Setter="setGzsxfcrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="true" Update="false" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM2" Key="true" Update="false" Getter="getSwjgzzjgdm2" Setter="setSwjgzzjgdm2" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="PH" Key="false" Update="true" Getter="getPh" Setter="setPh" ClassType="String.class" />
+    <ORColumn ColumName="GZSX_ID" Key="false" Update="true" Getter="getGzsx_id" Setter="setGzsx_id" ClassType="String.class" />
+    <ORColumn ColumName="GZSXNRBT" Key="false" Update="true" Getter="getGzsxnrbt" Setter="setGzsxnrbt" ClassType="String.class" />
+    </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gzsx_fk" table="SBDB.SB_JL_GZSX_FK">
+    <ORColumn ColumName="JSJDM" Key="true" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="GZSX_ID" Key="true" Update="true" Getter="getGzsx_id" Setter="setGzsx_id" ClassType="String.class" />
+    <ORColumn ColumName="YDSJ" Key="false" Update="true" Getter="getYdsj" Setter="setYdsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FKSJ" Key="false" Update="true" Getter="getFksj" Setter="setFksj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YDBS" Key="false" Update="true" Getter="getYdbs" Setter="setYdbs" ClassType="String.class" />
+    <ORColumn ColumName="FKBS" Key="false" Update="true" Getter="getFkbs" Setter="setFkbs" ClassType="String.class" />
+    <ORColumn ColumName="FKNR" Key="false" Update="true" Getter="getFknr" Setter="setFknr" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsnbfpbl" table="SBDB.SB_JL_CZZSNBFPBL">
+    <ORColumn ColumName="BL" Key="false" Update="true" Getter="getBl" Setter="setBl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BQLJS" Key="false" Update="true" Getter="getBqljs" Setter="setBqljs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="true" Update="false" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshyysrmx" table="SBDB.SB_JL_GTGSHYYSRMX">
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="DQKJFPJE" Key="false" Update="true" Getter="getDqkjfpje" Setter="setDqkjfpje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JZYYSR" Key="false" Update="true" Getter="getJzyysr" Setter="setJzyysr" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="DQYYSRJEHJ" Key="false" Update="true" Getter="getDqyysrjehj" Setter="setDqyysrjehj" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="DQWKJFPJE" Key="false" Update="true" Getter="getDqwkjfpje" Setter="setDqwkjfpje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czqrl" table="SBDB.SB_JL_CZQRL">
+    <ORColumn ColumName="ZQSSRQQ" Key="false" Update="true" Getter="getZqssrqq" Setter="setZqssrqq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQSSRQZ" Key="false" Update="true" Getter="getZqssrqz" Setter="setZqssrqz" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQLXMC" Key="false" Update="true" Getter="getZqlxmc" Setter="setZqlxmc" ClassType="String.class" />
+    <ORColumn ColumName="ZQQSRQ" Key="true" Update="false" Getter="getZqqsrq" Setter="setZqqsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQZZRQ" Key="false" Update="true" Getter="getZqzzrq" Setter="setZqzzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQLXDM" Key="true" Update="false" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Lsswszmx" table="SBDB.SB_JL_LSSWSZMX">
+    <ORColumn ColumName="WSZXH" Key="true" Update="false" Getter="getWszxh" Setter="setWszxh" ClassType="String.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="PZZLDM" Key="false" Update="true" Getter="getPzzldm" Setter="setPzzldm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="false" Update="true" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="JZBZ" Key="false" Update="true" Getter="getJzbz" Setter="setJzbz" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YJHKC" Key="false" Update="true" Getter="getYjhkc" Setter="setYjhkc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="WSZH" Key="fasle" Update="true" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NDZB" Key="false" Update="true" Getter="getNdzb" Setter="setNdzb" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Qysdsnb" table="SBDB.SB_JL_QYSDSNB">
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="BQLJS" Key="false" Update="true" Getter="getBqljs" Setter="setBqljs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="DLJGJSJDM" Key="false" Update="true" Getter="getDljgjsjdm" Setter="setDljgjsjdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="ZGSWJGZZJGDM" Key="false" Update="true" Getter="getZgswjgzzjgdm" Setter="setZgswjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sydwshttsrmx" table="SBDB.SB_JL_SYDWSHTTSRMX">
+    <ORColumn ColumName="BQLJS" Key="false" Update="true" Getter="getBqljs" Setter="setBqljs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sdwszsbhz" table="SBDB.SB_JL_SDWSZSBHZ">
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="HZKSRQ" Key="false" Update="true" Getter="getHzksrq" Setter="setHzksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="HZRQ" Key="false" Update="true" Getter="getHzrq" Setter="setHzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="HZJSRQ" Key="false" Update="true" Getter="getHzjsrq" Setter="setHzjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBHZDH" Key="true" Update="false" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBBH" Key="false" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Lsswszz" table="SBDB.SB_JL_LSSWSZZ">
+    <ORColumn ColumName="WSZXH" Key="true" Update="false" Getter="getWszxh" Setter="setWszxh" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="ZJLXDM" Key="false" Update="true" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="PZZLDM" Key="false" Update="rtue" Getter="getPzzldm" Setter="setPzzldm" ClassType="String.class" />
+    <ORColumn ColumName="JBDH" Key="false" Update="true" Getter="getJbdh" Setter="setJbdh" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="false" Update="true" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="DZ" Key="false" Update="true" Getter="getDz" Setter="setDz" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM2" Key="false" Update="true" Getter="getSwjgzzjgdm2" Setter="setSwjgzzjgdm2" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="HJSJJE" Key="false" Update="true" Getter="getHjsjje" Setter="setHjsjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBHZDH" Key="false" Update="true" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="WSZH" Key="false" Update="true" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NDZB" Key="false" Update="true" Getter="getNdzb" Setter="setNdzb" ClassType="String.class" />
+    <ORColumn ColumName="SKLXDM" Key="false" Update="true" Getter="getSklxdm" Setter="setSklxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Jqsz" table="SBDB.SB_JL_JQSZ">
+    <ORColumn ColumName="JQRQ" Key="true" Update="false" Getter="getJqrq" Setter="setJqrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SSNF" Key="true" Update="false" Getter="getSsnf" Setter="setSsnf" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />    
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhsgmz" table="SBDB.SB_JL_YHSGMZ">
+    <ORColumn ColumName="XSPZH" Key="true" Update="false" Getter="getXspzh" Setter="setXspzh" ClassType="String.class" />
+    <ORColumn ColumName="DSJSJDM" Key="true" Update="false" Getter="getDsjsjdm" Setter="setDsjsjdm" ClassType="String.class" />
+    <ORColumn ColumName="DSDWMC" Key="false" Update="true" Getter="getDsdwmc" Setter="setDsdwmc" ClassType="String.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="fasle" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="false" Update="true" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="HZRQ" Key="false" Update="true" Getter="getHzrq" Setter="setHzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HZR" Key="false" Update="true" Getter="getHzr" Setter="setHzr" ClassType="String.class" />
+    <ORColumn ColumName="YHZBS" Key="fasle" Update="true" Getter="getYhzbs" Setter="setYhzbs" ClassType="String.class" />
+    <ORColumn ColumName="HZFS" Key="fasle" Update="true" Getter="getHzfs" Setter="setHzfs" ClassType="String.class" />
+    <ORColumn ColumName="HJJE" Key="false" Update="true" Getter="getHjje" Setter="setHjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="ZHDM" Key="false" Update="true" Getter="getZhdm" Setter="setZhdm" ClassType="String.class" />
+    <ORColumn ColumName="JZBS" Key="false" Update="true" Getter="getJzbs" Setter="setJzbs" ClassType="String.class" />
+    <ORColumn ColumName="PKJBDH" Key="false" Update="true" Getter="getPkjbdh" Setter="setPkjbdh" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhsgmmx" table="SBDB.SB_JL_YHSGMMX">
+    <ORColumn ColumName="XSPZH" Key="true" Update="false" Getter="getXspzh" Setter="setXspzh" ClassType="String.class" />
+    <ORColumn ColumName="DSJSJDM" Key="true" Update="false" Getter="getDsjsjdm" Setter="setDsjsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SPMZDM" Key="true" Update="false" Getter="getSpmzdm" Setter="setSpmzdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="false" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="DWMC" Key="false" Update="true" Getter="getDwmc" Setter="setDwmc" ClassType="String.class" />
+    <ORColumn ColumName="GJDQDM" Key="false" Update="true" Getter="getGjdqdm" Setter="setGjdqdm" ClassType="String.class" />
+    <ORColumn ColumName="ZJLXDM" Key="false" Update="true" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="fasle" Update="true" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="SPMZJE" Key="false" Update="true" Getter="getSpmzje" Setter="setSpmzje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="GPSL" Key="false" Update="true" Getter="getGpsl" Setter="setGpsl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JE" Key="false" Update="true" Getter="getJe" Setter="setJe" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Szzqsz" table="SBDB.SB_JL_SZZQSZ">
+    <ORColumn ColumName="ZQLXDM" Key="true" Update="false" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+    <ORColumn ColumName="SZDM" Key="true" Update="false" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZQKSRQ" Key="false" Update="true" Getter="getZqksrq" Setter="setZqksrq" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQTS" Key="false" Update="true" Getter="getZqts" Setter="setZqts" ClassType="java.math.BigDecimal.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sydwshttwh" table="SBDB.SB_JL_SYDWSHTTWH">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="WH" Key="false" Update="true" Getter="getWh" Setter="setWh" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsnbqy" table="SBDB.SB_JL_CZZSNBQY">
+    <ORColumn ColumName="BQLJS" Key="false" Update="true" Getter="getBqljs" Setter="setBqljs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="XMMC" Key="false" Update="true" Getter="getXmmc" Setter="setXmmc" ClassType="String.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zqlx" table="DMDB.SB_DM_ZQLX">
+    <ORColumn ColumName="ZQKSRQ" Key="false" Update="true" Getter="getZqksrq" Setter="setZqksrq" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQLXMC" Key="false" Update="true" Getter="getZqlxmc" Setter="setZqlxmc" ClassType="String.class" />
+    <ORColumn ColumName="SKSSQ" Key="false" Update="true" Getter="getSkssq" Setter="setSkssq" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQTS" Key="false" Update="true" Getter="getZqts" Setter="setZqts" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQLXDM" Key="true" Update="false" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQZQ" Key="false" Update="true" Getter="getZqzq" Setter="setZqzq" ClassType="String.class" />
+    <ORColumn ColumName="TYRQ" Key="false" Update="true" Getter="getTyrq" Setter="setTyrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JGLXDM" Key="false" Update="true" Getter="getJglxdm" Setter="setJglxdm" ClassType="String.class" />
+    
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Szsmyfjs" table="SBDB.SB_JL_SZSMYFJS">
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="FJSSZSMDM" Key="true" Update="false" Getter="getFjsszsmdm" Setter="setFjsszsmdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsnbzb" table="SBDB.SB_JL_CZZSNBZB">
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="true" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="true" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsnbtzzsj" table="SBDB.SB_JL_CZZSNBTZZSJ">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CWFZR" Key="false" Update="true" Getter="getCwfzr" Setter="setCwfzr" ClassType="String.class" />
+    <ORColumn ColumName="TZZXM" Key="false" Update="true" Getter="getTzzxm" Setter="setTzzxm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="true" Update="false" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="true" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Lygf" table="SBDB.SB_JL_LYGF">
+    <ORColumn ColumName="DWMC" Key="false" Update="true" Getter="getDwmc" Setter="setDwmc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LR" Key="false" Update="true" Getter="getLr" Setter="setLr" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="FL" Key="false" Update="true" Getter="getFl" Setter="setFl" ClassType="String.class" />
+    <ORColumn ColumName="YBSDSE" Key="false" Update="true" Getter="getYbsdse" Setter="setYbsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QYLXDH" Key="false" Update="true" Getter="getQylxdh" Setter="setQylxdh" ClassType="String.class" />
+    <ORColumn ColumName="SSKCE" Key="false" Update="true" Getter="getSskce" Setter="setSskce" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="XH" Key="true" Update="false" Getter="getXh" Setter="setXh" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YNSDSE" Key="false" Update="true" Getter="getYnsdse" Setter="setYnsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YNSSDE" Key="false" Update="true" Getter="getYnssde" Setter="setYnssde" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Grsdsmx" table="SBDB.SB_JL_GRSDSMX">
+    <ORColumn ColumName="GJDM" Key="true" Update="false" Getter="getGjdm" Setter="setGjdm" ClassType="String.class" />
+    <ORColumn ColumName="BQSKSE" Key="false" Update="true" Getter="getBqskse" Setter="setBqskse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZYDM" Key="false" Update="true" Getter="getZydm" Setter="setZydm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="true" Update="false" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="XM" Key="false" Update="true" Getter="getXm" Setter="setXm" ClassType="String.class" />
+    <ORColumn ColumName="JMJE" Key="false" Update="true" Getter="getJmje" Setter="setJmje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SRE" Key="false" Update="true" Getter="getSre" Setter="setSre" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CJSJ" Key="true" Update="false" Getter="getCjsj" Setter="setCjsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YNSSDE" Key="false" Update="true" Getter="getYnssde" Setter="setYnssde" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="WSZH" Key="false" Update="true" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbjkzb" table="SBDB.SB_JL_SBJKZB">
+    <ORColumn ColumName="ZYRQ" Key="false" Update="true" Getter="getZyrq" Setter="setZyrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HXRMC" Key="false" Update="true" Getter="getHxrmc" Setter="setHxrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="RKJE" Key="false" Update="true" Getter="getRkje" Setter="setRkje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="false" Update="true" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKLXDM" Key="false" Update="true" Getter="getSklxdm" Setter="setSklxdm" ClassType="String.class" />
+    <ORColumn ColumName="YHMC" Key="false" Update="true" Getter="getYhmc" Setter="setYhmc" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="ZWBS" Key="false" Update="true" Getter="getZwbs" Setter="setZwbs" ClassType="String.class" />
+    <ORColumn ColumName="LSGXDM" Key="false" Update="true" Getter="getLsgxdm" Setter="setLsgxdm" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="SJJE" Key="false" Update="true" Getter="getSjje" Setter="setSjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="GKZZJGDM" Key="false" Update="true" Getter="getGkzzjgdm" Setter="setGkzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JKSJ" Key="false" Update="true" Getter="getJksj" Setter="setJksj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="ZH" Key="false" Update="true" Getter="getZh" Setter="setZh" ClassType="String.class" />
+    <ORColumn ColumName="HXRDM" Key="false" Update="true" Getter="getHxrdm" Setter="setHxrdm" ClassType="String.class" />
+    <ORColumn ColumName="XJRQ" Key="false" Update="true" Getter="getXjrq" Setter="setXjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZSSWJGZZJGDM" Key="false" Update="true" Getter="getZsswjgzzjgdm" Setter="setZsswjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="HXRQ" Key="false" Update="true" Getter="getHxrq" Setter="setHxrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBBH" Key="false" Update="true" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="JYDZLXDM" Key="false" Update="true" Getter="getJydzlxdm" Setter="setJydzlxdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="SPHM" Key="false" Update="true" Getter="getSphm" Setter="setSphm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Szsm" table="DMDB.SB_DM_SZSM">
+    <ORColumn ColumName="SZSMDM" Key="false" Update="true" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SSKCS" Key="false" Update="true" Getter="getSskcs" Setter="setSskcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JFYS" Key="false" Update="true" Getter="getJfys" Setter="setJfys" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMMC" Key="false" Update="true" Getter="getSzsmmc" Setter="setSzsmmc" ClassType="String.class" />
+    <ORColumn ColumName="JSGS" Key="false" Update="true" Getter="getJsgs" Setter="setJsgs" ClassType="String.class" />
+    <ORColumn ColumName="ZXJSRQ" Key="false" Update="true" Getter="getZxjsrq" Setter="setZxjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JLDW" Key="false" Update="true" Getter="getJldw" Setter="setJldw" ClassType="String.class" />
+    <ORColumn ColumName="JSJS" Key="false" Update="true" Getter="getJsjs" Setter="setJsjs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQLXDM" Key="false" Update="true" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZDKBJBZ" Key="false" Update="true" Getter="getZdkbjbz" Setter="setZdkbjbz" ClassType="String.class" />
+    <ORColumn ColumName="SJLYZD" Key="false" Update="true" Getter="getSjlyzd" Setter="setSjlyzd" ClassType="String.class" />
+    <ORColumn ColumName="ASLJBS" Key="false" Update="true" Getter="getAsljbs" Setter="setAsljbs" ClassType="String.class" />
+    <ORColumn ColumName="PYSY" Key="false" Update="true" Getter="getPysy" Setter="setPysy" ClassType="String.class" />
+    <ORColumn ColumName="ZXKSRQ" Key="false" Update="true" Getter="getZxksrq" Setter="setZxksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="YNSQSS" Key="false" Update="true" Getter="getYnsqss" Setter="setYnsqss" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BHSDSKCS" Key="false" Update="true" Getter="getBhsdskcs" Setter="setBhsdskcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BHSDSSL" Key="false" Update="true" Getter="getBhsdssl" Setter="setBhsdssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SFFJS" Key="false" Update="true" Getter="getSffjs" Setter="setSffjs" ClassType="String.class" />
+    <ORColumn ColumName="BHSDSZZ" Key="false" Update="true" Getter="getBhsdszz" Setter="setBhsdszz" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BHSDSQS" Key="false" Update="true" Getter="getBhsdsqs" Setter="setBhsdsqs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSZZS" Key="false" Update="true" Getter="getYnszzs" Setter="setYnszzs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="FJDDM" Key="false" Update="true" Getter="getFjddm" Setter="setFjddm" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="CCBS" Key="false" Update="true" Getter="getCcbs" Setter="setCcbs" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshyysrz" table="SBDB.SB_JL_GTGSHYYSRZ">
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SWDJZH" Key="false" Update="true" Getter="getSwdjzh" Setter="setSwdjzh" ClassType="String.class" />
+    <ORColumn ColumName="LRRDM" Key="false" Update="true" Getter="getLrrdm" Setter="setLrrdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbbxmdzb" table="SBDB.SB_JL_SBBXMDZB">
+    <ORColumn ColumName="XMDM" Key="true" Update="false" Getter="getXmdm" Setter="setXmdm" ClassType="String.class" />
+    <ORColumn ColumName="XH" Key="false" Update="true" Getter="getXh" Setter="setXh" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="XMSS" Key="true" Update="false" Getter="getXmss" Setter="setXmss" ClassType="String.class" />
+    <ORColumn ColumName="XMMC" Key="false" Update="true" Getter="getXmmc" Setter="setXmmc" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsjbqysj" table="SBDB.SB_JL_CZZSJBQYSJ">
+    <ORColumn ColumName="JD" Key="true" Update="false" Getter="getJd" Setter="setJd" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRZE" Key="false" Update="true" Getter="getLrze" Setter="setLrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SWDJZH" Key="false" Update="true" Getter="getSwdjzh" Setter="setSwdjzh" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="true" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshsdsmx" table="SBDB.SB_JL_GTGSHSDSMX">
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="JE" Key="false" Update="true" Getter="getJe" Setter="setJe" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsjbtzzsj" table="SBDB.SB_JL_CZZSJBTZZSJ">
+    <ORColumn ColumName="SJYJSE" Key="false" Update="true" Getter="getSjyjse" Setter="setSjyjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZJHM" Key="true" Update="false" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="QCWJSDSE" Key="false" Update="true" Getter="getQcwjsdse" Setter="setQcwjsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JD" Key="true" Update="false" Getter="getJd" Setter="setJd" ClassType="String.class" />
+    <ORColumn ColumName="YNSSDE" Key="false" Update="true" Getter="getYnssde" Setter="setYnssde" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YJNSDSE" Key="false" Update="true" Getter="getYjnsdse" Setter="setYjnsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SSKCS" Key="false" Update="true" Getter="getSskcs" Setter="setSskcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SYSL" Key="false" Update="true" Getter="getSysl" Setter="setSysl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="JMSE" Key="false" Update="true" Getter="getJmse" Setter="setJmse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSDSE" Key="false" Update="true" Getter="getYnsdse" Setter="setYnsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="TZZXM" Key="false" Update="true" Getter="getTzzxm" Setter="setTzzxm" ClassType="String.class" />
+    <ORColumn ColumName="FPBL" Key="false" Update="true" Getter="getFpbl" Setter="setFpbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Jm" table="SBDB.SB_JL_JM">
+    <ORColumn ColumName="JMLX" Key="true" Update="false" Getter="getJmlx" Setter="setJmlx" ClassType="String.class" />
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JMSE" Key="false" Update="true" Getter="getJmse" Setter="setJmse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="JZBZ" Key="false" Update="false" Getter="getJzbz" Setter="setJzbz" ClassType="String.class" />
+    <ORColumn ColumName="JMXMDM" Key="false" Update="false" Getter="getJmxmdm" Setter="setJmxmdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="false" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="false" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="false" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="DQXSE" Key="false" Update="true" Getter="getDqxse" Setter="setDqxse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="DQLRZE" Key="false" Update="true" Getter="getDqlrze" Setter="setDqlrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QYRS" Key="false" Update="true" Getter="getQyrs" Setter="setQyrs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="AZRS" Key="false" Update="true" Getter="getAzrs" Setter="setAzrs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JMXMJDM" Key="false" Update="true" Getter="getJmxmjdm" Setter="setJmxmjdm" ClassType="String.class" />
+    <ORColumn ColumName="JMXMKSRQ" Key="false" Update="true" Getter="getJmxmksrq" Setter="setJmxmksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JMXMJSRQ" Key="false" Update="true" Getter="getJmxmjsrq" Setter="setJmxmjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sydwshttsrzb" table="SBDB.SB_JL_SYDWSHTTSRZB">
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="SFYYSSR" Key="true" Update="false" Getter="getSfyyssr" Setter="setSfyyssr" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Wbhs" table="DMDB.SB_DM_WBHS">
+    <ORColumn ColumName="BZMC" Key="false" Update="true" Getter="getBzmc" Setter="setBzmc" ClassType="String.class" />
+    <ORColumn ColumName="JE" Key="false" Update="true" Getter="getJe" Setter="setJe" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="XH" Key="true" Update="false" Getter="getXh" Setter="setXh" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZHRMB" Key="false" Update="true" Getter="getZhrmb" Setter="setZhrmb" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BZDM" Key="true" Update="false" Getter="getBzdm" Setter="setBzdm" ClassType="String.class" />
+    <ORColumn ColumName="YF" Key="false" Update="true" Getter="getYf" Setter="setYf" ClassType="String.class" />
+    <ORColumn ColumName="WHPJ" Key="false" Update="true" Getter="getWhpj" Setter="setWhpj" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Clbj" table="DMDB.SB_DM_CLBJ">
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CLBJMC" Key="false" Update="true" Getter="getClbjmc" Setter="setClbjmc" ClassType="String.class" />
+    <ORColumn ColumName="SJSYZTBS" Key="false" Update="true" Getter="getSjsyztbs" Setter="setSjsyztbs" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="CLBJDM" Key="true" Update="false" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Wqyys" table="SBDB.SB_JL_WQYYS">
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HSSRE" Key="false" Update="true" Getter="getHssre" Setter="setHssre" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSE" Key="false" Update="true" Getter="getYnse" Setter="setYnse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JFZCE" Key="false" Update="true" Getter="getJfzce" Setter="setJfzce" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SRE" Key="false" Update="true" Getter="getSre" Setter="setSre" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="true" Update="false" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HTCJE" Key="false" Update="true" Getter="getHtcje" Setter="setHtcje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YINSE" Key="false" Update="true" Getter="getYinse" Setter="setYinse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YJL" Key="false" Update="true" Getter="getYjl" Setter="setYjl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZSFFDM" Key="false" Update="true" Getter="getZsffdm" Setter="setZsffdm" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HDSRE" Key="false" Update="true" Getter="getHdsre" Setter="setHdsre" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BQYBSE" Key="false" Update="true" Getter="getBqybse" Setter="setBqybse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhsbgmx" table="SBDB.SB_JL_YHSBGMX">
+    <ORColumn ColumName="FS" Key="false" Update="true" Getter="getFs" Setter="setFs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sqsbtmp" table="SBDB.SB_JL_SQSB_TMP">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZMC" Key="false" Update="true" Getter="getSzmc" Setter="setSzmc" ClassType="String.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="SZSMMC" Key="false" Update="true" Getter="getSzsmmc" Setter="setSzsmmc" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />	
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Dsdzdkmx" table="SBDB.SB_JL_DSDZDKMX">
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="PZZLDM" Key="true" Update="false" Getter="getPzzldm" Setter="setPzzldm" ClassType="String.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="QYLXDH" Key="false" Update="true" Getter="getQylxdh" Setter="setQylxdh" ClassType="String.class" />
+    <ORColumn ColumName="SZSMMC" Key="false" Update="true" Getter="getSzsmmc" Setter="setSzsmmc" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBHZDH" Key="false" Update="true" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="BDZRMC" Key="false" Update="true" Getter="getBdzrmc" Setter="setBdzrmc" ClassType="String.class" />
+    <ORColumn ColumName="SZMC" Key="false" Update="true" Getter="getSzmc" Setter="setSzmc" ClassType="String.class" />
+    <ORColumn ColumName="WSZH" Key="true" Update="false" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Grsdsz" table="SBDB.SB_JL_GRSDSZ">
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="BQDWZRS" Key="false" Update="true" Getter="getBqdwzrs" Setter="setBqdwzrs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BQFDWZRS" Key="false" Update="true" Getter="getBqfdwzrs" Setter="setBqfdwzrs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CJSJ" Key="true" Update="false" Getter="getCjsj" Setter="setCjsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />	
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Hdzsqysb" table="SBDB.SB_JL_HDZSQYSB">
+    <ORColumn ColumName="QYSRZE" Key="false" Update="true" Getter="getQysrze" Setter="setQysrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JD" Key="true" Update="false" Getter="getJd" Setter="setJd" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJSJ" Key="false" Update="true" Getter="getCjsj" Setter="setCjsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSSDL" Key="false" Update="true" Getter="getYssdl" Setter="setYssdl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRZE" Key="false" Update="true" Getter="getLrze" Setter="setLrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SWDJZH" Key="false" Update="true" Getter="getSwdjzh" Setter="setSwdjzh" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FSDM" Key="true" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gzsxls" table="SBDB.SB_JL_GZSX_LS">
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="GZSXKSRQ" Key="false" Update="true" Getter="getGzsxksrq" Setter="setGzsxksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="FZCBS" Key="false" Update="true" Getter="getFzcbs" Setter="setFzcbs" ClassType="String.class" />
+    <ORColumn ColumName="GZSXJSRQ" Key="false" Update="true" Getter="getGzsxjsrq" Setter="setGzsxjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="GZSXNR" Key="false" Update="true" Getter="getGzsxnr" Setter="setGzsxnr" ClassType="String.class" />
+    <ORColumn ColumName="GZSXFCDW" Key="false" Update="true" Getter="getGzsxfcdw" Setter="setGzsxfcdw" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRRDM" Key="false" Update="true" Getter="getLrrdm" Setter="setLrrdm" ClassType="String.class" />
+    <ORColumn ColumName="GZSXSDBZ" Key="false" Update="true" Getter="getGzsxsdbz" Setter="setGzsxsdbz" ClassType="String.class" />
+    <ORColumn ColumName="GZSXFCRQ" Key="true" Update="false" Getter="getGzsxfcrq" Setter="setGzsxfcrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="true" Update="false" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM2" Key="true" Update="false" Getter="getSwjgzzjgdm2" Setter="setSwjgzzjgdm2" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="PH" Key="false" Update="true" Getter="getPh" Setter="setPh" ClassType="String.class" />
+    <ORColumn ColumName="GZSX_ID" Key="false" Update="true" Getter="getGzsx_id" Setter="setGzsx_id" ClassType="String.class" />
+    <ORColumn ColumName="GZSXNRBT" Key="false" Update="true" Getter="getGzsxnrbt" Setter="setGzsxnrbt" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zqrl" table="SBDB.SB_JL_ZQRL">
+    <ORColumn ColumName="ZQSSRQQ" Key="false" Update="true" Getter="getZqssrqq" Setter="setZqssrqq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQSSRQZ" Key="false" Update="true" Getter="getZqssrqz" Setter="setZqssrqz" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQLXMC" Key="false" Update="true" Getter="getZqlxmc" Setter="setZqlxmc" ClassType="String.class" />
+    <ORColumn ColumName="ZQZZRQ" Key="false" Update="true" Getter="getZqzzrq" Setter="setZqzzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZQQSRQ" Key="true" Update="false" Getter="getZqqsrq" Setter="setZqqsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="ZQLXDM" Key="true" Update="false" Getter="getZqlxdm" Setter="setZqlxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />    
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />    
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZQKSRQ" Key="false" Update="true" Getter="getZqksrq" Setter="setZqksrq" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZQTS" Key="false" Update="true" Getter="getZqts" Setter="setZqts" ClassType="java.math.BigDecimal.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbbbxm" table="SBDB.SB_DM_SBBBXM">
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="XMMC" Key="false" Update="true" Getter="getXmmc" Setter="setXmmc" ClassType="String.class" />
+    <ORColumn ColumName="SJKJ" Key="true" Update="false" Getter="getSjkj" Setter="setSjkj" ClassType="String.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="XMSS" Key="true" Update="false" Getter="getXmss" Setter="setXmss" ClassType="String.class" />
+    <ORColumn ColumName="BJXZ" Key="false" Update="true" Getter="getBjxz" Setter="setBjxz" ClassType="String.class" />
+    <ORColumn ColumName="FBXH" Key="false" Update="true" Getter="getFbxh" Setter="setFbxh" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JYTJ" Key="false" Update="true" Getter="getJytj" Setter="setJytj" ClassType="String.class" />
+    <ORColumn ColumName="SFJYBS" Key="false" Update="true" Getter="getSfjybs" Setter="setSfjybs" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhsbgz" table="SBDB.SB_JL_YHSBGZ">
+    <ORColumn ColumName="HJYNSE" Key="false" Update="true" Getter="getHjynse" Setter="setHjynse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="HJFS" Key="false" Update="true" Getter="getHjfs" Setter="setHjfs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HJJSJE" Key="false" Update="true" Getter="getHjjsje" Setter="setHjjsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="false" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Swjgzzjg" table="DMDB.GY_DM_SWJGZZJG">
+		<ORColumn ColumName="XZQDM" Key="false" Update="true" Getter="getXzqdm" Setter="setXzqdm" ClassType="String.class"/>
+		<ORColumn ColumName="JGCCGX" Key="false" Update="true" Getter="getJgccgx" Setter="setJgccgx" ClassType="String.class"/>
+		<ORColumn ColumName="SWJGZZJGDH" Key="false" Update="true" Getter="getSwjgzzjgdh" Setter="setSwjgzzjgdh" ClassType="String.class"/>
+		<ORColumn ColumName="BBBZDWMC" Key="false" Update="true" Getter="getBbbzdwmc" Setter="setBbbzdwmc" ClassType="String.class"/>
+		<ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class"/>
+		<ORColumn ColumName="JGZNLX" Key="false" Update="true" Getter="getJgznlx" Setter="setJgznlx" ClassType="String.class"/>
+		<ORColumn ColumName="SWJGZZJGMC" Key="false" Update="true" Getter="getSwjgzzjgmc" Setter="setSwjgzzjgmc" ClassType="String.class"/>
+		<ORColumn ColumName="SKGK" Key="false" Update="true" Getter="getSkgk" Setter="setSkgk" ClassType="String.class"/>
+		<ORColumn ColumName="SWJGZZJGDM" Key="true" Update="false" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class"/>
+		<ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class"/>
+		<ORColumn ColumName="WSJC" Key="false" Update="true" Getter="getWsjc" Setter="setWsjc" ClassType="String.class"/>
+		<ORColumn ColumName="SWJGZZJGDZ" Key="false" Update="true" Getter="getSwjgzzjgdz" Setter="setSwjgzzjgdz" ClassType="String.class"/>
+		<ORColumn ColumName="JC" Key="false" Update="true" Getter="getJc" Setter="setJc" ClassType="String.class"/>
+		<ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class"/>
+		<ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class"/>
+		<ORColumn ColumName="YZBM" Key="false" Update="true" Getter="getYzbm" Setter="setYzbm" ClassType="String.class"/>
+		<ORColumn ColumName="GKJHH" Key="false" Update="true" Getter="getGkjhh" Setter="setGkjhh" ClassType="String.class"/>
+		<ORColumn ColumName="QXFJDM" Key="false" Update="true" Getter="getQxfjdm" Setter="setQxfjdm" ClassType="String.class"/>
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gj" table="DMDB.GY_DM_GJDQ">
+    <ORColumn ColumName="GJDQDM" Key="true" Update="false" Getter="getGjdqdm" Setter="setGjdqdm" ClassType="String.class" />
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="GJDQMC" key="false" Update="true" Getter="getGjdqmc" Setter="setGjdqmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zjlx" table="DMDB.GY_DM_ZJLX">
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZJLXMC" Key="false" Update="true" Getter="getZjlxmc" Setter="setZjlxmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zy" table="DMDB.DJ_DM_ZY">
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZYDM" Key="true" Update="false" Getter="getZydm" Setter="setZydm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="ZYMC" Key="false" Update="true" Getter="getZymc" Setter="setZymc" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yh" table="DMDB.GY_DM_YH">
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LWZT" Key="false" Update="true" Getter="getLwzt" Setter="setLwzt" ClassType="String.class" />
+    <ORColumn ColumName="YHMC" Key="false" Update="true" Getter="getYhmc" Setter="setYhmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="true" Update="false" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshwszz" table="SBDB.SB_JL_GTGSHWSZZ">
+    <ORColumn ColumName="WSZXH" Key="true" Update="false" Getter="getWszxh" Setter="setWszxh" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="ZJLXDM" Key="false" Update="true" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="PZZLDM" Key="false" Update="true" Getter="getPzzldm" Setter="setPzzldm" ClassType="String.class" />
+    <ORColumn ColumName="JBDH" Key="false" Update="true" Getter="getJbdh" Setter="setJbdh" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="false" Update="true" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="DZ" Key="false" Update="true" Getter="getDz" Setter="setDz" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM2" Key="false" Update="true" Getter="getSwjgzzjgdm2" Setter="setSwjgzzjgdm2" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="false" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="HJSJJE" Key="false" Update="true" Getter="getHjsjje" Setter="setHjsjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBHZDH" Key="false" Update="true" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="WSZH" Key="false" Update="true" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRJSJDM" Key="true" Update="true" Getter="getNsrjsjdm" Setter="setNsrjsjdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NDZB" Key="false" Update="true" Getter="getNdzb" Setter="setNdzb" ClassType="String.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshwszmx" table="SBDB.SB_JL_GTGSHWSZMX">
+    <ORColumn ColumName="WSZXH" Key="true" Update="false" Getter="getWszxh" Setter="setWszxh" ClassType="String.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="PZZLDM" Key="false" Update="true" Getter="getPzzldm" Setter="setPzzldm" ClassType="String.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="JZBZ" Key="false" Update="true" Getter="getJzbz" Setter="setJzbz" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="false" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRJSJDM" Key="true" Update="false" Getter="getNsrjsjdm" Setter="setNsrjsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YJHKC" Key="false" Update="true" Getter="getYjhkc" Setter="setYjhkc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="WSZH" Key="false" Update="true" Getter="getWszh" Setter="setWszh" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="NDZB" Key="false" Update="true" Getter="getNdzb" Setter="setNdzb" ClassType="String.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gtgshwszsbhz" table="SBDB.SB_JL_GTGSHWSZSBHZ">
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="HZKSRQ" Key="false" Update="true" Getter="getHzksrq" Setter="setHzksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="HZRQ" Key="false" Update="true" Getter="getHzrq" Setter="setHzrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="HZJSRQ" Key="false" Update="true" Getter="getHzjsrq" Setter="setHzjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBHZDH" Key="true" Update="false" Getter="getSbhzdh" Setter="setSbhzdh" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="HZFS" Key="false" Update="true" Getter="getHzfs" Setter="setHzfs" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />    
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Jkpzhkz" table="SBDB.SB_JL_JKPZHKZ">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="XH" Key="false" Update="true" Getter="getXh" Setter="setXh" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="NY" Key="false" Update="true" Getter="getNy" Setter="setNy" ClassType="String.class" />
+
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Lsgx" table="DMDB.DJ_DM_LSGX">
+    <ORColumn ColumName="LSGXMC" Key="false" Update="true" Getter="getLsgxmc" Setter="setLsgxmc" ClassType="String.class" />
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LSGXDM" Key="true" Update="false" Getter="getLsgxdm" Setter="setLsgxdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Djzclx" table="DMDB.DJ_DM_DJZCLX">
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="PCLXDM" Key="false" Update="true" Getter="getPclxdm" Setter="setPclxdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXMC" Key="false" Update="true" Getter="getDjzclxmc" Setter="setDjzclxmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="NWZFLDM" Key="false" Update="true" Getter="getNwzfldm" Setter="setNwzfldm" ClassType="String.class" />
+    <ORColumn ColumName="QYLXDM" Key="false" Update="true" Getter="getQylxdm" Setter="setQylxdm" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="true" Update="false" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SWDJZZLDM" Key="false" Update="true" Getter="getSwdjzzldm" Setter="setSwdjzzldm" ClassType="String.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gjbzhy" table="DMDB.GY_DM_GJBZHY">
+    <ORColumn ColumName="ZGHYDM" Key="false" Update="true" Getter="getZghydm" Setter="setZghydm" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="true" Update="false" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="HYMLDM" Key="false" Update="true" Getter="getHymldm" Setter="setHymldm" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYMC" Key="false" Update="true" Getter="getGjbzhymc" Setter="setGjbzhymc" ClassType="String.class" />
+    <ORColumn ColumName="DFSHYDM" Key="false" Update="true" Getter="getDfshydm" Setter="setDfshydm" ClassType="String.class" />
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CYFLDM" Key="false" Update="true" Getter="getCyfldm" Setter="setCyfldm" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yskm" table="DMDB.KJ_DM_YSKM">
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="SJFCBL" Key="false" Update="true" Getter="getSjfcbl" Setter="setSjfcbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QXFCBL" Key="false" Update="true" Getter="getQxfcbl" Setter="setQxfcbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YSKMDM" Key="true" Update="false" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="MRSZSMDM" Key="false" Update="true" Getter="getMrszsmdm" Setter="setMrszsmdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SXRQ" Key="false" Update="true" Getter="getSxrq" Setter="setSxrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSKMMC" Key="false" Update="true" Getter="getYskmmc" Setter="setYskmmc" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="ZYFCBL" Key="false" Update="true" Getter="getZyfcbl" Setter="setZyfcbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Ysjc" table="DMDB.SF_DM_YSJC">
+    <ORColumn ColumName="YSJCDM" Key="true" Update="false" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCMC" Key="false" Update="true" Getter="getYsjcmc" Setter="setYsjcmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Czzsnbtzzmxsj" table="SBDB.SB_JL_CZZSNBTZZMXSJ">
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="ZJLXDM" Key="true" Update="false" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="true" Update="false" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="HC" Key="true" Update="false" Getter="getHc" Setter="setHc" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="BQLJS" Key="false" Update="true" Getter="getBqljs" Setter="setBqljs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="true" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Fs" table="DMDB.GY_DM_FS">
+    <ORColumn ColumName="SBDM" Key="true" Update="false" Getter="getSbdm" Setter="setSbdm" ClassType="String.class" />
+    <ORColumn ColumName="SBMC" Key="false" Update="true" Getter="getSbmc" Setter="setSbmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR"  Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="java.sql.Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Qysdsjd" table="SBDB.SB_JL_QYSDSJD">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="ND"  Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="JD"  Key="true" Update="false" Getter="getJd" Setter="setJd" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ"  Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="java.sql.Timestamp.class" />
+    <ORColumn ColumName="LRRQ"  Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="java.sql.Timestamp.class" />
+    <ORColumn ColumName="SBRQ"  Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="java.sql.Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ"  Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="java.sql.Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ"  Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="java.sql.Timestamp.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="LRR"  Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH"  Key="false" Update="true" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="SRZE" Key="false" Update="true" Getter="getSrze" Setter="setSrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRZE"  Key="false" Update="true" Getter="getLrze" Setter="setLrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SL" Key="true" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSDSE"  Key="false" Update="true" Getter="getYnsdse" Setter="setYnsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QCWJSDSE" Key="false" Update="true" Getter="getQcwjsdse" Setter="setQcwjsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JMSDSE"  Key="false" Update="true" Getter="getJmsdse" Setter="setJmsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CBYQNDSE" Key="false" Update="true" Getter="getCbyqndse" Setter="setCbyqndse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SJYJSDSSE"  Key="false" Update="true" Getter="getSjyjsdsse" Setter="setSjyjsdsse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BQYJSDSE" Key="false" Update="true" Getter="getBqyjsdse" Setter="setBqyjsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SJYBSDSE"  Key="false" Update="true" Getter="getSjybsdse" Setter="setSjybsdse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="MBYQNDKS"  Key="false" Update="true" Getter="getMbyqndks" Setter="setMbyqndks" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="BKHLRZE"  Key="false" Update="true" Getter="getBkhlrze" Setter="setBkhlrze" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QXDM" Key="true" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sklx" table="DMDB.KJ_DM_SKLX">
+    <ORColumn ColumName="SBSYBS" Key="false" Update="true" Getter="getSbsybs" Setter="setSbsybs" ClassType="String.class" />
+    <ORColumn ColumName="SKLXDM" Key="true" Update="false" Getter="getSklxdm" Setter="setSklxdm" ClassType="String.class" />
+    <ORColumn ColumName="LRXSBS" Key="false" Update="true" Getter="getLrxsbs" Setter="setLrxsbs" ClassType="String.class" />
+    <ORColumn ColumName="SKLXMC" Key="false" Update="true" Getter="getSklxmc" Setter="setSklxmc" ClassType="String.class" />
+    <ORColumn ColumName="CCBS" Key="false" Update="true" Getter="getCcbs" Setter="setCcbs" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zrrgrsdsz" table="SBDB.SB_JL_ZRRGRSDSZ">
+    <ORColumn ColumName="GJDM" Key="false" Update="true" Getter="getGjdm" Setter="setGjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="true" Update="false" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZJLXDM" Key="false" Update="true" Getter="getZjlxdm" Setter="setZjlxdm" ClassType="String.class" />
+    <ORColumn ColumName="DHRQ" Key="false" Update="true" Getter="getDhrq" Setter="setDhrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZYDM" Key="false" Update="true" Getter="getZydm" Setter="setZydm" ClassType="String.class" />
+    <ORColumn ColumName="ZJHM" Key="false" Update="true" Getter="getZjhm" Setter="setZjhm" ClassType="String.class" />
+    <ORColumn ColumName="FWDD" Key="false" Update="true" Getter="getFwdd" Setter="setFwdd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="DWFDBL" Key="false" Update="true" Getter="getDwfdbl" Setter="setDwfdbl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="TXDZ" Key="false" Update="true" Getter="getTxdz" Setter="setTxdz" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="DH" Key="false" Update="true" Getter="getDh" Setter="setDh" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FWDW" Key="false" Update="true" Getter="getFwdw" Setter="setFwdw" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YZBM" Key="false" Update="true" Getter="getYzbm" Setter="setYzbm" ClassType="String.class" />
+    <ORColumn ColumName="JNZZ" Key="false" Update="true" Getter="getJnzz" Setter="setJnzz" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBBH" Key="true" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+  </ORMAP>
+ <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zrrgrsdsmx" table="SBDB.SB_JL_ZRRGRSDSMX">
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="true" Update="false" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SRERMB" Key="false" Update="true" Getter="getSrermb" Setter="setSrermb" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SSKCS" Key="false" Update="true" Getter="getSskcs" Setter="setSskcs" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SDJSRQ" Key="true" Update="false" Getter="getSdjsrq" Setter="setSdjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="FDKCE" Key="false" Update="true" Getter="getFdkce" Setter="setFdkce" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSE" Key="false" Update="true" Getter="getYnse" Setter="setYnse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="SDKSRQ" Key="true" Update="false" Getter="getSdksrq" Setter="setSdksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZHRMB" Key="false" Update="true" Getter="getZhrmb" Setter="setZhrmb" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="RMBHJ" Key="false" Update="true" Getter="getRmbhj" Setter="setRmbhj" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JFYE" Key="false" Update="true" Getter="getJfye" Setter="setJfye" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YKJSE" Key="false" Update="true" Getter="getYkjse" Setter="setYkjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YJZGSK" Key="false" Update="true" Getter="getYjzgsk" Setter="setYjzgsk" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YBTSK" Key="false" Update="true" Getter="getYbtsk" Setter="setYbtsk" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YNSSDE" Key="false" Update="true" Getter="getYnssde" Setter="setYnssde" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBBH" Key="true" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Jmfl" table="SBDB.SB_DM_JMFL">
+    <ORColumn ColumName="JMFLDM" Key="true" Update="false" Getter="getJmfldm" Setter="setJmfldm" ClassType="String.class" />
+    <ORColumn ColumName="JMFLMC" Key="false" Update="true" Getter="getJmflmc" Setter="setJmflmc" ClassType="String.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Skfdqk" table="DMDB.DJ_DM_SKFDQK">
+    <ORColumn ColumName="SKFDQKDM" Key="true" Update="false" Getter="getSkfdqkdm" Setter="setSkfdqkdm" ClassType="String.class" />
+    <ORColumn ColumName="ZHGXSJ" Key="false" Update="true" Getter="getZhgxsj" Setter="setZhgxsj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKFDQKMC" Key="false" Update="true" Getter="getSkfdqkmc" Setter="setSkfdqkmc" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Wbzhrmb" table="SBDB.SB_JL_WBZHRMB">
+    <ORColumn ColumName="SDKSRQ" Key="false" Update="true" Getter="getSdksrq" Setter="setSdksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JE" Key="false" Update="true" Getter="getJe" Setter="setJe" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SDJSRQ" Key="false" Update="true" Getter="getSdjsrq" Setter="setSdjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="BZDM" Key="true" Update="false" Getter="getBzdm" Setter="setBzdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZHRMB" Key="false" Update="true" Getter="getZhrmb" Setter="setZhrmb" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBRQ" Key="true" Update="false" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="WHPJ" Key="false" Update="true" Getter="getWhpj" Setter="setWhpj" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SBBH" Key="true" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Gzsxpl" table="SBDB.SB_JL_GZSXPL">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="YZBS" Key="false" Update="true" Getter="getYzbs" Setter="setYzbs" ClassType="String.class" />
+    <ORColumn ColumName="PH" Key="true" Update="false" Getter="getPh" Setter="setPh" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhkkhzxx" table="SFDB.SF_JL_GTGSH_YHKKHZXX">
+    <ORColumn ColumName="YSJCMC" Key="false" Update="true" Getter="getYsjcmc" Setter="setYsjcmc" ClassType="String.class" />
+    <ORColumn ColumName="SJRD" Key="false" Update="true" Getter="getSjrd" Setter="setSjrd" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="KKDWDM" Key="false" Update="true" Getter="getKkdwdm" Setter="setKkdwdm" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="RKJE" Key="false" Update="true" Getter="getRkje" Setter="setRkje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QJFC" Key="false" Update="true" Getter="getQjfc" Setter="setQjfc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="false" Update="true" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="YD" Key="false" Update="true" Getter="getYd" Setter="setYd" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="false" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="false" Update="true" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGMC" Key="false" Update="true" Getter="getSwjgzzjgmc" Setter="setSwjgzzjgmc" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="JYDZLXDM" Key="false" Update="true" Getter="getJydzlxdm" Setter="setJydzlxdm" ClassType="String.class" />
+    <ORColumn ColumName="LSGXDM" Key="false" Update="true" Getter="getLsgxdm" Setter="setLsgxdm" ClassType="String.class" />
+    <ORColumn ColumName="KKRQ" Key="false" Update="true" Getter="getKkrq" Setter="setKkrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMMC" Key="false" Update="true" Getter="getSzsmmc" Setter="setSzsmmc" ClassType="String.class" />
+    <ORColumn ColumName="BCGYYDM" Key="false" Update="true" Getter="getBcgyydm" Setter="setBcgyydm" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="KKBZ" Key="false" Update="true" Getter="getKkbz" Setter="setKkbz" ClassType="String.class" />
+    <ORColumn ColumName="SJJE" Key="false" Update="true" Getter="getSjje" Setter="setSjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SCJXDM" Key="false" Update="true" Getter="getScjxdm" Setter="setScjxdm" ClassType="String.class" />
+    <ORColumn ColumName="GKZZJGDM" Key="false" Update="true" Getter="getGkzzjgdm" Setter="setGkzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="GKZZJGMC" Key="false" Update="true" Getter="getGkzzjgmc" Setter="setGkzzjgmc" ClassType="String.class" />
+    <ORColumn ColumName="ZH" Key="false" Update="true" Getter="getZh" Setter="setZh" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJFC" Key="false" Update="true" Getter="getSjfc" Setter="setSjfc" ClassType="java.math.BigDecimal.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.GtgshZt" table="SFDB.SF_JL_GTGSH_ZT">
+    <ORColumn ColumName="ND" Key="true" Update="false" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="DSCZT" Key="false" Update="true" Getter="getDsczt" Setter="setDsczt" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="true" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="ECKKNRZT" Key="false" Update="true" Getter="getEckknrzt" Setter="setEckknrzt" ClassType="String.class" />
+    <ORColumn ColumName="YCKKNRZT" Key="false" Update="true" Getter="getYckknrzt" Setter="setYckknrzt" ClassType="String.class" />
+    <ORColumn ColumName="YHQZT" Key="false" Update="true" Getter="getYhqzt" Setter="setYhqzt" ClassType="String.class" />
+    <ORColumn ColumName="ZJLS" Key="false" Update="true" Getter="getZjls" Setter="setZjls" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="ZJE" Key="false" Update="true" Getter="getZje" Setter="setZje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="YDKKWJMC" Key="false" Update="true" Getter="getYdkkwjmc" Setter="setYdkkwjmc" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="ECKKZT" Key="false" Update="true" Getter="getEckkzt" Setter="setEckkzt" ClassType="String.class" />
+    <ORColumn ColumName="YCKKZT" Key="false" Update="true" Getter="getYckkzt" Setter="setYckkzt" ClassType="String.class" />
+    <ORColumn ColumName="CWZJLS" Key="false" Update="true" Getter="getCwzjls" Setter="setCwzjls" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CWZJE" Key="false" Update="true" Getter="getCwzje" Setter="setCwzje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YD" Key="true" Update="false" Getter="getYd" Setter="setYd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Yhkkxx" table="SFDB.SF_JL_GTGSH_YHKKXX">
+    <ORColumn ColumName="SJJE" Key="false" Update="true" Getter="getSjje" Setter="setSjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZSMDM" Key="false" Update="true" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="ZH" Key="false" Update="true" Getter="getZh" Setter="setZh" ClassType="String.class" />
+    <ORColumn ColumName="LSGXDM" Key="false" Update="true" Getter="getLsgxdm" Setter="setLsgxdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGMC" Key="false" Update="true" Getter="getSwjgzzjgmc" Setter="setSwjgzzjgmc" ClassType="String.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="SZSMMC" Key="false" Update="true" Getter="getSzsmmc" Setter="setSzsmmc" ClassType="String.class" />
+    <ORColumn ColumName="GKZZJGDM" Key="false" Update="true" Getter="getGkzzjgdm" Setter="setGkzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="JYDZLXDM" Key="false" Update="true" Getter="getJydzlxdm" Setter="setJydzlxdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="false" Update="true" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="SCJXDM" Key="false" Update="true" Getter="getScjxdm" Setter="setScjxdm" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="false" Update="true" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRMC" Key="false" Update="true" Getter="getNsrmc" Setter="setNsrmc" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="GKZZJGMC" Key="false" Update="true" Getter="getGkzzjgmc" Setter="setGkzzjgmc" ClassType="String.class" />
+    <ORColumn ColumName="SJRD" Key="false" Update="true" Getter="getSjrd" Setter="setSjrd" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YD" Key="false" Update="true" Getter="getYd" Setter="setYd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSJCMC" Key="false" Update="true" Getter="getYsjcmc" Setter="setYsjcmc" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Wynsksb" table="SBDB.SB_JL_WYNSKSB">
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBBH" Key="true" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZSSWJGZZJGDM" Key="false" Update="true" Getter="getZsswjgzzjgdm" Setter="setZsswjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="WSSBYYDM" Key="false" Update="true" Getter="getWssbyydm" Setter="setWssbyydm" ClassType="String.class" />
+    <ORColumn ColumName="WSSBYYNR" Key="false" Update="true" Getter="getWssbyynr" Setter="setWssbyynr" ClassType="String.class" />
+     <ORColumn ColumName="LRRMC" Key="false" Update="true" Getter="getLrrmc" Setter="setLrrmc" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Wynskszsm" table="SBDB.SB_JL_WYNSKSZSM">
+    <ORColumn ColumName="ZTBS" Key="false" Update="true" Getter="getZtbs" Setter="setZtbs" ClassType="String.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="ZXBS" Key="false" Update="true" Getter="getZxbs" Setter="setZxbs" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbjkclrz" table="SBDB.SB_JL_SBJKCLRZ">
+    <ORColumn ColumName="JKPZH" Key="true" Update="true" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="ture" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="ZRLXDM" Key="true" Update="true" Getter="getZrlxdm" Setter="setZrlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZRRQ" Key="true" Update="true" Getter="getZrrq" Setter="setZrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZRMS1" Key="false" Update="true" Getter="getZrms1" Setter="setZrms1" ClassType="String.class" />
+    <ORColumn ColumName="ZRMS2" Key="false" Update="true" Getter="getZrms2" Setter="setZrms2" ClassType="String.class" />
+    <ORColumn ColumName="ZRMS3" Key="false" Update="true" Getter="getZrms3" Setter="setZrms3" ClassType="String.class" />
+    <ORColumn ColumName="ZRMS4" Key="false" Update="true" Getter="getZrms4" Setter="setZrms4" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="ZRR" Key="false" Update="true" Getter="getZrr" Setter="setZrr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+    <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbjkzb_His" table="SBDB.SB_JL_SBJKZB_HIS">
+    <ORColumn ColumName="ZRLXDM" Key="true" Update="true" Getter="getZrlxdm" Setter="setZrlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZRRQ" Key="true" Update="true" Getter="getZrrq" Setter="setZrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZRR" Key="false" Update="true" Getter="getZrr" Setter="setZrr" ClassType="String.class" />
+    <ORColumn ColumName="ZYRQ" Key="false" Update="true" Getter="getZyrq" Setter="setZyrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="HXRMC" Key="false" Update="true" Getter="getHxrmc" Setter="setHxrmc" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="RKJE" Key="false" Update="true" Getter="getRkje" Setter="setRkje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="YHDM" Key="false" Update="true" Getter="getYhdm" Setter="setYhdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="CLBJDM" Key="false" Update="true" Getter="getClbjdm" Setter="setClbjdm" ClassType="String.class" />
+    <ORColumn ColumName="SKLXDM" Key="false" Update="true" Getter="getSklxdm" Setter="setSklxdm" ClassType="String.class" />
+    <ORColumn ColumName="YHMC" Key="false" Update="true" Getter="getYhmc" Setter="setYhmc" ClassType="String.class" />
+    <ORColumn ColumName="GJBZHYDM" Key="false" Update="true" Getter="getGjbzhydm" Setter="setGjbzhydm" ClassType="String.class" />
+    <ORColumn ColumName="ZWBS" Key="false" Update="true" Getter="getZwbs" Setter="setZwbs" ClassType="String.class" />
+    <ORColumn ColumName="LSGXDM" Key="false" Update="true" Getter="getLsgxdm" Setter="setLsgxdm" ClassType="String.class" />
+    <ORColumn ColumName="BZ" Key="false" Update="true" Getter="getBz" Setter="setBz" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="DJZCLXDM" Key="false" Update="true" Getter="getDjzclxdm" Setter="setDjzclxdm" ClassType="String.class" />
+    <ORColumn ColumName="SJJE" Key="false" Update="true" Getter="getSjje" Setter="setSjje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SZDM" Key="false" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="GKZZJGDM" Key="false" Update="true" Getter="getGkzzjgdm" Setter="setGkzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JKSJ" Key="false" Update="true" Getter="getJksj" Setter="setJksj" ClassType="Timestamp.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="ZH" Key="false" Update="true" Getter="getZh" Setter="setZh" ClassType="String.class" />
+    <ORColumn ColumName="HXRDM" Key="false" Update="true" Getter="getHxrdm" Setter="setHxrdm" ClassType="String.class" />
+    <ORColumn ColumName="XJRQ" Key="false" Update="true" Getter="getXjrq" Setter="setXjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZSSWJGZZJGDM" Key="false" Update="true" Getter="getZsswjgzzjgdm" Setter="setZsswjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="HXRQ" Key="false" Update="true" Getter="getHxrq" Setter="setHxrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBBH" Key="false" Update="true" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="JYDZLXDM" Key="false" Update="true" Getter="getJydzlxdm" Setter="setJydzlxdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJLY" Key="false" Update="true" Getter="getSjly" Setter="setSjly" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="SPHM" Key="false" Update="true" Getter="getSphm" Setter="setSphm" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Sbjkmx_His" table="SBDB.SB_JL_SBJKMX_HIS">
+    <ORColumn ColumName="ZRLXDM" Key="true" Update="true" Getter="getZrlxdm" Setter="setZrlxdm" ClassType="String.class" />
+    <ORColumn ColumName="ZRRQ" Key="true" Update="true" Getter="getZrrq" Setter="setZrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="ZRR" Key="false" Update="true" Getter="getZrr" Setter="setZrr" ClassType="String.class" />
+    <ORColumn ColumName="KSSL" Key="false" Update="true" Getter="getKssl" Setter="setKssl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="YSKMDM" Key="false" Update="true" Getter="getYskmdm" Setter="setYskmdm" ClassType="String.class" />
+    <ORColumn ColumName="YSJCDM" Key="false" Update="true" Getter="getYsjcdm" Setter="setYsjcdm" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SJSE" Key="false" Update="true" Getter="getSjse" Setter="setSjse" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SZSMDM" Key="true" Update="false" Getter="getSzsmdm" Setter="setSzsmdm" ClassType="String.class" />
+    <ORColumn ColumName="JKPZH" Key="true" Update="false" Getter="getJkpzh" Setter="setJkpzh" ClassType="String.class" />
+    <ORColumn ColumName="JSJE" Key="false" Update="true" Getter="getJsje" Setter="setJsje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="RKJE" Key="false" Update="true" Getter="getRkje" Setter="setRkje" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SBBH" Key="false" Update="false" Getter="getSbbh" Setter="setSbbh" ClassType="String.class" />
+    <ORColumn ColumName="SJFC" Key="false" Update="false" Getter="getSjfc" Setter="setSjfc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="QJFC" Key="false" Update="false" Getter="getQjfc" Setter="setQjfc" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+    <ORColumn ColumName="SL" Key="false" Update="true" Getter="getSl" Setter="setSl" ClassType="java.math.BigDecimal.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="true" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+  </ORMAP>  
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zjyjmsbz" table="SBDB.SB_JL_ZJYJMSBZ">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="SWJGZZJGDM" Key="false" Update="true" Getter="getSwjgzzjgdm" Setter="setSwjgzzjgdm" ClassType="String.class" />
+    <ORColumn ColumName="FSDM" Key="false" Update="true" Getter="getFsdm" Setter="setFsdm" ClassType="String.class" />
+    <ORColumn ColumName="BBLXDM" Key="true" Update="true" Getter="getBblxdm" Setter="setBblxdm" ClassType="String.class" />
+    <ORColumn ColumName="BBQ" Key="true" Update="true" Getter="getBbq" Setter="setBbq" ClassType="String.class" />
+    <ORColumn ColumName="BBND" Key="true" Update="true" Getter="getBbnd" Setter="setBbnd" ClassType="String.class" />
+    <ORColumn ColumName="SKSSKSRQ" Key="false" Update="true" Getter="getSkssksrq" Setter="setSkssksrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SKSSJSRQ" Key="false" Update="true" Getter="getSkssjsrq" Setter="setSkssjsrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="SBRQ" Key="false" Update="true" Getter="getSbrq" Setter="setSbrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="JZBZ" Key="false" Update="true" Getter="getJzbz" Setter="setJzbz" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+  <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zjyjmsbmx12" table="SBDB.SB_JL_ZJYJMSBMX12">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="BBLXDM" Key="true" Update="true" Getter="getBblxdm" Setter="setBblxdm" ClassType="String.class" />
+    <ORColumn ColumName="BBQ" Key="true" Update="true" Getter="getBbq" Setter="setBbq" ClassType="String.class" />
+    <ORColumn ColumName="BBND" Key="true" Update="true" Getter="getBbnd" Setter="setBbnd" ClassType="String.class" />
+    <ORColumn ColumName="NSRLXDM" Key="true" Update="true" Getter="getNsrlxdm" Setter="setNsrlxdm" ClassType="String.class" />
+    <ORColumn ColumName="SBBLXDM" Key="true" Update="true" Getter="getSbblxdm" Setter="setSbblxdm" ClassType="String.class" />
+    <ORColumn ColumName="NSRLXMC" Key="false" Update="true" Getter="getNsrlxmc" Setter="setNsrlxmc" ClassType="String.class" />
+    <ORColumn ColumName="XNXGSYRS" Key="false" Update="true" Getter="getXnxgsyrs" Setter="setXnxgsyrs" ClassType="String.class" />
+    <ORColumn ColumName="SZDM" Key="true" Update="true" Getter="getSzdm" Setter="setSzdm" ClassType="String.class" />
+    <ORColumn ColumName="J1" Key="false" Update="true" Getter="getJ1" Setter="setJ1" ClassType="String.class" />
+    <ORColumn ColumName="J2" Key="false" Update="true" Getter="getJ2" Setter="setJ2" ClassType="String.class" />
+    <ORColumn ColumName="J3" Key="false" Update="true" Getter="getJ3" Setter="setJ3" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+   <ORMAP object="com.ttsoft.bjtax.shenbao.model.domain.Zjyjmsbmx3" table="SBDB.SB_JL_ZJYJMSBMX3">
+    <ORColumn ColumName="JSJDM" Key="true" Update="false" Getter="getJsjdm" Setter="setJsjdm" ClassType="String.class" />
+    <ORColumn ColumName="BBLXDM" Key="true" Update="true" Getter="getBblxdm" Setter="setBblxdm" ClassType="String.class" />
+    <ORColumn ColumName="BBQ" Key="true" Update="true" Getter="getBbq" Setter="setBbq" ClassType="String.class" />
+    <ORColumn ColumName="BBND" Key="true" Update="true" Getter="getBbnd" Setter="setBbnd" ClassType="String.class" />
+    <ORColumn ColumName="QNYYSR" Key="false" Update="true" Getter="getQnyysr" Setter="setQnyysr" ClassType="String.class" />
+    <ORColumn ColumName="QNJMSE" Key="false" Update="true" Getter="getQnjmse" Setter="setQnjmse" ClassType="String.class" />
+    <ORColumn ColumName="LRR" Key="false" Update="true" Getter="getLrr" Setter="setLrr" ClassType="String.class" />
+    <ORColumn ColumName="LRRQ" Key="false" Update="true" Getter="getLrrq" Setter="setLrrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="CJR" Key="false" Update="true" Getter="getCjr" Setter="setCjr" ClassType="String.class" />
+    <ORColumn ColumName="CJRQ" Key="false" Update="true" Getter="getCjrq" Setter="setCjrq" ClassType="Timestamp.class" />
+    <ORColumn ColumName="QXDM" Key="false" Update="false" Getter="getQxdm" Setter="setQxdm" ClassType="String.class" />
+    <ORColumn ColumName="ND" Key="false" Update="true" Getter="getNd" Setter="setNd" ClassType="String.class" />
+  </ORMAP>
+</OR>

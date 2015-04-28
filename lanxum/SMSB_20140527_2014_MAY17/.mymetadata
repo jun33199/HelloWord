@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SMSB_20140527_2014_MAY17"
+  id="myeclipse.1421313306886"
+  context-root="/WEB-INF"
+  j2ee-spec="1.4"
+  archive="SMSB_20140527_2014_MAY17.war">
+  <attributes>
+    <attribute name="webrootdir" value="webapp" />
+  </attributes>
+</project-module>
+

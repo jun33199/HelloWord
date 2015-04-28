@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="yhsActionForm" type="yhs.yhsActionForm" />
+  </form-beans>
+  <action-mappings>
+    <action name="yhsActionForm" type="yhs.yhsAction" validate="false" scope="request" path="/yhsAction" />
+  </action-mappings>
+</struts-config>

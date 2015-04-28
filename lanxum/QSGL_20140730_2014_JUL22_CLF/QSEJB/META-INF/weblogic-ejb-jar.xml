@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-ejb-jar PUBLIC "-//BEA Systems, Inc.//DTD WebLogic 7.0.0 EJB//EN" "http://www.bea.com/servers/wls700/dtd/weblogic-ejb-jar.dtd">
+<weblogic-ejb-jar>
+  <weblogic-enterprise-bean>
+    <ejb-name>InitialStartupBean</ejb-name>
+    <stateless-session-descriptor>
+      <pool>
+        <max-beans-in-free-pool>1</max-beans-in-free-pool>
+        <initial-beans-in-free-pool>1</initial-beans-in-free-pool>
+      </pool>
+    </stateless-session-descriptor>
+    <jndi-name>com.creationstar.bjtax.qsgl.BizLogic.ejb.InitialStartupHome</jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
+    <ejb-name>QsglSessionBean</ejb-name>
+        <transaction-descriptor>
+			<trans-timeout-seconds>3600</trans-timeout-seconds>
+		</transaction-descriptor>        
+    <jndi-name>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglSessionHome</jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
+    <ejb-name>QsglServiceSessionBean</ejb-name>
+    <jndi-name>com.creationstar.bjtax.qsgl.BizLogic.ejb.QsglServiceSessionHome</jndi-name>
+  </weblogic-enterprise-bean>
+</weblogic-ejb-jar>

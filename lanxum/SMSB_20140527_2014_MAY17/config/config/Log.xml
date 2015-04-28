@@ -1,0 +1,40 @@
+<!DOCTYPE log4j:configuration SYSTEM "file:///%%config_path%%log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="Main" class="com.ekernel.foundation.log.LogFileAppender">
+            <param name="File"   value="Kernl.log" />
+            <param name="Append" value="true" />
+            <param name="MaxFileSize" value="1MB" />
+            <param name="MaxBackupIndex" value="10" />
+            <layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d %-5p - %m%n"/>
+            </layout>
+	</appender>
+
+	<appender name="STDOUT" class="com.ekernel.foundation.log.LogConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+                   <param name="ConversionPattern"
+		          value="%d %-5p (%F:%L) - %m%n"/>
+		</layout>
+	</appender>
+	<appender name="JDBC" class="test.log.MyJdbcAppender">
+	</appender>
+	<appender name="JMS" class="com.ekernel.foundation.log.LogJmsAppender">
+	</appender>
+
+<!--  Default File Logger   -->
+	<category name="com">
+	  <priority value="debug" />
+  	  <appender-ref ref="Main" />
+  	  <appender-ref ref="JDBC" />
+	</category>
+
+
+<!--  Console Logger for All  -->
+	<root>
+	   <priority value ="debug" />
+   	   <appender-ref ref="STDOUT" />
+	</root>
+
+</log4j:configuration>

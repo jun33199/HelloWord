@@ -1,0 +1,5 @@
+企业所得税后台校验：
+QysdsCheckUtil.check：为校验接口
+Subject：为校验组，在QysdsCheckUtil构造方法添加
+Observer：为具体校验器
+SbxxVO：从总获取被校验数据和设置校验结果

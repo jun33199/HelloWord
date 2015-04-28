@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Input Checker 测试页</title>
+</head>
+<body>
+<script language="javascript" src="inputchecker.js"></script>
+<p>
+  <input type="text" name="T1" size="20"></p>
+  <p><input type="text" name="T2" size="20" value="" captionName="输入域2" required maxlength="20" required=false keepSpaces=false></p>
+  <p><input type="text" name="T3" size="20" captionName="普通输入域3" regExpPattern="/^[\w]{7,8}$/i" required=true patternDesc="7或8位字符或者数字"></p>
+  <p><input type="password" name="T4" size="20" objectChecker="objectCheck1" keepSpaces patternDesc="密码"></p>
+  <p><select size="1" name="D1" required="true">
+  <option></option>
+  <option value="aaaaaaaa">aaaaaaaa</option>
+  <option value="bbbbbbbb">bbbbbbbb</option>
+  <option value="cccccccc">cccccccc</option>
+  <option value="dddddddd">dddddddd</option>
+  <option value="eeeeeeee">eeeeeeee</option>
+  </select></p>
+  <p><input type="radio" name="group1" value="V1" checked ID=Radio1>
+     <input type="radio" name="group1" value="V2" ID=Radio2>
+     <input type="radio" name="group1" value="V3" ID=Radio3></p>
+  <p><input type="radio" name="group2" value="V2" checked ID=Radio4></p>     
+  <p><input type="checkbox" name="C1" value="ON" ID=Checkbox1></p>
+  <p>
+　</p>
+  <p><input type="submit" value="提交" name="B1" onclick="checkInput()" ID=Submit1><input type="reset" value="重置" name="B2" ID=Reset1></p>
+
+<textarea name="textarea1" ID=Textarea1 maxlength="10" required rows="1" cols="20">
+abcdefg
+hijklmn
+</textarea>
+
+<form name="main_form" method="POST" action="testServlet" ID=Form1>
+
+</form>
+
+</body>
+<script language =javascript >
+var a = inputObject('T1','投资额',true,'18','checkNumber(17,4)','整数部分小于等于13位，小数部分小于等于4位');
+var group = new Array(a,T2,T3,T4,D1,textarea1);
+
+function checkInput() 
+{
+	var rtnValue = checker_checkGroup(group);
+	alert("检查结果="+rtnValue);
+}
+
+function objectCheck1(obj,param1,param2)
+{
+	obj.focus();
+	obj.select();
+	alert(obj.name+"="+obj.value+"("+param1+","+param2+")");
+	return true;
+}
+function inputObject(obj,captionName,required,maxlength,specialChecker,patternDesc)
+{
+    document.all(obj).captionName = captionName;
+    document.all(obj).required = required;
+    document.all(obj).maxlength = maxlength;
+    document.all(obj).specialChecker = specialChecker;
+    document.all(obj).patternDesc = patternDesc;
+    return document.all(obj);
+}
+</script>
+</html>

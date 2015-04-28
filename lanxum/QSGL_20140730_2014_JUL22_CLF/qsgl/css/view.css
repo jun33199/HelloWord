@@ -1,0 +1,469 @@
+.black9 {
+	font-size: 11pt;
+	color: #415967;
+	white-space: pre;
+}
+a:link {
+	color: blue;
+	text-decoration: underline;
+
+}
+a:visited {
+	color: #3E6071;
+	text-decoration: underline;
+
+}
+a:hover {
+	color: #000000;
+	text-decoration: none;
+
+
+}
+a:active {
+	color: #A0A0A0;
+	text-decoration: underline;
+
+}
+.txtInput {
+	background-color: #E3E3E3;
+	font-size: 13px;
+	color: #828282;
+
+}
+.z-ta1-td1 {
+	font-size: 11pt;
+	color: #3C5564;
+	background-color: #AEC9DD;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: text-bottom;
+	line-height: 27px;
+
+
+
+
+}
+.z-ta1-td2 {
+	font-size: 11pt;
+	color: #3C5564;
+	background-color: f3f3f3;
+	text-align: center;
+}
+.z-ta2-td1 {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #C2D5E2;
+	border: 1px solid #9BB4CA;
+	line-height: 27px;
+	text-align: center;
+
+}
+.z-ta2-td2 {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #E7EEF1;
+	text-align: center;
+	border: 1px solid #9BB4CA;
+
+
+}
+.1-td1 {
+	font-size: 11pt;
+	color: #3C5564;
+	background-color: D6E0E9;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: text-bottom;
+	line-height: 27px;
+	border: 1px solid #336699;
+}
+.td-1px-wight {
+	background-color: #6699CC;
+	width: 1px;
+	margin: 0px;
+	border: 0px;
+	position: relative;
+	padding: 0px;
+
+
+
+}
+.1-td2 {
+	font-size: 11pt;
+	color: #3C5564;
+	background-color: f3f3f3;
+	text-align: center;
+	border-top: 0px none;
+	border-right: 1px solid #336699;
+	border-bottom: 1px solid #336699;
+	border-left: 1px solid #336699;
+	clip:  rect(-1px auto auto auto);
+}
+.2-td1-left {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 0px none;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+
+
+}
+.2-td1-qd {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	border-top: 1px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+	text-indent: 3px;
+
+
+
+}
+
+.2-td1-center {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	text-align: center;
+	border: 1px solid #9BB4CA;
+
+
+
+}
+.2-td1-right {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 0px;
+
+
+}
+.2-td2  {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	border: 1px solid #336699;
+
+}
+.2-td2-left {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 0px solid;
+	border-right: 0px solid;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+}
+.2-td2-t-left {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 0px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+	vertical-align: center;
+
+}
+.2-td2-center {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 0px solid;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+	vertical-align: center;
+
+}
+.2-td2-t-center {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+}
+.2-td2-t-right {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 0px solid #9BB4CA;
+	vertical-align: top;
+
+}
+.2-td2-right {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 0px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 0px solid #9BB4CA;
+}
+.3-td1-left {
+	font-size: 11pt;
+	color: #3C5564;
+	line-height: 27px;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 0px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+
+
+
+
+}
+.3-td1-centen {
+	font-size: 11pt;
+	color: #3C5564;
+	line-height: 27px;
+	text-align: center;
+	border: 1px solid #9BB4CA;
+
+
+
+}
+.3-td1-right {
+	font-size: 11pt;
+	color: #3C5564;
+	line-height: 27px;
+	text-align: center;
+	border-top: 1px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 0px solid #9BB4CA;
+
+
+
+
+}
+.hr1 {
+	border: solid #435E78;
+	height: 1px;
+}
+.table-80 {
+	width: 80%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+
+
+}
+.table-99 {
+	width: 99%;
+	margin: 0px;
+	border: 0px none;
+	text-align: center;
+
+
+}
+.table-98 {
+
+
+	width: 95%;
+	margin: 0px;
+	border: 0px none;
+}
+.table-90 {
+
+
+	width: 90%;
+	margin: 0px;
+	border: 0px none;
+}
+.table-60 {
+
+
+	width: 60%;
+	margin: 0px;
+	border: 0px none;
+}
+.hr1 {
+	border: solid #435E78;
+	height: 1px;
+}
+
+.itemBorder { 	border: 1px solid #6F97AE;
+	text-align: right;
+ }
+.itemText {
+	text-decoration: none;
+	color: #4D6A77;
+	font-size: 9pt;
+	text-align: right;
+}
+
+.crazyBorder {
+	border: 1px solid #538BA4;
+	text-align: right;
+}
+.crazyText {
+	text-decoration: none;
+	color: #FFCC99;
+	font-size: 12pt;
+	text-align: right;
+}
+.bitian {
+	color: #FF0000;
+}
+
+.inputnoborder {
+    font-size: 11pt;
+    color: #3E6071;
+    background :#ECF2F4;
+    background-color: #ECF2F4;
+    border: 0px;
+}
+
+.noborder-txtcenter {
+    text-align: center;
+    color: #3E6071;
+    font-size: 11pt;
+    background :#ECF2F4;
+    background-color: #ECF2F4;
+    border: 0px;
+}
+
+.noborder-txtleft {
+    text-align: left;
+    color: #3E6071;
+    font-size: 11pt;
+    background :#ECF2F4;
+    background-color: #ECF2F4;
+    border: 0px;
+}
+
+
+.inputnormal {
+    font-size: 11pt;
+    text-align: left;
+}
+
+.txtinput-link {
+	background-color: #D6DFE4;
+	color: #3D5563;
+	text-align: right;
+	border-top: 1px outset #FFFFFF;
+	border-right: 1px outset #666666;
+	border-bottom: 1px outset #666666;
+	border-left: 1px outset #FFFFFF;
+}
+.tishi {
+	font-family: "Times New Roman", "Times", "serif";
+	color: #0033FF;
+	font-size: 14px;
+
+}
+.2-td1-Bleft {
+
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	text-align: center;
+	border-top: 0px solid #9BB4CA;
+	border-right: 0px none;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+}
+.2-td1-Bcenter {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 27px;
+	text-align: center;
+	border-top: 0px solid #9BB4CA;
+	border-right: 1px solid #9BB4CA;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 1px solid #9BB4CA;
+
+}
+.background {
+	background-image: url(../images/logging-dbg.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.b-black9 {
+
+	font-size: 11pt;
+	color: #415967;
+	white-space: pre;
+	font-weight: bold;
+}
+.b-black12 {
+
+	font-size: 11pt;
+	color: #415967;
+	white-space: pre;
+	font-weight: bold;
+}
+.2-td2-noleft {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 0px solid;
+	border-right: 0px solid;
+	border-bottom: 1px solid #9BB4CA;
+	border-left: 0px solid;
+}
+
+.2-td2-center-noBottom {
+	font-size: 11pt;
+	line-height: 27px;
+	color: #3E6071;
+	background-color: #ECF2F4;
+	text-align: center;
+	border-top: 0px solid;
+	border-right: 0px solid #9BB4CA;
+	border-bottom: 0px solid;
+	border-left: 1px solid #9BB4CA;
+	vertical-align: center;
+
+}
+body{
+	font-size:10pt;
+	line-height:25px;
+}

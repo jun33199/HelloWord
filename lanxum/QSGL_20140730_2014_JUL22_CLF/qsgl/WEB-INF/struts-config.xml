@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="queryZcwhForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryZcwhForm" />
+    <form-bean name="fwTdForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.FwTdForm" />
+    <form-bean name="zcwhForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.ZcwhForm" />
+    <form-bean name="querySbxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QuerySbxxForm" />
+    <form-bean name="sbxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.SbxxForm" />
+    <form-bean name="shskForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.ShskForm" />
+    <form-bean name="hdtzsForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.HdtzsForm" />
+    <form-bean name="sbGrForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.SbGrForm" />
+    <form-bean name="sbFgrForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.SbFgrForm" />
+    <form-bean name="shskForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.ShskForm" />
+    <form-bean name="cqxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.CqxxForm" />
+    <form-bean name="ftxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.FtxxForm" />
+    <form-bean name="yggyzfForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.YggyzfForm" />
+    <form-bean name="bzqsForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.BzqsForm" />
+    <!--form-bean name="queryBzqsForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryBzqsAllForm" /-->
+    <form-bean name="fwjhxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.FwjhxxForm" />
+    <form-bean name="queryWszForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryWszForm" />
+    <form-bean name="jksForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.JksForm" />
+    <form-bean name="hzWsz2JksForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.hzWsz2JksForm" />
+    <form-bean name="queryCqxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryCqxxForm" />
+    <form-bean name="queryYggyzfForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryYggyzfForm" />
+    <form-bean name="queryFtxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryFtxxForm" />
+    <form-bean name="querySbzbForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QuerySbzbForm" />
+    <form-bean name="wszForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.WszForm" />
+    <form-bean name="queryPlslForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlslForm" />
+    <form-bean name="plslForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.PlslForm" />
+    <form-bean name="receivePlslForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.ReceivePlslForm" />
+    <form-bean name="queryPlcxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlcxForm" />
+    <form-bean name="queryPlcxMxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlcxMxForm" />
+    <form-bean name="pldyForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.PldyForm" />
+    <form-bean name="blJksForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.BlJksForm" />
+    <form-bean name="blAllSbWszForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.BlAllSbWszForm" />
+    <form-bean name="sjqyForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.SjqyForm" />
+    <form-bean name="addCqxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.AddCqxxForm" />
+    <form-bean name="cqxxbForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.CqxxbForm"/>
+    <form-bean name="cqxxImportFileForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.CqxxImportFileForm"/>
+    <form-bean name="jmsbForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.JmsbForm" />
+    <form-bean name="queryJmsbxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryJmsbxxForm" />
+    <form-bean name="jmsbxxForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.JmsbxxForm" />
+    <form-bean name="jmsbHdtzsForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.JmsbHdtzsForm" />
+    <!--fujx pzlrForm begin-->
+    <form-bean name="pzlrForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.PzlrForm" />
+
+    <!-- zzb 20081205 plsl_swry...form...begin-->
+    <form-bean name="queryPlslForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlslForm2" />
+    <form-bean name="plslForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.PlslForm2" />
+    <form-bean name="receivePlslForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.ReceivePlslForm2" />
+    <form-bean name="queryPlcxForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlcxForm2" />
+    <form-bean name="queryPlcxMxForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.QueryPlcxMxForm2" />
+    <form-bean name="pldyForm2" type="com.creationstar.bjtax.qsgl.VisionLogic.form.PldyForm2" />
+    <!--plsl_swry...form...end-->
+    
+    <!-- tutu 20130502 fpgl...form...begin-->
+    <form-bean name="FplrForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FplrForm" />
+    <form-bean name="FpdkForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FpdkForm" />
+    <form-bean name="FpcdForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FpcdForm" />
+    <form-bean name="FptpForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FptpForm" />
+    <form-bean name="FpzfForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FpzfForm" />
+    <form-bean name="FpdcForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.fpgl.FpdcForm" />
+    <!-- fpgl...form...end-->
+    
+    <!--add by TangchangFu start clfgl start  -->
+    <form-bean name="ClfqxwhForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.clfgl.ClfqxwhForm"/>
+    <form-bean name="clfxxcjForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.clfgl.ClfxxcjForm"/>
+    <form-bean name="clfjyxxCXForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.clfgl.ClfjyxxCXForm"/>
+    <form-bean name="ClfswjghdxxlrForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.clfgl.ClfswjghdxxlrForm"/>
+    <!--add by TangchangFu start clfgl end    -->
+    <!--add by zhangyj start clfgl start  -->
+    <form-bean name="mfskzsForm" type="com.creationstar.bjtax.qsgl.VisionLogic.form.clfgl.MfskzsForm"/>
+    <!--add by zhangyj start clfgl end    -->    
+    
+  </form-beans>
+  <global-forwards>
+    <forward name="return" path="/returntomenu.jsp" />
+    <forward name="InvalidToken" path="/invalidToken.jsp" />
+  </global-forwards>
+  <action-mappings type="org.apache.struts.action.ActionMapping">
+    <action path="/logout" scope="request" type="com.ttsoft.common.web.action.LogoutAction" />
+    <action input="/xxwh/queryZcwh.jsp" name="queryZcwhForm" path="/xxwh/queryZcwh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.Base.QueryBaseAction">
+      <forward name="show" path="/xxwh/queryZcwh.jsp" />
+      <forward name="query" path="/xxwh/queryZcwh.jsp" />
+      <forward name="add" path="/xxwh/addZcwh.do?operationType=Show" />
+      <forward name="save" path="/xxwh/queryZcwh.jsp" />
+    </action>
+    <action input="/sh/queryJsbl.jsp" name="querySbxxForm" path="/sh/querySbxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QuerySbxxAction">
+      <forward name="show" path="/sh/queryJsbl.jsp" />
+      <forward name="query" path="/sh/queryJsbl.jsp" />
+      <forward name="showdetail" path="/sh/jsbl.do?operationType=Show" />
+    </action>
+    <action input="/sh/queryJsblSh.jsp" name="querySbxxForm" path="/sh/querySbxx2" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QuerySbxxAction">
+      <forward name="show" path="/sh/queryJsblSh.jsp" />
+      <forward name="query" path="/sh/queryJsblSh.jsp" />
+      <forward name="showdetail" path="/sh/shsk.do?operationType=Show" />
+    </action>
+    <action input="/sh/shsk.jsp" name="shskForm" path="/sh/shsk" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ShskAction">
+      <forward name="show" path="/sh/shsk.jsp" />
+      <forward name="return" path="/sh/queryJsblSh.jsp" />
+      <forward name="check" path="/sh/shsk.jsp" />
+      <forward name="printJks" path="/jks/printJks.do?operationType=IntoPrint" />
+      <forward name="printWsz" path="/wsz/printWsz.do?operationType=IntoPrint" />
+    </action>
+    <action input="/xxwh/addZcwh.jsp" name="zcwhForm" path="/xxwh/addZcwh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.Base.AddBaseAction">
+      <forward name="show" path="/xxwh/addZcwh.jsp" />
+      <forward name="save" path="/xxwh/addZcwh.jsp" />
+      <forward name="return" path="/xxwh/queryZcwh.do?operationType=Show" />
+    </action>
+    <action input="/sh/jsbl.jsp" name="sbxxForm" path="/sh/jsbl" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewSbxxAction">
+      <forward name="show" path="/sh/jsbl.jsp" />
+      <forward name="confirm" path="/sh/jsbl.jsp" />
+      <forward name="reject" path="/sh/queryJsbl.jsp" />
+      <forward name="return" path="/sh/queryJsbl.jsp" />
+      <forward name="returnbz" path="/sh/queryJsbl.jsp" />
+    </action>
+    <action input="/qssb/querySbxx.jsp" name="querySbxxForm" path="/qssb/querySbxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QuerySbxxAction">
+      <forward name="show" path="/qssb/querySbxx.jsp" />
+      <forward name="query" path="/qssb/querySbxx.jsp" />
+      <forward name="delete" path="/qssb/querySbxx.jsp" />
+      <forward name="view" path="/qssb/viewSbxx.do?operationType=Show" />
+    </action>
+    <action input="/qssb/viewSbxx.jsp" name="sbxxForm" path="/qssb/viewSbxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewSbxxAction">
+      <forward name="show" path="/qssb/viewSbxx.jsp" />
+      <forward name="rollback" path="/qssb/viewSbxx.jsp" />
+      <forward name="cancel" path="/qssb/viewSbxx.jsp" />
+      <forward name="modify" path="/qssb/modifySbxx.jsp" />
+      <forward name="save" path="/qssb/viewSbxx.jsp" />
+      <forward name="returnView" path="/qssb/viewSbxx.jsp" />
+      <forward name="delete" path="/qssb/querySbxx.jsp" />
+      <forward name="deletebz" path="/bzqslr/queryBzqs.jsp" />
+      <forward name="return" path="/qssb/querySbxx.jsp" />
+      <forward name="returnbz" path="/bzqslr/queryBzqs.jsp" />
+      <forward name="modcqxx" path="/qssb/modifyCqxx.do?operationType=Show" />
+      <forward name="modfwxx" path="/qssb/modifyFwxx.do?operationType=Show" />
+      <forward name="modfwjh" path="/qssb/modifyFwjh.do?operationType=Show" />
+      <forward name="modgyzf" path="/qssb/modifyGyzf.do?operationType=Show" />
+    </action>
+    <action input="/qssb/modifyCqxx.jsp" name="cqxxForm" path="/qssb/modifyCqxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModifyCqxxAction">
+      <forward name="show" path="/qssb/modifyCqxx.jsp" />
+      <forward name="save" path="/qssb/viewSbxx.jsp" />
+      <forward name="return" path="/qssb/viewSbxx.jsp" />
+    </action>
+    <action input="/qssb/modifyGyzf.jsp" name="yggyzfForm" path="/qssb/modifyGyzf" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModifyGyzfAction">
+      <forward name="show" path="/qssb/modifyGyzf.jsp" />
+      <forward name="save" path="/qssb/viewSbxx.jsp" />
+      <forward name="return" path="/qssb/viewSbxx.jsp" />
+    </action>
+    <action input="/qssb/modifyFwxx.jsp" name="ftxxForm" path="/qssb/modifyFwxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModifyFtxxAction">
+      <forward name="show" path="/qssb/modifyFwxx.jsp" />
+      <forward name="save" path="/qssb/viewSbxx.jsp" />
+      <forward name="return" path="/qssb/viewSbxx.jsp" />
+    </action>
+    <action input="/qssb/modifyFwjh.jsp" name="fwjhxxForm" path="/qssb/modifyFwjh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModifyFwjhAction">
+      <forward name="show" path="/qssb/modifyFwjh.jsp" />
+      <forward name="save" path="/qssb/viewSbxx.jsp" />
+      <forward name="return" path="/qssb/viewSbxx.jsp" />
+    </action>
+    <action input="/qssb/addSbGr.jsp" name="sbGrForm" path="/qssb/addSbGr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddSbgrAction">
+      <forward name="show" path="/qssb/addSbGr.jsp" />
+      <forward name="save" path="/qssb/addSbGr.jsp" />
+      <forward name="fwjbxx" path="/qssb/addFtxx.do?operationType=Show" />
+      <forward name="cqxx" path="/qssb/addCqxx.do?operationType=Show" />
+      <forward name="gyzf" path="/qssb/addGyzf.do?operationType=Show" />
+      <forward name="fwjhxx" path="/qssb/addFwjhxx.do?operationType=Show" />
+    </action>
+    <action input="/qssb/addCqxx.jsp" name="cqxxForm" path="/qssb/addCqxx" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddCqxxAction">
+      <forward name="show" path="/qssb/addCqxx.jsp" />
+      <forward name="savegr" path="/qssb/addSbGr.jsp" />
+      <forward name="returngr" path="/qssb/addSbGr.jsp" />
+      <forward name="savefgr" path="/qssb/addSbFgr.jsp" />
+      <forward name="returnfgr" path="/qssb/addSbFgr.jsp" />
+    </action>
+    <action input="/qssb/addSbFgr.jsp" name="sbFgrForm" path="/qssb/addSbFgr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddSbFgrAction">
+      <forward name="show" path="/qssb/addSbFgr.jsp" />
+      <forward name="save" path="/qssb/addSbFgr.jsp" />
+      <forward name="fwjbxx" path="/qssb/addFtxx.do?operationType=Show" />
+      <forward name="cqxx" path="/qssb/addCqxx.do?operationType=Show" />
+      <forward name="gyzf" path="/qssb/addGyzf.do?operationType=Show" />
+      <forward name="fwjhxx" path="/qssb/addFwjhxx.do?operationType=Show" />
+    </action>
+    <action input="/qssb/addFtxx.jsp" name="ftxxForm" path="/qssb/addFtxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddFtxxAction">
+      <forward name="show" path="/qssb/addFtxx.jsp" />
+      <forward name="savegr" path="/qssb/addSbGr.jsp" />
+      <forward name="savefgr" path="/qssb/addSbFgr.jsp" />
+      <forward name="returngr" path="/qssb/addSbGr.jsp" />
+      <forward name="returnfgr" path="/qssb/addSbFgr.jsp" />
+    </action>
+    <action input="/qssb/addGyzf.jsp" name="yggyzfForm" path="/qssb/addGyzf" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddYggyzfAction">
+      <forward name="show" path="/qssb/addGyzf.jsp" />
+      <forward name="savegr" path="/qssb/addSbGr.jsp" />
+      <forward name="returngr" path="/qssb/addSbGr.jsp" />
+      <forward name="savefgr" path="/qssb/addSbFgr.jsp" />
+      <forward name="returnfgr" path="/qssb/addSbFgr.jsp" />
+    </action>
+    <action input="/bzqslr/queryBzqs.jsp" name="querySbxxForm" path="/bzqslr/queryBzqs" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QuerySbxxAction">
+      <forward name="show" path="/bzqslr/queryBzqs.jsp" />
+      <forward name="query" path="/bzqslr/queryBzqs.jsp" />
+      <forward name="view" path="/qssb/viewSbxx.do?operationType=Show" />
+    </action>
+    <action input="/bzqslr/addBzqsGr.jsp" name="bzqsForm" path="/bzqslr/addBzqsGr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddBzqsAction">
+      <forward name="show" path="/bzqslr/addBzqsGr.jsp" />
+      <forward name="save" path="/bzqslr/addBzqsGr.jsp" />
+      <forward name="add" path="/bzqslr/addBzqsGr.jsp" />
+      <forward name="view" path="/bzqslr/viewBzqsGrPri.jsp" />
+      <forward name="printreturngr" path="/bzqslr/addBzqsGr.jsp" />
+    </action>
+    <action input="/bzqslr/addBzqsFgr.jsp" name="bzqsForm" path="/bzqslr/addBzqsFgr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddBzqsAction">
+      <forward name="show" path="/bzqslr/addBzqsFgr.jsp" />
+      <forward name="save" path="/bzqslr/addBzqsFgr.jsp" />
+      <forward name="add" path="/bzqslr/addBzqsFgr.jsp" />
+      <forward name="view" path="/bzqslr/viewBzqsFgrPri.jsp" />
+      <forward name="printreturnfgr" path="/bzqslr/addBzqsFgr.jsp" />
+    </action>
+    <action input="/qssb/addFwjhxx.jsp" name="fwjhxxForm" path="/qssb/addFwjhxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddFwjhxxAction">
+      <forward name="show" path="/qssb/addFwjhxx.jsp" />
+      <forward name="savegr" path="/qssb/addSbGr.jsp" />
+      <forward name="returngr" path="/qssb/addSbGr.jsp" />
+      <forward name="savefgr" path="/qssb/addSbFgr.jsp" />
+      <forward name="returnfgr" path="/qssb/addSbFgr.jsp" />
+    </action>
+    <action input="/wsz/queryWsz.jsp" name="queryWszForm" path="/wsz/queryWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.Base.QueryBaseAction">
+      <forward name="show" path="/wsz/queryWsz.jsp" />
+      <forward name="query" path="/wsz/queryWsz.jsp" />
+    </action>
+    <action input="/wsz/viewWsz.jsp" name="queryWszForm" path="/wsz/viewWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewWszAction">
+      <forward name="show" path="/wsz/viewWszMx.jsp" />
+      <forward name="query" path="/wsz/viewWszMx.jsp" />
+      <forward name="return" path="/wsz/queryWsz.jsp" />
+      <forward name="returncx" path="/wsz/cxWsz.jsp" />
+    </action>
+    <action input="/qssb/printSbxx.jsp" name="sbxxForm" path="/qssb/printSbxx" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.SbxxPrintAction">
+      <forward name="show" path="/qssb/printSbxx.jsp" />
+    </action>
+    <action input="/qssb/printHdtzs.jsp" name="hdtzsForm" path="/qssb/printHdtzs" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.HdtzsPrintAction">
+      <forward name="show" path="/qssb/printHdtzs.jsp" />
+    </action>
+    <action input="/jks/queryJks.jsp" name="jksForm" path="/jks/queryJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.Base.QueryBaseAction">
+      <forward name="show" path="/jks/queryJks.jsp" />
+      <forward name="query" path="/jks/queryJks.jsp" />
+    </action>
+    <action input="/jks/viewJks.jsp" name="jksForm" path="/jks/viewJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="show" path="/jks/viewJks.jsp" />
+      <forward name="return" path="/jks/queryJks.jsp" />
+    </action>
+    <action input="/jks/viewWszList.jsp" name="queryWszForm" path="/jks/viewWszList" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="show" path="/jks/viewWszList.jsp" />
+      <forward name="query" path="/jks/viewWszList.jsp" />
+      <forward name="error" path="mainMenu.do" />
+      <forward name="returnQuery" path="/jks/queryJks.jsp" />
+      <forward name="returnHz" path="/jks/hzWsz2Jks.jsp" />
+      <forward name="returnCx" path="/jks/cxHzJks.jsp" />
+    </action>
+    <action input="/jks/printJks.jsp" name="jksForm" path="/jks/printJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="show" path="/jks/printJks.jsp" />
+      <forward name="error" path="/sh/shsk.jsp" />
+      <forward name="return" path="/sh/queryJsblSh.jsp" />
+    </action>
+    <action input="/wsz/queryWsz.jsp" name="queryWszForm" path="/wsz/updateWszStatus" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.WszAction">
+      <forward name="show" path="/wsz/queryWsz.jsp" />
+      <forward name="return" path="/wsz/queryWsz.do?operationType=Query" />
+    </action>
+    <action input="/wsz/printWsz.jsp" name="queryWszForm" path="/wsz/printWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.WszAction">
+      <forward name="show" path="/wsz/printWsz.jsp" />
+      <forward name="return" path="/sh/queryJsblSh.jsp" />
+    </action>
+    <action input="/wsz/cxWsz.jsp" name="queryWszForm" path="/wsz/cxWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.WszAction">
+      <forward name="query" path="/wsz/cxWsz.jsp" />
+      <forward name="show" path="/wsz/cxWsz.jsp" />
+    </action>
+    <action input="/jks/hzWsz2Jks.jsp" name="hzWsz2JksForm" path="/jks/hzWsz2Jks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="hzwsz" path="/jks/hzWsz2Jks.jsp" />
+      <forward name="show" path="/jks/hzWsz2Jks.jsp" />
+      <forward name="showWszList" path="/jks/hzWszList.jsp" />
+    </action>
+    <action input="/jks/printHzJks.jsp" name="hzWsz2JksForm" path="/jks/printHzWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="return" path="/jks/hzWsz2Jks.jsp" />
+      <forward name="show" path="/jks/printHzJks.jsp" />
+      <forward name="showLw" path="/jks/printHzJks001.jsp" />
+    </action>
+    <action input="/jks/cxHzJks.jsp" name="hzWsz2JksForm" path="/jks/cxHzJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JksAction">
+      <forward name="hzwsz" path="/jks/cxHzJks.jsp" />
+      <forward name="show" path="/jks/cxHzJks.jsp" />
+    </action>
+    <action input="/xxwh/queryCqxx.jsp" name="queryCqxxForm" path="/xxwh/queryCqxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryCqxxAction">
+      <forward name="show" path="/xxwh/queryCqxx.jsp" />
+      <forward name="query" path="/xxwh/queryCqxx.jsp" />
+    </action>
+    <action input="/xxwh/queryYggyzf.jsp" name="queryYggyzfForm" path="/xxwh/queryYggyzf" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryYggyzfAction">
+      <forward name="show" path="/xxwh/queryYggyzf.jsp" />
+      <forward name="query" path="/xxwh/queryYggyzf.jsp" />
+    </action>
+    <action input="/xxwh/queryFtxx.jsp" name="queryFtxxForm" path="/xxwh/queryFtxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryFtxxAction">
+      <forward name="show" path="/xxwh/queryFtxx.jsp" />
+      <forward name="query" path="/xxwh/queryFtxx.jsp" />
+    </action>
+    <action input="/xxwh/directViewSbxx.jsp" name="sbxxForm" path="/xxwh/directViewSbxx" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.DirectViewSbxxAction">
+      <forward name="show" path="/xxwh/directViewSbxx.jsp" />
+    </action>
+    <action input="/xxwh/addHzJks.jsp" name="hzWsz2JksForm" path="/xxwh/addHzJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddHzJksAction">
+      <forward name="show" path="/xxwh/addHzJks.jsp" />
+      <forward name="save" path="/xxwh/addHzJks.jsp" />
+    </action>
+    <action input="/xxwh/fpHzJks.jsp" name="hzWsz2JksForm" path="/xxwh/fpHzJks" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddHzJksAction">
+      <forward name="show" path="/xxwh/fpHzJks.jsp" />
+    </action>
+    <action input="/xxwh/addFhzJks.jsp" name="jksForm" path="/xxwh/addFhzJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddFhzJksAction">
+      <forward name="show" path="/xxwh/addFhzJks.jsp" />
+      <forward name="save" path="/xxwh/saveFhzJks.jsp" />
+      <forward name="back" path="/xxwh/addFhzJks.jsp" />
+    </action>
+    <action input="/xxwh/querySbzb.jsp" name="querySbzbForm" path="/xxwh/querySbzb" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QuerySbzbAction">
+      <forward name="show" path="/xxwh/querySbzb.jsp" />
+      <forward name="query" path="/xxwh/querySbzb.jsp" />
+      <forward name="delete" path="/xxwh/querySbzb.jsp" />
+    </action>
+    <action input="/xxwh/addWsz.jsp" name="wszForm" path="/xxwh/addWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddWszAction" >
+      <forward name="show" path="/xxwh/addWsz.jsp" />
+      <forward name="save" path="/xxwh/saveWsz.jsp" />
+      <forward name="back" path="/xxwh/addWsz.jsp" />
+    </action>
+    <action input="/plsl/plsl.jsp" name="queryPlslForm" path="/plsl/plsl" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.PlslAction">
+      <forward name="show" path="/plsl/plsl.jsp" />
+      <forward name="query" path="/plsl/plsl.jsp" />
+      <forward name="view" path="/plsl/plslDetail.do?operationType=Show" />
+      <forward name="viewOld" path="/plsl/plslDetail.do?operationType=ShowPage" />
+      <forward name="receive" path="/plsl/plslReceive.do?operationType=Show" />
+      <forward name="return" path="/plsl/importFile.do?operationType=Show" />
+      <forward name="back" path="/plsl/uploadFile.jsp" />
+    </action>
+    <action input="/plsl/plslDetail.jsp" name="plslForm" path="/plsl/plslDetail" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewPlslAction">
+      <forward name="show" path="/plsl/plslDetail.jsp" />
+      <forward name="return" path="/plsl/plsl.jsp" />
+      <forward name="returncx" path="/plsl/queryPlsl.jsp" />
+      <forward name="delete" path="/plsl/queryPlsl.jsp" />
+      <forward name="Save" path="/plsl/plsl.jsp" />
+    </action>
+    <action input="/plsl/plslReceive.jsp" name="receivePlslForm" path="/plsl/plslReceive" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ReceviePlslAction">
+      <forward name="show" path="/plsl/plslReceive.jsp" />
+      <forward name="receivedr" path="/plsl/importFile.do?operationType=Show" />
+      <forward name="receivequery" path="/plsl/plslQuery.do?operationType=QueryCurrentPage" />
+    </action>
+    <action input="/plsl/queryPlsl.jsp" name="queryPlslForm" path="/plsl/plslQuery" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryPlslAction">
+      <forward name="show" path="/plsl/queryPlsl.jsp" />
+      <forward name="query" path="/plsl/queryPlsl.jsp" />
+      <forward name="delete" path="/plsl/queryPlsl.jsp" />
+      <forward name="receive" path="/plsl/plslReceive.do?operationType=Show" />
+    </action>
+    <action input="/cqxx/querycqxx.jsp" name="cqxxbForm" path="/cqxx/cqxxQuery" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.CqxxbAction">
+      <forward name="show" path="/cqxx/querycqxx.jsp" />
+      <forward name="query" path="/cqxx/querycqxx.jsp" />
+
+
+      <forward name="print" path="/cqxx/cqxxPrint.jsp" />
+
+      <forward name="receive" path="/cqxx/cqxxQuery.do?operationType=Show"/>
+    </action>
+    <action input="/plsl/queryPlcx.jsp" name="queryPlcxForm" path="/plsl/pltjQuery" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.PltjAction">
+      <forward name="show" path="/plsl/queryPlcx.jsp" />
+      <forward name="query" path="/plsl/queryPlcx.jsp" />
+      <forward name="detail" path="/plsl/queryPlcx.jsp" />
+      <forward name="receive" path="/plsl/Base/QueryBaseAction.do?operationType=Show" />
+    </action>
+    <action input="/plsl/plcxDetail.jsp" name="queryPlcxMxForm" path="/plsl/pltjDetail" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewPlcxAction">
+      <forward name="show" path="/plsl/plcxDetail.jsp" />
+      <forward name="query" path="/plsl/plcxDetail.jsp" />
+      <forward name="back" path="/plsl/pltjQuery.do?operationType=Show" />
+    </action>
+    <action input="/plsl/queryPldy.jsp" name="pldyForm" path="/plsl/pldy" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryPldyAction">
+      <forward name="show" path="/plsl/queryPldy.jsp" />
+      <forward name="query" path="/plsl/queryPldy.jsp" />
+      <forward name="detail" path="/plsl/pldyDetail.jsp"/>
+      <forward name="back" path="/plsl/queryPldy.jsp"/>
+    </action>
+    <action input="/plsl/uploadFile.jsp" name="queryPlslForm" path="/plsl/importFile" scope="session"  type="com.creationstar.bjtax.qsgl.VisionLogic.action.ImportFileAction">
+      <forward name="show" path="/plsl/uploadFile.jsp" />
+      <forward name="continue" path="/plsl/plsl.do?operationType=Show"  />
+    </action>
+    <action input="/bl/bl.jsp" name="blJksForm" path="/qsbl/blJks" scope="session"  type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlJksAction">
+      <forward name="query" path="/bl/bl.jsp" />
+    </action>
+    <action input="/bl/viewJks.jsp" name="blJksForm" path="/qsbl/viewJks" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlViewJksAction">
+      <forward name="show" path="/bl/viewJks.jsp" />
+      <forward name="return" path="/bl/bl.jsp" />
+      <forward name="blfhz" path="/qsbl/blSb.do?operationType=Show" />
+    </action>
+    <action input="/bl/blsb.jsp" name="blAllSbWszForm" path="/qsbl/blSb" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlSbAction">
+      <forward name="show" path="/bl/blsb.jsp" />
+      <forward name="showhz" path="/bl/blsbwsz.jsp" />
+      <forward name="return" path="/bl/viewJks.jsp" />
+      <forward name="save" path="/bl/bl.jsp" />
+      <forward name="sbhd" path="/qsbl/viewSbHdtzs.do?operationType=Show" />
+    </action>
+    <action input="/bl/blsbwsz.jsp" name="blAllSbWszForm" path="/qsbl/blSbWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlSbWszAction">
+      <forward name="show" path="/bl/blsbwsz.jsp" />
+      <forward name="showfhz" path="/bl/blsb.jsp" />
+      <forward name="return" path="/bl/viewJks.jsp" />
+      <forward name="confirm" path="/bl/viewblsbwsz.jsp" />
+    </action>
+    <action input="/bl/viewblsbwsz.jsp" name="blAllSbWszForm" path="/qsbl/viewblSbWsz" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlSbWszAction">
+      <forward name="save" path="/bl/bl.jsp" />
+      <forward name="sbhd" path="/qsbl/viewSbHdtzs.do?operationType=Show" />
+      <forward name="back" path="/bl/blsbwsz.jsp" />
+    </action>
+    <action input="/bl/viewsbhdtzs.jsp" name="blAllSbWszForm" path="/qsbl/viewSbHdtzs" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.Base.BaseAction">
+      <forward name="return" path="/bl/bl.jsp" />
+      <forward name="show" path="/bl/viewsbhdtzs.jsp" />
+    </action>
+    <action input="/bl/blcxjks.jsp" name="blJksForm" path="/qsbl/blCx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.BlCxAction">
+      <forward name="show" path="/bl/blcxjks.jsp" />
+      <forward name="get" path="/bl/blcxjks.jsp" />
+      <forward name="cx" path="/bl/blcxjks.jsp" />
+    </action>
+    <action input="/sjqy/sjqy001.jsp" name="sjqyForm" path="/sjqy/sjqy" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.SjqyAction">
+      <forward name="show" path="/sjqy/sjqy001.jsp" />
+      <forward name="save" path="/sjqy/sjqy001.jsp" />
+    </action>
+    <action input="/cqxx/addcqxx.jsp" name="addCqxxForm" path="/cqxx/addCqxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddCqxxbAction">
+      <forward name="show" path="/cqxx/addcqxx.jsp" />
+      <forward name="save" path="/cqxx/addcqxx.jsp" />
+      <forward name="modify" path="/cqxx/modifycqxx.jsp" />
+      <forward name="modifysucc" path="/cqxx/querycqxxwh.jsp" />
+    </action>
+    <action input="/cqxx/querycqxxwh.jsp" name="cqxxbForm" path="/cqxx/cqxxWh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.CqxxWhAction">
+      <forward name="show" path="/cqxx/querycqxxwh.jsp" />
+      <forward name="query" path="/cqxx/querycqxxwh.jsp" />
+      <forward name="delete" path="/cqxx/querycqxxwh.jsp" />
+      <forward name="modify" path="/cqxx/addCqxx.do?operationType=Modify" />
+    </action>
+    <action input="/qssb/modHdtzsfwhm.jsp" name="hdtzsForm" path="/qssb/modHdtzsfwhm" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModHdtzsfwhmAction">
+      <forward name="show" path="/qssb/modHdtzsfwhm.jsp" />
+      <forward name="update" path="/qssb/modHdtzsfwhm.do?operationType=Show" />
+    </action>
+
+    <action input="/cqxx/cqxximport.jsp" name="cqxxImportFileForm" path="/cqxx/cqxximport" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.CqxxImportFileAction">
+      <forward name="show" path="/cqxx/cqxximport.jsp" />
+      <forward name="continue" path="/cqxx/cqxximport.jsp" />
+    </action>
+    <action input="/cqxx/querycqxxwhAllData.jsp" name="cqxxbForm" path="/cqxx/cqxxWhAllData" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.CqxxWhAction">
+      <forward name="show" path="/cqxx/querycqxxwhAllData.jsp" />
+      <forward name="query" path="/cqxx/querycqxxwhAllData.jsp" />
+      <forward name="delete" path="/cqxx/querycqxxwhAllData.jsp" />
+      <forward name="modify" path="/cqxx/addCqxx.do?operationType=Modify" />
+    </action>
+
+     <action input="/cqxx/querycqxxWhErr.jsp" name="cqxxbForm" path="/cqxx/cqxxWhErr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.CqxxWhAction">
+      <forward name="show" path="/cqxx/querycqxxWhErr.jsp" />
+      <forward name="queryErr" path="/cqxx/querycqxxWhErr.jsp" />
+      <forward name="query" path="/cqxx/querycqxxWhErr.jsp" />
+      <forward name="saveErreeee" path="/cqxx/cqxxWhErr.do?operationType=QueryErr" />
+       <forward name="saveErr" path="/cqxx/querycqxxWhErr.jsp" />
+    </action>
+
+
+
+	<action input="/jmsb/addJmsbGr.jsp" name="jmsbForm" path="/jmsb/addJmsbGr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddJmsbAction">
+      <forward name="show" path="/jmsb/addJmsbGr.jsp" />
+      <forward name="mod" path="/jmsb/addJmsbGr.jsp" />
+      <forward name="save" path="/jmsb/addJmsbGr.jsp" />
+      <forward name="add" path="/jmsb/addJmsbGr.jsp" />
+      <forward name="view" path="/jmsb/viewJmsbGrPri.jsp" />
+      <forward name="printreturngr" path="/jmsb/addJmsbGr.jsp" />
+    </action>
+    <action input="/jmsb/addJmsbFgr.jsp" name="jmsbForm" path="/jmsb/addJmsbFgr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.AddJmsbAction">
+      <forward name="show" path="/jmsb/addJmsbFgr.jsp" />
+      <forward name="mod" path="/jmsb/addJmsbFgr.jsp" />
+      <forward name="save" path="/jmsb/addJmsbFgr.jsp" />
+      <forward name="add" path="/jmsb/addJmsbFgr.jsp" />
+      <forward name="view" path="/jmsb/viewJmsbFgrPri.jsp" />
+      <forward name="printreturnfgr" path="/jmsb/addJmsbFgr.jsp" />
+    </action>
+    <action input="/jmsb/queryJmsb.jsp" name="queryJmsbxxForm" path="/jmsb/queryJmsb" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryJmsbxxAction">
+      <forward name="show" path="/jmsb/queryJmsb.jsp" />
+      <forward name="query" path="/jmsb/queryJmsb.jsp" />
+      <forward name="view" path="/jmsb/viewJmsbxx.do?operationType=Show" />
+    </action>
+    <action input="/jmsb/viewJmsbxx.jsp" name="jmsbxxForm" path="/jmsb/viewJmsbxx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewJmsbxxAction">
+      <forward name="show" path="/jmsb/viewJmsbxx.jsp" />
+      <forward name="cancel" path="/jmsb/viewJmsbxx.jsp" />
+      <forward name="rollback" path="/jmsb/viewJmsbxx.jsp" />
+      <forward name="delete" path="/jmsb/queryJmsb.jsp" />
+      <forward name="return" path="/jmsb/queryJmsb.jsp" />
+      <forward name="modjmsbxxgr" path="/jmsb/addJmsbGr.do?operationType=Mod" />
+      <forward name="modjmsbxxfgr" path="/jmsb/addJmsbFgr.do?operationType=Mod" />
+    </action>
+    <action input="/jmsb/printJmsbxx.jsp" name="jmsbxxForm" path="/jmsb/printJmsbxx" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JmsbxxPrintAction">
+      <forward name="show" path="/jmsb/printJmsbxx.jsp" />
+    </action>
+    <action input="/jmsb/queryJmsbSh.jsp" name="queryJmsbxxForm" path="/jmsb/queryJmsbSh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryJmsbxxAction">
+      <forward name="show" path="/jmsb/queryJmsbSh.jsp" />
+      <forward name="query" path="/jmsb/queryJmsbSh.jsp" />
+      <forward name="view" path="/jmsb/jmsbSh.do?operationType=Show" />
+    </action>
+    <action input="/jmsb/jmsbSh.jsp" name="jmsbxxForm" path="/jmsb/jmsbSh" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewJmsbxxAction">
+      <forward name="show" path="/jmsb/jmsbSh.jsp" />
+      <forward name="return" path="/jmsb/queryJmsbSh.jsp" />
+    </action>
+    <action input="/jmsb/printJmsbHdtzs.jsp" name="jmsbHdtzsForm" path="/jmsb/printJmsbHdtzs" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.JmsbHdtzsPrintAction">
+      <forward name="show" path="/jmsb/printJmsbHdtzs.jsp" />
+    </action>
+    <action input="/jmsb/modJmsbHdtzsfwhm.jsp" name="jmsbHdtzsForm" path="/jmsb/modJmsbHdtzsfwhm" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModJmsbHdtzsfwhmAction">
+      <forward name="show" path="/jmsb/modJmsbHdtzsfwhm.jsp" />
+      <forward name="update" path="/jmsb/modJmsbHdtzsfwhm.do?operationType=Show" />
+    </action>
+    <action input="/jmsb/modJmsbHdtzshm.jsp" name="jmsbHdtzsForm" path="/jmsb/modJmsbHdtzshm" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ModJmsbHdtzshmAction">
+      <forward name="show" path="/jmsb/modJmsbHdtzshm.jsp" />
+      <forward name="update" path="/jmsb/modJmsbHdtzshm.do?operationType=Show" />
+    </action>
+    <action input="/jmsb/queryJmsbSp.jsp" name="queryJmsbxxForm" path="/jmsb/queryJmsbSp" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryJmsbxxAction">
+      <forward name="show" path="/jmsb/queryJmsbSp.jsp" />
+      <forward name="query" path="/jmsb/queryJmsbSp.jsp" />
+      <forward name="view" path="/jmsb/jmsbSp.do?operationType=Show" />
+    </action>
+    <action input="/jmsb/jmsbSp.jsp" name="jmsbxxForm" path="/jmsb/jmsbSp" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewJmsbxxAction">
+      <forward name="show" path="/jmsb/jmsbSp.jsp" />
+      <forward name="savesp" path="/jmsb/jmsbSp.jsp" />
+      <forward name="return" path="/jmsb/queryJmsbSp.jsp" />
+    </action>
+<!--fujx pzlrAction begin-->
+<action input="/pzlr/pzlr.jsp" name="pzlrForm" path="/pzlr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.pzlr.PzlrAction">
+      <forward name="show" path="/pzlr/pzlr.jsp" />
+
+    </action>
+
+    <!-- zzb 20081205 plsl_swry...action...begin-->
+    <action input="/plsl_swry/plsl.jsp" name="queryPlslForm2" path="/plsl_swry/plsl"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.PlslAction2">
+      <forward name="show" path="/plsl_swry/plsl.jsp" />
+      <forward name="query" path="/plsl_swry/plsl.jsp" />
+      <forward name="view" path="/plsl_swry/plslDetail.do?operationType=Show" />
+       <forward name="viewOld" path="/plsl_swry/plslDetail.do?operationType=ShowPage" />
+      <forward name="receive" path="/plsl_swry/plslReceive.do?operationType=Show" />
+      <forward name="return" path="/plsl_swry/importFile.do?operationType=Show" />
+      <forward name="back" path="/plsl_swry/uploadFile.jsp" />
+    </action>
+
+    <action input="/plsl_swry/plslDetail.jsp" name="plslForm2" path="/plsl_swry/plslDetail"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewPlslAction2">
+      <forward name="show" path="/plsl_swry/plslDetail.jsp" />
+      <forward name="return" path="/plsl_swry/plsl.jsp" />
+      <forward name="returncx" path="/plsl_swry/queryPlsl.jsp" />
+      <forward name="delete" path="/plsl_swry/queryPlsl.jsp" />
+      <forward name="Save" path="/plsl_swry/plsl.jsp" />
+    </action>
+
+    <action input="/plsl_swry/plslReceive.jsp" name="receivePlslForm2" path="/plsl_swry/plslReceive"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ReceviePlslAction2">
+      <forward name="show" path="/plsl_swry/plslReceive.jsp" />
+      <forward name="receivedr" path="/plsl_swry/importFile.do?operationType=Show" />
+      <forward name="receivequery" path="/plsl_swry/plslQuery.do?operationType=QueryCurrentPage" />
+    </action>
+
+    <action input="/plsl_swry/queryPlsl.jsp" name="queryPlslForm2" path="/plsl_swry/plslQuery"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryPlslAction2">
+      <forward name="show" path="/plsl_swry/queryPlsl.jsp" />
+      <forward name="query" path="/plsl_swry/queryPlsl.jsp" />
+      <forward name="delete" path="/plsl_swry/queryPlsl.jsp" />
+      <forward name="receive" path="/plsl_swry/plslReceive.do?operationType=Show" />
+    </action>
+
+    <action input="/plsl_swry/queryPlcx.jsp" name="queryPlcxForm2" path="/plsl_swry/pltjQuery"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.PltjAction2">
+      <forward name="show" path="/plsl_swry/queryPlcx.jsp" />
+      <forward name="query" path="/plsl_swry/queryPlcx.jsp" />
+      <forward name="detail" path="/plsl_swry/queryPlcx.jsp" />
+      <forward name="receive" path="/plsl/Base/QueryBaseAction.do?operationType=Show" />
+    </action>
+
+    <action input="/plsl_swry/plcxDetail.jsp" name="queryPlcxMxForm2" path="/plsl_swry/pltjDetail"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ViewPlcxAction2">
+      <forward name="show" path="/plsl_swry/plcxDetail.jsp" />
+      <forward name="query" path="/plsl_swry/plcxDetail.jsp" />
+      <forward name="back" path="/plsl_swry/pltjQuery.do?operationType=Show" />
+    </action>
+
+
+    <action input="/plsl_swry/queryPldy.jsp" name="pldyForm2" path="/plsl_swry/pldy"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.QueryPldyAction2">
+      <forward name="show" path="/plsl_swry/queryPldy.jsp" />
+      <forward name="query" path="/plsl_swry/queryPldy.jsp" />
+      <forward name="detail" path="/plsl_swry/pldyDetail.jsp"/>
+      <forward name="back" path="/plsl_swry/queryPldy.jsp"/>
+    </action>
+
+    <action input="/plsl_swry/uploadFile.jsp" name="queryPlslForm2" path="/plsl_swry/importFile"
+        scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.ImportFileAction2">
+      <forward name="show" path="/plsl_swry/uploadFile.jsp" />
+      <forward name="continue" path="/plsl_swry/plsl.do?operationType=Show"  />
+    </action>
+    <!--plsl_swry...action...end-->
+    
+    <!-- tutu 20130502 fpgl...action...begin-->
+    <action input="/fpgl/fplr.jsp" name="FplrForm" path="/fpgl/fplr" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FplrAction">
+      <forward name="show" path="/fpgl/fplr.jsp" />
+      <forward name="clear" path="/fpgl/fplr.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fplr.jsp" />
+      <forward name="back" path="/fpgl/fplr.jsp" />
+    </action>
+    
+    <action input="/fpgl/fpdk.jsp" name="FpdkForm" path="/fpgl/fpdk" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FpdkAction">
+      <forward name="show" path="/fpgl/fpdk.jsp" />
+      <forward name="query" path="/fpgl/fpdk.jsp" />
+      <forward name="clear" path="/fpgl/fpdk.do?operationType=Show" />
+      <forward name="fpzf" path="/fpgl/fpzf.do?operationType=Show" />
+      <forward name="mfskzs" path="/clfgl/mfskzs.do?operationType=show" />
+      <forward name="addSbGr" path="/qssb/addSbGr.do?operationType=Show" />
+      <forward name="clfxxcj" path="/clfgl/clfxxcj.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fpdk.jsp" />
+      <forward name="print" path="/fpgl/fpdk.jsp" />
+      <forward name="back" path="/fpgl/fpdk.jsp" />
+    </action>
+    
+    <action input="/fpgl/fptp.jsp" name="FptpForm" path="/fpgl/fptp" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FptpAction">
+      <forward name="show" path="/fpgl/fptp.jsp" />
+      <forward name="query" path="/fpgl/fptp.jsp" />
+      <forward name="clear" path="/fpgl/fptp.do?operationType=Show" />
+      <forward name="fpdk" path="/fpgl/fpdk.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fptp.jsp" />
+      <forward name="back" path="/fpgl/fptp.jsp" />
+    </action>
+    
+    <action input="/fpgl/fpzf.jsp" name="FpzfForm" path="/fpgl/fpzf" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FpzfAction">
+      <forward name="show" path="/fpgl/fpzf.jsp" />
+      <forward name="clear" path="/fpgl/fpzf.do?operationType=Show" />
+      <forward name="fpdk" path="/fpgl/fpdk.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fpzf.jsp" />
+      <forward name="back" path="/fpgl/fpzf.jsp" />
+    </action>
+    
+    <action input="/fpgl/fpcd.jsp" name="FpcdForm" path="/fpgl/fpcd" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FpcdAction">
+      <forward name="show" path="/fpgl/fpcd.jsp" />
+      <forward name="query" path="/fpgl/fpcd.jsp" />
+      <forward name="clear" path="/fpgl/fpcd.do?operationType=Show" />
+      <forward name="fpdk" path="/fpgl/fpdk.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fpcd.jsp" />
+      <forward name="back" path="/fpgl/fpcd.jsp" />
+    </action>
+    
+    <action input="/fpgl/fpdc.jsp" name="FpdcForm" path="/fpgl/fpdc" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.fpgl.FpdcAction">
+      <forward name="show" path="/fpgl/fpdc.jsp" />
+      <forward name="query" path="/fpgl/fpdc.jsp" />
+      <forward name="clear" path="/fpgl/fpdc.do?operationType=Show" />
+      <forward name="save" path="/fpgl/fpdc.jsp" />
+      <forward name="back" path="/fpgl/fpdc.jsp" />
+    </action>
+    <!-- fpgl...action...end-->
+    
+    <!--add by TangchangFu start clfgl start  -->
+    <action input="/clfgl/clf_xgqxwh.jsp"  name="ClfqxwhForm" path="/clfgl/clfxgqxwh" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.ClfqxwhAction">
+     	<forward name="show" path="/clfgl/clf_xgqxwh.jsp"/>
+    	<forward name="save" path="/clfgl/clf_xgqxwh.jsp"/>
+    	<forward name="back" path="/clfgl/clf_xgqxwh.jsp" />
+    	<forward name="TurnPage" path="/clfgl/clf_xgqxwh.jsp" />
+    </action>
+    
+    <action input="/clfgl/clf_htxxcj.jsp"  name="clfxxcjForm" path="/clfgl/clfxxcj" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.ClfxxcjAction">
+     	<forward name="show" path="/clfgl/clf_htxxcj.jsp"/>
+    	<forward name="toPrint" path="/clfgl/print_dkfpsqb.jsp"/>
+    	<forward name="toSwryQR" path="/clfgl/clfswjghdxxlr.do?operationType=Query"/>
+    	<forward name="toSellerQSZS" path="/clfgl/mfskzs.do?operationType=show"/>
+    	<forward name="toFPDK" path="/fpgl/fpdk.do?operationType=Show"/>
+    	<forward name="toQSSB" path="/qssb/addSbGr.do?operationType=Show"/>
+    	<forward name="ToSGCJ" path="/clfgl/clf_htxxcj_sg.jsp"/>
+    </action>
+    
+    <action input="/clfgl/clfjyxx_cx.jsp"  name="clfjyxxCXForm" path="/clfgl/clfjyxxcx" scope="session" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.ClfjyxxCXAction">
+    	<forward name="show" path="/clfgl/clfjyxx_cx.jsp"/>
+    	<forward name="query" path="/clfgl/clfjyxx_cx.jsp"/>
+    </action>
+    
+    <action input="/clfgl/clf_swjghdxxlr.jsp"  name="ClfswjghdxxlrForm" path="/clfgl/clfswjghdxxlr" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.ClfswjghdxxlrAction">
+     	<forward name="show" path="/clfgl/clf_swjghdxxlr.jsp"/>
+    	<forward name="query" path="/clfgl/clfxxcj.do?operationType=ToPrint"/>
+    	<forward name="save" path="/clfgl/clf_swjghdxxlr.jsp"/>
+    	<forward name="toPrintZf" path="/clfgl/print_dkfpsqb_zf.jsp"/>
+    	<forward name="toPrintFzf" path="/clfgl/print_dkfpsqb_fzf.jsp"/>
+    	<forward name="toSellerQSZS" path="/clfgl/mfskzs.do?operationType=show"/>
+    	<forward name="toFPDK" path="/fpgl/fpdk.do?operationType=Show"/>
+    	<forward name="toQSSB" path="/qssb/addSbGr.do?operationType=Show"/>
+		<forward name="jumpToFzf" path="/clfgl/clf_swjghdxxlr_fzf.jsp"/>
+    </action>
+
+    <!--add by TangchangFu start clfgl end    -->
+    
+    <!--add by zhangyj start clfgl start  -->
+    <action input="/clfgl/mfskzs.jsp"  name="mfskzsForm" path="/clfgl/mfskzs" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.MfskzsAction">
+    	<forward name="show" path="/clfgl/mfskzs.jsp"/>
+    	<forward name="querygr" path="/clfgl/mfskzs_cx.jsp"/>
+    	<forward name="queryjg" path="/clfgl/mfskzs.jsp"/>
+    	<forward name="toPrintQrb" path="/clfgl/print_fcyzqrb.jsp"/>
+    	<forward name="save" path="/clfgl/whsbxx.jsp"/>
+			<forward name="toWhsbxx" path="/clfgl/whsbxx.jsp"/>
+			<forward name="querysbxx" path="/clfgl/whsbxx.jsp"/>
+			<forward name="dataSynchronism" path="/clfgl/whsbxx.jsp"/>
+			<forward name="viewwsz" path="/clfgl/viewwsz.jsp"/>
+			<forward name="viewjks" path="/clfgl/viewjks.jsp"/>
+			<forward name="wsz" path="/clfgl/whsbxx.jsp"/>
+			<forward name="jks" path="/clfgl/whsbxx.jsp"/>
+			<forward name="delete" path="/clfgl/whsbxx.jsp"/>		
+			<forward name="toFpdk" path="/fpgl/fpdk.do?operationType=Show"/>
+			<!--<forward name="toFpdk" path="/fpgl/fpdk.do?operationType=Show"/>    -->		
+    	<forward name="toAddSbGr" path="/qssb/addSbGr.do?operationType=Show"/>
+    	<forward name="toClfxxcj" path="/clfgl/clfxxcj.do?operationType=Show"/>
+    </action>
+    <!--add by zhangyj start clfgl end    -->
+    
+    <action input="/clfgl/whsbxx.jsp"  name="mfskzsForm" path="/clfgl/whsbxx" scope="request" type="com.creationstar.bjtax.qsgl.VisionLogic.action.clfgl.MfskzsAction">
+    	<forward name="show" path="/clfgl/whsbxx.jsp"/>
+		<forward name="toWhsbxx" path="/clfgl/whsbxx.jsp"/>
+		<forward name="querysbxx" path="/clfgl/whsbxx.jsp"/>
+		<forward name="dataSynchronism" path="/clfgl/whsbxx.jsp"/>
+		<forward name="viewwsz" path="/clfgl/viewwsz.jsp"/>
+		<forward name="viewjks" path="/clfgl/viewjks.jsp"/>
+		<forward name="wsz" path="/clfgl/whsbxx.jsp"/>
+		<forward name="jks" path="/clfgl/whsbxx.jsp"/>
+		<forward name="delete" path="/clfgl/whsbxx.jsp"/>
+		<forward name="toFpdk" path="/fpgl/fpdk.do?operationType=Show"/>		
+		<forward name="PrintFwhdxx" path="/clfgl/clfswjghdxxlr.do?operationType=ToPrint"/>		
+    </action>
+
+
+  </action-mappings>
+</struts-config>

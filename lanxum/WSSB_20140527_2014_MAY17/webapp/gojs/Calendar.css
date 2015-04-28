@@ -1,0 +1,9 @@
+TABLE.TableMain { border-bottom: 1px; border-left: 1px; border-right: 1px; border-top: 1px; cursor:default}
+TR.TRDay {BACKGROUND-COLOR: #44a938 }
+TR.TRNav {BACKGROUND-COLOR: #44a938 }
+TD.TDYearMon {font-size:12px;cursor:default}
+TD.TDWeek {	font-size:12px;color:#FFFFFF}
+TD.TDMonthNav {	font-size:12px;cursor: hand;color: #FFD700}
+TD.TDDay {font-size:12px}
+SPAN.CloseCalender{ font-size:12px; cursor: hand }
+input.ButtonNav {font-size: 12px; height: 20px}

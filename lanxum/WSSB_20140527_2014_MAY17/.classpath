@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/ca4others.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/CReportsBase.jar"/>
+	<classpathentry kind="lib" path="lib/DjService.jar"/>
+	<classpathentry kind="lib" path="lib/foundation.jar"/>
+	<classpathentry kind="lib" path="lib/FrameWork.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta-poi-1.5.1-final-20020615.jar"/>
+	<classpathentry kind="lib" path="lib/jel_g.jar"/>
+	<classpathentry kind="lib" path="lib/jstl.jar"/>
+	<classpathentry kind="lib" path="lib/k_or.jar"/>
+	<classpathentry kind="lib" path="lib/rowset.jar"/>
+	<classpathentry kind="lib" path="lib/SfglService.jar"/>
+	<classpathentry kind="lib" path="lib/Skh_Service.jar"/>
+	<classpathentry kind="lib" path="lib/standard.jar"/>
+	<classpathentry kind="lib" path="lib/struts.jar"/>
+	<classpathentry kind="lib" path="lib/zkclasses.jar"/>
+	<classpathentry kind="lib" path="lib/jkclasses.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

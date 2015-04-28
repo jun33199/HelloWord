@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<HTML>
+<HEAD>
+<meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+<TITLE>打印提示</TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY bgcolor="#F3F5F8" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center" height="100px">
+<p align="center">
+<br>
+<font color="#2C556D"><b>打印是否成功？</b></font>
+</p>
+<br>
+<input type="button" accesskey="s" tabIndex="-1" type="button" name="success" value="打印成功(S)" onclick="printSuccess()" title="success">
+&nbsp;&nbsp;
+<input type="button" accesskey="f" tabIndex="-1" name="failure" value="打印失败(F)" onclick="printFailure()" title="failure">
+
+
+<script>
+
+function printFailure(){
+	//alert(document.all.success.title)
+	if(document.all.failure.title=="newprint"){
+		window.returnValue = 'no_second';
+		window.close()
+	}else{
+		document.all.success.title="oldprint";
+		document.all.failure.title="newprint";
+		document.all.success.value="原号打印(S)";
+		document.all.failure.value="取号打印(F)";
+	}
+}
+
+
+function printSuccess(){
+	//alert(document.all.success.title)
+	if(document.all.failure.title=="newprint")	window.returnValue = 'yes_second';
+	else	window.returnValue = 'yes';	
+	window.close()
+}
+
+
+</script>
+
+</div>
+</BODY>
+</HTML>

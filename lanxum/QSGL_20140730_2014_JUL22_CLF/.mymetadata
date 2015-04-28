@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="QSGL_20140730_2014_JUL22_CLF"
+  id="myeclipse.1406777250895"
+  context-root="/QSGL_20140730_2014_JUL22_CLF"
+  j2ee-spec="5.0"
+  archive="QSGL_20140730_2014_JUL22_CLF.war">
+  <attributes>
+    <attribute name="webrootdir" value="qsgl" />
+  </attributes>
+</project-module>
+

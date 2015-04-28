@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="zfjgqysdsjb.xsl"?>
+<taxdoc>
+	<xsltVersion><![CDATA[20061102]]></xsltVersion>
+	<schemaVersion><![CDATA[20061102]]></schemaVersion>
+	<sbxx>
+		<fsdm><![CDATA[5]]></fsdm>
+		<jd><![CDATA[1]]></jd>
+		<nd><![CDATA[2009]]></nd>
+		<sbrq><![CDATA[2006-04-10]]></sbrq>
+		<sbrqshow><![CDATA[2006-04-10]]></sbrqshow>
+		<skssjsrq><![CDATA[2006-03-31]]></skssjsrq>
+		<skssksrq><![CDATA[2006-01-01]]></skssksrq>
+		<fpblyxqq><![CDATA[2007-07-01]]></fpblyxqq>
+		<fpblyxqz><![CDATA[2007-07-07]]></fpblyxqz>
+	</sbxx>
+	<zjgxx>
+		<jsjdm><![CDATA[06003600]]></jsjdm>
+		<nsrsbh><![CDATA[]]></nsrsbh>
+		<nsrmc><![CDATA[]]></nsrmc>
+		<srze><![CDATA[0.00]]></srze>
+		<gzze><![CDATA[0.00]]></gzze>
+		<zcze><![CDATA[0.00]]></zcze>
+		<hj><![CDATA[0.00]]></hj>
+		<ftse><![CDATA[0.00]]></ftse>
+	</zjgxx>
+	<fzjgxx>
+		<mxxx>
+		    <index><![CDATA[1]]></index>
+			<nsrsbh><![CDATA[]]></nsrsbh>
+			<nsrmc><![CDATA[]]></nsrmc>
+			<srze><![CDATA[0.00]]></srze>
+			<gzze><![CDATA[0.00]]></gzze>
+			<zcze><![CDATA[0.00]]></zcze>
+			<hj><![CDATA[0.00]]></hj>
+			<fpbl><![CDATA[0]]></fpbl>
+			<fpse><![CDATA[0.00]]></fpse>
+		</mxxx>
+		<mxxx>
+		    <index><![CDATA[2]]></index>
+			<nsrsbh><![CDATA[]]></nsrsbh>
+			<nsrmc><![CDATA[]]></nsrmc>
+			<srze><![CDATA[0.00]]></srze>
+			<gzze><![CDATA[0.00]]></gzze>
+			<zcze><![CDATA[0.00]]></zcze>
+			<hj><![CDATA[0.00]]></hj>
+			<fpbl><![CDATA[0]]></fpbl>
+			<fpse><![CDATA[0.00]]></fpse>
+		</mxxx>
+	</fzjgxx>
+</taxdoc>

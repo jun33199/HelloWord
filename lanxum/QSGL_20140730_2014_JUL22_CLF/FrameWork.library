@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>FrameWork</fullname>
+  <class>
+    <path>[../../lib/sharelib/FrameWork.jar]</path>
+  </class>
+  <lastmodsaved>1112251320202</lastmodsaved>
+</library>

@@ -1,0 +1,2255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+<struts-config>
+  <form-beans>
+  <!--===============form-bean The Begin of jkscx ====================-->
+    <form-bean name="jkscxForm" type="com.ttsoft.bjtax.smsb.jkscx.web.JkscxForm" />
+ <!--===============form-bean The End of jkscx ====================-->
+
+    <!--===============form-bean The Begin of qysdsjb ====================-->
+    <form-bean name="qysdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb.web.QysdsjbForm" />
+    <!--===============form-bean The End of qysdsjb ====================-->
+    <!--===============form-bean The Begin of yhs ====================-->
+    <form-bean name="yhsForm" type="com.ttsoft.bjtax.smsb.sbzl.yhs.web.YhsForm" />
+    <!--===============form-bean The End of yhs ====================-->
+    <!--===============form-bean The Begin of dsdzdk ====================-->
+    <form-bean name="dsdzdkForm" type="com.ttsoft.bjtax.smsb.sbzl.dsdzdk.web.DsdzdkForm" />
+    <!--===============form-bean The Begin of qysdsnb ====================-->
+    <form-bean name="qysdsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.QysdsnbForm" />
+    <form-bean name="sydwshttsrsbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.SydwshttsrsbForm" />
+    <form-bean name="qyjbcwzbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.QyjbcwzbForm" />
+    <!--===============form-bean The Begin of yhsgl ====================-->
+    <form-bean name="yhsgmlrForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmlrForm" />
+    <form-bean name="yhsgmhzForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmhzForm" />
+    <form-bean name="yhsgmhzcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmhzcxForm" />
+    <form-bean name="yhsxsdrForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxsdrForm" />
+    <form-bean name="yhsxshzForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxshzForm" />
+    <form-bean name="yhsxshzcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxshzcxForm" />
+    <form-bean name="yhsgmlrcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmlrcxForm" />
+    <!-- =============form-bean The end of yhsgl ====================-->
+    <!--===============form-bean The Begin of zbzl gtgsh ===========================-->
+    <form-bean name="gtgshyysrForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgsh.web.GtgshyysrForm" />
+    <form-bean name="gtgshyysrCxForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgsh.web.GtgshyysrCxForm" />
+    <form-bean name="gtgshsdsForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgshsds.web.GtgshsdsForm" />
+    <form-bean name="jmssbForm" type="com.ttsoft.bjtax.smsb.sbzl.jmssb.web.JmssbForm" />
+    <!--===============form-bean The Begin of zjyjmsb ===========================-->
+    <form-bean name="zjyjmsbForm" type="com.ttsoft.bjtax.smsb.zjyjmsb.web.ZjyjmsbForm" />
+    <form-bean name="zjyjmcxForm" type="com.ttsoft.bjtax.smsb.zjyjmsb.cx.web.ZjyjmcxForm" />
+    <!--===============form-bean The End of zjyjmsb ===========================-->
+    <!--===============form-bean The begin of zbzl czzs ============================-->
+    <form-bean name="czzsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.CzzsnbForm" />
+    <!-- =============form-bean The begin of gtgsh and lszs, modified by lufeng ====================-->
+    <form-bean name="gtgshWszlrForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshWszlrForm" />
+    <form-bean name="gtgshCxwszForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshCxwszForm" />
+    <form-bean name="gtgshJkslrForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJkslrForm" />
+    <form-bean name="gtgshCxjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshCxjksForm" />
+    <form-bean name="gtgshHzjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshHzjksForm" />
+    <form-bean name="gtgshZfjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshZfjksForm" />
+    <form-bean name="lszsWszlrForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsWszlrForm" />
+    <form-bean name="lszsCxwszForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsCxwszForm" />
+    <form-bean name="lszsJkslrForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsJkslrForm" />
+    <form-bean name="lszsCxjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsCxjksForm" />
+    <form-bean name="lszsHzjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsHzjksForm" />
+    <form-bean name="lszsZfjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsZfjksForm" />
+    <form-bean name="gtgshJksYpysForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJksYpysForm" />
+    <form-bean name="gtgshJksYpdsForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJksYpdsForm" />
+    <form-bean name="jksPrintForm" type="com.ttsoft.bjtax.smsb.print.web.JksPrintForm" />
+    <form-bean name="wszPrintForm" type="com.ttsoft.bjtax.smsb.print.web.WszPrintForm" />
+    <!-- =============form-bean The end of gtgsh and lszs, modified by lufeng ====================-->
+    <!-- =============form-bean The begin of zhsb ====================-->
+    <form-bean name="zhsbActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbActionForm" />
+    <form-bean name="zhsbGzsxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbGzsxActionForm" />
+    <form-bean name="zhsbjkswhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjkswhActionForm" />
+    <form-bean name="zhsbjksypysActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjksypysActionForm" />
+    <form-bean name="zhsbjksypdsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjksypdsActionForm" />
+
+    <!-- =============form-bean The end of zhsb ====================-->
+
+  <!-- =============form-bean The begin of zhsb_pgbs  zzb 20090330 add ====================-->
+    <form-bean name="zhsbPgbsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsActionForm" />
+    <form-bean name="zhsbPgbsGzsxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsGzsxActionForm" />
+    <form-bean name="zhsbPgbsjkswhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjkswhActionForm" />
+    <form-bean name="zhsbPgbsjksypysActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjksypysActionForm" />
+    <form-bean name="zhsbPgbsjksypdsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjksypdsActionForm" />
+  <!-- =============form-bean The end of zhsb_pgbs  zzb 20090330 add ====================-->
+
+
+    <!-- =============form-bean The begin of grsds ====================-->
+    <form-bean name="czzsjdForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.CzzsjdForm" />
+    <form-bean name="hdzsgrsdsForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.HdzsgrsdsForm" />
+    <form-bean name="hdzsgrsdszslForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.HdzsgrsdszslForm" />
+    <!-- =============form-bean The end of grsds ====================-->
+    <!-- =============form-bean The begin of qysdsks and wqyys, modified by yaoanfeng ====================-->
+    <form-bean name="qysdsksForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsks.web.QysdsksForm" />
+    <form-bean name="wqyyshdzsForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyyshdzsForm" />
+    <form-bean name="wqyysjfhsForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyysjfhsForm" />
+    <form-bean name="wqyysassbForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyysassbForm" />
+    <form-bean name="dsdzdklrForm" type="com.ttsoft.bjtax.smsb.sbzl.dsdzdk.web.DsdzdklrForm" />
+    <!-- =============form-bean The end of qysdsks and wqyys, modified by yaoanfeng ====================-->
+    <!-- =============form-bean The begin of zqwh ====================-->
+    <form-bean name="gzsxwhForm" type="com.ttsoft.bjtax.smsb.gzwh.web.GzsxwhForm" />
+    <form-bean name="zqrlcxForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlcxForm" />
+    <form-bean name="zqlxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqlxwhForm" />
+    <form-bean name="jjrwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.JjrwhForm" />
+    <form-bean name="szzqdzForm" type="com.ttsoft.bjtax.smsb.zqwh.web.SzzqdzForm" />
+    <form-bean name="zqwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqwhForm" />
+    <form-bean name="zqrlmxcxForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlmxcxForm" />
+    <form-bean name="zqrlmxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlmxwhForm" />
+    <form-bean name="zqlxmxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqlxmxwhForm" />
+    <!-- =============form-bean The end of zqwh ====================-->
+    <!-- =============form-bean The begin of wjgr ====================-->
+    <form-bean name="wjgrActionForm" type="com.ttsoft.bjtax.smsb.wjgr.web.WjgrActionForm" />
+    <form-bean name="wjgrJkswhActionForm" type="com.ttsoft.bjtax.smsb.wjgr.web.WjgrJkswhActionForm" />
+    <!-- =============form-bean The end of wjgr ====================-->
+    <!-- =============form-bean The begin of gghsb ====================-->
+    <form-bean name="yhdkwjscscForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjscscForm" />
+    <form-bean name="yhdkwjxzbcForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjxzbcForm" />
+    <form-bean name="kkxxcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.KkxxcxForm" />
+    <form-bean name="kkztcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.KkztcxForm" />
+    <form-bean name="dqdehrkcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.DqdehrkcxForm" />
+    <!-- =============form-bean The begin of gghsb add by hazhengze 20051117===========-->
+    <form-bean name="yhdkwjscscLwForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjscscForm"/>
+    <!-- =============form-bean The end of gghsb ====================-->
+    <!-- =============form-bean The begin of wynsksb ====================-->
+    <form-bean name="wynsksbActionForm" type="com.ttsoft.bjtax.smsb.wynsk.web.WynsksbActionForm" />
+    <form-bean name="wynskcxActionForm" type="com.ttsoft.bjtax.smsb.wynsk.web.WynskcxActionForm" />
+    <!-- =============form-bean The end of wynsksb ====================-->
+	<!-- =============form-bean The begin of sbzlcx ====================-->
+	<form-bean name="qyjbcwzbcxActionForm" type="com.ttsoft.bjtax.smsb.sbzl.cx.qyjbcwzb.web.QyjbcwzbCxActionForm" />
+	<!-- =============form-bean The end of sbzlcx ====================-->
+    <form-bean name="wrkcxActionForm" type="com.ttsoft.bjtax.smsb.wrkcx.web.WrkcxActionForm" />
+    <form-bean name="nsrxxForm" type="com.ttsoft.bjtax.smsb.wrkcx.web.NsrxxForm" />
+    <form-bean name="jksqdPrintForm" type="com.ttsoft.bjtax.smsb.print.web.JksqdPrintForm"/>
+    <form-bean name="dzwszForm" type="com.ttsoft.bjtax.smsb.dzwsz.web.DzwszForm"/>
+    <form-bean name="dzyjcxActionForm" type="com.ttsoft.bjtax.smsb.dzyj.web.DzyjcxActionForm"/>
+    <form-bean name="jkcxForm" type="com.ttsoft.bjtax.smsb.jkcx.web.JkcxForm"/>
+	<!-- =============form-bean The begin of sbbyzcl ====================-->
+    <form-bean name="sbbyzclForm" type="com.ttsoft.bjtax.smsb.zhsb.web.SbbyzclForm"/>
+	<!-- =============form-bean The end of sbbyzcl ====================-->
+	 <!-- =============VER2006-QYSDS-SMSB begin====================-->
+	 <form-bean name="zbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.zb.web.ZbForm"/>
+	 <form-bean name="srbybqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbybqy.web.SrbybqyForm"/>
+	 <form-bean name="srbjrqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbjrqy.web.SrbjrqyForm"/>
+	 <form-bean name="srbsydwForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbsydw.web.SrbsydwForm"/>
+	 <form-bean name="cbmxbybqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbybqy.web.CbmxbybqyForm"/>
+	 <form-bean name="cbmxbjrqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbjrqy.web.CbmxbjrqyForm"/>
+	 <form-bean name="cbmxbsydwForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbsydw.web.CbmxbsydwForm"/>
+	 <form-bean name="tzmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.tzmxb.web.TzmxbForm"/>
+	 <form-bean name="nstzmxzjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.nstzmxzjb.web.NstzmxzjbForm"/>
+	 <form-bean name="nstzmxjsbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.nstzmxjsb.web.NstzmxjsbForm"/>
+	 <form-bean name="mbksmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.mbksmxb.web.MbksmxbForm"/>
+	 <form-bean name="czqysdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjbnew.web.CzqysdsjbForm"/>
+	 <form-bean name="hdzssdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjbnew.web.HdzssdsjbForm"/>
+	 <form-bean name="hdzssdsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.hdzssdsnb.web.HdzssdsnbForm"/>
+	 <form-bean name="bxzbjForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.bxzbjb.web.BxzbjForm"/>
+	 <form-bean name="dzzbjtmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.dzzbjtmxb.web.DzzbjtmxbForm"/>
+	 <form-bean name="gzxjmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.gzxjmxb.web.GzxjmxbForm"/>
+	 <form-bean name="hzssmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.hzssmxb.web.HzssmxbForm"/>
+	 <form-bean name="zcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.zcmxb.web.ZcmxbForm"/>
+	 <form-bean name="jzzcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jzzcmxb.web.JzzcmxbForm"/>
+	 <form-bean name="jskffmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jskffmxb.web.JskffmxbForm"/>
+	 <form-bean name="jwsdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jwsdmxb.web.JwsdmxbForm"/>
+	 <form-bean name="gkfzcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.gkfzcmxb.web.GkfzcmxbForm"/>
+	 <form-bean name="mssdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.mssdmxb.web.MssdmxbForm"/>
+	 <form-bean name="qysdsNewForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.base.QysdsNewForm"/>
+	 <form-bean name="jbxxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jbxxb.web.JbxxbForm"/>
+	 <!-- =============VER2006-QYSDS-SMSB begin====================-->
+	 
+	 <!-- 2008版 企业所得税 配置信息  -->
+	 <form-bean name="jbxxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jbxxb.web.JbxxbForm2008"/>
+	 <form-bean name="zbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zb.web.ZbForm2008"/>
+	 <form-bean name="ggForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.gg.web.GgForm2008"/>
+	 <form-bean name="jwsdmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jwsdmxb.web.JwsdmxbForm2008"/>
+	 
+	 <form-bean name="srmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.srmxb.web.SrmxbForm2008"/>
+	 <form-bean name="jrqycbfymxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jrqycbfymxb.web.JrqycbfymxbForm2008"/>
+	 <form-bean name="qysdsmbksmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.qysdsmbksmxb.web.QysdsmbksmxbForm2008"/>
+	 <form-bean name="zczjtxnstzmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zczjtxnstzmxb.web.ZczjtxnstzmxbForm2008"/>
+	 
+	 <form-bean name="jrqysrmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jrqysrmx.web.JrqysrmxForm"/>
+ 	 <form-bean name="systmbfqyzcmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.systmbfqyzcmx.web.SystmbfqyzcmxForm"/>
+ 	 <form-bean name="ssyhmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.ssyhmx.web.SsyhmxForm"/>
+ 	 <form-bean name="zcjztzmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zcjztzmx.web.ZcjztzmxForm"/>
+	 <form-bean name="hdzssdsnbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.hdzssdsnb.web.HdzssdsnbForm"/>
+	 <form-bean name="hdzsssyhmxForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.hdzsssyhmx.web.HdzsssyhmxForm"/>
+		
+	 <form-bean name="cbmxbybqyForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.cbmxbybqy.web.CbmxbybqyForm2008"/>
+
+	 <form-bean name="srbsydw2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.srbsydw.web.SrbsydwForm2008"/>
+	 <form-bean name="nstzmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.nstzmxb.web.NstzmxbForm2008"/>
+	 <form-bean name="ygyjzjlnstzbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.ygyjzjlnstzb.web.YgyjzjlnstzbForm"/>
+	 <form-bean name="gqtzsdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.gqtzsdmxb.web.GqtzsdmxbForm"/>
+	 
+	 <!-- =============form-bean The begin of qsjksb add by zhangyj 20061122===========-->
+	 <form-bean name="qsjksbForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbForm"/>
+	 <form-bean name="qsjksbjkswhActionForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbjkswhActionForm" />
+	 <form-bean name="qsjksbjksypysActionForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbjksypysActionForm" />
+	 <!-- =============form-bean The end of qsjksb ====================-->	
+	 <!-- =============form-bean The begin of znjwh ====================-->
+	 <form-bean name="znjwhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZnjwhActionForm" />
+	 <form-bean name="znjwhMxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZnjwhMxActionForm" />
+	 <!-- =============form-bean The end of znjwh ====================-->
+	 <!-- =============form-bean The begin of sdsjb2008 ====================-->
+	 <form-bean name="zfjgForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.ZfjgqysdsjbForm" />
+	 <form-bean name="hdzssdsjb2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.HdzssdsjbForm"/>
+	 <form-bean name="czzssdsjb2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.CzzssdsjbForm"/>
+	 <!-- =============form-bean The end of sdsjb2008 ====================-->
+
+	 <!-- =============form-bean qysdsjb2012 add by gaoyh 2012-3-1====================-->
+	 <!-- =============form-bean The begin of qysdsjb2012 ====================-->
+	 <form-bean name="czzssdsjb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.CzzssdsjbForm"/>
+	 <form-bean name="hdzssdsjb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.HdzssdsjbForm"/>	 
+	 <form-bean name="zfjg2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.ZfjgqysdsjbForm" />	 	 
+	 <!-- =============form-bean The end of qysdsjb2012 ====================-->
+
+	 <!-- =============form-bean The begin of kjqysds2009 ====================-->
+	 <form-bean name="badjbForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.badjb.web.BadjbForm" />
+	 <form-bean name="kjqysdsbgbForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.kjqysdsbgb.web.KjqysdsbgbForm" />
+	 <form-bean name="kjssjksForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.kjssjks.web.KjssjksForm" />
+	 <form-bean name="dztzForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.dztz.web.DztzForm" />
+	 <!-- =============form-bean The end of kjqysds2009 ====================-->
+	 
+	 <!-- =============form-bean The begin of hzsds ====================-->
+	 <form-bean name="sjjhForm" type="com.ttsoft.bjtax.smsb.sjjh.web.SjjhForm" />
+	 <!-- =============form-bean The end of hzsds ====================-->
+	 
+	<!-- =============form-bean The begin of qysdsnb2009 ====================-->
+	<form-bean name="jbxxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jbxxb.web.JbxxbForm2009"/>
+	<form-bean name="zbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zb.web.ZbForm2009"/>
+	<form-bean name="ggForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.gg.web.GgForm2009"/>
+	<form-bean name="jwsdmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jwsdmxb.web.JwsdmxbForm2009"/>
+	<form-bean name="srmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.srmxb.web.SrmxbForm2009"/>
+	<form-bean name="jrqycbfymxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jrqycbfymxb.web.JrqycbfymxbForm2009"/>
+	<form-bean name="qysdsmbksmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.qysdsmbksmxb.web.QysdsmbksmxbForm2009"/>
+	<form-bean name="zczjtxnstzmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zczjtxnstzmxb.web.ZczjtxnstzmxbForm2009"/>
+	<form-bean name="jrqysrmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jrqysrmx.web.JrqysrmxForm"/>
+	<form-bean name="systmbfqyzcmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.systmbfqyzcmx.web.SystmbfqyzcmxForm"/>
+	<form-bean name="ssyhmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.ssyhmx.web.SsyhmxForm"/>
+	<form-bean name="zcjztzmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zcjztzmx.web.ZcjztzmxForm"/>
+	<form-bean name="cbmxbybqyForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.cbmxbybqy.web.CbmxbybqyForm2009"/>
+	<form-bean name="srbsydw2009Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.srbsydw.web.SrbsydwForm2009"/>
+	<form-bean name="nstzmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.nstzmxb.web.NstzmxbForm2009"/>
+	<form-bean name="ygyjzjlnstzbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.ygyjzjlnstzb.web.YgyjzjlnstzbForm"/>
+	<form-bean name="gqtzsdmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.gqtzsdmxb.web.GqtzsdmxbForm"/>
+	<form-bean name="hdzssdsnbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hdzssdsnb.web.HdzssdsnbForm"/>
+	<form-bean name="hdzsssyhmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hdzsssyhmx.web.HdzsssyhmxForm"/>	 
+	<!-- =============form-bean The end of qysdsnb2009  ====================-->
+	
+	<!-- =============form-bean qysdsnb2012 add by gaoyh 2013-01-23====================-->
+	 <!-- =============form-bean The begin of qysdsnb2012 ====================-->
+	 <form-bean name="hdzssdsnbForm2012" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.hdzssdsnb.web.HdzssdsnbForm"/>  	 
+	 <!-- =============form-bean The end of qysdsnb2012 ====================-->
+
+		<!-- =============form-bean The begin of cjrjyjms ====================-->
+		<form-bean name="cjrjyjmsForm" type="com.ttsoft.bjtax.smsb.jmssb.web.CjrjyjmsForm" />
+		<form-bean name="cjrjyjmscxtjForm" type="com.ttsoft.bjtax.smsb.jmssb.web.CjrjyjmscxtjForm" />
+		<!-- =============form-bean The end of cjrjyjms ====================-->	
+	
+	 <!-- =============form-bean The begin of qysdsjmsbagl====================-->
+	 <form-bean name="qysdsJmsbajlMainForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.jmsbajl.web.QysdsJmsbajlMainForm"/>
+	 <form-bean name="qysdsJmsbajlPrintForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.jmsbajl.web.QysdsJmsbajlPrintForm"/>
+	 <form-bean name="basx01Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx01.web.Basx01Form"/>
+	 <form-bean name="basx02Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx02.web.Basx02Form"/>
+	 <form-bean name="basx03Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx03.web.Basx03Form"/>
+	 <form-bean name="basx04Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx04.web.Basx04Form"/>
+	 <form-bean name="basx05Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx05.web.Basx05Form"/>
+	 <form-bean name="basx06Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx06.web.Basx06Form"/>
+	 <form-bean name="basx07Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx07.web.Basx07Form"/>
+	 <form-bean name="basx08Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx08.web.Basx08Form"/>
+	 <form-bean name="basx09Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx09.web.Basx09Form"/>
+	 <form-bean name="basx10Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx10.web.Basx10Form"/>
+	 <form-bean name="basx11Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx11.web.Basx11Form"/>
+	 <form-bean name="basx12Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx12.web.Basx12Form"/>
+	 <form-bean name="basx13AForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx13a.web.Basx13AForm"/>
+	 <form-bean name="basx13BForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx13b.web.Basx13BForm"/>
+	 <form-bean name="basx14AForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx14a.web.Basx14AForm"/>
+	 <form-bean name="basx14BForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx14b.web.Basx14BForm"/>
+	 <form-bean name="basx15Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx15.web.Basx15Form"/>
+	 <form-bean name="basx16Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx16.web.Basx16Form"/>
+	 <form-bean name="basx17Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx17.web.Basx17Form"/>
+	 <form-bean name="basx18Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx18.web.Basx18Form"/>
+	 <form-bean name="basx19Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx19.web.Basx19Form"/>
+	 <form-bean name="basx20Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx20.web.Basx20Form"/>
+	 <!-- =============form-bean The begin of qysdsjmsbagl====================-->
+	 <!-- ===================联网批量扣款form begin==================== -->
+	 <form-bean name="pktaskForm" type="com.ttsoft.bjtax.smsb.lwpk.web.PKTaskForm"></form-bean>
+	  <!-- ===================联网批量扣款form end==================== -->
+	  
+	  
+	  <!-- 单户查询 2013kanght -->
+	  <form-bean name="dhkscxForm" type="com.ttsoft.bjtax.smsb.lwpk.web.DhkscxForm"></form-bean>
+	  <form-bean name="plkscxForm" type="com.ttsoft.bjtax.smsb.lwpk.web.PlkscxForm"></form-bean>
+	  <!-- =============form-bean The begin of wszm tujb====================-->
+	  <form-bean name="wszmForm" type="com.ttsoft.bjtax.smsb.wszm.web.WszmForm"></form-bean>
+	  <form-bean name="wszmCxForm" type="com.ttsoft.bjtax.smsb.wszm.web.WszmCxForm"></form-bean>
+	  <!-- =============form-bean The end of wszm tujb====================-->
+	  
+	  <!-- 上门申报添加 企业所得税分支机构年度纳税申报表   add by wangcy  2013-12-07 -->
+	  <form-bean name="czzssdsnb2012Form"  type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.CzzssdsNbForm" />
+	  <form-bean name="zfjgnb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.ZfjgqysdsNbForm" />
+	  <!-- 企业所得税汇总纳税总机构分配表 add by wangxq  2013-12-11-->
+	  <form-bean name="hznszjgfpbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hznszjgfpb.web.HznszjgfpbForm" />
+
+	  
+	  <!--手工录入税收完税证明 start  add by tangchangfu (新票样项目) 20131121 start -->
+	  <form-bean name="sgsswszmlrForm" type="com.ttsoft.bjtax.smsb.sgsswszmlr.web.SgsswszmlrForm"></form-bean>
+	  <!--手工录入税收完税证明 start  add by tangchangfu (新票样项目) 20131121 end  -->
+	  
+	  <!-- 上门申报添加 企业所得税分支机构年度纳税申报表   add by wangcy  2013-12-07 -->
+		<form-bean name="czzssdsnb2012Form"  type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.CzzssdsNbForm" />
+		<form-bean name="zfjgnb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.ZfjgqysdsNbForm" />
+		
+		
+	  <!--耕地占有税 start-->
+	  <!-- 耕地占用税  减免税管理-->
+	  <form-bean name="sydjxxltForm" type="com.ttsoft.bjtax.smsb.gdzys.sydj.sydjxxlr.web.GdzysSydjxxlrForm"></form-bean>
+	  <form-bean name="gdzysJmscxForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmscxForm"></form-bean>
+	  <form-bean name="gdzysJmszmPrintForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmszmPrintForm"></form-bean>
+	  <form-bean name="gdzysJmsCancleForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmsCancleForm"></form-bean>
+	<!-- 业务查询-减免税证明查询 -->
+	<form-bean name="gdzysJmszmCxForm" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.GdzysJmszmCxForm"></form-bean>
+	  <!--申报征收-出具缴款书form-->
+	  <form-bean name="gdzysCjjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCjjksForm"></form-bean>
+	  <!--申报征收-出具滞纳金缴款书form-->
+	  <form-bean name="gdzysCjznjjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCjznjjksForm"></form-bean>
+	  <!--申报征收-撤销缴款书form-->
+	  <form-bean name="gdzysCxjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCxjksForm"></form-bean>
+	  
+	  <!--* 耕地占用税源登记查询Form *-->
+  	<form-bean name="gdzysSydjcxForm" type="com.ttsoft.bjtax.smsb.gdzys.sydj.sydjcx.web.GdzysSydjcxForm" />
+  	
+  	<!-- ================================审核确认===================================================== -->
+    <form-bean name="gdzysShqrForm" type="com.ttsoft.bjtax.smsb.gdzys.sydj.qrsh.web.GdzysShqrForm" />
+    
+    <!-- ================================变更===================================================== -->
+    <form-bean name="gdzysSybgForm" type="com.ttsoft.bjtax.smsb.gdzys.sydj.sybg.web.GdzysSybgForm" />
+
+    
+    <!--税源查询form-->
+    <form-bean name="sycxForm" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.SycxForm" />
+
+    
+      <!--业务查询-缴款书查询form-->
+	  <form-bean name="gdzysJksCxForm" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.GdzysJksCxForm"></form-bean>
+	
+
+	  
+	  <!--耕地占有税 end-->
+
+	<!-- wangcy 纳税人基本信息表 -->
+	<form-bean name="jbxxbForm2013" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2013.jbxxb.web.JbxxbForm2013"/>
+	
+	<!-- wangcy 企业所得税升级改造项目     form begin-->
+	<!-- ==============减免税备案   节能服务公司实施合同能源管理项目的所得备案事项==================== -->
+	<form-bean name="basx21Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx21.web.Basx21Form"/>
+	<form-bean name="basx22Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx22.web.Basx22Form"/>
+		
+	<!-- ====================企业所得税清算===================== -->
+	<form-bean name="qyqssdsBaglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsbagl.web.QyqssdsBaglForm"/>
+	 <form-bean name="qyqssdsSbglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdssbgl.web.QyqssdsSbglForm"/>
+	<form-bean name="qyqssdsBaForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsba.web.QyqssdsBaForm"/>
+	<form-bean name="qyqssdsBaseForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.base.QyqssdsBaseForm"/>
+	<form-bean name="qyqssdsZbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdszb.web.QyqssdsZbForm2014"/>
+	<form-bean name="qyqssdsFb1Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb1.web.QyqssdsFb1Form2014"/>
+	<form-bean name="qyqssdsFb2Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb2.web.QyqssdsFb2Form2014"/>
+	<form-bean name="qyqssdsFb3Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb3.web.QyqssdsFb3Form2014"/>
+	<form-bean name="qyqssdsHisglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.his.web.QyqssdsHisglForm"/>
+	<!-- zhangj  企业所得税清算无需备案  start  -->
+	<form-bean name="qyqssdsWxBaglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdswxbagl.web.QyqssdsWxBaglForm"/>
+	<form-bean name="qyqssdsWxBaForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdswxba.web.QyqssdsWxBaForm"/>
+	<!-- zhangj  企业所得税清算无需备案  end  -->
+	<!-- wangcy 企业所得税升级改造项目     form end  -->
+	
+	<!-- =============form-bean The begin of qysdsjb2014 ====================-->
+	 <form-bean name="czzssdsjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.CzzssdsjbForm"/>
+	 <form-bean name="hdzssdsjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.HdzssdsjbForm"/>	 
+	 <form-bean name="zfjg2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.ZfjgqysdsjbForm" />	
+	 <form-bean name="gdzcjszjyjqkjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.GdzcjszjyjqkjbForm"/> 	 
+	 <!-- =============form-bean The end of qysdsjb2014 ====================-->
+	 
+	<!-- tangchangfu 2014-04-24 无税减免税项目 总局减免税代码维护form -->
+	<form-bean name="zjjmsdmwhForm" type="com.ttsoft.bjtax.smsb.jccswh.web.ZjjmsdmwhForm"/>
+	
+	 <!-- =============form-bean The begin of qysdsnb2014 wangcy ====================-->
+	 <form-bean name="hdzssdsnbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.hdzssdsnb.web.HdzssdsnbForm"/>
+	 <form-bean name="czzsfzjgNbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.czzsfzjgnb.web.CzzsfzjgNbForm"/>  
+	 <form-bean name="zfjgfzjgNbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.czzsfzjgnb.web.ZfjgfzjgNbForm"/>	 
+	 <!-- =============form-bean The end of qysdsnb2012  wangcy =====================-->
+	
+	<!-- 个人合伙企业个人所得税 -->
+	<form-bean name="grsdsjbxxbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrsdsJbxxActionForm"/>
+	<form-bean name="grsdsndsbbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrsdsNdsbbActionForm"/>
+	<form-bean name="grsdstzflbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrListActionForm"/>
+	<form-bean name="grsdsjbxxbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrsdsJbxxActionForm"/>
+	<form-bean name="grsdsndsbbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrsdsNdsbbActionForm"/>
+	<form-bean name="grsdstzflbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrListActionForm"/>
+	<!--yugw 核定申报信息=============form-bean The begin of qysdshdsbxx ====================-->
+	<form-bean name="qysdsBbjcForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsbbjc.web.QysdsBbjcForm"/>
+    <!-- =========================form-bean The end of qysdshdsbxx ====================-->
+  </form-beans>
+  
+  <action-mappings>
+  <!-- tangchangfu 2014-04-24 无税减免税项目 总局减免税代码维护action -->
+  <action name="zjjmsdmwhForm"  input="/webapp/smsb/zjjmsdmwh.jsp" scope="request" type="com.ttsoft.bjtax.smsb.jccswh.web.ZjjmsdmwhAction" path="/webapp/jccswh/zjjmsdmwhAction">
+  	<forward name="Show" path="/webapp/smsb/zjjmsdmwh.jsp"></forward>
+  	<forward name="Query" path="/webapp/smsb/zjjmsdmwh_001.jsp"></forward>
+  </action>
+  
+  <action name ="sgsswszmlrForm" input ="/webapp/smsb/sgsswszmlr.jsp" scope="request" type="com.ttsoft.bjtax.smsb.sgsswszmlr.web.SgsswszmlrAction" path="/webapp/sgsswszmlr/sgsswszmlrAction">
+  	<forward name="Show" path="/webapp/smsb/sgsswszmlr.jsp"/>
+  	<forward name="ShowWH" path="/webapp/smsb/sgsswszmlrWH.jsp"/>
+  	<forward name="Print" path="/webapp/smsb/sgsswszmlrWszmPrint.jsp"/>
+  </action>
+  
+  
+   <!-- 单户查询 2013kanght -->
+   <action name ="dhkscxForm" input ="/webapp/smsb/dhkscx.jsp" scope="request" type="com.ttsoft.bjtax.smsb.lwpk.web.DhkscxAction" path="/webapp/smsb/dhkscxAction">
+	 	<forward name="Show" path="/webapp/smsb/dhkscx.jsp"></forward>
+	 	<forward name="Query" path="/webapp/smsb/dhkscx.jsp"></forward>
+	 	<!-- <forward name="Print" path="/webapp/smsb/dhkscxAction.do?actionType=Query"></forward> -->
+  </action>
+  <action name ="plkscxForm" input ="/webapp/smsb/plkscx.jsp" scope="request" type="com.ttsoft.bjtax.smsb.lwpk.web.PlkscxAction" path="/webapp/smsb/plkscxAction">
+	 	<forward name="Show" path="/webapp/smsb/plkscx.jsp"></forward>
+	 	<forward name="Query" path="/webapp/smsb/plkscx.jsp"></forward>
+	 	<forward name="QueryDetail" path="/webapp/smsb/plkscxDetail.jsp"></forward>
+  </action>
+  
+	
+	 <!-- ===================联网批量扣款Action begin kanght 20130531==================== -->
+	 <action name ="pktaskForm" input ="/webapp/smsb/plkksjjh.jsp" scope="request" type="com.ttsoft.bjtax.smsb.lwpk.web.PKTaskAction" path="/webapp/smsb/pktaskAction">
+	 	<forward name="Init" path="/webapp/smsb/pktaskAction.do?actionType=Query"></forward>
+	 	<forward name="Query" path="/webapp/smsb/plkksjjh.jsp"></forward>
+	 	<forward name="SaveModify" path="/webapp/smsb/pktaskAction.do?actionType=Query"></forward>
+	 	<forward name="Delete" path="/webapp/smsb/pktaskAction.do?actionType=Query"></forward>
+	 	<forward name="SaveAdd" path="/webapp/smsb/pktaskAction.do?actionType=Query"></forward>
+	 	<forward name="Print" path="/webapp/smsb/plkksjjhprint.jsp"></forward>
+	 	<forward name="Show" path="/webapp/smsb/plkksjjh.jsp"></forward>
+	 </action>
+	 
+	 
+	  <!-- ===================联网批量扣款Action end==================== -->
+	
+	<!-- =============action The begin of sbbyzcl ====================-->
+    <action name="sbbyzclForm"  type="com.ttsoft.bjtax.smsb.zhsb.web.SbbyzclAction"  input="/webapp/smsb/sbbyzcl001.jsp" scope="request"  path="/webapp/smsb/sbbyzclAction" >
+      <forward name="Show" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="QueryDj" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="QuerySb" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="QueryA" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="QueryB" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="MoveA" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="MoveB" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="SelectMoveA" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="SelectMoveB" path="/webapp/smsb/sbbyzcl001.jsp" />
+      <forward name="QueryMoveA" path="/webapp/smsb/sbbyzcl002.jsp" />
+      <forward name="QueryMoveB" path="/webapp/smsb/sbbyzcl002.jsp" />
+      <forward name="Detail" path="/webapp/smsb/sbbyzcl003.jsp" />        
+    </action>
+	<!-- =============action The end of sbbyzcl ====================-->
+    <action name="jkscxForm"
+            type="com.ttsoft.bjtax.smsb.jkscx.web.JkscxAction"
+            input="/webapp/smsb/jkscx001.jsp"
+            scope="session"
+            path="/webapp/smsb/jkscxAction" >
+      <forward name="Show" path="/webapp/smsb/jkscx001.jsp" />
+      <forward name="Query" path="/webapp/smsb/jkscx001.jsp" />
+      <forward name="Export" path="/webapp/smsb/jkscx001.jsp" />
+      <forward name="ChangePage" path="/webapp/smsb/jkscx001.jsp" />
+    </action>
+
+    <!-- =============action  The begin of dsdzdk ====================-->
+    <action name="dsdzdkForm" type="com.ttsoft.bjtax.smsb.sbzl.dsdzdk.web.DsdzdkAction" input="/webapp/smsb/dsdzdk016.jsp" scope="request" path="/webapp/smsb/dsdzdkAction">
+      <forward name="Show" path="/webapp/smsb/dsdzdk016.jsp" />
+      <forward name="Query" path="/webapp/smsb/dsdzdk016.jsp" />
+      <forward name="Upload" path="/webapp/smsb/dsdzdk016.jsp" />
+      <forward name="Gotopage" path="/webapp/smsb/dsdzdk016.jsp" />
+      <forward name="Input" path="/webapp/smsb/dsdzdklr016.jsp" />
+      <forward name="Save" path="/webapp/smsb/dsdzdkhz016.jsp" />
+      <forward name="Delete" path="/webapp/smsb/dsdzdkhz016.jsp" />
+      <forward name="Hzsbjkd" path="/webapp/smsb/dsdzdkcx016.jsp" />
+      <forward name="Hzsbjkdp" path="/webapp/smsb/dsdzdkdy016.jsp" />
+      <forward name="Cxhzsbjkd" path="/webapp/smsb/dsdzdkcx016.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+    <!-- =============action  The begin of qysdsnb ====================-->
+    <action name="qysdsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.QysdsnbAction" input="/webapp/smsb/qysdsnb001.jsp" scope="request" path="/webapp/smsb/qysdsnbAction">
+      <forward name="Show" path="/webapp/smsb/qysdsnb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysdsnb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysdsnb001.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qysdsnb001.jsp" />
+    </action>
+    <action name="sydwshttsrsbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.SydwshttsrsbAction" input="/webapp/smsb/sydwshttsrsb001.jsp" scope="request" path="/webapp/smsb/sydwshttsrsbAction">
+      <forward name="Show" path="/webapp/smsb/sydwshttsrsb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/sydwshttsrsb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/sydwshttsrsb001.jsp" />
+      <forward name="Delete" path="/webapp/smsb/sydwshttsrsb001.jsp" />
+    </action>
+    <action name="qyjbcwzbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb.web.QyjbcwzbAction" input="/webapp/smsb/qyjbcwzb001.jsp" scope="request" path="/webapp/smsb/qyjbcwzbAction">
+      <forward name="Show" path="/webapp/smsb/qyjbcwzb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qyjbcwzb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qyjbcwzb001.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qyjbcwzb001.jsp" />
+    </action>
+    <!-- =============action  The begin of yhsgl ====================-->
+    <action name="yhsgmlrForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmlrAction" input="/webapp/smsb/yhsgmlr0271.jsp" scope="request" path="/webapp/smsb/yhsgmlrAction">
+      <forward name="Show" path="/webapp/smsb/yhsgmlr0271.jsp" />
+      <forward name="Save" path="/webapp/smsb/yhsgmlr0271.jsp" />
+      <forward name="Reader" path="/webapp/smsb/yhsgmlr0271.jsp" />
+    </action>
+    <action name="yhsgmhzForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmhzAction" input="/webapp/smsb/yhsgmhz0272.jsp" scope="request" path="/webapp/smsb/yhsgmhzAction">
+      <forward name="Show" path="/webapp/smsb/yhsgmhz0272.jsp" />
+      <forward name="Hzjks" path="/webapp/smsb/yhsgmhz0272.jsp" />
+      <forward name="Cxjks" path="/webapp/smsb/yhsgmhzcxAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+    </action>
+    <action name="jksqdPrintForm" type="com.ttsoft.bjtax.smsb.print.web.JksqdPrintAction" validate="true" input="/webapp/smsb/sbsqdPrint.jsp" scope="request" path="/webapp/smsb/jksqdPrintAction">
+      <forward name="Show" path="/webapp/smsb/sbsqdPrint.jsp" />
+    </action>
+    
+    <!-- 开具电子完税证 kanght20130605 -->
+    
+    <action name="dzwszForm" type="com.ttsoft.bjtax.smsb.dzwsz.web.DzwszAction" validate="true" input="/webapp/smsb/dzwszlist.jsp" scope="request" path="/webapp/smsb/dzwszAction">
+       <!-- 
+      <forward name="Show" path="/webapp/smsb/dzwszprint.jsp" /> 
+      -->
+      <!-- 20130627 kanght -->
+     <forward name="Show" path="/webapp/smsb/dzwszlist.jsp" />
+       
+      <forward name="Print" path="/webapp/smsb/dzwszprint2013.jsp" />
+    </action>
+    
+    <action name="yhsgmhzcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmhzcxAction" input="/webapp/smsb/yhsgmhzcx0273.jsp" scope="request" path="/webapp/smsb/yhsgmhzcxAction">
+      <forward name="Show" path="/webapp/smsb/yhsgmhzcx0273.jsp" />
+      <forward name="Query" path="/webapp/smsb/yhsgmhzcx0273.jsp" />
+      <forward name="Turnback" path="/webapp/smsb/yhsgmhzAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+    </action>
+    <action name="yhsxsdrForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxsdrAction" input="/webapp/smsb/yhsxsdr0281.jsp" scope="request" path="/webapp/smsb/yhsxsdrAction">
+      <forward name="Show" path="/webapp/smsb/yhsxsdr0281.jsp" />
+      <forward name="Load" path="/webapp/smsb/yhsxsdr0281.jsp" />
+      <forward name="Gotopage" path="/webapp/smsb/yhsxsdr0281.jsp" />
+      <forward name="Hzjks" path="/webapp/smsb/yhsxshzAction.do?actionType=Show" />
+      <forward name="Cxjks" path="/webapp/smsb/yhsxshzcxAction.do?actionType=Show" />
+    </action>
+    <action name="yhsxshzForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxshzAction" input="/webapp/smsb/yhsxshz0282.jsp" scope="request" path="/webapp/smsb/yhsxshzAction">
+      <forward name="Show" path="/webapp/smsb/yhsxshz0282.jsp" />
+      <forward name="Cxjks" path="/webapp/smsb/yhsxshzcxAction.do?actionType=Show" />
+      <forward name="Turnback" path="/webapp/smsb/yhsxsdrAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+    <action name="yhsxshzcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsxshzcxAction" input="/webapp/smsb/yhsxshzcx0283.jsp" scope="request" path="/webapp/smsb/yhsxshzcxAction">
+      <forward name="Show" path="/webapp/smsb/yhsxshzcx0283.jsp" />
+      <forward name="Reader" path="/webapp/smsb/yhsxshzcx0283.jsp" />
+      <forward name="Query" path="/webapp/smsb/yhsxshzcx0283.jsp" />
+      <forward name="Turnback" path="/webapp/smsb/yhsxsdrAction.do?actionType=Show" />
+    </action>
+    <action name="yhsgmlrcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmlrcxAction" input="/webapp/smsb/yhsgmlrcx0274.jsp" scope="request" path="/webapp/smsb/yhsgmlrcxAction">
+      <forward name="Show" path="/webapp/smsb/yhsgmlrcx0274.jsp" />
+      <forward name="Query" path="/webapp/smsb/yhsgmlrcx0274.jsp" />
+      <forward name="Delete" path="/webapp/smsb/yhsgmlrcxAction.do?actionType=Query" />
+      <forward name="DeleteAll" path="/webapp/smsb/yhsgmlrcx0274.jsp" />
+      <forward name="View" path="/webapp/smsb/yhsgmlrckAction.do?actionType=Query" />
+    </action>
+    <action name="yhsgmlrcxForm" type="com.ttsoft.bjtax.smsb.yhsgl.web.YhsgmlrckAction" input="/webapp/smsb/yhsgmlrck0275.jsp" scope="request" path="/webapp/smsb/yhsgmlrckAction">
+      <forward name="Show" path="/webapp/smsb/yhsgmlrck0275.jsp" />
+      <forward name="Query" path="/webapp/smsb/yhsgmlrck0275.jsp" />
+      <forward name="Return" path="/webapp/smsb/yhsgmlrcxAction.do?actionType=Query" />
+    </action>
+    <!-- =============action  The end of yhsgl ====================-->
+    <!-- =============action The begin of gtgsh and lszs, modified by lufeng  ====================-->
+    <action name="gtgshWszlrForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshWszlrAction" input="/webapp/smsb/gtgshwszlr024.jsp" scope="request" path="/webapp/smsb/gtgshWszlrAction">
+      <forward name="Show" path="/webapp/smsb/gtgshwszlr024.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshwszlr024.jsp" />
+      <forward name="Save" path="/webapp/smsb/gtgshwszlr024.jsp" />
+      <forward name="Dismiss" path="/webapp/smsb/gtgshCxwszAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/wszPrintAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshCxwszForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshCxwszAction" validate="true" input="/webapp/smsb/gtgshcxwsz0241.jsp" scope="request" path="/webapp/smsb/gtgshCxwszAction">
+      <forward name="Show" path="/webapp/smsb/gtgshcxwsz0241.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshcxwsz0241.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshCxwszAction.do?actionType=Query" />
+      <forward name="Update" path="/webapp/smsb/gtgshCxwszAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/gtgshWszlrAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshJkslrForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJkslrAction" validate="false" input="/webapp/smsb/gtgshjkslr026.jsp" scope="request" path="/webapp/smsb/gtgshJkslrAction">
+      <forward name="Show" path="/webapp/smsb/gtgshjkslr026.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshjkslr026.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshjkslr026.jsp" />
+      <forward name="Save" path="/webapp/smsb/gtgshjkslr026.jsp" />
+      <forward name="Dismiss" path="/webapp/smsb/gtgshCxjksAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshCxjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshCxjksAction" validate="false" input="/webapp/smsb/gtgshcxjks0261.jsp" scope="request" path="/webapp/smsb/gtgshCxjksAction">
+      <forward name="Show" path="/webapp/smsb/gtgshcxjks0261.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshcxjks0261.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshcxjks0261.jsp" />
+      <forward name="Back" path="/webapp/smsb/gtgshJkslrAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshHzjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshHzjksAction" validate="false" input="/webapp/smsb/gtgshhzjks025.jsp" scope="request" path="/webapp/smsb/gtgshHzjksAction">
+      <forward name="Show" path="/webapp/smsb/gtgshhzjks025.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshhzjks025.jsp" />
+      <forward name="Save" path="/webapp/smsb/gtgshhzjks025.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshhzjks025.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+      <!-- The detail of ypys and ypds -->
+      <forward name="Ypys" path="/webapp/smsb/gtgshJksYpysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/gtgshJksYpdsAction.do?actionType=Query" />
+      <!-- The detail of ypys and ypds -->
+    </action>
+    <action name="gtgshZfjksForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshZfjksAction" validate="false" input="/webapp/smsb/gtgshzfjks030.jsp" scope="request" path="/webapp/smsb/gtgshZfjksAction">
+      <forward name="Show" path="/webapp/smsb/gtgshzfjks030.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshzfjks030.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshzfjks030.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <!-- The detail of ypys and ypds -->
+      <forward name="Ypys" path="/webapp/smsb/gtgshJksYpysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/gtgshJksYpdsAction.do?actionType=Query" />
+      <!-- The detail of ypys and ypds -->
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+    </action>
+    <action name="lszsWszlrForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsWszlrAction" validate="false" input="/webapp/smsb/lszswszlr024.jsp" scope="request" path="/webapp/smsb/lszsWszlrAction">
+      <forward name="Show" path="/webapp/smsb/lszswszlr024.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszswszlr024.jsp" />
+      <forward name="Save" path="/webapp/smsb/lszswszlr024.jsp" />
+      <forward name="Dismiss" path="/webapp/smsb/lszsCxwszAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/wszPrintAction.do?actionType=Show" />
+    </action>
+    <action name="lszsCxwszForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsCxwszAction" validate="false" input="/webapp/smsb/lszscxwsz0241.jsp" scope="request" path="/webapp/smsb/lszsCxwszAction">
+      <forward name="Show" path="/webapp/smsb/lszscxwsz0241.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszscxwsz0241.jsp" />
+      <forward name="Delete" path="/webapp/smsb/lszsCxwszAction.do?actionType=Query" />
+      <forward name="Update" path="/webapp/smsb/lszsCxwszAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/lszsWszlrAction.do?actionType=Show" />
+    </action>
+    <action name="lszsJkslrForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsJkslrAction" validate="false" input="/webapp/smsb/lszsjkslr026.jsp" scope="request" path="/webapp/smsb/lszsJkslrAction">
+      <forward name="Show" path="/webapp/smsb/lszsjkslr026.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszsjkslr026.jsp" />
+      <forward name="Delete" path="/webapp/smsb/lszsjkslr026.jsp" />
+      <forward name="Save" path="/webapp/smsb/lszsjkslr026.jsp" />
+      <forward name="Dismiss" path="/webapp/smsb/lszsCxjksAction.do?actionType=Show" />
+    </action>
+    <action name="lszsCxjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsCxjksAction" validate="false" input="/webapp/smsb/lszscxjks0261.jsp" scope="request" path="/webapp/smsb/lszsCxjksAction">
+      <forward name="Show" path="/webapp/smsb/lszscxjks0261.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszscxjks0261.jsp" />
+      <forward name="Delete" path="/webapp/smsb/lszscxjks0261.jsp" />
+      <forward name="Back" path="/webapp/smsb/lszsJkslrAction.do?actionType=Show" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+    </action>
+    <action name="lszsHzjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsHzjksAction" validate="false" input="/webapp/smsb/lszshzjks025.jsp" scope="request" path="/webapp/smsb/lszsHzjksAction">
+      <forward name="Show" path="/webapp/smsb/lszshzjks025.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszshzjks025.jsp" />
+      <forward name="Save" path="/webapp/smsb/lszshzjks025.jsp" />
+      <forward name="Delete" path="/webapp/smsb/lszshzjks025.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <!-- The detail of ypys and ypds -->
+      <forward name="Ypys" path="/webapp/smsb/gtgshJksYpysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/gtgshJksYpdsAction.do?actionType=Query" />
+      <!-- The detail of ypys and ypds -->
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+    </action>
+    <action name="lszsZfjksForm" type="com.ttsoft.bjtax.smsb.lszs.web.LszsZfjksAction" validate="false" input="/webapp/smsb/lszszfjks030.jsp" scope="request" path="/webapp/smsb/lszsZfjksAction">
+      <forward name="Show" path="/webapp/smsb/lszszfjks030.jsp" />
+      <forward name="Query" path="/webapp/smsb/lszszfjks030.jsp" />
+      <forward name="Delete" path="/webapp/smsb/lszszfjks030.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <!-- The detail of ypys and ypds -->
+      <forward name="Ypys" path="/webapp/smsb/gtgshJksYpysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/gtgshJksYpdsAction.do?actionType=Query" />
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+      <!-- The detail of ypys and ypds -->
+    </action>
+    <action name="gtgshJksYpysForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJksYpysAction" validate="false" input="/webapp/smsb/gtgshjksypys02303.jsp" scope="request" path="/webapp/smsb/gtgshJksYpysAction">
+      <forward name="Query" path="/webapp/smsb/gtgshjksypys02303.jsp" />
+      <forward name="GtgshZf" path="/webapp/smsb/gtgshZfjksAction.do?actionType=Query" />
+      <forward name="GtgshHz" path="/webapp/smsb/gtgshHzjksAction.do?actionType=Query" />
+      <forward name="LszsZf" path="/webapp/smsb/lszsZfjksAction.do?actionType=Query" />
+      <forward name="LszsHz" path="/webapp/smsb/lszsHzjksAction.do?actionType=Query" />
+    </action>
+    <action name="gtgshJksYpdsForm" type="com.ttsoft.bjtax.smsb.gtgsh.web.GtgshJksYpdsAction" validate="false" input="/webapp/smsb/gtgshjksypds02304.jsp" scope="request" path="/webapp/smsb/gtgshJksYpdsAction">
+      <forward name="Query" path="/webapp/smsb/gtgshjksypds02304.jsp" />
+      <forward name="GtgshZf" path="/webapp/smsb/gtgshZfjksAction.do?actionType=Query" />
+      <forward name="GtgshHz" path="/webapp/smsb/gtgshHzjksAction.do?actionType=Query" />
+      <forward name="LszsZf" path="/webapp/smsb/lszsZfjksAction.do?actionType=Query" />
+      <forward name="LszsHz" path="/webapp/smsb/lszsHzjksAction.do?actionType=Query" />
+    </action>
+    <action name="jksPrintForm" type="com.ttsoft.bjtax.smsb.print.web.JksPrintAction" validate="false" input="/webapp/smsb/jksprint0262.jsp" scope="request" path="/webapp/smsb/jksPrintAction">
+      <forward name="Show" path="/webapp/smsb/jksprint0262.jsp" />
+      <forward name="Query" path="/webapp/smsb/jksprint0262.jsp" />
+      <forward name="Save" path="/webapp/smsb/jksprint0262.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksprint0262.jsp" />
+    </action>
+    <action name="wszPrintForm" type="com.ttsoft.bjtax.smsb.print.web.WszPrintAction" validate="false" input="/webapp/smsb/wszprint0242.jsp" scope="request" path="/webapp/smsb/wszPrintAction">
+      <forward name="Show" path="/webapp/smsb/wszprint0242.jsp" />
+      <forward name="Query" path="/webapp/smsb/wszprint0242.jsp" />
+      <forward name="Print" path="/webapp/smsb/wszprint0242.jsp" />
+      <forward name="Success" path="/webapp/smsb/wszprint0242.jsp" />
+      <forward name="Reprint" path="/webapp/smsb/wszprint0242.jsp" />
+      <forward name="GtgshBack" path="/webapp/smsb/gtgshWszlrAction.do?actionType=Show" />
+      <forward name="LszsBack" path="/webapp/smsb/lszsWszlrAction.do?actionType=Show" />
+    </action>
+    <!-- =============action  The end of gtgsh and lszs, modified by lufeng  ====================-->
+    <!-- =============action  The begin of zhsb ====================-->
+    <action name="zhsbActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbAction" validate="true" input="/webapp/smsb/zhsb02301.jsp" scope="request" path="/webapp/smsb/zhsbAction">
+      <forward name="Query" path="/webapp/smsb/zhsb02301.jsp" />
+      <forward name="Show" path="/webapp/smsb/zhsb02301.jsp" />
+      <forward name="Save" path="/webapp/smsb/zhsb02301.jsp" />
+      <forward name="Jkswh" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+      <forward name="JkswhBySave" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+      <forward name="Gzsx" path="/webapp/smsb/zhsbGzsxAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbGzsxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbGzsxAction" validate="true" input="/webapp/smsb/zhsbgzsx0011.jsp" scope="request" path="/webapp/smsb/zhsbGzsxAction">
+      <forward name="Query" path="/webapp/smsb/zhsbgzsx0011.jsp" />
+      <forward name="Zhsb" path="/webapp/smsb/zhsbAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbjkswhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjkswhAction" validate="true" input="/webapp/smsb/zhsbjkswh02302.jsp" scope="request" path="/webapp/smsb/zhsbjkswhAction">
+      <forward name="Query" path="/webapp/smsb/zhsbjkswh02302.jsp" />
+      <forward name="Cx" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+      <forward name="Ypys" path="/webapp/smsb/zhsbjksypysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/zhsbjksypdsAction.do?actionType=Query" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Back" path="/webapp/smsb/zhsbAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbjksypysActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjksypysAction" validate="true" input="/webapp/smsb/zhsbjks02303.jsp" scope="request" path="/webapp/smsb/zhsbjksypysAction">
+      <forward name="Query" path="/webapp/smsb/zhsbjks02303.jsp" />
+      <forward name="Update" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbjksypdsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZhsbjksypdsAction" validate="true" input="/webapp/smsb/zhsbjks02304.jsp" scope="request" path="/webapp/smsb/zhsbjksypdsAction">
+      <forward name="Query" path="/webapp/smsb/zhsbjks02304.jsp" />
+      <forward name="Update" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" />
+    </action>
+    <!-- =============action  The end of zhsb ====================-->
+
+
+<!-- =============action  The begin of zhsb_pgbs zzb 20090330 add ====================-->
+    <action name="zhsbPgbsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsAction" validate="true" input="/webapp/smsb/zhsbpgbs.jsp" scope="request" path="/webapp/smsb/zhsbPgbsAction">
+      <forward name="Query" path="/webapp/smsb/zhsbpgbs.jsp" />
+      <forward name="Show" path="/webapp/smsb/zhsbpgbs.jsp" />
+      <forward name="Save" path="/webapp/smsb/zhsbpgbs.jsp" />
+      <forward name="Jkswh" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+      <forward name="JkswhBySave" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+      <forward name="Gzsx" path="/webapp/smsb/zhsbPgbsGzsxAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbPgbsGzsxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsGzsxAction" validate="true" input="/webapp/smsb/zhsbpgbsgzsx.jsp" scope="request" path="/webapp/smsb/zhsbPgbsGzsxAction">
+      <forward name="Query" path="/webapp/smsb/zhsbpgbsgzsx.jsp" />
+      <forward name="Zhsb" path="/webapp/smsb/zhsbPgbsAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbPgbsjkswhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjkswhAction" validate="true" input="/webapp/smsb/zhsbpgbsjkswh.jsp" scope="request" path="/webapp/smsb/zhsbPgbsjkswhAction">
+      <forward name="Query" path="/webapp/smsb/zhsbpgbsjkswh.jsp" />
+      <forward name="Cx" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+      <forward name="Ypys" path="/webapp/smsb/zhsbPgbsjksypysAction.do?actionType=Query" />
+      <forward name="Ypds" path="/webapp/smsb/zhsbPgbsjksypdsAction.do?actionType=Query" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Back" path="/webapp/smsb/zhsbPgbsAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbPgbsjksypysActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjksypysAction" validate="true" input="/webapp/smsb/zhsbpgbsjks01.jsp" scope="request" path="/webapp/smsb/zhsbPgbsjksypysAction">
+      <forward name="Query" path="/webapp/smsb/zhsbpgbsjks01.jsp" />
+      <forward name="Update" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+    </action>
+    <action name="zhsbPgbsjksypdsActionForm" type="com.ttsoft.bjtax.smsb.zhsb.pgbs.web.ZhsbPgbsjksypdsAction" validate="true" input="/webapp/smsb/zhsbpgbsjks02.jsp" scope="request" path="/webapp/smsb/zhsbPgbsjksypdsAction">
+      <forward name="Query" path="/webapp/smsb/zhsbpgbsjks02.jsp" />
+      <forward name="Update" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/zhsbPgbsjkswhAction.do?actionType=Query" />
+    </action>
+ <!-- =============action  The end of zhsb_pgbs zzb 20090330 add ====================-->
+
+
+
+    <!--===============form-bean The Begin of zbzl gtgsh ===========================-->
+    <action name="gtgshyysrForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgsh.web.GtgshyysrAction" validate="false" input="/webapp/smsb/gtgshyysr022.jsp" scope="request" path="/webapp/smsb/gtgshyysrAction">
+      <forward name="Show" path="/webapp/smsb/gtgshyysr022.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshyysr022.jsp" />
+      <forward name="Save" path="/webapp/smsb/gtgshyysr022.jsp" />
+      <forward name="UpdateQuery" path="/webapp/smsb/gtgshyysr022.jsp" />
+      <forward name="Update" path="/webapp/smsb/gtgshyysr022.jsp" />
+      <forward name="List" path="/webapp/smsb/gtgshyysrCxAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshyysrCxForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgsh.web.GtgshyysrCxAction" validate="false" input="/webapp/smsb/gtgshyysrcx0221.jsp" scope="request" path="/webapp/smsb/gtgshyysrCxAction">
+      <forward name="Show" path="/webapp/smsb/gtgshyysrcx0221.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshyysrcx0221.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshyysrcx0221.jsp" />
+      <forward name="Update" path="/webapp/smsb/gtgshyysrAction.do?actionType=UpdateQuery" />
+      <forward name="Back" path="/webapp/smsb/gtgshyysrAction.do?actionType=Show" />
+    </action>
+    <action name="gtgshsdsForm" type="com.ttsoft.bjtax.smsb.sbzl.gtgshsds.web.GtgshsdsAction" validate="false" input="/webapp/smsb/gtgshsds020.jsp" scope="request" path="/webapp/smsb/gtgshsdsAction">
+      <forward name="Show" path="/webapp/smsb/gtgshsds020.jsp" />
+      <forward name="Save" path="/webapp/smsb/gtgshsds020.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gtgshsds020.jsp" />
+      <forward name="Query" path="/webapp/smsb/gtgshsds020.jsp" />
+    </action>
+    <action name="jmssbForm" type="com.ttsoft.bjtax.smsb.sbzl.jmssb.web.JmssbAction" validate="false" input="/webapp/smsb/jmssb011.jsp" scope="request" path="/webapp/smsb/jmssbAction">
+      <forward name="Show" path="/webapp/smsb/jmssb011.jsp" />
+      <forward name="Query" path="/webapp/smsb/jmssb011.jsp" />
+      <forward name="Save" path="/webapp/smsb/jmssb011.jsp" />
+      <forward name="Delete" path="/webapp/smsb/jmssb011.jsp" />
+      <forward name="Error" path="/webapp/smsb/jmssb011.jsp" />
+    </action>
+    <!--===============form-bean The Begin of zbzl czzs ===========================-->
+    <action name="czzsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.CzzsnbAction" validate="false" input="/webapp/smsb/czzsnb005.jsp" scope="request" path="/webapp/smsb/czzsnbAction">
+      <forward name="Show" path="/webapp/smsb/czzsnb005.jsp" />
+      <forward name="Query" path="/webapp/smsb/czzsnb005.jsp" />
+      <forward name="Save" path="/webapp/smsb/czzsnb005.jsp" />
+      <forward name="Delete" path="/webapp/smsb/czzsnb005.jsp" />
+      <forward name="Error" path="/webapp/smsb/czzsnb005.jsp" />
+    </action>
+    <!-- =============form-bean The begin of grsds ====================-->
+    <action name="czzsjdForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.CzzsjdAction" validate="false" input="/webapp/smsb/czzsjd004.jsp" scope="request" path="/webapp/smsb/czzsjdAction">
+      <forward name="Show" path="/webapp/smsb/czzsjd004.jsp" />
+      <forward name="Query" path="/webapp/smsb/czzsjd004.jsp" />
+      <forward name="Save" path="/webapp/smsb/czzsjd004.jsp" />
+      <forward name="Delete" path="/webapp/smsb/czzsjd004.jsp" />
+      <forward name="Error" path="/webapp/smsb/czzsjd004.jsp" />
+    </action>
+    <action name="hdzsgrsdszslForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.HdzsgrsdszslAction" validate="false" input="/webapp/smsb/hdzsgrsdszsl007.jsp" scope="request" path="/webapp/smsb/hdzsgrsdszslAction">
+      <forward name="Show" path="/webapp/smsb/hdzsgrsdszsl007.jsp" />
+      <forward name="Query" path="/webapp/smsb/hdzsgrsdszsl007.jsp" />
+      <forward name="HdzsgrsdsQuery" path="/webapp/smsb/hdzsgrsdsAction.do?actionType=Query" />
+      <forward name="Save" path="/webapp/smsb/hdzsgrsdszsl007.jsp" />
+      <forward name="Delete" path="/webapp/smsb/hdzsgrsdszsl007.jsp" />
+      <forward name="Error" path="/webapp/smsb/hdzsgrsdszsl007.jsp" />
+    </action>
+    <action name="hdzsgrsdsForm" type="com.ttsoft.bjtax.smsb.sbzl.grsds.web.HdzsgrsdsAction" validate="false" input="/webapp/smsb/hdzsgrsdsys006.jsp" scope="request" path="/webapp/smsb/hdzsgrsdsAction">
+      <forward name="Show" path="/webapp/smsb/hdzsgrsdsys006.jsp" />
+      <forward name="Query" path="/webapp/smsb/hdzsgrsdsys006.jsp" />
+      <forward name="HdzsgrsdszslQuery" path="/webapp/smsb/hdzsgrsdszslAction.do?actionType=Query" />
+      <forward name="Error" path="/webapp/smsb/hdzsgrsdsys006.jsp" />
+      <forward name="Save" path="/webapp/smsb/hdzsgrsdsys006.jsp" />
+      <forward name="Delete" path="/webapp/smsb/hdzsgrsdsys006.jsp" />
+    </action>
+    <!-- =============form-bean The end of grsds ====================-->
+    <!-- =============Action-bean The Begin of qysdsks and wqyys, modified by yaoanfeng ====================-->
+    <action name="qysdsksForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsks.web.QysdsksAction" validate="false" input="/webapp/smsb/qysdsks010.jsp" scope="request" path="/webapp/smsb/qysdsksAction">
+      <forward name="Show" path="/webapp/smsb/qysdsks010.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysdsks010.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysdsks010.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qysdsks010.jsp" />
+    </action>
+    <action name="wqyyshdzsForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyyshdzsAction" validate="false" input="/webapp/smsb/wqyyshdzs018.jsp" scope="request" path="/webapp/smsb/wqyyshdzsAction">
+      <forward name="Show" path="/webapp/smsb/wqyyshdzs018.jsp" />
+      <forward name="Query" path="/webapp/smsb/wqyyshdzs018.jsp" />
+      <forward name="Save" path="/webapp/smsb/wqyyshdzs018.jsp" />
+      <forward name="Delete" path="/webapp/smsb/wqyyshdzs018.jsp" />
+      <forward name="Error" path="/webapp/smsb/wqyyshdzs018.jsp" />
+    </action>
+    <action name="wqyysjfhsForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyysjfhsAction" validate="false" input="/webapp/smsb/wqyysjfhs017.jsp" scope="request" path="/webapp/smsb/wqyysjfhsAction">
+      <forward name="Show" path="/webapp/smsb/wqyysjfhs017.jsp" />
+      <forward name="Query" path="/webapp/smsb/wqyysjfhs017.jsp" />
+      <forward name="Save" path="/webapp/smsb/wqyysjfhs017.jsp" />
+      <forward name="Delete" path="/webapp/smsb/wqyysjfhs017.jsp" />
+      <forward name="Error" path="/webapp/smsb/wqyysjfhs017.jsp" />
+    </action>
+    <action name="wqyysassbForm" type="com.ttsoft.bjtax.smsb.sbzl.wqyys.web.WqyysassbAction" validate="false" input="/webapp/smsb/wqyysassb019.jsp" scope="request" path="/webapp/smsb/wqyysassbAction">
+      <forward name="Show" path="/webapp/smsb/wqyysassb019.jsp" />
+      <forward name="Query" path="/webapp/smsb/wqyysassb019.jsp" />
+      <forward name="Save" path="/webapp/smsb/wqyysassb019.jsp" />
+      <forward name="Delete" path="/webapp/smsb/wqyysassb019.jsp" />
+      <forward name="Error" path="/webapp/smsb/wqyysassb019.jsp" />
+    </action>
+    <action name="dsdzdklrForm" type="com.ttsoft.bjtax.smsb.sbzl.dsdzdk.web.DsdzdklrAction" validate="false" input="/webapp/smsb/dsdzdklr016.jsp" scope="request" path="/webapp/smsb/dsdzdklrAction">
+      <forward name="Show" path="/webapp/smsb/dsdzdklr016.jsp" />
+      <forward name="Query" path="/webapp/smsb/dsdzdklr016.jsp" />
+      <forward name="Save" path="/webapp/smsb/dsdzdklr016.jsp" />
+      <forward name="Delete" path="/webapp/smsb/dsdzdklr016.jsp" />
+    </action>
+    <!-- =============Action-bean The End of qysdsks and wqyys, modified by yaoanfeng ====================-->
+    <!-- =============Action-bean The begin of zqwh ====================-->
+    <action name="gzsxwhForm" type="com.ttsoft.bjtax.smsb.gzwh.web.GzsxwhAction" input="/webapp/smsb/gzsxwh036.jsp" scope="request" path="/webapp/smsb/gzsxwhAction">
+      <forward name="Show" path="/webapp/smsb/gzsxwh036.jsp" />
+      <forward name="Query" path="/webapp/smsb/gzsxwh036.jsp" />
+      <forward name="GetNsrmc" path="/webapp/smsb/gzsxwh036.jsp" />
+      <forward name="Delete" path="/webapp/smsb/gzsxwhAction.do?actionType=Query" />
+      <forward name="Modify" path="/webapp/smsb/xzgzsxAction.do?actionType=Show" />
+      <forward name="DeleteAll" path="/webapp/smsb/gzsxwh036.jsp" />
+      <forward name="Add" path="/webapp/smsb/xzgzsxAction.do?actionType=Show" />
+    </action>
+    <action name="gzsxwhForm" type="com.ttsoft.bjtax.smsb.gzsxfkcx.web.GzsxfkcxAction" input="/webapp/smsb/gzsxfkcxmain.jsp" scope="request" path="/webapp/smsb/gzsxfkcxAction">
+      <forward name="Show" path="/webapp/smsb/gzsxfkcxmain.jsp" />
+      <forward name="jsjdmgzsxlist" path="/webapp/smsb/jsjdmgzsxlist.jsp" />
+      <forward name="ydqd" path="/webapp/smsb/gzsxydqd.jsp" />
+      <forward name="wydqd" path="/webapp/smsb/gzsxwydqd.jsp" />
+      <forward name="gzfknr" path="/webapp/smsb/gzsxfknr.jsp" />
+      <forward name="gzsxnr" path="/webapp/smsb/gzsxnr.jsp" />
+    </action>
+    <action name="gzsxwhForm" type="com.ttsoft.bjtax.smsb.gzwh.web.XzgzsxAction" input="/webapp/smsb/xzgzsx035.jsp" scope="request" path="/webapp/smsb/xzgzsxAction">
+      <forward name="Show" path="/webapp/smsb/xzgzsx035.jsp" />
+      <forward name="Save" path="/webapp/smsb/xzgzsx035.jsp" />
+      <forward name="Update" path="/webapp/smsb/xzgzsx035.jsp" />
+      <forward name="GetNsrmc" path="/webapp/smsb/xzgzsx035.jsp" />
+      <forward name="Return" path="/webapp/smsb/gzsxwhAction.do?actionType=Show" />
+      <forward name="ReturnSelect" path="/webapp/smsb/gzsxwhAction.do?actionType=Query" />
+    </action>
+    <action name="zqrlcxForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlcxAction" input="/webapp/smsb/zqrlcx040.jsp" scope="request" path="/webapp/smsb/zqrlcxAction">
+      <forward name="Show" path="/webapp/smsb/zqrlcx040.jsp" />
+      <forward name="Query" path="/webapp/smsb/zqrlcx040.jsp" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="zqlxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqlxwhAction" input="/webapp/smsb/zqlxwh038.jsp" scope="request" path="/webapp/smsb/zqlxwhAction">
+      <forward name="Show" path="/webapp/smsb/zqlxwhAction.do?actionType=Query" />
+      <forward name="Query" path="/webapp/smsb/zqlxwh038.jsp" />
+      <forward name="Update" path="/webapp/smsb/zqlxwhAction.do?actionType=Query" />
+      <forward name="Save" path="/webapp/smsb/zqlxwhAction.do?actionType=Query" />
+      <forward name="CreateCalendar" path="/webapp/smsb/zqrlcxAction.do?actionType=Query" />
+      <forward name="Edit" path="/webapp/smsb/zqlxmxwhAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="jjrwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.JjrwhAction" input="/webapp/smsb/jjrwh039.jsp" scope="request" path="/webapp/smsb/jjrwhAction">
+      <forward name="Show" path="/webapp/smsb/jjrwh039.jsp" />
+      <forward name="Save" path="/webapp/smsb/jjrwh039.jsp" />
+      <forward name="CreateCalendar" path="/webapp/smsb/zqrlcxAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="szzqdzForm" type="com.ttsoft.bjtax.smsb.zqwh.web.SzzqdzAction" input="/webapp/smsb/szzqdz041.jsp" scope="request" path="/webapp/smsb/szzqdzAction">
+      <forward name="Show" path="/webapp/smsb/szzqdz041.jsp" />
+      <forward name="Query" path="/webapp/smsb/szzqdz041.jsp" />
+      <forward name="Save" path="/webapp/smsb/szzqdzAction.do?actionType=Query" />
+      <forward name="Import" path="/webapp/smsb/szzqdzAction.do?actionType=Query" />
+      <forward name="Delete" path="/webapp/smsb/szzqdzAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="zqwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqwhAction" input="/webapp/smsb/zqwh037.jsp" scope="request" path="/webapp/smsb/zqwhAction">
+      <forward name="Show" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="zqrlmxcxForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlmxcxAction" input="/webapp/smsb/zqrlmxcx042.jsp" scope="request" path="/webapp/smsb/zqrlmxcxAction">
+      <forward name="Show" path="/webapp/smsb/zqrlmxcx042.jsp" />
+      <forward name="Save" path="/webapp/smsb/zqrlmxcx042.jsp" />
+      <forward name="Query" path="/webapp/smsb/zqrlmxcx042.jsp" />
+      <forward name="Update" path="/webapp/smsb/zqrlmxwhAction.do?actionType=Query" />
+      <forward name="Delete" path="/webapp/smsb/zqrlmxcxAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="zqrlmxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqrlmxwhAction" input="/webapp/smsb/zqrlmxwh043.jsp" scope="request" path="/webapp/smsb/zqrlmxwhAction">
+      <forward name="Show" path="/webapp/smsb/zqrlmxwh043.jsp" />
+      <forward name="Query" path="/webapp/smsb/zqrlmxwh043.jsp" />
+      <forward name="Save" path="/webapp/smsb/zqrlmxwh043.jsp" />
+      <forward name="Update" path="/webapp/smsb/zqrlmxcxAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/zqrlmxcxAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <action name="zqlxmxwhForm" type="com.ttsoft.bjtax.smsb.zqwh.web.ZqlxmxwhAction" input="/webapp/smsb/zqlxmxwh044.jsp" scope="request" path="/webapp/smsb/zqlxmxwhAction">
+      <forward name="Show" path="/webapp/smsb/zqlxmxwh044.jsp" />
+      <forward name="Query" path="/webapp/smsb/zqlxmxwh044.jsp" />
+      <forward name="Save" path="/webapp/smsb/zqlxmxwh044.jsp" />
+      <forward name="Back" path="/webapp/smsb/zqlxwhAction.do?actionType=Query" />
+      <forward name="Return" path="/webapp/smsb/zqwh037.jsp" />
+    </action>
+    <!-- =============Action-bean The end of zqwh ====================-->
+    <!--===============form-bean The Begin of yhs ====================-->
+    <action name="yhsForm" type="com.ttsoft.bjtax.smsb.sbzl.yhs.web.YhsAction" input="/webapp/smsb/yhs015.jsp" scope="request" path="/webapp/smsb/yhsAction">
+      <forward name="Show" path="/webapp/smsb/yhs015.jsp" />
+      <forward name="Query" path="/webapp/smsb/yhs015.jsp" />
+      <forward name="Save" path="/webapp/smsb/yhsAction.do?actionType=Show" />
+      <forward name="Delete" path="/webapp/smsb/yhsAction.do?actionType=Show" />
+    </action>
+    <!--===============form-bean The end of yhs ====================-->
+    <!--=============== The begin of qysdsjb ====================-->
+    <action name="qysdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb.web.QysdsjbAction" input="/webapp/smsb/qysdsjb.jsp" scope="request" path="/webapp/smsb/qysdsjbAction">
+      <forward name="Show" path="/webapp/smsb/qysdsjb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysdsjb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysdsjb.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qysdsjb.jsp" />
+    </action>
+    <!--=============== The end of qysdsjb ====================-->
+    <!--===============form-bean The Begin of wjgr ====================-->
+    <action name="wjgrActionForm" type="com.ttsoft.bjtax.smsb.wjgr.web.WjgrAction" validate="true" input="/webapp/smsb/wjgr001.jsp" scope="request" path="/webapp/smsb/wjgrAction">
+      <forward name="Save" path="/webapp/smsb/wjgr001.jsp" />
+      <forward name="Query" path="/webapp/smsb/wjgr001.jsp" />
+      <forward name="Jkswh" path="/webapp/smsb/wjgrJkswhAction.do?actionType=Show" />
+    </action>
+    <action name="wjgrJkswhActionForm" type="com.ttsoft.bjtax.smsb.wjgr.web.WjgrJkswhAction" validate="true" input="/webapp/smsb/wjgrjkswh002.jsp" scope="request" path="/webapp/smsb/wjgrJkswhAction">
+      <forward name="Show" path="/webapp/smsb/wjgrjkswh002.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Back" path="/webapp/smsb/wjgrAction.do?actionType=Query" />
+      <forward name="Cx" path="/webapp/smsb/wjgrJkswhAction.do?actionType=Show" />
+    </action>
+    <!--===============form-bean The end of wjgr ====================-->
+    <!-- =============action  The begin of gghsb ====================-->
+    <action name="yhdkwjscscForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjscscAction" validate="true" input="/webapp/smsb/yhdkwjscsc001.jsp" scope="request" path="/webapp/smsb/yhdkwjscscAction">
+      <forward name="Show" path="/webapp/smsb/yhdkwjscsc001.jsp" />
+      <forward name="Save" path="/webapp/smsb/yhdkwjscsc001.jsp" />
+    </action>
+    <action name="yhdkwjxzbcForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjxzbcAction" validate="true" input="/webapp/smsb/yhdkwjxzbc001.jsp" scope="request" path="/webapp/smsb/yhdkwjxzbcAction">
+      <forward name="Show" path="/webapp/smsb/yhdkwjxzbc001.jsp" />
+      <forward name="Save" path="/webapp/smsb/yhdkwjxzbc001.jsp" />
+    </action>
+    <action name="kkxxcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.KkxxcxAction" validate="true" input="/webapp/smsb/kkxxcx001.jsp" scope="request" path="/webapp/smsb/kkxxcxAction">
+      <forward name="Show" path="/webapp/smsb/kkxxcx001.jsp" />
+      <forward name="Query" path="/webapp/smsb/kkxxcx001.jsp" />
+      <forward name="SaveExcel" path="/webapp/smsb/kkxxcx001.jsp" />
+    </action>
+    <!-- =============add by huxf 20050617 ====================-->
+    <action name="kkztcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.KkztcxAction" validate="true" input="/webapp/smsb/kkztcx001.jsp" scope="request" path="/webapp/smsb/kkztcxAction">
+      <forward name="Show" path="/webapp/smsb/kkztcx001.jsp" />
+      <forward name="Query" path="/webapp/smsb/kkztcx001.jsp" />
+      <forward name="SaveExcel" path="/webapp/smsb/kkztcx001.jsp" />
+    </action>
+    <action name="dqdehrkcxForm" type="com.ttsoft.bjtax.smsb.gghsb.web.DqdehrkcxAction" validate="true" input="/webapp/smsb/dqdehrkcx001.jsp" scope="request" path="/webapp/smsb/dqdehrkcxAction">
+      <forward name="Show" path="/webapp/smsb/dqdehrkcx001.jsp" />
+      <forward name="Query" path="/webapp/smsb/dqdehrkcx001.jsp" />
+      <forward name="SaveExcel" path="/webapp/smsb/dqdehrkcx001.jsp" />
+    </action>
+    <!-- =============action  The begin of gghsb add by hazhengze 20051117 ====================-->
+    <action name="yhdkwjscscLwForm" type="com.ttsoft.bjtax.smsb.gghsb.web.YhdkwjscscLwAction" validate="true" input="/webapp/smsb/yhdkwjscsc002.jsp" scope="request" path="/webapp/smsb/yhdkwjscscLwAction">
+      <forward name="Show" path="/webapp/smsb/yhdkwjscsc002.jsp" />
+      <forward name="Save" path="/webapp/smsb/yhdkwjscsc002.jsp" />
+      <forward name="Send" path="/webapp/smsb/yhdkwjscsc002.jsp" />
+    </action>
+    <!-- =============action  The end of gghsb ====================-->
+    <!-- =============action  The begin of wynsksb ====================-->
+    <action name="wynsksbActionForm" type="com.ttsoft.bjtax.smsb.wynsk.web.WynsksbAction" input="/webapp/smsb/wynsksb001.jsp" scope="request" path="/webapp/smsb/wynsksbAction">
+      <forward name="Query" path="/webapp/smsb/wynsksb001.jsp" />
+      <forward name="Init" path="/webapp/smsb/wynsksb001.jsp" />
+      <forward name="Delete" path="/webapp/smsb/wynsksb001.jsp" />
+    </action>
+    <action name="wynskcxActionForm" type="com.ttsoft.bjtax.smsb.wynsk.web.WynskcxAction" validate="false" input="/webapp/smsb/wynskcx001.jsp" scope="request" path="/webapp/smsb/wynskcxAction" >
+      <forward name="Show" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="QueryA" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="QueryB" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="ChangePageA" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="ChangePageB" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="ExportA" path="/webapp/smsb/wynskcx001.jsp" />
+      <forward name="ExportB" path="/webapp/smsb/wynskcx001.jsp" />
+    </action>
+    <!-- =============action  The end of wynsksb ====================-->
+    <!-- =============add by huxf 20050906 ====================-->
+    <action name="wrkcxActionForm" type="com.ttsoft.bjtax.smsb.wrkcx.web.WrkcxAction" validate="true" input="/webapp/smsb/wrkcx001.jsp" scope="request" path="/webapp/smsb/wrkcxAction">
+      <forward name="Show" path="/webapp/smsb/wrkcx001.jsp" />
+      <forward name="Query" path="/webapp/smsb/wrkcx001.jsp" />
+      <forward name="SaveExcel" path="/webapp/smsb/wrkcx001.jsp" />
+      <forward name="Query_DjInfo" path="/webapp/smsb/nsrxxAction.do?actionType=Query_DjInfo" />
+
+    </action>
+    <!-- =============end huxf 20050906 ====================-->
+    <!-- =============add by huxf 20050914 ====================-->
+    <action name="nsrxxForm" type="com.ttsoft.bjtax.smsb.wrkcx.web.NsrxxAction" validate="true"
+     input="/webapp/smsb/wrkcx001.jsp" scope="request" path="/webapp/smsb/nsrxxAction">
+      <forward name="Query_DjInfo" path="/webapp/smsb/djxx005.jsp" />
+      <forward name="Jbsj" path="/webapp/smsb/djxx005.jsp"/>
+       <forward name="Fzjgxx" path="/webapp/smsb/djxx006.jsp"/>
+       <forward name="Zjgxx" path="/webapp/smsb/djxx007.jsp"/>
+       <forward name="Yhzhxx" path="/webapp/smsb/djxx008.jsp"/>
+       <forward name="Bgxx" path="/webapp/smsb/djxx009.jsp"/>
+       <forward name="Qtztxx" path="/webapp/smsb/djxx010.jsp"/>
+
+    </action>
+    <!-- =============end huxf 20050914 ====================-->
+    <!-- =============add by qianchao 20060224 ====================-->
+    <action name="dzyjcxActionForm" type="com.ttsoft.bjtax.smsb.dzyj.web.DzyjcxAction" validate="true"
+     input="/webapp/smsb/dzyjcx.jsp" scope="request" path="/webapp/smsb/dzyjcxAction">
+       <forward name="Query" path="/webapp/smsb/dzyjcx.jsp" />
+       <forward name="Show" path="/webapp/smsb/dzyjcx.jsp"/>
+       <forward name="ShowOne" path="/webapp/smsb/dzyjsjmx.jsp"/>
+    </action>
+    <!-- =============end qianchao 20060224 ====================-->
+    <!-- =============add by hazhengze 20060330 start ====================-->
+    <action name="qyjbcwzbcxActionForm" type="com.ttsoft.bjtax.smsb.sbzl.cx.qyjbcwzb.web.QyjbcwzbCxAction" validate="false" input="/webapp/smsb/qyjbcwzbcx001.jsp" scope="request" path="/webapp/smsb/sbzl/cx/qyjbcwzbcxAction" >
+      <forward name="Show" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="QueryA" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="QueryB" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="QueryC" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="QueryD" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="QueryE" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="ChangePageA" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="ChangePageB" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="ExportA" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+      <forward name="ExportB" path="/webapp/smsb/qyjbcwzbcx001.jsp" />
+    </action>
+    <!-- =============add by hazhengze 20060330 end ====================-->
+    <action name="jkcxForm" type="com.ttsoft.bjtax.smsb.jkcx.web.JkcxAction" validate="true"
+     input="/webapp/smsb/jkcx.jsp" scope="request" path="/webapp/smsb/jkcxAction">
+       <forward name="Query" path="/webapp/smsb/jkcx.jsp"/>
+       <forward name="Show" path="/webapp/smsb/jkcx.jsp"/>
+       <forward name="Detail" path="/webapp/smsb/jkcxmx.jsp"/>
+       <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+      <forward name="PrintJksqd" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show"/>
+    </action>
+    <!-- =============add by qinw 20060527 start ====================-->
+    <action name="zjyjmsbForm" type="com.ttsoft.bjtax.smsb.zjyjmsb.web.ZjyjmsbAction" validate="false" input="/webapp/smsb/zjyjmsb.jsp" scope="request" path="/webapp/smsb/zjyjmsbAction">
+      <forward name="Show" path="/webapp/smsb/zjyjmsb.jsp" />
+      <forward name="Query" path="/webapp/smsb/zjyjmsb.jsp" />
+      <forward name="Save" path="/webapp/smsb/zjyjmsb.jsp" />
+      <forward name="Delete" path="/webapp/smsb/zjyjmsb.jsp" />
+      <forward name="Error" path="/webapp/smsb/zjyjmsb.jsp" />
+    </action>
+    <!-- =============add by qinw 20060527 end ====================-->
+    <!-- =============add by qinw 20060628 start ====================-->
+    <action name="zjyjmcxForm" type="com.ttsoft.bjtax.smsb.zjyjmsb.cx.web.ZjyjmcxAction" validate="false" input="/webapp/smsb/zjycx.jsp" scope="request" path="/webapp/smsb/zjyjmcxAction">
+      <forward name="Show" path="/webapp/smsb/zjycx.jsp" />
+      <forward name="Query" path="/webapp/smsb/zjycx.jsp" />
+      <forward name="SaveExcel" path="/webapp/smsb/zjycx.jsp" />
+      <forward name="Error" path="/webapp/smsb/zjycx.jsp" />
+    </action>
+    <!-- =============add by qinw 20060628 end ====================-->
+    <!-- =============VER2006-QYSDS-SMSB begin====================-->
+    <action name="zbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.zb.web.ZbAction" validate="false" input="/webapp/smsb/qysds/zb.jsp" scope="request" path="/webapp/smsb/qysds/zbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/zb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/zb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/zb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/zb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="srbybqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbybqy.web.SrbybqyAction" validate="false" input="/webapp/smsb/qysds/srbybqy.jsp" scope="request" path="/webapp/smsb/qysds/srbybqyAction">
+      <forward name="Show" path="/webapp/smsb/qysds/srbybqy.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/srbybqy.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/srbybqy.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/srbybqy.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="srbjrqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbjrqy.web.SrbjrqyAction" validate="false" input="/webapp/smsb/qysds/srbjrqy.jsp" scope="request" path="/webapp/smsb/qysds/srbjrqyAction">
+      <forward name="Show" path="/webapp/smsb/qysds/srbjrqy.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/srbjrqy.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/srbjrqy.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/srbjrqy.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="srbsydwForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.srbsydw.web.SrbsydwAction" validate="false" input="/webapp/smsb/qysds/srbsydw.jsp" scope="request" path="/webapp/smsb/qysds/srbsydwAction">
+      <forward name="Show" path="/webapp/smsb/qysds/srbsydw.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/srbsydw.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/srbsydw.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/srbsydw.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="cbmxbybqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbybqy.web.CbmxbybqyAction" validate="false" input="/webapp/smsb/qysds/cbmxbybqy.jsp" scope="request" path="/webapp/smsb/qysds/cbmxbybqyAction">
+      <forward name="Show" path="/webapp/smsb/qysds/cbmxbybqy.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/cbmxbybqy.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/cbmxbybqy.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/cbmxbybqy.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="cbmxbjrqyForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbjrqy.web.CbmxbjrqyAction" validate="false" input="/webapp/smsb/qysds/cbmxbjrqy.jsp" scope="request" path="/webapp/smsb/qysds/cbmxbjrqyAction">
+      <forward name="Show" path="/webapp/smsb/qysds/cbmxbjrqy.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/cbmxbjrqy.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/cbmxbjrqy.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/cbmxbjrqy.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="cbmxbsydwForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.cbmxbsydw.web.CbmxbsydwAction" validate="false" input="/webapp/smsb/qysds/cbmxbsydw.jsp" scope="request" path="/webapp/smsb/qysds/cbmxbsydwAction">
+      <forward name="Show" path="/webapp/smsb/qysds/cbmxbsydw.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/cbmxbsydw.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/cbmxbsydw.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/cbmxbsydw.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="tzmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.tzmxb.web.TzmxbAction" validate="false" input="/webapp/smsb/qysds/tzmxb.jsp" scope="request" path="/webapp/smsb/qysds/tzmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/tzmxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/tzmxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/tzmxb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/tzmxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="nstzmxzjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.nstzmxzjb.web.NstzmxzjbAction" validate="false" input="/webapp/smsb/qysds/nstzmxzjb.jsp" scope="request" path="/webapp/smsb/qysds/nstzmxzjbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/nstzmxzjb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/nstzmxzjb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/nstzmxzjb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/nstzmxzjb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+     <action name="nstzmxjsbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.nstzmxjsb.web.NstzmxjsbAction" validate="false" input="/webapp/smsb/qysds/nstzmxjsb.jsp" scope="request" path="/webapp/smsb/qysds/nstzmxjsbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/nstzmxjsb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/nstzmxjsb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/nstzmxjsb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/nstzmxjsb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="mbksmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.mbksmxb.web.MbksmxbAction" validate="false" input="/webapp/smsb/qysds/mbksmxb.jsp" scope="request" path="/webapp/smsb/qysds/mbksmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/mbksmxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/mbksmxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/mbksmxb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/mbksmxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="czqysdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjbnew.web.CzqysdsjbAction" validate="false" input="/webapp/smsb/qysds/czqysdsjb.jsp" scope="request" path="/webapp/smsb/qysds/czqysdsjbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/czqysdsjb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/czqysdsjb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/czqysdsjb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/czqysdsjb.jsp" />
+    </action>
+   <action name="hdzssdsjbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjbnew.web.HdzssdsjbAction" validate="false" input="/webapp/smsb/qysds/hdzssdsjb.jsp" scope="request" path="/webapp/smsb/qysds/hdzssdsjbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/hdzssdsjb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/hdzssdsjb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/hdzssdsjb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/hdzssdsjb.jsp" />
+    </action>
+    <action name="hdzssdsnbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.hdzssdsnb.web.HdzssdsnbAction" validate="false" input="/webapp/smsb/qysds/hdzssdsnb.jsp" scope="request" path="/webapp/smsb/qysds/hdzssdsnbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/hdzssdsnb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/hdzssdsnb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/hdzssdsnb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/hdzssdsnb.jsp" />
+    </action>
+    <action name="bxzbjForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.bxzbjb.web.BxzbjAction" validate="false" input="/webapp/smsb/qysds/bxzbjb001.jsp" scope="request" path="/webapp/smsb/qysds/bxzbjAction">
+      <forward name="Show" path="/webapp/smsb/qysds/bxzbjb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/bxzbjb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/bxzbjb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/bxzbjb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="dzzbjtmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.dzzbjtmxb.web.DzzbjtmxbAction" validate="false" input="/webapp/smsb/qysds/dzzbjtmxb001.jsp" scope="request" path="/webapp/smsb/qysds/dzzbjtmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/dzzbjtmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/dzzbjtmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/dzzbjtmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/dzzbjtmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="gzxjmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.gzxjmxb.web.GzxjmxbAction" validate="false" input="/webapp/smsb/qysds/gzxjmxb001.jsp" scope="request" path="/webapp/smsb/qysds/gzxjmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/gzxjmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/gzxjmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/gzxjmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/gzxjmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="hzssmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.hzssmxb.web.HzssmxbAction" validate="false" input="/webapp/smsb/qysds/hzssmxb001.jsp" scope="request" path="/webapp/smsb/qysds/hzssmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/hzssmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/hzssmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/hzssmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/hzssmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="zcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.zcmxb.web.ZcmxbAction" validate="false" input="/webapp/smsb/qysds/zcmxb001.jsp" scope="request" path="/webapp/smsb/qysds/zcmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/zcmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/zcmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/zcmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/zcmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="jzzcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jzzcmxb.web.JzzcmxbAction" validate="false" input="/webapp/smsb/qysds/jzzcmxb001.jsp" scope="request" path="/webapp/smsb/qysds/jzzcmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/jzzcmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/jzzcmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/jzzcmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/jzzcmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="jskffmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jskffmxb.web.JskffmxbAction" validate="false" input="/webapp/smsb/qysds/jskffmxb001.jsp" scope="request" path="/webapp/smsb/qysds/jskffmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/jskffmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/jskffmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/jskffmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/jskffmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="jwsdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jwsdmxb.web.JwsdmxbAction" validate="false" input="/webapp/smsb/qysds/jwsdmxb001.jsp" scope="request" path="/webapp/smsb/qysds/jwsdmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/jwsdmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/jwsdmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/jwsdmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/jwsdmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="gkfzcmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.gkfzcmxb.web.GkfzcmxbAction" validate="false" input="/webapp/smsb/qysds/gkfzcmxb001.jsp" scope="request" path="/webapp/smsb/qysds/gkfzcmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/gkfzcmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/gkfzcmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/gkfzcmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/gkfzcmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+    <action name="mssdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.mssdmxb.web.MssdmxbAction" validate="false" input="/webapp/smsb/qysds/mssdmxb001.jsp" scope="request" path="/webapp/smsb/qysds/mssdmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/mssdmxb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/mssdmxb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/mssdmxb001.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/mssdmxb001.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/qysdsMainAction.do?actionType=Return" />
+    </action>
+	<action name="qysdsNewForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.main.web.QysdsMainAction" validate="false" input="/webapp/smsb/qysds/mainqysds.jsp" scope="request" path="/webapp/smsb/qysds/qysdsMainAction">
+      <forward name="Show" path="/webapp/smsb/qysds/mainqysds.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/mainqysds.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/mainqysds.jsp" />
+    </action>
+    <action name="jbxxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnbnew.jbxxb.web.JbxxbAction" validate="false" input="/webapp/smsb/qysds/jbxxb.jsp" scope="request" path="/webapp/smsb/qysds/jbxxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/jbxxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/jbxxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/jbxxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/jbxxb.jsp" />
+       <forward name="Delete" path="/webapp/smsb/qysds/jbxxb.jsp" />
+    </action>
+    <!-- =============VER2006-QYSDS-SMSB end====================-->
+    
+    <!-- 2008版企业所得税  -->
+    
+    <action name="jbxxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jbxxb.web.JbxxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/jbxxb.jsp" scope="request" path="/webapp/smsb/qysds/2008/jbxxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/jbxxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/jbxxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/jbxxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/jbxxb.jsp" />
+       <forward name="Delete" path="/webapp/smsb/qysds/2008/jbxxb.jsp" />
+    </action>
+    
+  	<action name="qysdsNewForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.main.web.QysdsMainAction2008" validate="false" input="/webapp/smsb/qysds/2008/mainqysds.jsp" scope="request" path="/webapp/smsb/qysds/2008/qysdsMainAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/mainqysds.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/mainqysds.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/mainqysds.jsp" />
+    </action>
+    
+    <action name="zbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zb.web.ZbAction2008" validate="false" input="/webapp/smsb/qysds/2008/zb.jsp" scope="request" path="/webapp/smsb/qysds/2008/zbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/zb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/zb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/zb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/zb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+    <action name="ggForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.gg.web.GgAction2008" validate="false" input="/webapp/smsb/qysds/2008/gg.jsp" scope="request" path="/webapp/smsb/qysds/2008/ggAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/gg.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/gg.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/gg.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/gg.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+    <action name="jwsdmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jwsdmxb.web.JwsdmxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/jwsdmxb.jsp" scope="request" path="/webapp/smsb/qysds/2008/jwsdmxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/jwsdmxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/jwsdmxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/jwsdmxb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/jwsdmxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+    <action name="srmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.srmxb.web.SrmxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/srmxb2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/srmxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/srmxb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/srmxb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/srmxb2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/srmxb2008.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+
+		<action name="jrqycbfymxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jrqycbfymxb.web.JrqycbfymxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/jrqycbfymxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/jrqycbfymxb2008.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+		<action name="qysdsmbksmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.qysdsmbksmxb.web.QysdsmbksmxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/qysdsmbksmxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/qysdsmbksmxb2008.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+		<action name="zczjtxnstzmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zczjtxnstzmxb.web.ZczjtxnstzmxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/jzczjtxnstzmxb2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/zczjtxnstzmxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/zczjtxnstzmxb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/zczjtxnstzmxb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/zczjtxnstzmxb2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/zczjtxnstzmxb2008.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+    </action>
+    
+    <action name="jrqysrmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.jrqysrmx.web.JrqysrmxAction2008" validate="false" input="/webapp/smsb/qysds/2008/jrqysrmx.jsp" scope="request" path="/webapp/smsb/qysds/2008/jrqysrmxAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/jrqysrmx.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/jrqysrmx.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/jrqysrmx.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/jrqysrmx.jsp" />
+    <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+  </action>
+  
+  <action name="systmbfqyzcmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.systmbfqyzcmx.web.SystmbfqyzcmxAction2008" validate="false" input="/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp" scope="request" path="/webapp/smsb/qysds/2008/systmbfqyzcmxAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/systmbfqyzcmx.jsp" />
+    <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+  </action>
+  
+  <action name="ssyhmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.ssyhmx.web.SsyhmxAction2008" validate="false" input="/webapp/smsb/qysds/2008/ssyhmx.jsp" scope="request" path="/webapp/smsb/qysds/2008/ssyhmxAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/ssyhmx.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/ssyhmx.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/ssyhmx.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/ssyhmx.jsp" />
+    <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+  </action>
+  
+  <action name="zcjztzmxForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.zcjztzmx.web.ZcjztzmxAction2008" validate="false" input="/webapp/smsb/qysds/2008/zcjztzmx.jsp" scope="request" path="/webapp/smsb/qysds/2008/zcjztzmxAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/zcjztzmx.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/zcjztzmx.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/zcjztzmx.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/zcjztzmx.jsp" />
+    <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+  </action> 
+  
+  <action name="hdzssdsnbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.hdzssdsnb.web.HdzssdsnbAction2008" validate="false" input="/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/hdzssdsnbAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/hdzssdsnb2008.jsp" />
+    <forward name="ToFb" path="/webapp/smsb/qysds/2008/hdzsssyhmxAction2008.do?actionType=Show" />
+  </action>
+  <action name="hdzsssyhmxForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.hdzsssyhmx.web.HdzsssyhmxAction2008" validate="false" input="/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/hdzsssyhmxAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp" />
+    <forward name="Query" path="/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp" />
+    <forward name="Save" path="/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp" />
+    <forward name="Error" path="/webapp/smsb/qysds/2008/hdzsssyhmx2008.jsp" />
+    <forward name="Return" path="/webapp/smsb/qysds/2008/hdzssdsnbAction2008.do?actionType=Return" />
+  </action>
+
+  <action name="cbmxbybqyForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.cbmxbybqy.web.CbmxbybqyAction2008" validate="false" input="/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp" scope="request" path="/webapp/smsb/qysds/2008/cbmxbybqyAction2008">
+    <forward name="Show" path="/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp"/>
+    <forward name="Query" path="/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp"/>
+    <forward name="Save" path="/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp"/>
+    <forward name="Error" path="/webapp/smsb/qysds/2008/cbmxbybqy2008.jsp"/>
+    <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return"/>       
+	</action>
+
+
+  <action name="srbsydw2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.srbsydw.web.SrbsydwAction2008" validate="false" input="/webapp/smsb/qysds/2008/srbsydw.jsp" scope="request" path="/webapp/smsb/qysds/2008/srbsydw2008Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/srbsydw2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/srbsydw2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/srbsydw2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/srbsydw2008.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+	</action>
+
+	<action name="nstzmxbForm2008" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.nstzmxb.web.NstzmxbAction2008" validate="false" input="/webapp/smsb/qysds/2008/nstzmxb.jsp" scope="request" path="/webapp/smsb/qysds/2008/nstzmxbAction2008">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/nstzmxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/nstzmxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/nstzmxb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/nstzmxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+	</action>
+
+	<action name="ygyjzjlnstzbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.ygyjzjlnstzb.web.YgyjzjlnstzbAction" validate="false" input="/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp" scope="request" path="/webapp/smsb/qysds/2008/ygyjzjlnstzbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/ygyjzjlnstzb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+	</action>
+
+	<action name="gqtzsdmxbForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2008.gqtzsdmxb.web.GqtzsdmxbAction" validate="false" input="/webapp/smsb/qysds/2008/gqtzsdmxb.jsp" scope="request" path="/webapp/smsb/qysds/2008/gqtzsdmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/2008/gqtzsdmxb.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2008/gqtzsdmxb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2008/gqtzsdmxb.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2008/gqtzsdmxb.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2008/qysdsMainAction2008.do?actionType=Return" />
+	</action>
+  
+        <!-- =============add by zhangyj 20061122 qsjksb start ====================-->
+    <action name="qsjksbForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbAction" validate="false" input="/webapp/smsb/qsjksb001.jsp" scope="request" path="/webapp/smsb/qsjksbAction">
+      <forward name="Show" path="/webapp/smsb/qsjksb001.jsp" />
+      <forward name="Query" path="/webapp/smsb/qsjksb001.jsp" />
+      <forward name="Save" path="/webapp/smsb/qsjksb001.jsp" />
+      <forward name="Jkswh" path="/webapp/smsb/qsjksbjkswhAction.do?actionType=Query" />
+      <forward name="JkswhBySave" path="/webapp/smsb/qsjksbjkswhAction.do?actionType=Query" />
+    </action>
+    <action name="qsjksbjkswhActionForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbjkswhAction" validate="true" input="/webapp/smsb/qsjksbjkswh002.jsp" scope="request" path="/webapp/smsb/qsjksbjkswhAction">
+      <forward name="Query" path="/webapp/smsb/qsjksbjkswh002.jsp" />
+      <forward name="Cx" path="/webapp/smsb/qsjksbjkswhAction.do?actionType=Query" />
+      <forward name="Ypys" path="/webapp/smsb/qsjksbjksypysAction.do?actionType=Query" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Back" path="/webapp/smsb/qsjksbAction.do?actionType=Query" />
+    </action>   
+    <action name="qsjksbjksypysActionForm" type="com.ttsoft.bjtax.smsb.sbzl.qsjksb.web.QsjksbjksypysAction" validate="true" input="/webapp/smsb/qsjksbjks003.jsp" scope="request" path="/webapp/smsb/qsjksbjksypysAction">
+      <forward name="Query" path="/webapp/smsb/qsjksbjks003.jsp" />
+      <forward name="Back" path="/webapp/smsb/qsjksbjkswhAction.do?actionType=Query" />
+    </action>
+    <!-- =============add by zhangyj 20061122 qsjksb end ====================--> 
+    <!-- =============The begin of znjwh ====================-->    
+    <action name="znjwhActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZnjwhAction" validate="true" input="/webapp/smsb/znjwh.jsp" scope="request" path="/webapp/smsb/znjwhAction">
+      <forward name="Query" path="/webapp/smsb/znjwh.jsp" />
+      <forward name="Show" path="/webapp/smsb/znjwh.jsp" />
+      <forward name="Ypys" path="/webapp/smsb/znjwhMxAction.do?actionType=Query" />
+      <forward name="PrintSQD" path="/webapp/smsb/jksqdPrintAction.do?actionType=Show" />
+      <forward name="Back" path="/webapp/smsb/zhsbAction.do?actionType=Query" />
+    </action>
+    <action name="znjwhMxActionForm" type="com.ttsoft.bjtax.smsb.zhsb.web.ZnjwhMxAction" validate="true" input="/webapp/smsb/znjwhmx.jsp" scope="request" path="/webapp/smsb/znjwhMxAction">
+      <forward name="Query" path="/webapp/smsb/znjwhmx.jsp" />
+      <forward name="Update" path="/webapp/smsb/znjwhAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/znjwhAction.do?actionType=Query" />
+    </action>    
+    <!-- =============The end of znjwh ====================-->     
+    <!-- =============The begin of sdsjb2008 ====================-->    
+    <action name="zfjgForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.ZfjgqysdsjbAction" validate="true" input="/webapp/smsb/qysds/zfjgqysdsjb2008.jsp" scope="request" path="/webapp/smsb/qysds/zfjgqysdsjbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/zfjgqysdsjb2008.jsp" />
+	  <forward name="Query" path="/webapp/smsb/qysds/czzssdsjb2008Action.do?actionType=Query" />
+	  <forward name="Jump" path="/webapp/smsb/qysds/czzssdsjb2008Action.do?actionType=Show" />
+    </action> 
+    <action name="hdzssdsjb2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.HdzssdsjbAction" validate="false" input="/webapp/smsb/qysds/hdzssdsjb2008.jsp" scope="request" path="/webapp/smsb/qysds/hdzssdsjb2008Action">
+      <forward name="Show" path="/webapp/smsb/qysds/hdzssdsjb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/hdzssdsjb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/hdzssdsjb2008.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/hdzssdsjb2008.jsp" />
+    </action>
+    <action name="czzssdsjb2008Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2008.web.CzzssdsjbAction" validate="false" input="/webapp/smsb/qysds/czzssdsjb2008.jsp" scope="request" path="/webapp/smsb/qysds/czzssdsjb2008Action">
+      <forward name="Show" path="/webapp/smsb/qysds/czzssdsjb2008.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/czzssdsjb2008.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/czzssdsjb2008.jsp" />
+      <forward name="Jump" path="/webapp/smsb/qysds/zfjgqysdsjbAction.do?actionType=Query" />
+      <forward name="Error" path="/webapp/smsb/qysds/czzssdsjb2008.jsp" />
+    </action>
+    <!-- =============The end of sdsjb2008 ====================-->  
+
+
+	<!-- =============action qysdsjb2012 add by gaoyh 2012-3-1 =======-->
+    <!-- =============The begin of qysdsjb2012 ====================-->  
+    <action name="czzssdsjb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.CzzssdsjbAction" validate="false" input="/webapp/smsb/qysds/czzssdsjb2012.jsp" scope="request" path="/webapp/smsb/qysds/czzssdsjb2012Action">
+      <forward name="Show" path="/webapp/smsb/qysds/czzssdsjb2012.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/czzssdsjb2012.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/czzssdsjb2012.jsp" />
+      <forward name="Jump" path="/webapp/smsb/qysds/zfjgqysdsjb2012Action.do?actionType=Query" />
+      <forward name="Error" path="/webapp/smsb/qysds/czzssdsjb2012.jsp" />
+    </action>
+    <action name="hdzssdsjb2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.HdzssdsjbAction" validate="false" input="/webapp/smsb/qysds/hdzssdsjb2012.jsp" scope="request" path="/webapp/smsb/qysds/hdzssdsjb2012Action">
+      <forward name="Show" path="/webapp/smsb/qysds/hdzssdsjb2012.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/hdzssdsjb2012.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/hdzssdsjb2012.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/hdzssdsjb2012.jsp" />
+    </action>
+    <action name="zfjg2012Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2012.web.ZfjgqysdsjbAction" validate="true" input="/webapp/smsb/qysds/zfjgqysdsjb2012.jsp" scope="request" path="/webapp/smsb/qysds/zfjgqysdsjb2012Action">
+      <forward name="Show" path="/webapp/smsb/qysds/zfjgqysdsjb2012.jsp" />
+	  <forward name="Query" path="/webapp/smsb/qysds/czzssdsjb2012Action.do?actionType=Query" />
+	  <forward name="Jump" path="/webapp/smsb/qysds/czzssdsjb2012Action.do?actionType=Show" />
+    </action>         
+    <!-- =============The end of qysdsjb2012 ======================-->  
+
+	<!-- =============The begin of kjqysds2009 ====================-->    
+    <action name="badjbForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.badjb.web.BadjbAction" validate="true" input="/webapp/smsb/qysds/kjqysds/badjblr.jsp" scope="request" path="/webapp/smsb/qysds/kjqysds/badjbAction">
+	  <forward name="Init" path="/webapp/smsb/qysds/kjqysds/badjbsh.jsp" />
+      <forward name="Show" path="/webapp/smsb/qysds/kjqysds/badjblr.jsp" />
+	  <forward name="ViewMX" path="/webapp/smsb/qysds/kjqysds/badjbmx.jsp" />
+	  <forward name="Shbtg" path="/webapp/smsb/qysds/kjqysds/badjbAction.do?actionType=QueryKjrRecords" />
+	  <forward name="Print" path="/webapp/smsb/qysds/kjqysds/dybadjb.jsp" />
+	  <forward name="showModify" path="/webapp/smsb/qysds/kjqysds/badjbxg.jsp" />
+    </action>
+    <action name="kjqysdsbgbForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.kjqysdsbgb.web.KjqysdsbgbAction" validate="false" input="/webapp/smsb/qysds/kjqysds/kjqysdsbgbcx.jsp" scope="request" path="/webapp/smsb/qysds/kjqysds/kjqysdsbgbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/kjqysds/kjqysdsbgbcx.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/kjqysds/kjqysdsbgb.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/kjqysds/kjssjksAction.do?actionType=Query" />
+    </action>
+    
+    
+    <action name="kjssjksForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.kjssjks.web.KjssjksAction" validate="false" input="/webapp/smsb/qysds/kjqysds/kjssjks.jsp" scope="request" path="/webapp/smsb/qysds/kjqysds/kjssjksAction">
+      <forward name="Show" path="/webapp/smsb/qysds/kjqysds/kjssjks.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/kjqysds/kjssjks.jsp" />
+      <forward name="JkswhBySave" path="/webapp/smsb/zhsbjkswhAction.do?actionType=Query" redirect="true"  />
+    </action>
+    <action name="dztzForm" type="com.ttsoft.bjtax.smsb.sbzl.kjqysds.dztz.web.DztzAction" validate="true" input="/webapp/smsb/qysds/kjqysds/kjqysdsgltz.jsp" scope="request" path="/webapp/smsb/qysds/kjqysds/dztzAction">
+  	<forward name="Show" path="/webapp/smsb/qysds/kjqysds/kjqysdsgltz.jsp" />
+    </action>
+    
+    <action name="sjjhForm" type="com.ttsoft.bjtax.smsb.sjjh.web.SjjhAction" validate="true" input="/webapp/smsb/sjjh.jsp" scope="request" path="/webapp/smsb/sjjhAction">
+      <forward name="Show" path="/webapp/smsb/sjjh.jsp" />
+    </action>
+    
+    <!-- =============The end of kjqysds2009 ====================-->  
+    
+    <!-- =============The end of qysdsnb2009 ====================-->  
+    
+    <action name="jbxxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jbxxb.web.JbxxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/jbxxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/jbxxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/jbxxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/jbxxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/jbxxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/jbxxb2009.jsp" />
+       <forward name="Delete" path="/webapp/smsb/qysds/2009/jbxxb2009.jsp" />
+    </action>
+    
+    
+    <action name="qysdsNewForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.main.web.QysdsMainAction2009" validate="false" input="/webapp/smsb/qysds/2009/mainqysds2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/qysdsMainAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/mainqysds2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/mainqysds2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/mainqysds2009.jsp" />
+    </action>
+    
+    <action name="zbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zb.web.ZbAction2009" validate="false" input="/webapp/smsb/qysds/2009/zb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/zbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/zb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/zb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/zb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/zb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>
+    
+    <action name="ggForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.gg.web.GgAction2009" validate="false" input="/webapp/smsb/qysds/2009/gg2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/ggAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/gg2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/gg2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/gg2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/gg2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>
+    
+    <action name="jwsdmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jwsdmxb.web.JwsdmxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/jwsdmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/jwsdmxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/jwsdmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/jwsdmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/jwsdmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/jwsdmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>
+    
+    <action name="srmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.srmxb.web.SrmxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/srmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/srmxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/srmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/srmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/srmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/srmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>    
+
+		<action name="jrqycbfymxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jrqycbfymxb.web.JrqycbfymxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/jrqycbfymxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/jrqycbfymxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>    
+    
+    <action name="qysdsmbksmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.qysdsmbksmxb.web.QysdsmbksmxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/qysdsmbksmxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/qysdsmbksmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>
+    
+		<action name="zczjtxnstzmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zczjtxnstzmxb.web.ZczjtxnstzmxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/jzczjtxnstzmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/zczjtxnstzmxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/zczjtxnstzmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/zczjtxnstzmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/zczjtxnstzmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/zczjtxnstzmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+    </action>    
+    
+	  <action name="jrqysrmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.jrqysrmx.web.JrqysrmxAction2009" validate="false" input="/webapp/smsb/qysds/2009/jrqysrmx2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/jrqysrmxAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/jrqysrmx2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/jrqysrmx2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/jrqysrmx2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/jrqysrmx2009.jsp" />
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+	  </action>    
+  
+    <action name="systmbfqyzcmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.systmbfqyzcmx.web.SystmbfqyzcmxAction2009" validate="false" input="/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/systmbfqyzcmxAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/systmbfqyzcmx2009.jsp" />
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+	  </action>
+  
+	  <action name="ssyhmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.ssyhmx.web.SsyhmxAction2009" validate="false" input="/webapp/smsb/qysds/2009/ssyhmx2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/ssyhmxAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/ssyhmx2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/ssyhmx2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/ssyhmx2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/ssyhmx2009.jsp" />
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+	  </action>  
+  
+		<action name="zcjztzmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.zcjztzmx.web.ZcjztzmxAction2009" validate="false" input="/webapp/smsb/qysds/2009/zcjztzmx2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/zcjztzmxAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/zcjztzmx2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/zcjztzmx2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/zcjztzmx2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/zcjztzmx2009.jsp" />
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+	  </action> 
+  
+    <action name="cbmxbybqyForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.cbmxbybqy.web.CbmxbybqyAction2009" validate="false" input="/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/cbmxbybqyAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp"/>
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp"/>
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp"/>
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/cbmxbybqy2009.jsp"/>
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return"/>       
+		</action>
+	
+	  <action name="srbsydw2009Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.srbsydw.web.SrbsydwAction2009" validate="false" input="/webapp/smsb/qysds/2009/srbsydw.jsp" scope="request" path="/webapp/smsb/qysds/2009/srbsydw2009Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/srbsydw2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/srbsydw2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/srbsydw2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/srbsydw2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+		</action>	
+	
+		<action name="nstzmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.nstzmxb.web.NstzmxbAction2009" validate="false" input="/webapp/smsb/qysds/2009/nstzmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/nstzmxbAction2009">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/nstzmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/nstzmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/nstzmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/nstzmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+		</action>	
+	
+		<action name="ygyjzjlnstzbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.ygyjzjlnstzb.web.YgyjzjlnstzbAction" validate="false" input="/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/ygyjzjlnstzbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/ygyjzjlnstzb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+		</action>
+	
+		<action name="gqtzsdmxbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.gqtzsdmxb.web.GqtzsdmxbAction" validate="false" input="/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/gqtzsdmxbAction">
+      <forward name="Show" path="/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2009/gqtzsdmxb2009.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+		</action>
+	
+	  <action name="hdzssdsnbForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hdzssdsnb.web.HdzssdsnbAction2009" validate="false" input="/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/hdzssdsnbAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/hdzssdsnb2009.jsp" />
+	    <forward name="ToFb" path="/webapp/smsb/qysds/2009/hdzsssyhmxAction2009.do?actionType=Show" />
+	  </action>
+  
+    <action name="hdzsssyhmxForm2009" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hdzsssyhmx.web.HdzsssyhmxAction2009" validate="false" input="/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp" scope="request" path="/webapp/smsb/qysds/2009/hdzsssyhmxAction2009">
+	    <forward name="Show" path="/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2009/hdzsssyhmx2009.jsp" />
+	    <forward name="Return" path="/webapp/smsb/qysds/2009/hdzssdsnbAction2009.do?actionType=Return" />
+	  </action>
+	 
+    <!-- =============The end of qysdsnb2009 ====================-->  
+    
+	<!-- =============The begin of qysdsnb2012 gaoyh added 2013-01-23 ====================-->  
+    <action name="hdzssdsnbForm2012" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.hdzssdsnb.web.HdzssdsnbAction" validate="false" input="/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp" scope="request" path="/webapp/smsb/qysds/2012/hdzssdsnbAction2012">
+	    <forward name="Show" path="/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2012/hdzssdsnb2012.jsp" />
+	</action>
+	<!-- =============The end of qysdsnb2012 ====================-->  
+
+    <!-- =============The begin of cjrjyjms ====================-->  
+    <action name="cjrjyjmscxtjForm"
+			type="com.ttsoft.bjtax.smsb.jmssb.web.CjrjyjmscxtjAciton"
+			validate="false" input="/webapp/smsb/cjrjyjmscxtj.jsp"
+			scope="request" path="/webapp/smsb/cjrjyjmscxtjAciton">
+			<forward name="Show" path="/webapp/smsb/cjrjyjmscxtj.jsp" />
+			<forward name="Query" path="/webapp/smsb/cjrjyjmscxtj.jsp" />
+			<forward name="ChangePage" path="/webapp/smsb/cjrjyjmscxtj.jsp" />			
+		</action>
+		<action name="cjrjyjmsForm"
+			type="com.ttsoft.bjtax.smsb.jmssb.web.CjrjyjmsbAction"
+			input="/webapp/smsb/cjrjyjms.jsp" scope="request"
+			path="/webapp/smsb/cjrjyjmsbAction">
+			<forward name="Show" path="/webapp/smsb/cjrjyjms.jsp" />
+			<forward name="Query" path="/webapp/smsb/cjrjyjms.jsp" />
+			<forward name="Save" path="/webapp/smsb/cjrjyjms.jsp"/>
+		</action>
+     <!-- =============The end of cjrjyjms ====================--> 
+         
+    <!-- =============The begin of qysdsjmsbagl ====================--> 
+	  <action name="qysdsJmsbajlMainForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.jmsbajl.web.QysdsJmsbajlMainAction" validate="false" input="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMain.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMainAction">
+	    <forward name="Show" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMain.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMain.jsp" />	   
+	    <forward name="ShowZfbg" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMainZfbg.jsp" />
+	    <forward name="QueryZfbg" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlMainZfbg.jsp" />	   
+	  </action>
+	  
+	  <action name="qysdsJmsbajlPrintForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.jmsbajl.web.QysdsJmsbajlPrintAction" validate="false" input="/webapp/smsb/qysds/jmsbagl/PrintSdhz.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/QysdsJmsbajlPrintAction">
+	    <forward name="Sdhz" path="/webapp/smsb/qysds/jmsbagl/PrintSdhz.jsp" />
+	    <forward name="Bysltzs" path="/webapp/smsb/qysds/jmsbagl/PrintBysltzs.jsp" />	   
+	  </action>
+	  
+	  <action name="basx01Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx01.web.Basx01Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx01Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx01Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx01Edit.jsp" />
+	    <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx01Check.jsp" />
+	    <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx01View.jsp" />
+	    <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx01Zfbg.jsp" />
+	  </action> 
+	
+	  <action name="basx02Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx02.web.Basx02Action" validate="false"  
+	  input="/webapp/smsb/qysds/jmsbagl/Basx02Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx02Action">
+	     <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx02Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx02Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx02View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx02Zfbg.jsp" />
+	  </action> 
+	  
+	  <action name="basx03Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx03.web.Basx03Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx03Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx03Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx03Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx03Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx03View.jsp" /> 
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx03Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx04Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx04.web.Basx04Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx04Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx04Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx04Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx04Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx04View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx04Zfbg.jsp" />
+	  </action> 
+	  
+	 <action name="basx05Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx05.web.Basx05Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx05Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx05Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx05Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx05Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx05View.jsp" /> 
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx05Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx06Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx06.web.Basx06Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx06Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx06Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx06Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx06Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx06View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx06Zfbg.jsp" />
+	  </action> 
+
+	  <action name="basx07Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx07.web.Basx07Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx07Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx07Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx07Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx07Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx07View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx07Zfbg.jsp" />
+	  </action> 
+	  
+	  <action name="basx08Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx08.web.Basx08Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx08Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx08Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx08Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx08Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx08View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx08Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx09Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx09.web.Basx09Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx09Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx09Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx09Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx09Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx09View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx09Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx10Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx10.web.Basx10Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx10Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx10Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx10Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx10Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx10View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx10Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx11Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx11.web.Basx11Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx11Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx11Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx11Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx11Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx11View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx11Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx12Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx12.web.Basx12Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx12Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx12Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx12Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx12Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx12View.jsp" /> 
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx12Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx13AForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx13a.web.Basx13AAction" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx13ACheck.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx13AAction">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx13AEdit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx13ACheck.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx13AView.jsp" /> 
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx13AZfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx13BForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx13b.web.Basx13BAction" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx13BCheck.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx13BAction">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx13BAdd.jsp" />
+	    <forward name="Edit"  path="/webapp/smsb/qysds/jmsbagl/Basx13BEdit.jsp" />
+	    <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx13BCheck.jsp" />
+	    <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx13BView.jsp" />
+	    <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx13BZfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx14AForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx14a.web.Basx14AAction" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx14ACheck.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx14AAction">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx14AEdit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx14ACheck.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx14AView.jsp" /> 
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx14AZfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx14BForm" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx14b.web.Basx14BAction" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx14BCheck.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx14BAction">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx14BAdd.jsp" />
+	    <forward name="Edit"  path="/webapp/smsb/qysds/jmsbagl/Basx14BEdit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx14BCheck.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx14BView.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx14BZfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx15Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx15.web.Basx15Action" validate="false" 
+	  input="/webapp/smsb/qysds/jmsbagl/Basx15Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx15Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx15Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx15Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx15View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx15Zfbg.jsp" />
+	  </action> 
+	  
+      <action name="basx16Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx16.web.Basx16Action" validate="false" input="/webapp/smsb/qysds/jmsbagl/Basx16Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx16Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx16Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx16Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx16View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx16Zfbg.jsp" />
+	  </action> 
+	  
+	  <action name="basx17Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx17.web.Basx17Action" validate="false" input="/webapp/smsb/qysds/jmsbagl/Basx17Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx17Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx17Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx17Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx17View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx17Zfbg.jsp" />
+	  </action> 
+	  
+	  <action name="basx18Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx18.web.Basx18Action" validate="false" input="/webapp/smsb/qysds/jmsbagl/Basx18Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx18Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx18Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx18Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx18View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx18Zfbg.jsp" />
+	  </action> 
+	  
+	  <action name="basx19Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx19.web.Basx19Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx19Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx19Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx19Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx19Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx19View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx19Zfbg.jsp" />
+	  </action>
+	  
+	  <action name="basx20Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx20.web.Basx20Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx20Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx20Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx20Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx20Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx20View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx20Zfbg.jsp" />
+	  </action>
+	  
+	  <!-- =============The begin of wszm tujb====================--> 
+	  <action name="wszmForm" type="com.ttsoft.bjtax.smsb.wszm.web.WszmAction" validate="false"
+     input="/webapp/smsb/wszm001.jsp" scope="request" path="/webapp/smsb/wszmAction">
+       <forward name="Show" path="/webapp/smsb/wszm001.jsp"/>
+       <forward name="Query" path="/webapp/smsb/wszm001.jsp"/>
+       <forward name="Dismiss" path="/webapp/smsb/wszmCxAction.do?actionType=Show" />
+       <forward name="Detail" path="/webapp/smsb/wszm002.jsp"/>
+       <forward name="SavePrint" path="/webapp/smsb/wszm002.jsp" />
+       <forward name="Success" path="/webapp/smsb/wszm002.jsp" />
+       <forward name="Reprint" path="/webapp/smsb/wszm002.jsp" />
+      </action>
+
+    <action name="wszmCxForm" type="com.ttsoft.bjtax.smsb.wszm.web.WszmCxAction" validate="false" 
+    input="/webapp/smsb/wszm003.jsp" scope="request" path="/webapp/smsb/wszmCxAction">
+      <forward name="Show" path="/webapp/smsb/wszm003.jsp" />
+      <forward name="Query" path="/webapp/smsb/wszm003.jsp" />
+      <forward name="Delete" path="/webapp/smsb/wszmCxAction.do?actionType=Query" />
+      <forward name="Update" path="/webapp/smsb/wszmCxAction.do?actionType=Query" />
+      <forward name="Back" path="/webapp/smsb/wszmAction.do?actionType=Show" />
+    </action>
+      <!-- =============The end of wszm tujb====================--> 
+
+      <!-- 上门申报添加 企业所得税分支机构年度纳税申报表   add by wangcy  2013-12-07 -->
+		<action name="czzssdsnb2012Form"
+			type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.CzzssdsNbAction"
+			validate="false" input="/webapp/smsb/qysds/2012/czzssdsnb2012.jsp" scope="request"
+			path="/webapp/smsb/qysds/czzssdsnb2012Action">
+			<forward name="Show" path="/webapp/smsb/qysds/2012/czzssdsnb2012.jsp" />
+			<forward name="Query" path="/webapp/smsb/qysds/2012/czzssdsnb2012.jsp" />
+			<forward name="Save" path="/webapp/smsb/qysds/2012/czzssdsnb2012.jsp" />
+			<forward name="Jump" path="/webapp/smsb/qysds/zfjgqysdsnb2012Action.do?actionType=Query" />
+			<forward name="JumpNew" path="/webapp/smsb/qysds/zfjgqysdsnb2012Action.do?actionType=Show" />
+			<forward name="Error" path="/webapp/smsb/qysds/2012/czzssdsnb2012.jsp" />
+		</action>
+
+		<action name="zfjgnb2012Form"
+			type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2012.czzssdsnb.web.ZfjgqysdsNbAction"
+			validate="true" input="/webapp/smsb/qysds/2012/zfjgqysdsnb2012.jsp" scope="request"
+			path="/webapp/smsb/qysds/zfjgqysdsnb2012Action">
+			<forward name="Show" path="/webapp/smsb/qysds/2012/zfjgqysdsnb2012.jsp" />
+			<forward name="Query" path="/webapp/smsb/qysds/czzssdsnb2012Action.do?actionType=Query" />
+			<forward name="Jump" path="/webapp/smsb/qysds/czzssdsnb2012Action.do?actionType=Show" />
+		</action>
+       <!-- 企业所得税汇总纳税总机构分配表 add by wangxq  2013-12-11-->
+	 <action name="hznszjgfpbForm"
+			type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2009.hznszjgfpb.web.HznszjgfpbAction"
+			validate="true" input="/webapp/smsb/qysds/2009/hznszjgfpb.jsp" scope="request"
+			path="/webapp/smsb/qysds/2009/hznszjgfpbAction">
+			<forward name="Show" path="/webapp/smsb/qysds/2009/hznszjgfpb.jsp" />
+			<forward name="Query"
+				path="/webapp/smsb/qysds/2009/hznszjgfpbAction.do?actionType=Query" />
+			<forward name="Jump"
+				path="/webapp/smsb/qysds/2009/hznszjgfpbAction.do?actionType=Query" />
+			<forward name="Return"
+				path="/webapp/smsb/qysds/2009/qysdsMainAction2009.do?actionType=Return" />
+	</action>
+
+     <!--耕地占有税   start-->
+      <!-- 耕地占用税 新建税源登记 2013kanght -->  
+      <!-- validate="false" input="/webapp/smsb/gdzys/sydj/sydjxxlr.jsp" -->
+   <action name ="sydjxxltForm" scope="request"  type="com.ttsoft.bjtax.smsb.gdzys.sydj.sydjxxlr.web.GdzysSydjxxlrAction" path="/webapp/smsb/sydjxxlrAction">
+	 	<forward name="Init" path="/webapp/smsb/gdzys/sydj/sydjxxlr.jsp"></forward>
+	 	<forward name="Save" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+	 	<forward name="Printsbb" path="/webapp/smsb/gdzys/sydj/sydjnssbb.jsp"></forward>
+	 	<forward name="Printjmsbb" path="/webapp/smsb/gdzys/sydj/sydjjmsbb.jsp"></forward>
+	 	<forward name="Qxsh" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+		<forward name="Sjsh" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+		<forward name="Addbz" path="/webapp/smsb/gdzys/sydj/sydjtjbz.jsp"></forward>
+		<forward name="Remark" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+		<forward name="Query" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+		<forward name="Update" path="/webapp/smsb/gdzys/sydj/sydjxxxx.jsp"></forward>
+		<forward name="Bgcx" path="/webapp/smsb/gdzys/sydj/sydjbgxx.jsp"></forward>
+		<!-- <forward name="Error" path="/webapp/smsb/gdzys/sydj/sydjxxlr.jsp"></forward> -->
+		<forward name="Error" path="/webapp/smsb/gdzys/sydj/sydjxxlr.jsp"></forward>
+  </action>
+	 <!--减免税管理 -减免税查询-->
+	  <action name="gdzysJmscxForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmscxAction" 
+	   scope="request" path="/webapp/smsb/gdzys/gdzysJmscxAction" validate="false">
+	   	 <forward name="Show" path="/webapp/smsb/gdzys/jmsgl/jmscx.jsp" />
+	   	 <forward name="Query" path="/webapp/smsb/gdzys/jmsgl/jmscx.jsp" />
+	   	 <!--  <forward name="PrintView" path="webapp/smsb/gdzys/jmsgl/jmszmprint.jsp" />-->
+	   	  <forward name="PrintView" path="/webapp/smsb/gdzys/jmsgl/jmszmprint.jsp" />
+	   </action>
+	    <!-- 减免税管理-减免税证明 -->
+    <action name="gdzysJmscxForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmszmPrintAction" scope="request" validate="false" path="/webapp/smsb/gdzys/gdzysJmszmPrintAction">
+    	<forward name="Query" path="/webapp/smsb/gdzys/jmsgl/close.jsp" />
+    </action>
+    <!-- 减免税管理-撤销减免税证明 -->
+    <action name="gdzysJmsCancleForm" type="com.ttsoft.bjtax.smsb.gdzys.jmsgl.web.GdzysJmsCancleAction" scope="request" validate="false" path="/webapp/smsb/gdzys/gdzysJmscancleAction" >
+    	<forward name="Show" path="/webapp/smsb/gdzys/jmsgl/jmszmCancle.jsp"></forward>
+    	<forward name="Query" path="/webapp/smsb/gdzys/jmsgl/jmszmCancle.jsp"></forward>
+    	<forward name="View" path="/webapp/smsb/gdzys/jmsgl/jmszmView.jsp"></forward>
+    	<forward name="Cancle" path="/webapp/smsb/gdzys/gdzysJmscancleAction?actionType=Query"></forward>
+    </action>
+    <!-- 业务查询-减免税证明查询 -->
+    <action name="gdzysJmszmCxForm" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.GdzysJmszmCxAction" scope="request" validate="false" path="/webapp/smsb/gdzys/gdzysJmszmCxAction">
+    	<forward name="Show" path="/webapp/smsb/gdzys/cx/jmszmcx.jsp"></forward>
+    	<forward name="Query" path="/webapp/smsb/gdzys/cx/jmszmcx.jsp"></forward>
+    </action>
+    
+    
+
+	 <!--申报征收-出具缴款书action-->
+	 <action name="gdzysCjjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCjjksAction" validate="false" input="/webapp/smsb/gdzys/sbzs/gdzyscjjks.jsp" scope="request" path="/webapp/smsb/gdzys/gdzysCjjksAction">
+      <forward name="Show" path="/webapp/smsb/gdzys/sbzs/gdzyscjjks.jsp" />
+      <forward name="Query" path="/webapp/smsb/gdzys/sbzs/gdzyscjjks.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+
+     <!--申报征收-出具滞纳金缴款书action-->
+	 <action name="gdzysCjznjjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCjznjjksAction" validate="false" input="/webapp/smsb/gdzys/sbzs/gdzyscjznjjks.jsp" scope="request" path="/webapp/smsb/gdzys/gdzysCjznjjksAction">
+      <forward name="Show" path="/webapp/smsb/gdzys/sbzs/gdzyscjznjjks.jsp" />
+      <forward name="Query" path="/webapp/smsb/gdzys/sbzs/gdzyscjznjjks.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+    <!--申报征收-撤销缴款书action-->
+	 <action name="gdzysCxjksForm" type="com.ttsoft.bjtax.smsb.gdzys.sbzs.web.GdzysCxjksAction" validate="false" input="/webapp/smsb/gdzys/sbzs/gdzyscxjks.jsp" scope="request" path="/webapp/smsb/gdzys/gdzysCxjksAction">
+      <forward name="Show" path="/webapp/smsb/gdzys/sbzs/gdzyscxjks.jsp" />
+      <forward name="Query" path="/webapp/smsb/gdzys/sbzs/gdzyscxjks.jsp" />
+      <forward name="Print" path="/webapp/smsb/jksPrintAction.do?actionType=Show" />
+    </action>
+    
+    
+  <!-- 耕地占用登记查询 -->
+  <action name ="gdzysSydjcxForm" input ="/webapp/smsb/gdzys/sydj/gdzydjcx.jsp" scope="request" type="com.ttsoft.bjtax.smsb.gdzys.sydj.sydjcx.web.GdzysSydjcxAction" path="/webapp/smsb/gdzydjcxAction">
+  		<forward name="Show" path="/webapp/smsb/gdzys/sydj/gdzydjcx.jsp"></forward>
+	 	<forward name="QueryResult" path="/webapp/smsb/gdzys/sydj/gdzydjcx.jsp"></forward>
+	 	<forward name="QueryResultManyDetail" path="/webapp/smsb/gdzys/sydj/gdzydjcxxq.jsp"></forward>
+  </action>
+  
+  <!-- 审核确认 -->
+  <action name ="gdzysShqrForm" input ="/webapp/smsb/gdzys/sydj/gdzyshqr.jsp" scope="request" type="com.ttsoft.bjtax.smsb.gdzys.sydj.qrsh.web.GdzysShqrAction" path="/webapp/smsb/gdzyShqrAction">
+  		<forward name="Show" path="/webapp/smsb/gdzys/sydj/gdzyshqr.jsp"></forward>
+  		<forward name="ShowShqr" path="/webapp/smsb/gdzysUpdateShxx.jsp"></forward>
+	 	<forward name="QueryResult" path="/webapp/smsb/gdzys/sydj/gdzyshqr.jsp"></forward>
+	 	<forward name="QueryResultManyDetail" path="/webapp/smsb/gdzyshqrxq.jsp"></forward>
+  </action>
+
+  <!-- 税源变更 -->
+  <action name ="gdzysSybgForm" input ="/webapp/smsb/gdzys/sydj/gdzybg.jsp" scope="request" type="com.ttsoft.bjtax.smsb.gdzys.sydj.sybg.web.GdzysSybgAction" path="/webapp/smsb/gdzySybgAction">
+  		<forward name="Show" path="/webapp/smsb/gdzys/sydj/gdzybg.jsp"></forward>
+  		<forward name="BgResult" path="/webapp/smsb/gdzys/sydj/gdzybg.jsp"></forward>
+  </action>
+  
+
+  <!-- 税源查询 -->
+  <action name ="sycxForm" input ="/webapp/smsb/gdzys/cx/sycx.jsp" scope="request" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.SycxAction" path="/webapp/smsb/sycxAction">
+  		<forward name="Show" path="/webapp/smsb/gdzys/cx/sycx.jsp"></forward>
+  		<forward name="QueryList" path="/webapp/smsb/gdzys/cx/sycx.jsp"></forward>
+	 	<forward name="QueryDetail" path="/webapp/smsb/gdzys/cx/sycxDetail.jsp"></forward>
+  </action>
+
+  	 <!--业务查询-缴款书查询action-->
+	 <action name="gdzysJksCxForm" type="com.ttsoft.bjtax.smsb.gdzys.cx.web.GdzysJksCxAction" validate="false" input="/webapp/smsb/gdzys/cx/gdzysjkscx.jsp" scope="request" path="/webapp/smsb/gdzys/gdzysJksCxAction">
+      <forward name="Show" path="/webapp/smsb/gdzys/cx/gdzysjkscx.jsp" />
+      <forward name="Query" path="/webapp/smsb/gdzys/cx/gdzysjkscx.jsp" />
+    </action>
+
+    
+    <!--耕地占有税   end-->
+
+  	<!-- wangcy    纳税人基本信息-->
+	<action name="jbxxbForm2013" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2013.jbxxb.web.JbxxbAction2013" validate="false" input="/webapp/smsb/qysds/2013/jbxxb2013.jsp" scope="request" path="/webapp/smsb/qysds/2013/jbxxbAction2013">
+      <forward name="Show" path="/webapp/smsb/qysds/2013/jbxxb2013.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2013/jbxxb2013.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2013/jbxxb2013.jsp" />
+      <forward name="Return" path="/webapp/smsb/qysds/2013/jbxxb2013.jsp" />
+       <forward name="Delete" path="/webapp/smsb/qysds/2013/jbxxb2013.jsp" />
+    </action>
+	
+	<!-- wangcy 企业所得税升级改造项目     form begin-->
+	
+	<!-- ==============减免税备案  节能服务公司实施合同能源管理项目的所得备案事项==================== -->
+	 <action name="basx21Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx21.web.Basx21Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx21Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx21Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx21Edit.jsp" />
+	     <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx21Check.jsp" />
+	     <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx21View.jsp" />
+	     <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx21Zfbg.jsp" />
+	  </action>
+	<action name="basx22Form" type="com.ttsoft.bjtax.smsb.qysdsjmsbagl.basx22.web.Basx22Action" validate="false" 
+	 input="/webapp/smsb/qysds/jmsbagl/Basx22Check.jsp" scope="request" path="/webapp/smsb/qysds/jmsbagl/Basx22Action">
+	    <forward name="Show"  path="/webapp/smsb/qysds/jmsbagl/Basx22Edit.jsp" />
+	    <forward name="Check"  path="/webapp/smsb/qysds/jmsbagl/Basx22Check.jsp" />
+	    <forward name="View"  path="/webapp/smsb/qysds/jmsbagl/Basx22View.jsp" />
+	    <forward name="Zfbg"  path="/webapp/smsb/qysds/jmsbagl/Basx22Zfbg.jsp" />
+	 </action> 
+	
+	<!-- ====================企业所得税清算 ===================== -->
+	<action name="qyqssdsBaglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsbagl.web.QyqssdsBaglAction" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsbagl2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsBaglAction2014">
+	    <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsbagl2014.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdsbagl2014.jsp" />
+	</action>
+	
+	<action name="qyqssdsSbglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdssbgl.web.QyqssdsSbglAction" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdssbgl2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsSbglAction2014">
+	    <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdssbgl2014.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdssbgl2014.jsp" />
+	</action>
+	
+	<action name="qyqssdsBaForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsba.web.QyqsSdsBaAction" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsBaAction2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp" />
+      <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdsBaAction2014.do?actionType=Query" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qyqssds/2014/qyqssdsba2014.jsp" />
+      <forward name="PrintHz" path="/webapp/smsb/qyqssds/2014/qyqssdsbadyhz.jsp" />
+    </action>
+	<action name="qyqssdsBaseForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.main.web.QyqssdsMainAction2014" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsmain2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsmain2014.jsp" />
+      <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014.do?actionType=Query" />
+      <forward name="Error" path="/webapp/smsb/qyqssds/2014/qyqssdsmain2014.jsp" />
+    </action>
+    <action name="qyqssdsZbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdszb.web.QyqssdsZbAction2014" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdszb2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsZbAction2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdszb2014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdszb2014.jsp" />
+      <forward name="Error" path="/webapp/smsb/qyqssds/2014/qyqssdszb2014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014.do?actionType=Return" />
+    </action>
+    <action name="qyqssdsFb1Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb1.web.QyqssdsFb1Action2014" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsfb12014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsFb1Action2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsfb12014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdsfb12014.jsp" />
+      <forward name="Error" path="/webapp/smsb/qyqssds/2014/qyqssdsfb12014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014.do?actionType=Return" />
+    </action>
+    <action name="qyqssdsFb2Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb2.web.QyqssdsFb2Action2014" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsfb22014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsFb2Action2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsfb22014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdsfb22014.jsp" />
+      <forward name="Error" path="/webapp/smsb/qyqssds/2014/qyqssdsfb22014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014.do?actionType=Return" />
+    </action>
+	<action name="qyqssdsFb3Form2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdsfb3.web.QyqssdsFb3Action2014" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdsfb32014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsFb3Action2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdsfb32014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdsfb32014.jsp" />
+      <forward name="Error" path="/webapp/smsb/qyqssds/2014/qyqssdsfb32014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdsMainAction2014.do?actionType=Return" />
+    </action>
+    <action name="qyqssdsHisglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.his.web.QyqssdsHisglAction" validate="true" input="/webapp/smsb/qyqssds/2014/qyqssdshis2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdshis2014Action">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdshisgl2014.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdshisgl2014.jsp" />
+    </action>    
+    <!-- zhangj  企业所得税清算无需备案   -->
+    <action name="qyqssdsWxBaglForm" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdswxbagl.web.QyqssdsWxBaglAction" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdswxbagl2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsWxBaglAction2014">
+	    <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdswxbagl2014.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdswxbagl2014.jsp" />
+	</action> 
+	<action name="qyqssdsWxBaForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qyqssds2014.qyqssdswxba.web.QyqsSdsWxBaAction" validate="false" input="/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp" scope="request" path="/webapp/smsb/qyqssds/2014/qyqssdsWxBaAction2014">
+      <forward name="Show" path="/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp" />
+      <forward name="Query" path="/webapp/smsb/qyqssds/2014/qyqssdsWxBaAction2014.do?actionType=Query" />
+      <forward name="Save" path="/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp" />
+      <forward name="Return" path="/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp" />
+      <forward name="Delete" path="/webapp/smsb/qyqssds/2014/qyqssdswxba2014.jsp" />
+    </action>   
+	<!-- wangcy 企业所得税升级改造项目     form end  -->
+	<!-- =============The begin of qysdsjb2014 ====================-->  
+    <action name="czzssdsjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.CzzssdsjbAction" validate="false" input="/webapp/smsb/qysds/2014/czzssdsjb2014.jsp" scope="request" path="/webapp/smsb/qysds/czzssdsjb2014Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2014/czzssdsjb2014.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2014/czzssdsjb2014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2014/czzssdsjb2014.jsp" />
+      <forward name="Jump" path="/webapp/smsb/qysds/zfjgqysdsjb2014Action.do?actionType=Query" />
+      <forward name="JumpGdzc" path="/webapp/smsb/qysds/gdzcjszjyjqkjb2014Action.do?actionType=Query" />
+      <forward name="Error" path="/webapp/smsb/qysds/2014/czzssdsjb2014.jsp" />
+    </action>
+    <action name="hdzssdsjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.HdzssdsjbAction" validate="false" input="/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp" scope="request" path="/webapp/smsb/qysds/hdzssdsjb2014Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp" />
+      <forward name="Query" path="/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp" />
+      <forward name="Save" path="/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp" />
+      <forward name="Error" path="/webapp/smsb/qysds/2014/hdzssdsjb2014.jsp" />
+    </action>
+    <action name="zfjg2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.ZfjgqysdsjbAction" validate="true" input="/webapp/smsb/qysds/2014/zfjgqysdsjb2014.jsp" scope="request" path="/webapp/smsb/qysds/zfjgqysdsjb2014Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2014/zfjgqysdsjb2014.jsp" />
+	  <forward name="Query" path="/webapp/smsb/qysds/czzssdsjb2014Action.do?actionType=Query" />
+	  <forward name="Jump" path="/webapp/smsb/qysds/czzssdsjb2014Action.do?actionType=Show" />
+	  <forward name="JumpGdzcjszjyjqk" path="/webapp/smsb/qysds/gdzcjszjyjqkjb2014Action.do?actionType=Query" />
+    </action> 
+
+    <action name="gdzcjszjyjqkjb2014Form" type="com.ttsoft.bjtax.smsb.sbzl.qysdsjb2014.web.GdzcjszjyjqkjbAction" validate="true" input="/webapp/smsb/qysds/2014/gdzcjszjyjqkjb2014.jsp" scope="request" path="/webapp/smsb/qysds/gdzcjszjyjqkjb2014Action">
+      <forward name="Show" path="/webapp/smsb/qysds/2014/gdzcjszjyjqkjb2014.jsp" />
+	  <forward name="JumpZfjg" path="/webapp/smsb/qysds/zfjgqysdsjb2014Action.do?actionType=Query" />
+	  <forward name="JumpCzzs" path="/webapp/smsb/qysds/czzssdsjb2014Action.do?actionType=Query" />
+    </action> 
+     
+
+    <!-- =============The end of qysdsjb2014 ======================-->  
+     <!-- =============The begin of qysdsnb2014 wangcy added 2014-09-03 ====================-->  
+    
+    <action name="hdzssdsnbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.hdzssdsnb.web.HdzssdsnbAction" validate="false" input="/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp" scope="request" path="/webapp/smsb/qysds/2014/hdzssdsnbAction2014">
+	    <forward name="Show" path="/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp" />
+	    <forward name="Query" path="/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp" />
+	    <forward name="Save" path="/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp" />
+	    <forward name="Error" path="/webapp/smsb/qysds/2014/hdzssdsnb2014.jsp" />
+	</action>
+   
+	<action name="czzsfzjgNbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.czzsfzjgnb.web.CzzsfzjgNbAction" validate="false" input="/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp" scope="request" path="/webapp/smsb/qysds/2014/czzsfzjgNbAction2014">	           
+        <forward name="Show" path="/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp" />
+		<forward name="Query" path="/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp" />
+		<forward name="Save" path="/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp" />
+		 <forward name="Jump" path="/webapp/smsb/qysds/2014/zfjgfzjgNbAction2014.do?actionType=Query" />
+		<!--<forward name="Jump" path="/webapp/smsb/qysds/zfjgqysdsnb2012Action.do?actionType=Query" /> -->
+		<!--<forward name="JumpNew" path="/webapp/smsb/qysds/zfjgqysdsnb2012Action.do?actionType=Show" />-->
+		 <forward name="JumpNew" path="/webapp/smsb/qysds/2014/zfjgfzjgNbAction2014.do?actionType=Show" />
+		<forward name="Error" path="/webapp/smsb/qysds/2014/czzsfzjgnb2014.jsp" />
+	</action>
+	<action name="zfjgfzjgNbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.qysdsnb2014.czzsfzjgnb.web.ZfjgfzjgNbAction" validate="true" input="/webapp/smsb/qysds/2014/zfjgfzjgnb2014.jsp" scope="request" path="/webapp/smsb/qysds/2014/zfjgfzjgNbAction2014">	    
+	    <forward name="Show" path="/webapp/smsb/qysds/2014/zfjgfzjgnb2014.jsp" />
+		<forward name="Query" path="/webapp/smsb/qysds/2014/czzsfzjgNbAction2014.do?actionType=Query" />
+		<forward name="Jump" path="/webapp/smsb/qysds/2014/czzsfzjgNbAction2014.do?actionType=Show" />
+	</action>
+
+			
+	<!-- =============The end of qysdsnb2014 ====================-->   
+    
+    <!-- ========================个人合伙经营申报表 add by lijn 20141118================================== -->
+    <action name="grsdsjbxxbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrsdsJbxxAction" validate="true" input="/webapp/smsb/grsds/2014/grsdsJbxx.jsp" scope="request" path="/webapp/smsb/grsds/grsdsJbxxAction2014">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/grsdsJbxx.jsp" />
+    </action> 
+    <action name="grsdsndsbbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrsdsNdsbbAction" validate="true" input="/webapp/smsb/grsds/2014/grsdsndsbb.jsp" scope="request" path="/webapp/smsb/grsds/grsdsNdsbbAction2014">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/grsdsndsbb.jsp" />
+    </action> 
+    <action name="grsdstzflbForm2014" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.web.GrListAction" validate="true" input="/webapp/smsb/grsds/2014/grsdstzflb.jsp" scope="request" path="/webapp/smsb/grsds/grsdsTzflbAction2014">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/grsdstzflb.jsp" />
+    </action> 
+    
+	 <action name="grsdsjbxxbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrsdsJbxxAction" validate="true" input="/webapp/smsb/grsds/2014/cx/grsdsJbxx.jsp" scope="request" path="/webapp/smsb/grsds/grsdsJbxxAction2014cx">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/cx/grsdsJbxx.jsp" />
+    </action> 
+    <action name="grsdsndsbbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrsdsNdsbbAction" validate="true" input="/webapp/smsb/grsds/2014/cx/grsdsndsbb.jsp" scope="request" path="/webapp/smsb/grsds/grsdsNdsbbAction2014cx">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/cx/grsdsndsbb.jsp" />
+    </action> 
+    <action name="grsdstzflbForm2014cx" type="com.ttsoft.bjtax.smsb.sbzl.grsds2014.cx.web.GrListAction" validate="true" input="/webapp/smsb/grsds/2014/cx/grsdstzflb.jsp" scope="request" path="/webapp/smsb/grsds/grsdsTzflbAction2014cx">
+      <forward name="Show" path="/webapp/smsb/grsds/2014/cx/grsdstzflb.jsp" />
+    </action> 
+ 	<!--yugw 核定申报信息  -->
+    <!-- =============The begin of hdsbxx============================== -->
+    <action name="qysdsBbjcForm" type="com.ttsoft.bjtax.smsb.sbzl.qysdsbbjc.web.QysdsBbjcAction" validate="false" input="/webapp/smsb/qysds/qysdsbbjc/qysdsbbjc.jsp" scope="request" path="/webapp/smsb/qysds/qysdsbbjc/qysdsBbjcAction">
+     <forward name="Show" path="/webapp/smsb/qysds/qysdsbbjc/qysdsbbjc.jsp"/>
+     <forward name="Query" path="/webapp/smsb/qysds/qysdsbbjc/qysdsbbjc.jsp" />
+    </action>
+    <!--The end  of hdsbxx  -->
+  </action-mappings>
+</struts-config>

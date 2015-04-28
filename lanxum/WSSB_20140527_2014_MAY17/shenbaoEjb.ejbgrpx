@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<descriptors>
+  <ejb-jar.xml extralocation="" timestamp="1062818318516"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+    <enterprise-beans>
+        <session>
+            <ejb-name>shenbao</ejb-name>
+            <home>com.ttsoft.bjtax.shenbao.ejb.ShenbaoHome</home>
+            <remote>com.ttsoft.bjtax.shenbao.ejb.Shenbao</remote>
+            <ejb-class>com.ttsoft.bjtax.shenbao.ejb.ShenbaoBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <session>
+            <display-name>InitialStartup</display-name>
+            <ejb-name>InitialStartup</ejb-name>
+            <home>com.ttsoft.bjtax.shenbao.ejb.InitialStartupHome</home>
+            <remote>com.ttsoft.bjtax.shenbao.ejb.InitialStartup</remote>
+            <ejb-class>com.ttsoft.bjtax.shenbao.ejb.InitialStartupBean</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+        <session>
+            <ejb-name>ServiceEJB</ejb-name>
+            <home>com.ttsoft.bjtax.shenbao.ejb.ServiceEJBHome</home>
+            <remote>com.ttsoft.bjtax.shenbao.ejb.Service</remote>
+            <ejb-class>com.ttsoft.bjtax.shenbao.ejb.ServiceEJB</ejb-class>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor>
+        <container-transaction>
+            <method>
+                <ejb-name>InitialStartup</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+        <container-transaction>
+            <method>
+                <description />
+                <ejb-name>shenbao</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <trans-attribute>Required</trans-attribute>
+        </container-transaction>
+    </assembly-descriptor>
+</ejb-jar>]]></ejb-jar.xml>
+  <ejb-borland.xml extralocation="" timestamp="1062818318516"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Borland Software Corporation//DTD Enterprise JavaBeans 2.0//EN" "http://www.borland.com/devsupport/appserver/dtds/ejb-jar_2_0-borland.dtd">
+<ejb-jar>
+    <enterprise-beans>
+        <session>
+            <ejb-name>shenbao</ejb-name>
+            <bean-home-name>shenbao</bean-home-name>
+            <bean-local-home-name>shenbaolocal</bean-local-home-name>
+            <timeout>0</timeout>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>shenbao</prop-value>
+            </property>
+        </session>
+        <session>
+            <ejb-name>InitialStartup</ejb-name>
+            <bean-home-name>InitialStartup</bean-home-name>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>InitialStartup</prop-value>
+            </property>
+            <property>
+                <prop-name>max-beans-in-free-pool</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>1</prop-value>
+            </property>
+            <property>
+                <prop-name>initial-beans-in-free-pool</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>1</prop-value>
+            </property>
+        </session>
+        <session>
+            <ejb-name>ServiceEJB</ejb-name>
+            <bean-home-name>ServiceEJB</bean-home-name>
+            <timeout>0</timeout>
+            <property>
+                <prop-name>ejb-designer-id</prop-name>
+                <prop-type>String</prop-type>
+                <prop-value>ServiceEJB</prop-value>
+            </property>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor />
+</ejb-jar>]]></ejb-borland.xml>
+  <ejb-modeler-layout.xml extralocation="" timestamp="1062817965640"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+  <view>
+    <name>Default</name>
+    <ejb>
+      <name>ServiceEJB</name>
+      <x>331</x>
+      <y>55</y>
+      <width>109</width>
+      <height>39</height>
+    </ejb>
+    <ejb>
+      <name>shenbao</name>
+      <x>136</x>
+      <y>54</y>
+      <width>144</width>
+      <height>119</height>
+    </ejb>
+    <ejb>
+      <name>InitialStartup</name>
+      <x>523</x>
+      <y>59</y>
+      <width>144</width>
+      <height>99</height>
+    </ejb>
+  </view>
+</layout>]]></ejb-modeler-layout.xml>
+  <weblogic-cmp-extras.xml extralocation="" timestamp="1062817965640"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-rdbms-jar />]]></weblogic-cmp-extras.xml>
+  <weblogic-ejb-jar.xml extralocation="" timestamp="1062827476032"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-ejb-jar PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 7.0.0 EJB//EN' 'http://www.bea.com/servers/wls700/dtd/weblogic-ejb-jar.dtd'>
+<weblogic-ejb-jar>
+    <weblogic-enterprise-bean>
+        <ejb-name>shenbao</ejb-name>
+        <jndi-name>shenbao</jndi-name>
+        <local-jndi-name>shenbaolocal</local-jndi-name>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>InitialStartup</ejb-name>
+        <stateless-session-descriptor>
+            <pool>
+                <max-beans-in-free-pool>1</max-beans-in-free-pool>
+                <initial-beans-in-free-pool>1</initial-beans-in-free-pool>
+            </pool>
+        </stateless-session-descriptor>
+        <jndi-name>InitialStartup</jndi-name>
+    </weblogic-enterprise-bean>
+    <weblogic-enterprise-bean>
+        <ejb-name>ServiceEJB</ejb-name>
+        <jndi-name>ServiceEJB</jndi-name>
+    </weblogic-enterprise-bean>
+</weblogic-ejb-jar>
+]]></weblogic-ejb-jar.xml>
+</descriptors>

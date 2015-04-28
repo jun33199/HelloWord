@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by et8 (et8) -->
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<context-param>
+		<param-name>weblogic.httpd.inputCharset./*</param-name>
+		<param-value>GBK</param-value>
+	</context-param>
+	<filter>
+		<filter-name>BusinessPermission</filter-name>
+		<filter-class>com.ttsoft.common.web.filter.BusinessPermissionFilter</filter-class>
+		<init-param>
+			<param-name>nopermissionurl</param-name>
+			<param-value>/nopermission.do</param-value>
+		</init-param>
+		<init-param>
+			<param-name>omiturls</param-name>
+			<param-value>quit.do,logout.do</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>Loginer</filter-name>
+		<filter-class>com.ttsoft.common.web.filter.LoginFilter</filter-class>
+		<init-param>
+			<param-name>ssourl</param-name>
+			<param-value>/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Loginer</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>BusinessPermission</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>com.ttsoft.bjtax.smsb.ApplicationResources</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!-- 2013 kanght线程配置 -->
+	<listener>  
+		<listener-class>com.ttsoft.bjtax.smsb.lwpk.task.PKListener</listener-class>  
+	</listener>
+
+	<servlet>
+		<servlet-name>loadsingleton</servlet-name>
+		<servlet-class>com.ttsoft.common.web.servlet.LoadSingletonServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>warrefresh</servlet-name>
+		<servlet-class>com.ttsoft.bjtax.sfgl.common.servlet.WARCacheRefresh</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>warrefresh</servlet-name>
+		<url-pattern>/warrefresh</url-pattern>
+	</servlet-mapping>
+
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-html.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/struts-template.tld</taglib-uri>
+		<taglib-location>/WEB-INF/struts-template.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/WEB-INF/ttsoft-html.tld</taglib-uri>
+		<taglib-location>/WEB-INF/ttsoft-html.tld</taglib-location>
+	</taglib>
+	
+	<error-page>
+    <error-code>403</error-code>
+    <location>/err403.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/err404.htm</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/err500.htm</location>
+  </error-page>
+</web-app>

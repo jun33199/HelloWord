@@ -1,0 +1,47 @@
+
+* {
+    font-family: "ËÎÌו";
+	font-size: 12px;
+}
+
+.op_row {
+    padding: 10px 5px 0;
+    cursor: pointer;
+}
+#nav {
+    padding: 10px 5px 0;
+}
+
+#nav span {
+    cursor: pointer;
+}
+
+#nav .current {
+    cursor: default;
+    font-weight: bold;
+    font-size: small;
+}
+
+#theTable {
+    width: 99%;
+	margin: 0px;
+	border: 0px none;
+	text-align: center;
+    background-color: #9BB4CA;
+}
+#theTable thead td{
+    font-weight: bold;
+    border-bottom: 1px solid #9BB4CA;
+}
+#theTable td {
+    font-size: 10pt;
+	font-weight: normal;
+	color: #3C5564;
+	background-color: #DDE7EC;
+	line-height: 20px;
+	text-align: center;
+}
+.query_zhengce {
+	cursor: pointer;
+	color: blue;
+	}

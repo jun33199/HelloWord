@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxdoc>
+	<xsltVersion><![CDATA[20061102]]></xsltVersion>
+	<schemaVersion><![CDATA[20061102]]></schemaVersion>
+	<ywlx><![CDATA[010020]]></ywlx>
+	<ywczlx><![CDATA[1]]></ywczlx>
+	<nsrxx>
+		<jsjdm><![CDATA[06003600]]></jsjdm>
+		<nsrmc><![CDATA[Google.com]]></nsrmc>
+		<swjgzzjgdm><![CDATA[0601]]></swjgzzjgdm>		
+	</nsrxx>
+	<hdxx>
+		<jmzg><![CDATA[1]]></jmzg>
+		<ybjmsl><![CDATA[0.00]]></ybjmsl>
+		<qyzslx><![CDATA[3]]></qyzslx>
+		<cyl><![CDATA[0]]></cyl>
+		<xzqy><![CDATA[0]]></xzqy>
+		<dezsse><![CDATA[0.00]]></dezsse>
+	</hdxx>
+	<sbxx>
+		<fsdm><![CDATA[5]]></fsdm>
+		<jd><![CDATA[1]]></jd>
+		<nd><![CDATA[2009]]></nd>
+		<sbrq><![CDATA[2006-04-10]]></sbrq>
+		<skssjsrq><![CDATA[2006-03-31]]></skssjsrq>
+		<skssksrq><![CDATA[2006-01-01]]></skssksrq>
+	</sbxx>
+	<sbsj>
+	  <sbrqshow><![CDATA[20061102]]></sbrqshow>
+		<lrze><![CDATA[06025800]]></lrze>
+		<nstzzje><![CDATA[333333]]></nstzzje>
+		<nstzjse><![CDATA[0606]]></nstzjse> 
+		<mbyqndks><![CDATA[06025800]]></mbyqndks>
+		<ynssde><![CDATA[333333]]></ynssde>
+		<sysl><![CDATA[06025800]]></sysl>
+		<ynsdse><![CDATA[0606]]></ynsdse> 
+		<jmsdse><![CDATA[06025800]]></jmsdse>
+		<hznscyqyjdyjbl><![CDATA[333333]]></hznscyqyjdyjbl>
+		<sjyyjdsdse><![CDATA[0606]]></sjyyjdsdse>
+		<ybdsdse><![CDATA[0606]]></ybdsdse>
+	</sbsj>
+</taxdoc>

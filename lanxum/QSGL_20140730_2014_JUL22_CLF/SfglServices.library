@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>SfglServices</fullname>
+  <class>
+    <path>[../../lib/sharelib/sfbase.jar]</path>
+    <path>[../../lib/commonlib/SfglService.jar]</path>
+  </class>
+  <lastmodsaved>1112251601702</lastmodsaved>
+</library>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DBConfig>
+  <!--Parameter-->
+  <Parameter name="debug" value="true" />
+  <!--Ormap-->
+  <DBConnect>
+    <File name="config/DBConnect.xml" />
+  </DBConnect>
+  <ORMap print="false">
+    <File name="config/eProjectORMap.xml" />
+  </ORMap>
+  <!--JDBC-->
+  <JDBC JDBCDriver="oracle.jdbc.driver.OracleDriver" JDBC_URL="jdbc:oracle:thin:@192.29.1.2:1521:bjldb" userid="swzg" password="swzg001223" />
+</DBConfig>
+

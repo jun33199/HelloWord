@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+  <view>
+    <name>Default</name>
+    <ejb>
+      <name>InitialStartupBean</name>
+      <x>27</x>
+      <y>73</y>
+      <width>138</width>
+      <height>91</height>
+    </ejb>
+    <ejb>
+      <name>QsglSessionBean</name>
+      <x>215</x>
+      <y>73</y>
+      <width>137</width>
+      <height>109</height>
+    </ejb>
+    <ejb>
+      <name>QsglServiceSessionBean</name>
+      <x>25</x>
+      <y>216</y>
+      <width>177</width>
+      <height>109</height>
+    </ejb>
+  </view>
+</layout>

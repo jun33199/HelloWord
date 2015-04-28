@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="build" name="CopyExtensions.1" value="xml"/>
+  <property category="generalFormatting" name="blockIndent" value="4"/>
+  <property category="generalFormatting" name="tabSize" value="4"/>
+  <property category="generalFormatting2" name="blockIndent" value="4"/>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="generalFormatting2" name="tabSize" value="4"/>
+  <property category="idl" name="ProcessIDL" value="false"/>
+  <property category="java" name="compiler" value="bmj2"/>
+  <property category="javaFormatting" name="arrayInitDataOnNewLine" value="0"/>
+  <property category="javaFormatting" name="classBraceNextLine" value="1"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="methodBraceNextLine" value="1"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;javax;BLANK_LINE;java.awt;javax.swing;BLANK_LINE;org;(*)"/>
+  <property category="javaFormatting" name="spaceAfterTypecast" value="0"/>
+  <property category="javaFormatting" name="spaceBetweenKeywordLparen" value="0"/>
+  <property category="javaFormatting" name="wrapAtColumn" value="120"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="jspc" name="checkEnabled" value="0"/>
+  <property category="module" name="ProjectConvertedToEnsureModulesHaveSupportedFeatures" value="1"/>
+  <property category="module" name="ProjectConvertedToUseFilesAndDependenciesAsDefaultContent" value="1"/>
+  <property category="module" name="ProjectConvertedToUseProperModuleDefaults" value="1"/>
+  <property category="module" name="projectConvertedFromModuleExtensionsToModuleFileTypes" value="1"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="ConfigurationName" value="ZsbApplication"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="com.ttsoft.bjtax.shenbao.zsb.client.ZsbApplication"/>
+  <property category="serverservices" name="BuildTargetOnDeploy" value="&lt;None&gt;"/>
+  <property category="serverservices" name="disabled.services" value="connector;jdatastore;sqlj"/>
+  <property category="serverservices" name="single.server.name" value="WebLogic Application Server 7.x"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="F%|/bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value="\u6e05\u534e\u540c\u65b9\u8f6f\u4ef6\u80a1\u4efd\u6709\u9650\u516c\u53f8"/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="(C) 2003-2004 \u6e05\u534e\u540c\u65b9\u8f6f\u4ef6\u80a1\u4efd\u6709\u9650\u516c\u53f8\uff0c\u7248\u6743\u6240\u6709."/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc;F%|/javadoc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.2_04-b05"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="WebLogic 7.x Client;Servlet;Oracle;Untitled;interface;sharelib;Struts"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="F%|/classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="\u5317\u4eac\u5730\u7a0e\u6838\u5fc3\u5f81\u7ba1\u7cfb\u7edf\uff0d\uff0d\u7f51\u4e0a\u7533\u62a5"/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.1"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="webapp" name="last.wizard" value="shenbao"/>
+  <property category="weblogic60" name="map.webapps" value="0"/>
+  <node name="Additional Settings" type="Folder">
+    <property category="sys" name="SettingsFolder" value="1"/>
+    <file path="src/com/ttsoft/bjtax/shenbao/ejb/InitialStartupBean.java"/>
+    <file path="F%|/shenbao.war">
+      <property category="weblogic" name="deploy.node.password.70" value="123456789"/>
+      <property category="weblogic" name="deploy.node.server.70" value="myshenbaoserver"/>
+      <property category="weblogic" name="deploy.node.user.name.70" value="system"/>
+    </file>
+    <file path="src/com/ttsoft/bjtax/shenbao/ejb/ShenbaoBean.java"/>
+  </node>
+  <node name="shenbao" type="WebModuleNode">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.enterprise.module.web.WebModuleArchiver"/>
+    <property category="archiving" name="contentRules.1" value="i:sar"/>
+    <property category="archiving" name="contentRules.10" value="i:opentools"/>
+    <property category="archiving" name="contentRules.11" value="i:png"/>
+    <property category="archiving" name="contentRules.12" value="i:properties"/>
+    <property category="archiving" name="contentRules.13" value="i:au"/>
+    <property category="archiving" name="contentRules.14" value="i:txt"/>
+    <property category="archiving" name="contentRules.15" value="i:ram"/>
+    <property category="archiving" name="contentRules.16" value="i:css"/>
+    <property category="archiving" name="contentRules.17" value="i:wml"/>
+    <property category="archiving" name="contentRules.18" value="i:xmi"/>
+    <property category="archiving" name="contentRules.19" value="i:xul"/>
+    <property category="archiving" name="contentRules.2" value="i:gif"/>
+    <property category="archiving" name="contentRules.20" value="i:xsl"/>
+    <property category="archiving" name="contentRules.21" value="I:**/*.*"/>
+    <property category="archiving" name="contentRules.3" value="i:html"/>
+    <property category="archiving" name="contentRules.4" value="i:class"/>
+    <property category="archiving" name="contentRules.5" value="i:jnlp"/>
+    <property category="archiving" name="contentRules.6" value="i:js"/>
+    <property category="archiving" name="contentRules.7" value="i:jpg"/>
+    <property category="archiving" name="contentRules.8" value="i:jsp"/>
+    <property category="archiving" name="contentRules.9" value="i:tld"/>
+    <property category="archiving" name="defaultLibraryState" value="3"/>
+    <property category="archiving" name="includeDeps" value="1"/>
+    <property category="archiving" name="libraryStates.1" value="0:WebLogic 7.x Client"/>
+    <property category="archiving" name="libraryStates.2" value="0:Servlet"/>
+    <property category="archiving" name="targetPath" value="F%|/shenbao.war"/>
+    <property category="archiving" name="usingRules" value="1"/>
+    <property category="legacy.module.conversion" name="legacy.module.name" value="shenbao"/>
+    <property category="module" name="directory" value="webapp"/>
+    <property category="module" name="supported.features.1" value="JSP 1.2"/>
+    <property category="module" name="supported.features.2" value="Servlet 2.3"/>
+    <property category="sys" name="WebLogicServerVersion" value="7.0.4"/>
+    <property category="web" name="context-root" value="shenbao"/>
+    <property category="webModule" name="kit.1" value="struts"/>
+    <property category="webModule" name="kitlib.1" value="Struts"/>
+  </node>
+  <node name="shenbaoEjb" type="EjbModuleNode">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.enterprise.module.ModuleArchiver"/>
+    <property category="archiving" name="contentRules.1" value="i:sar"/>
+    <property category="archiving" name="contentRules.10" value="i:opentools"/>
+    <property category="archiving" name="contentRules.11" value="i:png"/>
+    <property category="archiving" name="contentRules.12" value="i:au"/>
+    <property category="archiving" name="contentRules.13" value="i:txt"/>
+    <property category="archiving" name="contentRules.14" value="i:ram"/>
+    <property category="archiving" name="contentRules.15" value="i:css"/>
+    <property category="archiving" name="contentRules.16" value="i:wml"/>
+    <property category="archiving" name="contentRules.17" value="i:xmi"/>
+    <property category="archiving" name="contentRules.18" value="I:**/*.au"/>
+    <property category="archiving" name="contentRules.19" value="I:**/*.midi"/>
+    <property category="archiving" name="contentRules.2" value="i:gif"/>
+    <property category="archiving" name="contentRules.20" value="I:**/*.gif"/>
+    <property category="archiving" name="contentRules.21" value="I:**/*.xml"/>
+    <property category="archiving" name="contentRules.22" value="I:**/*.properties"/>
+    <property category="archiving" name="contentRules.23" value="I:**/*.aiff"/>
+    <property category="archiving" name="contentRules.24" value="I:**/*.jpe"/>
+    <property category="archiving" name="contentRules.25" value="I:**/*.jpeg"/>
+    <property category="archiving" name="contentRules.26" value="I:**/*.rmf"/>
+    <property category="archiving" name="contentRules.27" value="I:**/*.wav"/>
+    <property category="archiving" name="contentRules.28" value="I:**/*.mid"/>
+    <property category="archiving" name="contentRules.29" value="I:**/*.png"/>
+    <property category="archiving" name="contentRules.3" value="i:html"/>
+    <property category="archiving" name="contentRules.30" value="I:**/*.jpg"/>
+    <property category="archiving" name="contentRules.4" value="i:class"/>
+    <property category="archiving" name="contentRules.5" value="i:jnlp"/>
+    <property category="archiving" name="contentRules.6" value="i:js"/>
+    <property category="archiving" name="contentRules.7" value="i:jpg"/>
+    <property category="archiving" name="contentRules.8" value="i:jsp"/>
+    <property category="archiving" name="contentRules.9" value="i:tld"/>
+    <property category="archiving" name="includeDeps" value="1"/>
+    <property category="archiving" name="outPathState" value="2"/>
+    <property category="archiving" name="targetPath" value="shenbaoEjb.jar"/>
+    <property category="archiving" name="usingRules" value="1"/>
+    <property category="bes" name="add.layout.descriptor.jar.50" value="1"/>
+    <property category="bes" name="add.layout.descriptor.jar.50x" value="1"/>
+    <property category="bes" name="add.schema.descriptor.jar.50" value="1"/>
+    <property category="bes" name="add.schema.descriptor.jar.50x" value="1"/>
+    <property category="ejbmodeler" name="add.layout.descriptor.jar" value="1"/>
+    <property category="ejbmodeler" name="add.schema.descriptor.jar" value="1"/>
+    <property category="module" name="directory" value="shenbaoEjb"/>
+    <property category="module" name="supported.features.1" value="EJB 2.0"/>
+    <property category="module" name="useModuleSpecificJavaFileNodesToBuild" value="1"/>
+    <property category="sys" name="WebLogicServerVersion" value="7.0.4"/>
+  </node>
+  <node name="doc" type="Javadoc">
+    <property category="javadoc" name="documentAllPackages" value="0"/>
+    <property category="javadoc" name="packages.1" value="com.ttsoft.bjtax.shenbao.action"/>
+    <property category="javadoc" name="packages.10" value="com.ttsoft.bjtax.shenbao.jiekou.processor"/>
+    <property category="javadoc" name="packages.11" value="com.ttsoft.bjtax.shenbao.jiekou.vo"/>
+    <property category="javadoc" name="packages.12" value="com.ttsoft.bjtax.shenbao.model.client"/>
+    <property category="javadoc" name="packages.13" value="com.ttsoft.bjtax.shenbao.model.domain"/>
+    <property category="javadoc" name="packages.14" value="com.ttsoft.bjtax.shenbao.model.mapping"/>
+    <property category="javadoc" name="packages.15" value="com.ttsoft.bjtax.shenbao.proxy"/>
+    <property category="javadoc" name="packages.16" value="com.ttsoft.bjtax.shenbao.sbzl.czzsjd"/>
+    <property category="javadoc" name="packages.17" value="com.ttsoft.bjtax.shenbao.sbzl.czzsjd.processor"/>
+    <property category="javadoc" name="packages.18" value="com.ttsoft.bjtax.shenbao.sbzl.czzsjd.web"/>
+    <property category="javadoc" name="packages.19" value="com.ttsoft.bjtax.shenbao.sbzl.czzsnd"/>
+    <property category="javadoc" name="packages.2" value="com.ttsoft.bjtax.shenbao.codetable.processor"/>
+    <property category="javadoc" name="packages.20" value="com.ttsoft.bjtax.shenbao.sbzl.czzsnd.processor"/>
+    <property category="javadoc" name="packages.21" value="com.ttsoft.bjtax.shenbao.sbzl.czzsnd.web"/>
+    <property category="javadoc" name="packages.22" value="com.ttsoft.bjtax.shenbao.sbzl.dsdzdk"/>
+    <property category="javadoc" name="packages.23" value="com.ttsoft.bjtax.shenbao.sbzl.dsdzdk.processor"/>
+    <property category="javadoc" name="packages.24" value="com.ttsoft.bjtax.shenbao.sbzl.dsdzdk.web"/>
+    <property category="javadoc" name="packages.25" value="com.ttsoft.bjtax.shenbao.sbzl.grsds"/>
+    <property category="javadoc" name="packages.26" value="com.ttsoft.bjtax.shenbao.sbzl.grsds.processor"/>
+    <property category="javadoc" name="packages.27" value="com.ttsoft.bjtax.shenbao.sbzl.grsds.web"/>
+    <property category="javadoc" name="packages.28" value="com.ttsoft.bjtax.shenbao.sbzl.hdzsgrsds"/>
+    <property category="javadoc" name="packages.29" value="com.ttsoft.bjtax.shenbao.sbzl.hdzsgrsds.processor"/>
+    <property category="javadoc" name="packages.3" value="com.ttsoft.bjtax.shenbao.codetable.web"/>
+    <property category="javadoc" name="packages.30" value="com.ttsoft.bjtax.shenbao.sbzl.hdzsgrsds.web"/>
+    <property category="javadoc" name="packages.31" value="com.ttsoft.bjtax.shenbao.sbzl.jms"/>
+    <property category="javadoc" name="packages.32" value="com.ttsoft.bjtax.shenbao.sbzl.jms.processor"/>
+    <property category="javadoc" name="packages.33" value="com.ttsoft.bjtax.shenbao.sbzl.jms.web"/>
+    <property category="javadoc" name="packages.34" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks"/>
+    <property category="javadoc" name="packages.35" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.processor"/>
+    <property category="javadoc" name="packages.36" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsjdks.web"/>
+    <property category="javadoc" name="packages.37" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb"/>
+    <property category="javadoc" name="packages.38" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.processor"/>
+    <property category="javadoc" name="packages.39" value="com.ttsoft.bjtax.shenbao.sbzl.qysdsnb.web"/>
+    <property category="javadoc" name="packages.4" value="com.ttsoft.bjtax.shenbao.constant"/>
+    <property category="javadoc" name="packages.40" value="com.ttsoft.bjtax.shenbao.sbzl.wqyys"/>
+    <property category="javadoc" name="packages.41" value="com.ttsoft.bjtax.shenbao.sbzl.wqyys.processor"/>
+    <property category="javadoc" name="packages.42" value="com.ttsoft.bjtax.shenbao.sbzl.wqyys.web"/>
+    <property category="javadoc" name="packages.43" value="com.ttsoft.bjtax.shenbao.sbzl.yhs"/>
+    <property category="javadoc" name="packages.44" value="com.ttsoft.bjtax.shenbao.sbzl.yhs.processor"/>
+    <property category="javadoc" name="packages.45" value="com.ttsoft.bjtax.shenbao.sbzl.yhs.web"/>
+    <property category="javadoc" name="packages.46" value="com.ttsoft.bjtax.shenbao.service"/>
+    <property category="javadoc" name="packages.47" value="com.ttsoft.bjtax.shenbao.service.processor"/>
+    <property category="javadoc" name="packages.48" value="com.ttsoft.bjtax.shenbao.szsm"/>
+    <property category="javadoc" name="packages.49" value="com.ttsoft.bjtax.shenbao.szsm.processor"/>
+    <property category="javadoc" name="packages.5" value="com.ttsoft.bjtax.shenbao.ejb"/>
+    <property category="javadoc" name="packages.50" value="com.ttsoft.bjtax.shenbao.szsm.web"/>
+    <property category="javadoc" name="packages.51" value="com.ttsoft.bjtax.shenbao.taglib"/>
+    <property category="javadoc" name="packages.52" value="com.ttsoft.bjtax.shenbao.util"/>
+    <property category="javadoc" name="packages.53" value="com.ttsoft.bjtax.shenbao.zhsb"/>
+    <property category="javadoc" name="packages.54" value="com.ttsoft.bjtax.shenbao.zhsb.processor"/>
+    <property category="javadoc" name="packages.55" value="com.ttsoft.bjtax.shenbao.zhsb.web"/>
+    <property category="javadoc" name="packages.56" value="com.ttsoft.bjtax.shenbao.zrrsb"/>
+    <property category="javadoc" name="packages.57" value="com.ttsoft.bjtax.shenbao.zrrsb.processor"/>
+    <property category="javadoc" name="packages.58" value="com.ttsoft.bjtax.shenbao.zrrsb.web"/>
+    <property category="javadoc" name="packages.6" value="com.ttsoft.bjtax.shenbao.gzsx.processor"/>
+    <property category="javadoc" name="packages.7" value="com.ttsoft.bjtax.shenbao.gzsx.web"/>
+    <property category="javadoc" name="packages.8" value="com.ttsoft.bjtax.shenbao.jiekou"/>
+    <property category="javadoc" name="packages.9" value="com.ttsoft.bjtax.shenbao.jiekou.access"/>
+    <property category="nodeJavadoc" name="directory" value="F%|/javadoc"/>
+    <property category="nodeJavadoc" name="displayAllOutput" value="0"/>
+  </node>
+  <node name="shenbao" type="WebContext">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.wizard.webapp.WarArchiver"/>
+    <property category="archiving" name="defaultLibraryState" value="3"/>
+    <property category="archiving" name="libraryStates.1" value="0:WebLogic 7.x Client"/>
+    <property category="archiving" name="libraryStates.2" value="0:Servlet"/>
+    <property category="archiving" name="targetPath" value="F%|/shenbao.war"/>
+    <property category="kit.struts" name="struts-config.1" value="WEB-INF/struts-config.xml"/>
+    <property category="module" name="converted.to.module" value="1"/>
+    <property category="webapp" name="docroot" value="webapp"/>
+    <property category="webapp" name="kit.1" value="struts"/>
+    <property category="webapp" name="kitlib.1" value="Struts"/>
+    <property category="weblogic" name="deploy.node.password.70" value="123456789"/>
+    <property category="weblogic" name="deploy.node.server.70" value="myshenbaoserver"/>
+    <property category="weblogic" name="deploy.node.user.name.70" value="system"/>
+  </node>
+  <file path="jndi-definitions.xml"/>
+</project>
