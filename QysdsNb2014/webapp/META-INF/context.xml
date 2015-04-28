@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+	<Resource name="QysdsNbDataSource"
+			  auth="Container" 
+			  type="javax.sql.DataSource" 
+			  username="swzg"
+			  password="swzg123"
+			  driverClassName="oracle.jdbc.driver.OracleDriver" 
+			  url="jdbc:oracle:thin:@10.254.2.11:1521:cskh"
+			  maxActive="200" 
+			  maxIdle="5" 
+			  maxWait="5000" />
+</Context>

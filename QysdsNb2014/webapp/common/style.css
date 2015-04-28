@@ -1,0 +1,54 @@
+TD
+{
+	FONT-SIZE: 15px; LINE-HEIGHT: 17px
+}
+
+.title
+{
+	FONT-SIZE: 15px;
+}
+
+.tabStyle   { 
+       border-collapse:   collapse; 
+       border-color:   #9DACBF; 
+       border-style:   solid; 
+       border-width:   1px; 
+       background-color:	#EEEEEE;
+} 
+.tabStyle   td   { 
+       margin:   0px; 
+       padding:   2px; 
+       border-style:   solid; 
+       border-color:   #9DACBF; 
+       border-width:   1px;
+       FONT-SIZE: 15px; 
+       LINE-HEIGHT: 17px; 
+} 
+.tabOutStyle   { 
+       border-collapse:   collapse; 
+       border-color:   #9DACBF; 
+       background-color:	#EEEEEE;
+       border-width:   1px; 
+} 
+.tabOutStyle   td   { 
+       margin:   0px; 
+       padding:   2px; 
+       border-color:   #9DACBF; 
+       border-width:   0px; 
+       FONT-SIZE: 15px; 
+       LINE-HEIGHT: 17px; 
+}
+.tabInnerStyle   { 
+       border-collapse:   collapse; 
+       border-color:   #9DACBF; 
+       background-color:	#EEEEEE;
+       border-width:   0px; 
+} 
+.tabInnerStyle   td   { 
+       margin:   0px; 
+       padding:   2px; 
+       border-color:   #9DACBF; 
+       border-width:   0px; 
+       FONT-SIZE: 15px; 
+       LINE-HEIGHT: 17px; 
+} 
