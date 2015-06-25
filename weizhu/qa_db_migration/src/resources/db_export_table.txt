@@ -1,0 +1,17 @@
+//导出语句
+mysqldump -uroot  --databases weizhu_test --tables weizhu_qa_answer > /Users/zhangjun/Desktop/weizhu_qa_answer.sql
+
+mysqldump -uroot  --databases weizhu_test --tables weizhu_qa_question > /Users/zhangjun/Desktop/weizhu_qa_question.sql
+
+
+mysqldump -uroot  --databases weizhu_test --tables weizhu_qa_answer_like > /Users/zhangjun/Desktop/weizhu_qa_answer_like.sql
+
+mysqldump -uroot  --databases weizhu_test --tables weizhu_qa_question_category > /Users/zhangjun/Desktop/weizhu_qa_question_category.sql
+
+
+
+//清除原有数据
+delete  from answer;
+delete  from question;
+delete  from rafflerecord;
+delete  from supportrecord;
