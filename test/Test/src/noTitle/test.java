@@ -1,9 +1,15 @@
 package noTitle;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class test {
+	
+	float i;
 	public static void main(String [] a)throws Exception{
-		String key="999|1";
-		key.split("|");
-		System.out.println("1"+key.substring(0,3));
+		System.out.println(new test().i);
 	}
+	
 }
