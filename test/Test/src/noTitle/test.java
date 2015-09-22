@@ -1,15 +1,10 @@
 package noTitle;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class test {
-	
-	float i;
-	public static void main(String [] a)throws Exception{
-		System.out.println(new test().i);
+	public static void main(String [] arg) throws Exception{
+		String [] strArray = {"str1","str2","str3"};
+		for(String str : strArray){
+			System.out.println(str);
+		}
 	}
-	
 }
