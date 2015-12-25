@@ -1,36 +1,44 @@
 package sort;
-
-public class HeapSort {
+/**
+ * å †æ’åºåˆ†ä¸ºä¸¤ä¸ªè¿‡ç¨‹ï¼šç¬¬ä¸€æ­¥ï¼šå»ºå †ï¼›ç¬¬äºŒæ­¥ï¼šå †æ’åºï¼ˆé€šè¿‡nï¼1æ¬¡è°ƒæ•´å †æ¥å®Œæˆå †æ’åºï¼‰
+ * å»ºå †çš„æ—¶é—´å¤æ‚åº¦ä¸ºO(n),è°ƒæ•´å †çš„æ—¶é—´å¤æ‚åº¦ä¸ºO(logn),å †æ’åºçš„æ—¶é—´å¤æ‚åº¦ä¸ºO(nlogn),
+ * æ‰€ä»¥æ•´ä¸ªä½¿ç”¨å †æ’åºçš„è¿‡ç¨‹æ—¶é—´å¤æ‚åº¦ä¸ºO(n)ï¼‹O(nlogn)ï¼O(nlogn)
+ * æ’åºæ–¹æ³•    å¹³å‡æ—¶é—´     æœ€åæƒ…å†µ     æœ€å¥½æƒ…å†µ     è¾…åŠ©å­˜å‚¨     ç¨³å®šæ€§     å¤æ‚æ€§
+ * å †æ’åº     O(nlogn)   O(nlogn)    O(nlogn)    O(1)       ä¸ç¨³å®š     è¾ƒå¤æ‚
+ * @author zhangjun
+ *
+ */
+public class HeapSorting {
 	private static int[] sort = new int[] { 1, 0, 10, 20, 3, 5, 6, 4, 9, 8, 12,
 			17, 34, 11 };
-
 	public static void main(String[] args) {
 		buildMaxHeapify(sort);
-		heapSort(sort);
-		print(sort);
+//		heapSort(sort);
+		
+		for(int i:sort){
+			System.out.println(i);
+		}
+//		print(sort);
 	}
-
 	private static void buildMaxHeapify(int[] data) {
-		// Ã»ÓĞ×Ó½ÚµãµÄ²ÅĞèÒª´´½¨×î´ó¶Ñ£¬´Ó×îºóÒ»¸öµÄ¸¸½Úµã¿ªÊ¼
+		// æ²¡æœ‰å­èŠ‚ç‚¹çš„æ‰éœ€è¦åˆ›å»ºæœ€å¤§å †ï¼Œä»æœ€åä¸€ä¸ªçš„çˆ¶èŠ‚ç‚¹å¼€å§‹
 		int startIndex = getParentIndex(data.length - 1);
-		// ´ÓÎ²¶Ë¿ªÊ¼´´½¨×î´ó¶Ñ£¬Ã¿´Î¶¼ÊÇÕıÈ·µÄ¶Ñ
+		// ä»å°¾ç«¯å¼€å§‹åˆ›å»ºæœ€å¤§å †ï¼Œæ¯æ¬¡éƒ½æ˜¯æ­£ç¡®çš„å †
 		for (int i = startIndex; i >= 0; i--) {
 			maxHeapify(data, data.length, i);
 		}
 	}
-
 	/**
-	 *´´½¨×î´ó¶Ñ
-	 * 
-	 *@paramdata
-	 *@paramheapSize ĞèÒª´´½¨×î´ó¶ÑµÄ´óĞ¡£¬Ò»°ãÔÚsortµÄÊ±ºòÓÃµ½£¬ÒòÎª×î¶àÖµ·ÅÔÚÄ©Î²£¬Ä©Î²¾Í²»ÔÙ¹éÈë×î´ó¶ÑÁË
-	 *@paramindex µ±Ç°ĞèÒª´´½¨×î´ó¶ÑµÄÎ»ÖÃ
+	 * åˆ›å»ºæœ€å¤§å †
+	 *
+	 * @paramdata
+	 * @paramheapSizeéœ€è¦åˆ›å»ºæœ€å¤§å †çš„å¤§å°ï¼Œä¸€èˆ¬åœ¨sortçš„æ—¶å€™ç”¨åˆ°ï¼Œå› ä¸ºæœ€å¤šå€¼æ”¾åœ¨æœ«å°¾ï¼Œæœ«å°¾å°±ä¸å†å½’å…¥æœ€å¤§å †äº†
+	 * @paramindexå½“å‰éœ€è¦åˆ›å»ºæœ€å¤§å †çš„ä½ç½®
 	 */
 	private static void maxHeapify(int[] data, int heapSize, int index) {
-		// µ±Ç°µãÓë×óÓÒ×Ó½Úµã±È½Ï
+		// å½“å‰ç‚¹ä¸å·¦å³å­èŠ‚ç‚¹æ¯”è¾ƒ
 		int left = getChildLeftIndex(index);
 		int right = getChildRightIndex(index);
-
 		int largest = index;
 		if (left < heapSize && data[index] < data[left]) {
 			largest = left;
@@ -38,7 +46,7 @@ public class HeapSort {
 		if (right < heapSize && data[largest] < data[right]) {
 			largest = right;
 		}
-		// µÃµ½×î´óÖµºó¿ÉÄÜĞèÒª½»»»£¬Èç¹û½»»»ÁË£¬Æä×Ó½Úµã¿ÉÄÜ¾Í²»ÊÇ×î´ó¶ÑÁË£¬ĞèÒªÖØĞÂµ÷Õû
+		// å¾—åˆ°æœ€å¤§å€¼åå¯èƒ½éœ€è¦äº¤æ¢ï¼Œå¦‚æœäº¤æ¢äº†ï¼Œå…¶å­èŠ‚ç‚¹å¯èƒ½å°±ä¸æ˜¯æœ€å¤§å †äº†ï¼Œéœ€è¦é‡æ–°è°ƒæ•´
 		if (largest != index) {
 			int temp = data[index];
 			data[index] = data[largest];
@@ -46,14 +54,13 @@ public class HeapSort {
 			maxHeapify(data, heapSize, largest);
 		}
 	}
-
 	/**
-	 *ÅÅĞò£¬×î´óÖµ·ÅÔÚÄ©Î²£¬dataËäÈ»ÊÇ×î´ó¶Ñ£¬ÔÚÅÅĞòºó¾Í³ÉÁËµİÔöµÄ
-	 * 
-	 *@paramdata
+	 * æ’åºï¼Œæœ€å¤§å€¼æ”¾åœ¨æœ«å°¾ï¼Œdataè™½ç„¶æ˜¯æœ€å¤§å †ï¼Œåœ¨æ’åºåå°±æˆäº†é€’å¢çš„
+	 *
+	 * @paramdata
 	 */
 	private static void heapSort(int[] data) {
-		// Ä©Î²ÓëÍ·½»»»£¬½»»»ºóµ÷Õû×î´ó¶Ñ
+		// æœ«å°¾ä¸å¤´äº¤æ¢ï¼Œäº¤æ¢åè°ƒæ•´æœ€å¤§å †
 		for (int i = data.length - 1; i > 0; i--) {
 			int temp = data[0];
 			data[0] = data[i];
@@ -61,37 +68,33 @@ public class HeapSort {
 			maxHeapify(data, i, 0);
 		}
 	}
-
 	/**
-	 *¸¸½ÚµãÎ»ÖÃ
-	 * 
-	 *@paramcurrent
-	 *@return
+	 * çˆ¶èŠ‚ç‚¹ä½ç½®
+	 *
+	 * @paramcurrent
+	 * @return
 	 */
 	private static int getParentIndex(int current) {
 		return (current - 1) >> 1;
 	}
-
 	/**
-	 *×ó×Ó½Úµãposition×¢ÒâÀ¨ºÅ£¬¼Ó·¨ÓÅÏÈ¼¶¸ü¸ß
-	 * 
-	 *@paramcurrent
-	 *@return
+	 * å·¦å­èŠ‚ç‚¹positionæ³¨æ„æ‹¬å·ï¼ŒåŠ æ³•ä¼˜å…ˆçº§æ›´é«˜
+	 *
+	 * @paramcurrent
+	 * @return
 	 */
 	private static int getChildLeftIndex(int current) {
 		return (current << 1) + 1;
 	}
-
 	/**
-	 *ÓÒ×Ó½Úµãposition
-	 * 
-	 *@paramcurrent
-	 *@return
+	 * å³å­èŠ‚ç‚¹position
+	 *
+	 * @paramcurrent
+	 * @return
 	 */
 	private static int getChildRightIndex(int current) {
 		return (current << 1) + 2;
 	}
-
 	private static void print(int[] data) {
 		int pre = -2;
 		for (int i = 0; i < data.length; i++) {
@@ -102,14 +105,14 @@ public class HeapSort {
 			System.out.print(data[i] + "|");
 		}
 	}
-
 	/**
-	 *ÒÔ2Îªµ×µÄ¶ÔÊı
-	 * 
-	 *@paramparam
-	 *@return
+	 * ä»¥2ä¸ºåº•çš„å¯¹æ•°
+	 *
+	 * @paramparam
+	 * @return
 	 */
 	private static double getLog(double param) {
 		return Math.log(param) / Math.log(2);
 	}
 }
+
